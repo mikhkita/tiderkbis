@@ -19,23 +19,19 @@
 </head>
 <body>
 	<div class="b b-header">
-		<div class="b-grey-header">
-			<div class="b-block">
+		<div class="b-grey-header clearfix">
+			<div class="b-block clearfix">
 				<a href="index.php" class="b-logo"><img src="i/logo.svg" alt=""></a>
 				<a href="#" class="b-city-btn">
-					<span class="b-city-btn-icon"></span>
-					<span class="b-city-btn-text">Томск</span>
-					<span class="b-city-btn-arrow"></span>
+					<span class="b-city-btn-icon"></span><span class="b-city-btn-text">Томск</span><span class="b-city-btn-arrow"></span>
 				</a>
 				<a href="tel:83822513614" class="b-phone"><span class="b-phone-icon"></span>(3822) 51-36-14</a>
 				<div class="b-header-right">
 					<a href="#" class="b-personal-btn">
-						<span class="b-personal-btn-icon"></span>
-						<span class="b-personal-btn-text">Личный кабинет</span>
+						<span class="b-personal-btn-icon"></span><span class="b-personal-btn-text">Личный кабинет</span>
 					</a>
 					<a href="#" class="b-search-btn">
-						<span class="b-search-btn-icon"></span>
-						<span class="b-search-btn-text">Поиск</span>
+						<span class="b-search-btn-icon"></span><span class="b-search-btn-text">Поиск</span>
 					</a>
 				</div>
 			</div>
