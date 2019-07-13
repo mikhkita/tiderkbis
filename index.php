@@ -20,7 +20,6 @@
 </head>
 <body>
 	<? include "header.php"; ?>
-
 	<div class="b-main-slider">
 		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
 			<div class="b-block">
@@ -46,6 +45,36 @@
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
 					<a href="#" class="b-btn">Оформить заявку</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="b-main-illustrations">
+		<div class="b-block">
+			<div class="b-illustration-list">
+				<div class="b-illustration-item">
+					<div class="b-1-illustration b-illustration"></div>
+					<div class="b-illustration-text">Пайщиков</div>
+					<div class="b-illustration-info">
+						<span class="illustration-bold">11 959</span>
+						<span class="illustration-regular">Чел.</span>
+					</div>
+				</div>
+				<div class="b-illustration-item">
+					<div class="b-2-illustration b-illustration"></div>
+					<div class="b-illustration-text">Принято сбережений</div>
+					<div class="b-illustration-info">
+						<span class="illustration-bold">424 481 608</span>
+						<span class="rub-icon"></span>
+					</div>
+				</div>
+				<div class="b-illustration-item">
+					<div class="b-3-illustration b-illustration"></div>
+					<div class="b-illustration-text">Выдано займов </div>
+					<div class="b-illustration-info">
+						<span class="illustration-bold">5 746 662 874</span>
+						<span class="rub-icon"></span>
+					</div>
 				</div>
 			</div>
 		</div>
