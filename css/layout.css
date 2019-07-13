@@ -159,16 +159,18 @@ input.error,textarea.error{
 	.b-slider-item{
 		width: 100%;
 		height: calc(100vh - 47px);
+		max-height: 48rem;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 50% 0;	
 		padding: 40px 0;
 	}
 		.b-slider-item .b-block{
-
+			height: 100%;
 		}
 			.b-slider-item-info{
-
+				position: absolute;
+				bottom: 0;
 			}
 				.b-slider-item-info h2{
 					font-family: 'Rubik-Bold';
@@ -176,8 +178,8 @@ input.error,textarea.error{
 					line-height: 4.8rem;
 					color: #333333;
 					display: block;
-					max-width: 306px;
-					margin-bottom: 24px;
+					max-width: 30.6rem;
+					margin-bottom: 2.4rem;
 				}
 				.b-slider-item-text{
 					font-family: 'Rubik-Regular';
@@ -185,18 +187,18 @@ input.error,textarea.error{
 					line-height: 2.2rem;
 					color: #333333;
 					display: block;
-					max-width: 416px;
-					margin-bottom: 32px;
+					max-width: 41.6rem;
+					margin-bottom: 3.2rem;
 				}
 				.b-btn{
-					font-family: 'Rubik-Regular';
+					font-family: 'Rubik-Medium';
 					font-size: 1.4rem;
 					line-height: 1.7rem;
 					color: #333333;
 					display: inline-block;
 					text-transform: uppercase;
-					padding: 16px;
-					width: 200px;
+					padding: 1.6rem;
+					width: 20rem;
 					text-align: center;
 					background: #FEDB31;
 					box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
