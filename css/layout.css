@@ -30,13 +30,13 @@ input.error,textarea.error{
 		position: relative;
 		z-index: 10;
 	}
+		.b-header .b-block *{
+			display: inline-block;
+			vertical-align: middle;
+		}
 		.b-grey-header .b-block{
 			height: 6.5rem;	
 		}
-			.b-grey-header .b-block *{
-				display: inline-block;
-				vertical-align: middle;
-			}
 			.b-logo{
 				width: 10.1rem;
 				height: 13rem;
@@ -116,20 +116,28 @@ input.error,textarea.error{
 			height: 6.5rem;	
 		}
 			ul.b-main-menu{
+				margin-top: 1.2rem;
 				margin-left: 12.5rem;
+				width: calc( 100% - 24.1rem );
 			}
 				ul.b-main-menu li{
 					
 				}
 					ul.b-main-menu li a{
+						padding: 1.2rem 0rem;
 						text-transform: uppercase;
 						font-family: "Rubik-Medium";
 					}
 			.b-menu-btn{
-
+				margin-top: 1rem;
+				float: right;
+				margin-right: 2.2rem;
 			}
 				.b-menu-btn-icon{
-
+					background-image: url('../i/sprite.svg#menu');
+					background-size: 2.4rem 1.8rem;
+					width: 4.6rem;
+					height: 4.6rem;
 				}
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	
@@ -140,8 +148,11 @@ input.error,textarea.error{
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	
 }
+/* Desktop */
 @media (min-width: 1024px)  and (max-width: 1440px) {
-	
+	ul.b-main-menu li a:hover{
+		color: #00963F;
+	}
 }
 @media (min-width: 1440px) {
 	

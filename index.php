@@ -37,8 +37,8 @@
 			</div>
 		</div>
 		<div class="b-white-header">
-			<div class="b-block">
-				<ul class="b-main-menu">
+			<div class="b-block clearfix">
+				<ul class="b-main-menu justify">
 					<li><a href="#">Займы</a></li>
 					<li><a href="#">Сбережения</a></li>
 					<li><a href="#">Погашение займа</a></li>
