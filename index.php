@@ -12,70 +12,67 @@
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="css/base.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
-
-	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css">
-	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
 
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 </head>
 <body>
-	<ul class="ps-lines">
-		<li class="v" style="margin-left:-501px"></li>
-		<li class="v" style="margin-left:500px"></li>
-		<li class="v" ></li>
-	</ul>
-	<div class="b b-1">
-		<div class="b-block">
-			<div class="b-logo-cont left">
-				<div class="b-logo-text left blue">ФРАНШИЗА "ELECTROFROG"<br/>ОТ КРУПНЕЙШЕГО ЗАВОДА ЗАО "ЛИТМАШДЕТАЛЬ"</div>
+	<div class="b b-header">
+		<div class="b-grey-header">
+			<div class="b-block">
+				<a href="index.php" class="b-logo"><img src="i/logo.svg" alt=""></a>
+				<a href="#" class="b-city-btn">
+					<span class="b-city-btn-icon"></span>
+					<span class="b-city-btn-text">Томск</span>
+					<span class="b-city-btn-arrow"></span>
+				</a>
+				<a href="tel:83822513614" class="b-phone"><span class="b-phone-icon"></span>(3822) 51-36-14</a>
+				<div class="b-header-right">
+					<a href="#" class="b-personal-btn">
+						<span class="b-personal-btn-icon"></span>
+						<span class="b-personal-btn-text">Личный кабинет</span>
+					</a>
+					<a href="#" class="b-search-btn">
+						<span class="b-search-btn-icon"></span>
+						<span class="b-search-btn-text">Поиск</span>
+					</a>
+				</div>
 			</div>
-			<div class="b-date-cont right">
-				<h2 class="blue">8 (800) 555 15 24</h2>
-				<p class="right"><a href="#b-popup-1" class="b-get-callback b-orange-butt fancy goal-click" data-goal="CALLBACK_B">Заказать звонок</a></p>
+		</div>
+		<div class="b-white-header">
+			<div class="b-block">
+				<ul class="b-main-menu">
+					<li><a href="#">Займы</a></li>
+					<li><a href="#">Сбережения</a></li>
+					<li><a href="#">Погашение займа</a></li>
+					<li><a href="#">О кооперативе</a></li>
+					<li><a href="#">Онлайн-приёмная</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<a href="#" class="b-menu-btn">
+					<span class="b-menu-btn-icon"></span>
+				</a>
 			</div>
 		</div>
 	</div>
-	<div class="b b-2">
+	<div class="b-main-slider">
 		<div class="b-block">
 			
 		</div>
 	</div>
-	<div class="b b-3">
-		<div class="b-block">
-			
-		</div>
-	</div>
-	<div class="b b-4">
-		<div class="b-block">
-			
-		</div>
-	</div>
-	<div class="b b-5">
-		<div class="b-block">
-			
-		</div>
-	</div>
-	<div class="b b-6">
-		<div class="b-block">
-			
-		</div>
-	</div>
-	<div class="b b-7">
-		<div class="b-block">
-			
-		</div>
-	</div>
-	<div class="b b-8">
-		<div class="b-block">
-			
-		</div>
-	</div>
-	<div class="b b-9">
-		<div class="b-block">
-			
-		</div>
-	</div>
+
+
+
+
+
+
+
+
+
+
+
+
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
 		<div class="b-popup" id="b-popup-1">

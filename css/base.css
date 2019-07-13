@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Rubik-Bold';
+    src: url('../fonts/Rubik-Bold.eot');
+    src: url('../fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Rubik-Bold.woff2') format('woff2'),
+        url('../fonts/Rubik-Bold.woff') format('woff'),
+        url('../fonts/Rubik-Bold.ttf') format('truetype'),
+        url('../fonts/Rubik-Bold.svg#Rubik-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url('../fonts/Rubik-Regular.eot');
+    src: url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Rubik-Regular.woff2') format('woff2'),
+        url('../fonts/Rubik-Regular.woff') format('woff'),
+        url('../fonts/Rubik-Regular.ttf') format('truetype'),
+        url('../fonts/Rubik-Regular.svg#Rubik-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik-Medium';
+    src: url('../fonts/Rubik-Medium.eot');
+    src: url('../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Rubik-Medium.woff2') format('woff2'),
+        url('../fonts/Rubik-Medium.woff') format('woff'),
+        url('../fonts/Rubik-Medium.ttf') format('truetype'),
+        url('../fonts/Rubik-Medium.svg#Rubik-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+	position: relative;
+}
+html {
+	font-size: 10px;
+}
+body {
+	text-align: center;
+	font-family: 'Rubik-Regular';
+	overflow-x: hidden;
+	-webkit-text-size-adjust: none;
+	color: #212121;
+	font-weight: normal;
+	font-size: 1.6rem;
+}
+a{
+	text-decoration: none;
+	color: #212121;
+}
+.b{
+	position: relative;
+}
+.b-block{
+	position: relative;
+	width: calc( 100vw - 4.8rem );
+	margin: 0px auto;
+	text-align: left;
+}
+input::-webkit-input-placeholder {
+	color: #777;
+}
+input:-moz-placeholder {
+	color: #777;
+}
+[class^="-icon"], 
+[class*="-icon"],
+[class^="-illustration"], 
+[class*="-illustration"]  {
+	display: inline-block;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-image: url('../i/sprite.svg');
+	/*background-size: contain;*/
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	
+}
+@media screen and (max-width: 767px) {
+	html {
+		font-size: calc(10px + 13 * (100vw - 320px) / 447);
+	}
+	.b-block{
+		width: calc( 100vw - 4.8rem );
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+	html {
+		font-size: calc(6px + 4 * (100vw - 768px) / 312);
+	}
+	.b-block{
+		width: calc( 100vw - 4.8rem );
+	}
+}
+@media (min-width: 1080px)  and (max-width: 1440px) {
+	html {
+		font-size: 10px;
+	}
+	.b-block{
+		width: 1032px;
+	}
+}
+@media (min-width: 1440px) {
+	html {
+		font-size: calc(10px + 2 * (100vw - 1920px) / 480);
+	}
+}
+@media (min-width: 1920px) {
+	html {
+		font-size: 12px;
+	}
+}
