@@ -57,8 +57,14 @@
 		</div>
 	</div>
 	<div class="b-main-slider">
-		<div class="b-block">
-			
+		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+			<div class="b-block">
+				<div class="b-slider-item-info">
+					<h2>Займы на любые цели</h2>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<a href="#" class="b-btn">Оформить заявку</a>
+				</div>
+			</div>
 		</div>
 	</div>
 
