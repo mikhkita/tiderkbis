@@ -1,4 +1,4 @@
-<div class="b b-header">
+<div class="b b-header grey">
 	<div class="b-grey-header clearfix">
 		<div class="b-block clearfix">
 			<a href="index.php" class="b-logo"><img src="i/logo.svg" alt=""></a>

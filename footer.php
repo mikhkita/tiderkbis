@@ -1,5 +1,5 @@
 <? if( $withoutRating !== true ): ?>
-<div class="b-rating">
+<div class="b b-rating">
 	<div class="b-block">
 		<h3>Помогите нам стать лучше</h3>
 		<p>Оцените нашу новую страницу</p>
@@ -13,7 +13,7 @@
 	</div>
 </div>
 <? endif; ?>
-<div class="b b-footer">
+<div class="b b-footer grey">
 	<div class="b-block justify">
 		<ul class="b-footer-menu">
 			<li><a href="#">О кооперативе</a></li>

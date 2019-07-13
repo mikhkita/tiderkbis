@@ -57,8 +57,7 @@
 
 
 
-
-
+	<? include "advices.php"; ?>
 
 	<? include "footer.php"; ?>
 

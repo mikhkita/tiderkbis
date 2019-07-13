@@ -10,19 +10,82 @@ input.error,textarea.error{
 	overflow: visible !important;
 }
 .b-btn{
+	font-family: 'Rubik-Medium';
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 1.6rem 2rem;
+	min-width: 20rem;
+	text-align: center;
+	background: #FEDB31;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+	border-radius: 6.8rem;
+}
+.b-small-btn{
+	font-family: 'Rubik-Medium';
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 0.8rem 1.6rem;
+	min-width: 15.2rem;
+	text-align: center;
+	border: 1px solid #DADADA;
+	border-radius: 6.8rem;
+}
+.b-green-link{
 
 }
-.b-orange-btn{
-
+.b-title-with-button{
+	margin-bottom: 4rem;
 }
-	.b-orange-btn:hover{
-		
+	.b-title-with-button h3{
+		margin-bottom: 0rem;
+		display: inline-block;
+		vertical-align: middle;
 	}
+	.b-title-with-button .b-small-btn{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 3.2rem;
+	}
+.b.grey,
+.b.gray{
+	background-color: #F2F2F2;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	
+}	
+@media screen and (max-width: 767px) {
+	
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	
+}
+/* Desktop */
+@media (min-width: 1024px)  and (max-width: 1440px) {
+	.b-small-btn{
+		-webkit-transition: border-color 100ms ease-out;
+		   -moz-transition: border-color 100ms ease-out;
+		    -ms-transition: border-color 100ms ease-out;
+		   	 -o-transition: border-color 100ms ease-out;
+				transition: border-color 100ms ease-out;
+	}
+		.b-small-btn:hover{
+			border-color: #212121;
+		}
+}
+@media (min-width: 1440px) {
+	
+}
+@media (min-width: 1920px) {
+	
+}
 
 
 /* Header ––––––––––––––––––––––––––––––––––––––––––––– Header */
 .b-header{
-	background-color: #F2F2F2;
 	font-size: 1.4rem;
 	line-height: 1.7rem;
 	z-index: 1;
@@ -191,7 +254,6 @@ input.error,textarea.error{
 					font-family: 'Rubik-Bold';
 					font-size: 4.8rem;
 					line-height: 4.8rem;
-					color: #333333;
 					display: block;
 					max-width: 30.6rem;
 					margin-bottom: 2.4rem;
@@ -200,24 +262,9 @@ input.error,textarea.error{
 					font-family: 'Rubik-Regular';
 					font-size: 1.6rem;
 					line-height: 2.2rem;
-					color: #333333;
 					display: block;
 					max-width: 41.6rem;
 					margin-bottom: 3.2rem;
-				}
-				.b-btn{
-					font-family: 'Rubik-Medium';
-					font-size: 1.4rem;
-					line-height: 1.7rem;
-					color: #333333;
-					display: inline-block;
-					text-transform: uppercase;
-					padding: 1.6rem;
-					width: 20rem;
-					text-align: center;
-					background: #FEDB31;
-					box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
-					border-radius: 68px;
 				}
 			.b-block.slick-arrow{
 			    position: absolute;
@@ -254,6 +301,39 @@ input.error,textarea.error{
 			    background-position: 2rem 50%;
 				background-image: url('../i/sprite.svg#arrow-right');				
 			}
+
+/* Advices –––––––––––––––––––––––––––––––––––––––––––– Advices */
+.b-advices{
+	
+}
+	.b-advices .b-block{
+		padding: 4rem 0rem;
+	}
+		.b-advices .b-title-with-button{
+
+		}
+			.b-advices h3{
+
+			}
+			.b-advices .b-small-btn{
+
+			}
+		.b-advice-list{
+
+		}
+			.b-advice{
+
+			}
+				.b-advice .b-img{
+
+				}
+				.b-advice h4{
+
+				}
+				.b-advice .b-green-link{
+
+				}
+/* Advices –––––––––––––––––––––––––––––––––––––––––––– Advices */
 
 
 /* Rating ––––––––––––––––––––––––––––––––––––––––––––– Rating */
@@ -296,7 +376,7 @@ input.error,textarea.error{
 
 /* Footer ––––––––––––––––––––––––––––––––––––––––––––– Footer */
 .b-footer{
-	background-color: #F2F2F2;
+	
 }
 	.b-footer .b-block{
 		padding-top: 4rem;
