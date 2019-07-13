@@ -54,6 +54,27 @@ $(document).ready(function(){
         touchThreshold: 100
     });
 
+    $(".b-star").hover(function() {
+        $(this).addClass("highlight");
+        $(this).prevAll(".b-star").addClass("highlight");
+        $(".b-stars").addClass("hover");
+    }, function() {
+        $(this).removeClass("highlight");
+        $(this).prevAll(".b-star").removeClass("highlight");
+        $(".b-stars").removeClass("hover");
+    });
+
+    $(".b-star").click(function() {
+        var $this = $(this);
+
+        //здесь будет ajax-запрос
+        $this.parent().find(".b-star").removeClass("highlight").removeClass("selected");
+        $(".b-stars").removeClass("hover");
+
+        $this.addClass("selected");
+        $this.prevAll(".b-star").addClass("selected");
+    });
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
@@ -68,24 +89,5 @@ $(document).ready(function(){
     //     $(".b-step-slide .slider-anim").removeClass("show");
     //     $(".b-step-slide[data-slick-index='"+currentSlide+"'] .slider-anim").addClass("show");
     // });
-
-
-    
-	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
- //    var myOptions = {
- //        zoom: 16,
- //        center: myPlace,
- //        mapTypeId: google.maps.MapTypeId.ROADMAP,
- //        disableDefaultUI: true,
- //        scrollwheel: false,
- //        zoomControl: true
- //    }
- //    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-
- //    var marker = new google.maps.Marker({
-	//     position: myPlace,
-	//     map: map,
-	//     title: "Ярмарка вакансий и стажировок"
-	// });
 
 });
