@@ -167,6 +167,8 @@ input.error,textarea.error{
 .b-main-slider{
 	/*height: 100px;*/
 	/*background-color: #ccc;*/
+	overflow: hidden;
+	max-height: 48rem;
 }
 	.b-slider-item{
 		height: 48rem;
@@ -234,19 +236,19 @@ input.error,textarea.error{
 				bottom: 4.0rem;
 				background: #FFFFFF;
 				border-radius: 4.5rem;
-				background-size: 2.7rem;
+				background-size: 0.9rem 1.6rem;
 				background-repeat: no-repeat;
 				z-index: 1;
 				box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
 			}
 			.arrow-left-icon{
 				right: 6.1rem;
-			    background-position: 0.8rem 50%;
+			    background-position: 1.8rem 50%;
 				background-image: url('../i/sprite.svg#arrow-left');
 			}
 			.arrow-right-icon{
 				right: 0;
-			    background-position: 1.4rem 50%;
+			    background-position: 2rem 50%;
 				background-image: url('../i/sprite.svg#arrow-right');				
 			}
 
