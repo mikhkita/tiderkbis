@@ -27,7 +27,8 @@ input.error,textarea.error{
 	line-height: 1.7rem;
 }
 	.b-grey-header{
-		
+		position: relative;
+		z-index: 10;
 	}
 		.b-grey-header .b-block{
 			height: 6.5rem;	
@@ -76,7 +77,6 @@ input.error,textarea.error{
 				}
 			.b-header-right{
 				float: right;
-				height: 100%;
 				margin-top: 1rem;
 			}
 				.b-personal-btn{
@@ -107,19 +107,23 @@ input.error,textarea.error{
 
 					}
 	.b-white-header{
-
+		position: absolute;
+		left: 0px;
+		width: 100%;
 	}
 		.b-white-header .b-block{
-
+			background-color: #FFF;
+			height: 6.5rem;	
 		}
 			ul.b-main-menu{
-
+				margin-left: 12.5rem;
 			}
 				ul.b-main-menu li{
-
+					
 				}
 					ul.b-main-menu li a{
-
+						text-transform: uppercase;
+						font-family: "Rubik-Medium";
 					}
 			.b-menu-btn{
 
