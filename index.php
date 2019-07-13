@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/reset.css" type="text/css">
 	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css">
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
+	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/base.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
@@ -21,6 +22,24 @@
 	<? include "header.php"; ?>
 
 	<div class="b-main-slider">
+		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+			<div class="b-block">
+				<div class="b-slider-item-info">
+					<h2>Займы на любые цели</h2>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<a href="#" class="b-btn">Оформить заявку</a>
+				</div>
+			</div>
+		</div>
+		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+			<div class="b-block">
+				<div class="b-slider-item-info">
+					<h2>Займы на любые цели</h2>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<a href="#" class="b-btn">Оформить заявку</a>
+				</div>
+			</div>
+		</div>
 		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
 			<div class="b-block">
 				<div class="b-slider-item-info">
@@ -81,6 +100,7 @@
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/mask.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
