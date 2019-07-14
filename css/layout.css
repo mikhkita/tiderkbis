@@ -635,11 +635,9 @@ input.error,textarea.error{
 						user-select: none;
 					}
 					.b-tumbler-text-left{
-						width: 9.3rem;
 						margin-right: 2.6rem;
 					}
 					.b-tumbler-text-right{
-						width: 22rem;
 						margin-left: 3rem;
 					}
 					.b-tumbler-text.active{
