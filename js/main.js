@@ -95,7 +95,7 @@ $(document).ready(function(){
         });
     });
 
-    $('.b-calc-tumbler-text').on('click', function(){
+    $('.b-tumbler-text').on('click', function(){
         if (!$(this).hasClass('active')) {
             if ($('#tumbler').prop('checked') === true) {
                 $('#tumbler').prop('checked', false);
@@ -107,7 +107,7 @@ $(document).ready(function(){
     });
 
     $('#tumbler').on('change', function(){
-        $('.b-calc-tumbler-text').each(function(){
+        $('.b-tumbler-text').each(function(){
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
             } else {

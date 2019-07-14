@@ -621,37 +621,36 @@ input.error,textarea.error{
 								font-size: 1.6rem;
 								line-height: 1.9rem;
 							}
-				.b-calc-tumbler{
+				.b-tumbler-block{
 					padding: 32px 0;
 				}
-					.b-calc-tumbler-text{
+					.b-tumbler-text{
 						font-family: 'Rubik-Regular';
 						font-size: 1.6rem;
 						line-height: 1.9rem;
 						color: rgba(33, 33, 33, 0.4);
 						display: inline-block;
-						vertical-align: middle;
+						vertical-align: top;
 						cursor: pointer;
 						user-select: none;
 					}
-					.b-calc-tumbler-text-left{
-						width: 9.3rem;
+					.b-tumbler-text-left{
 						margin-right: 2.6rem;
 					}
-					.b-calc-tumbler-text-right{
-						width: 22rem;
+					.b-tumbler-text-right{
 						margin-left: 3rem;
 					}
-					.b-calc-tumbler-text.active{
+					.b-tumbler-text.active{
 						color: inherit;
 					}
-					.b-calc-tumbler-item{
+					.b-tumbler-item{
 						width: 6.4rem;
 						height: 3.6rem;
 						display: inline-block;
-						vertical-align: middle;
+						vertical-align: top;
+						margin-top: 1px;
 					}
-					.b-calc-tumbler-item input {
+					.b-tumbler-item input {
 						position: absolute;
 						z-index: -1;
 						opacity: 0;
@@ -689,7 +688,7 @@ input.error,textarea.error{
 						-o-transition: left .2s;
 						transition: left .2s;
 					}
-					.b-calc-tumbler-item input:checked + .b-tumbler:after {
+					.b-tumbler-item input:checked + .b-tumbler:after {
 						left: 3.2rem;
 					}
 				.b-calc-checkboxes{
