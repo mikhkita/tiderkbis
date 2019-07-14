@@ -16,9 +16,9 @@
 <div class="b b-footer grey">
 	<div class="b-block justify">
 		<ul class="b-footer-menu">
-			<li><a href="#">О кооперативе</a></li>
+			<li><a href="cooperative.php">О кооперативе</a></li>
 			<li><a href="#">Онлайн-приёмная</a></li>
-			<li><a href="#">Документы</a></li>
+			<li><a href="documents.php">Документы</a></li>
 		</ul>
 		<ul class="b-footer-menu">
 			<li><a href="#">Займы</a></li>

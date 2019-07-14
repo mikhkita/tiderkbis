@@ -44,7 +44,7 @@
 					<li><a href="#">Займы</a></li>
 					<li><a href="savings.php">Сбережения</a></li>
 					<li><a href="payment.php">Погашение займа</a></li>
-					<li><a href="#">О кооперативе</a></li>
+					<li><a href="cooperative.php">О кооперативе</a></li>
 					<li><a href="#">Онлайн-приёмная</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>

@@ -285,6 +285,13 @@ input.error,textarea.error{
 }
 /* Desktop */
 @media (min-width: 1024px) {
+	ul.b-main-menu li a{
+		-webkit-transition: color 100ms ease-out;
+		   -moz-transition: color 100ms ease-out;
+		    -ms-transition: color 100ms ease-out;
+		   	 -o-transition: color 100ms ease-out;
+				transition: color 100ms ease-out;
+	}
 	ul.b-main-menu li a:hover{
 		color: #00963F;
 	}
@@ -305,6 +312,7 @@ input.error,textarea.error{
 
 	}
 		.b-breadcrumbs{
+			color: #A6A6A6;
 			font-size: 0px;
 			margin-bottom: 3.5rem;
 		}
@@ -1008,7 +1016,7 @@ input.error,textarea.error{
 			.b-advice{
 				display: inline-block;
 				vertical-align: top;
-				width: 32.8rem;
+				width: 100%;
 				background-color: #FFF;
 				margin-right: 2.4rem;
 				position: relative;
@@ -1201,6 +1209,169 @@ input.error,textarea.error{
 	}
 }
 /* Cooperative ––––––––––––––––––––––––––––––––––––––––– Cooperative */
+
+
+/* Accordeon --––––––––––––––––––––––––––––––––––––––––– Accordeon */
+.b-accordeon-list{
+
+}
+	.b-accordeon{
+		position: relative;
+		-webkit-transition: background-color 300ms ease-out;
+		   -moz-transition: background-color 300ms ease-out;
+		    -ms-transition: background-color 300ms ease-out;
+		   	 -o-transition: background-color 300ms ease-out;
+				transition: background-color 300ms ease-out;
+	}
+	.b-accordeon.opened{
+		background-color: #F2F2F2;
+	}
+		.b-accordeon.opened:before{
+			position: absolute;
+			content: "s";
+			font-size: 0px;
+			width: 100%;
+			height: 1px;
+			left: 0px;
+			top: -1px;
+			background-color: #F2F2F2;
+		}
+		.b-accordeon.opened + .b-accordeon.opened:before{
+			position: absolute;
+			content: "s";
+			font-size: 0px;
+			width: 100%;
+			height: 1px;
+			left: 0px;
+			top: -1px;
+			-webkit-transition: background-color 300ms ease-out;
+			   -moz-transition: background-color 300ms ease-out;
+			    -ms-transition: background-color 300ms ease-out;
+			   	 -o-transition: background-color 300ms ease-out;
+					transition: background-color 300ms ease-out;
+			background-color: #DADADA;
+		}
+		.b-accordeon-head{
+			cursor: pointer;
+			position: relative;
+			padding: 2.4rem 0rem 2.4rem;
+			border-bottom: 1px solid #DADADA;
+			-webkit-transition: border-bottom 150ms 200ms ease-out;
+			   -moz-transition: border-bottom 150ms 200ms ease-out;
+			    -ms-transition: border-bottom 150ms 200ms ease-out;
+			   	 -o-transition: border-bottom 150ms 200ms ease-out;
+					transition: border-bottom 150ms 200ms ease-out;
+		}
+		.b-accordeon.opened .b-accordeon-head{
+			-webkit-transition: border-bottom 100ms ease-out;
+			   -moz-transition: border-bottom 100ms ease-out;
+			    -ms-transition: border-bottom 100ms ease-out;
+			   	 -o-transition: border-bottom 100ms ease-out;
+					transition: border-bottom 100ms ease-out;
+			border-bottom: 1px solid transparent;
+		}
+			.b-accordeon-head h4{
+				
+			}
+			.b-accordeon-head .b-arrow-icon{
+				position: absolute;
+				right: 0rem;
+				top: 1.9rem;
+				width: 3.8rem;
+				height: 3.8rem;
+				border-radius: 100rem;
+				background-color: #212121;
+				background-image: url('../i/sprite.svg#accordeon-arrow');
+				background-size: 1.2rem auto;
+				background-position: 50% 55%;
+				-webkit-transition: background-color 300ms ease-out;
+				   -moz-transition: background-color 300ms ease-out;
+				    -ms-transition: background-color 300ms ease-out;
+				   	 -o-transition: background-color 300ms ease-out;
+						transition: background-color 300ms ease-out;
+			}
+			.b-accordeon.opened .b-accordeon-head .b-arrow-icon{
+				-webkit-transition: background-color 300ms ease-out;
+				   -moz-transition: background-color 300ms ease-out;
+				    -ms-transition: background-color 300ms ease-out;
+				   	 -o-transition: background-color 300ms ease-out;
+						transition: background-color 300ms ease-out;
+				background-position: 50% 50%;
+				background-color: #E6E6E6;
+				background-size: 1.2rem auto;
+				background-image: url('../i/sprite.svg#accordeon-arrow-opened');
+			}
+		.b-accordeon-body{
+			display: none;
+			padding: 0.8rem 0rem 4rem;
+		}
+/* Desktop */
+@media (min-width: 1024px) {
+	.b-accordeon-head:hover .b-arrow-icon{
+		-webkit-transition: background-color 100ms ease-out;
+		   -moz-transition: background-color 100ms ease-out;
+		    -ms-transition: background-color 100ms ease-out;
+		   	 -o-transition: background-color 100ms ease-out;
+				transition: background-color 100ms ease-out;
+		background-color: rgba(33, 33, 33, 0.8);
+	}
+	.b-accordeon-head:active .b-arrow-icon{
+		-webkit-transition: background-color 50ms ease-out;
+		   -moz-transition: background-color 50ms ease-out;
+		    -ms-transition: background-color 50ms ease-out;
+		   	 -o-transition: background-color 50ms ease-out;
+				transition: background-color 50ms ease-out;
+		background-color: rgba(33, 33, 33, 0.6);
+	}
+}
+/* Accordeon --––––––––––––––––––––––––––––––––––––––––– Accordeon */
+
+
+/* Documents --––––––––––––––––––––––––––––––––––––––––– Documents */
+.b-documents{
+	font-size: 0px;
+	line-height: 0px;
+	margin-bottom: -3.2rem;
+}
+	.b-document{
+		display: inline-block;
+		vertical-align: top;
+		width: calc( (100% - 3.8rem * 2) / 3 );
+		margin-right: 3.8rem;
+		margin-bottom: 3.2rem;
+	}
+	.b-document:nth-child(3n){
+		margin-right: 0rem;
+	}
+		.b-document-icon{
+			background-image: url('../i/sprite.svg#document');
+			width: 3.2rem;
+			height: 3.2rem;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 2rem;
+		}
+		.b-document-text{
+			width: calc( 100% - 5.2rem );
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 1.6rem;
+			line-height: 1.8rem;
+		}
+/* Desktop */
+@media (min-width: 1024px) {
+	.b-document-text{
+		-webkit-transition: color 100ms ease-out;
+		   -moz-transition: color 100ms ease-out;
+		    -ms-transition: color 100ms ease-out;
+		   	 -o-transition: color 100ms ease-out;
+				transition: color 100ms ease-out;
+	}
+	.b-document:hover .b-document-text{
+		color: #00963F;
+	}
+}
+/* Documents --––––––––––––––––––––––––––––––––––––––––– Documents */
 
 
 /* Footer ––––––––––––––––––––––––––––––––––––––––––––– Footer */
