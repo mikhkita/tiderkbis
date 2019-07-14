@@ -792,6 +792,138 @@ input.error,textarea.error{
 /* Calc slider ––––––––––––––––––––––––––––––––––––––––––––– Calc slider */
 
 
+/* News –––––––––––––––––––––––––––––––––––––––––––– News */
+.b-news-block{
+	padding: 64px 0;
+}
+	.b-news .b-block{
+		padding: 4rem 0rem;
+	}
+		.b-news .b-title-with-button{
+
+		}
+			.b-news h3{
+
+			}
+			.b-news .b-small-btn{
+
+			}
+		.b-news-list{
+			display: flex;
+		}
+			.b-news{
+				display: inline-block;
+				vertical-align: top;
+				width: 32.8rem;
+				background: #FFFFFF;
+				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+				margin-right: 2.4rem;
+				position: relative;
+				padding: 1.6rem 1.6rem 10rem;
+				z-index: 1;
+				-webkit-transition: box-shadow .2s;
+				-o-transition: box-shadow .2s;
+				transition: box-shadow .2s;
+			}
+			.b-news:last-child{
+				margin-right: 0rem;
+			}
+			.b-news:hover{
+				box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.15);
+			}
+				.b-news-date{
+					color: rgba(0, 0, 0, 0.4);
+					margin-bottom: 1.6rem;
+					font-size: 1.6rem;
+					line-height: 2.2rem;
+				}
+				.b-news-text{
+					font-size: 1.6rem;
+					line-height: 2.2rem;
+				}
+				.b-news .b-green-link{
+					position: absolute;
+					left: 16px;
+					bottom: 33px;
+				}
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	
+}	
+@media screen and (max-width: 767px) {
+	
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	
+}
+/* Desktop */
+@media (min-width: 1024px) {
+	.b-news:hover .b-green-link:before{
+		width: 3.7rem;
+		right: -3.7rem;
+	}
+	.b-news:hover .b-green-link .right-arrow-icon{
+		right: -3.9rem;
+	}	
+}
+@media (min-width: 1440px) {
+	
+}
+@media (min-width: 1920px) {
+	
+}
+/* News –––––––––––––––––––––––––––––––––––––––––––– News */
+
+/* Advantages –––––––––––––––––––––––––––––––––––––––––––– Advantages */
+
+.b-adv-block{
+	padding-top: 16px;
+	padding-bottom: 76px;
+}
+	.b-adv-list{
+		display: flex;
+	}
+		.b-adv{
+			width: 32.8rem;
+			margin-right: 2.4rem;
+		    display: inline-flex;
+		    flex-wrap: wrap;
+		    align-content: space-between;
+		}
+		.b-adv:last-child{
+			margin-right: 0;
+		}
+			.b-adv-illustration{
+				height: 17rem;
+				margin-bottom: 2.4rem;
+			}
+			.b-1-adv-illustration{
+				width: 17.4rem;
+				background-image: url('../i/illustration.svg#4');
+			}
+			.b-2-adv-illustration{
+				width: 16.3rem;
+				background-image: url('../i/illustration.svg#5');
+			}
+			.b-3-adv-illustration{
+				width: 16rem;
+				background-image: url('../i/illustration.svg#6');
+			}
+			.b-adv-title{
+				max-width: 20rem;
+				font-size: 2.4rem;
+				line-height: 2.8rem;
+				margin-bottom: 1.6rem;
+			}
+			.b-adv-text{
+				font-size: 1.6rem;
+				line-height: 2.2rem;
+				margin-bottom: 2.4rem;
+			}
+
+/* Advantages –––––––––––––––––––––––––––––––––––––––––––– Advantages */
+
+
+
 /* Advices –––––––––––––––––––––––––––––––––––––––––––– Advices */
 .b-advices{
 	
