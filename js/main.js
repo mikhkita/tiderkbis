@@ -133,6 +133,32 @@ $(document).ready(function(){
         Stickyfill.add($('.sticky'));
     }
 
+    $(".b-accordeon").each(function(){
+        if( $(this).hasClass("opened") ){
+            $(this).find(".b-accordeon-body").animate({
+                height : "show",
+                padding : "show"
+            }, 300);
+        }
+    });
+
+    $(".b-accordeon-head").click(function(){
+        var $accordeon = $(this).parents(".b-accordeon");
+        if( $accordeon.hasClass("opened") ){
+            $accordeon.find(".b-accordeon-body").animate({
+                height : "hide",
+                padding : "hide"
+            }, 300);
+            $accordeon.removeClass("opened");
+        }else{
+            $accordeon.find(".b-accordeon-body").animate({
+                height : "show",
+                padding : "show"
+            }, 300);
+            $accordeon.addClass("opened");
+        }
+    });
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
