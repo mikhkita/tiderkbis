@@ -49,8 +49,46 @@ input.error,textarea.error{
 
 }
 .b-green-link{
-
+	font-family: "Rubik-Medium";
+	text-transform: uppercase;
+	color: #00963F;
+	position: relative;
+	padding-right: 0.9rem;
 }
+	.b-green-link:before{
+		position: absolute;
+		content: "s";
+		font-size: 0px;
+		width: 1.4rem;
+		height: 2px;
+		right: -1.4rem;
+		opacity: 0.4;
+		background-color: #00963F;
+		top: 50%;
+		margin-top: -2px;
+		-webkit-transition: width 150ms ease-out, right 150ms ease-out;
+		   -moz-transition: width 150ms ease-out, right 150ms ease-out;
+		    -ms-transition: width 150ms ease-out, right 150ms ease-out;
+		   	 -o-transition: width 150ms ease-out, right 150ms ease-out;
+				transition: width 150ms ease-out, right 150ms ease-out;
+	}
+	.b-green-link .right-arrow-icon{
+		position: absolute;
+		right: -1.6rem;
+		top: 50%;
+		margin-top: -0.8rem;
+		display: inline-block;
+		vertical-align: middle;
+		width: 0.8rem;
+		height: 1.4rem;
+		background-image: url('../i/sprite.svg#arrow-right-green');
+		z-index: 1;
+		-webkit-transition: right 150ms ease-out;
+		   -moz-transition: right 150ms ease-out;
+		    -ms-transition: right 150ms ease-out;
+		   	 -o-transition: right 150ms ease-out;
+				transition: right 150ms ease-out;
+	}
 .b-title-with-button{
 	margin-bottom: 4rem;
 }
@@ -728,20 +766,62 @@ input.error,textarea.error{
 
 			}
 		.b-advice-list{
-
+			display: flex;
 		}
 			.b-advice{
-
+				display: inline-block;
+				vertical-align: top;
+				width: 32.8rem;
+				background-color: #FFF;
+				margin-right: 2.4rem;
+				position: relative;
+			}
+			.b-advice:last-child{
+				margin-right: 0rem;
 			}
 				.b-advice .b-img{
-
+					width: 100%;
+					height: 20.6rem;
+					background-position: 50% 50%;
+					background-size: cover;
 				}
-				.b-advice h4{
-
+				.b-advice-text{
+					padding: 1.6rem 1.6rem 6.6rem;
+					min-height: 21.2rem;
 				}
-				.b-advice .b-green-link{
-
-				}
+					.b-advice h4{
+						line-height: 130%;
+					}
+					.b-advice .b-green-link{
+						position: absolute;
+						left: 16px;
+						bottom: 33px;
+					}
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+	
+}	
+@media screen and (max-width: 767px) {
+	
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	
+}
+/* Desktop */
+@media (min-width: 1024px)  and (max-width: 1440px) {
+	.b-advice:hover .b-green-link:before{
+		width: 3.7rem;
+		right: -3.7rem;
+	}
+	.b-advice:hover .b-green-link .right-arrow-icon{
+		right: -3.9rem;
+	}	
+}
+@media (min-width: 1440px) {
+	
+}
+@media (min-width: 1920px) {
+	
+}
 /* Advices –––––––––––––––––––––––––––––––––––––––––––– Advices */
 
 
