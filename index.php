@@ -225,6 +225,81 @@ include "header.php";
 		</div>
 	</div>
 
+	<div class="b b-news-block">
+		<div class="b-block">
+			<div class="b-title-with-button">
+				<h3>Новости</h3>
+				<a href="#" class="b-small-btn">Все новости</a>
+			</div>
+			<div class="b-news-list">
+				<a href="#" class="b-news b-white-tile">
+					<div class="b-news-date">16 июня 2019</div>
+					<div class="b-news-text">КПКГ «Сибирский кредит» выступил спонсором конкурса детского рисунка «Война. Победа. Память»</div>
+					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
+				</a>
+				<a href="#" class="b-news b-white-tile">
+					<div class="b-news-date">8 июня 2019</div>
+					<div class="b-news-text">30 мая 2019 года состоится внеочередное общее собрание членов КПКГ «Сибирский кредит»  в форме собрания уполномоченных</div>
+					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
+				</a>
+				<a href="#" class="b-news b-white-tile">
+					<div class="b-news-date">10 марта 2019</div>
+					<div class="b-news-text">В КПКГ «Сибирский кредит» прошло очередное ежегодное собрание</div>
+					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="b b-adv-block">
+		<div class="b-block">
+			<h3>Нам доверяют<br> более 10 000 пайщиков</h3>
+			<div class="b-adv-list">
+				<div class="b-adv">
+					<div class="b-adv-top">
+						<div class="b-1-adv-illustration b-adv-illustration"></div>
+						<div class="b-adv-title">Более чем 30 кооперативных  участков</div>
+					</div>
+					<div class="b-adv-bottom">
+						<div class="b-adv-text">На территории Сибирсокого <br>Федерального округа</div>
+						<a href="#" class="b-small-btn">КОнтакты</a>
+					</div>
+				</div>
+				<div class="b-adv">
+					<div class="b-adv-top">
+						<div class="b-2-adv-illustration b-adv-illustration"></div>
+						<div class="b-adv-title">Минимум  документов</div>
+					</div>
+					<div class="b-adv-bottom">
+						<div class="b-adv-text">Основной документ —<br>паспорт гражданина РФ</div>
+						<a href="#" class="b-small-btn">Документы</a>
+					</div>
+				</div>
+				<div class="b-adv">
+					<div class="b-adv-top">
+						<div class="b-3-adv-illustration b-adv-illustration"></div>
+						<div class="b-adv-title">Быстрое оформление</div>
+					</div>
+					<div class="b-adv-bottom">
+						<div class="b-adv-text">Оформление <br>в течение 1 часа</div>
+						<a href="#" class="b-small-btn">Заявка на заём</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="b-commercial-block">
+		<div class="b-block">
+			<div class="b-commercial-inner">
+				<h3>Работа  в кооперативе</h3>
+				<div class="b-commercial-text">Начинать строить карьеру лучше вместе  с лидером рынка. Мы поможем раскрыть  и реализовать ваш потенциал.</div>
+				<div class="b-commercial-text">Мы обладаем всеми инструментами для личного и профессионального развития.  Коллектив - это то, чем мы гордимся  и дорожим!</div>
+				<a href="#" class="b-btn">Вакансии</a>
+			</div>
+		</div>
+	</div>
+
 
 
 
