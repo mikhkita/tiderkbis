@@ -140,13 +140,13 @@
 							</div>
 						</div>
 						<div class="b-calc-string">
-							<div class="b-block-calc b-calc-tumbler">
-								<div class="b-calc-tumbler-text b-calc-tumbler-text-left active">С равными платежами</div>
-								<label class="b-calc-tumbler-item">
+							<div class="b-block-calc b-tumbler-block">
+								<div class="b-tumbler-text b-tumbler-text-left active">С равными платежами</div>
+								<label class="b-tumbler-item">
 									<input type="checkbox" id="tumbler">
 									<div class="b-tumbler"></div>
 								</label>
-								<div class="b-calc-tumbler-text b-calc-tumbler-text-right">С начислением процентов на остаток долга</div>
+								<div class="b-tumbler-text b-tumbler-text-right">С начислением процентов на остаток долга</div>
 							</div>
 						</div>
 						<div class="b-calc-string">
