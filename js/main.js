@@ -142,7 +142,7 @@ $(document).ready(function(){
         }
     });
 
-    $(".b-accordeon-head").click(function(){
+    $("body").on( "click", ".b-accordeon-head", function(){
         var $accordeon = $(this).parents(".b-accordeon");
         if( $accordeon.hasClass("opened") ){
             $accordeon.find(".b-accordeon-body").animate({
