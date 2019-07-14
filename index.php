@@ -93,6 +93,137 @@ include "header.php";
 			</div>
 		</div>
 	</div>
+	<div class="b-calc">
+		<div class="b-block">
+			<h3>Калькулятор услуг</h3>
+			<div class="b-calc-with-tabs b-calc-with-shadow">
+				<div class="b-calc-tab-list">
+					<a href="#b-calc-form-1" class="b-calc-tab-item active">Займы</a>
+					<a href="#b-calc-form-2" class="b-calc-tab-item">Сбережения</a>
+				</div>
+				<div class="b-calc-form" id="b-calc-form-1">
+					<form action="#" method="#">
+						<div class="b-calc-string">
+							<div class="b-block-calc b-block-calc-sliders">
+								<div class="b-calc-slider-block">
+									<label for="sum">Сумма займа</label>
+									<div class="b-calc-slider">
+										<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
+										<div class="b-calc-input-cont">
+											<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15000">
+										</div>
+									</div>
+								</div>
+								<div class="b-calc-slider-block">
+									<label for="date">Срок займа</label>
+									<div class="b-calc-slider">
+										<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
+										<div class="b-calc-input-cont b-calc-input-month-cont">
+											<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-calc-string">
+							<div class="b-block-calc b-calc-tumbler">
+								<div class="b-calc-tumbler-text b-calc-tumbler-text-left active">С равными платежами</div>
+								<label class="b-calc-tumbler-item">
+									<input type="checkbox" id="tumbler">
+									<div class="b-tumbler"></div>
+								</label>
+								<div class="b-calc-tumbler-text b-calc-tumbler-text-right">С начислением процентов на остаток долга</div>
+							</div>
+						</div>
+						<div class="b-calc-string">
+							<div class="b-block-calc b-calc-checkboxes">
+								<label class="b-calc-checkbox-item">
+									<input type="radio" name="b-person-type">
+									<div class="b-checkbox-text">Я пенсионер</div>
+								</label>
+								<label class="b-calc-checkbox-item">
+									<input type="radio" name="b-person-type">
+									<div class="b-checkbox-text">Я работник бюджетной сферы</div>
+								</label>
+								<label class="b-calc-checkbox-item">
+									<input type="radio" name="b-person-type">
+									<div class="b-checkbox-text">Я предприниматель</div>
+								</label>
+							</div>
+						</div>
+						<div class="b-calc-string">
+							<div class="b-block-calc b-calc-text-block">
+								<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+								<div class="b-btn-container">
+									<a href="#" class="ajax b-btn">Рассчитать</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="b-calc-form hide" id="b-calc-form-2">
+					<form action="#" method="#">
+						<div class="b-calc-string">
+							<div class="b-block-calc b-block-calc-sliders">
+								<div class="b-calc-slider-block">
+									<label for="sum">Сумма займа</label>
+									<div class="b-calc-slider">
+										<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
+										<div class="b-calc-input-cont">
+											<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15000">
+										</div>
+									</div>
+								</div>
+								<div class="b-calc-slider-block">
+									<label for="date">Срок займа</label>
+									<div class="b-calc-slider">
+										<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
+										<div class="b-calc-input-cont b-calc-input-month-cont">
+											<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-calc-string">
+							<div class="b-block-calc b-calc-checkboxes">
+								<label class="b-calc-checkbox-item">
+									<input type="radio" name="b-person-type">
+									<div class="b-checkbox-text">Я пенсионер</div>
+								</label>
+								<label class="b-calc-checkbox-item">
+									<input type="radio" name="b-person-type">
+									<div class="b-checkbox-text">Я работник бюджетной сферы</div>
+								</label>
+								<label class="b-calc-checkbox-item">
+									<input type="radio" name="b-person-type">
+									<div class="b-checkbox-text">Я предприниматель</div>
+								</label>
+							</div>
+						</div>
+						<div class="b-calc-string">
+							<div class="b-block-calc b-calc-tumbler">
+								<div class="b-calc-tumbler-text b-calc-tumbler-text-left active">С равными платежами</div>
+								<label class="b-calc-tumbler-item">
+									<input type="checkbox" id="tumbler">
+									<div class="b-tumbler"></div>
+								</label>
+								<div class="b-calc-tumbler-text b-calc-tumbler-text-right">С начислением процентов на остаток долга</div>
+							</div>
+						</div>
+						<div class="b-calc-string">
+							<div class="b-block-calc b-calc-text-block">
+								<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+								<div class="b-btn-container">
+									<a href="#" class="ajax b-btn">Рассчитать</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -100,6 +231,6 @@ include "header.php";
 
 
 
-	<? include "advices.php"; ?>
+<? include "advices.php"; ?>
 
 <? include "footer.php"; ?>

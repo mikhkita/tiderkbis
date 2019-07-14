@@ -9,6 +9,12 @@ input.error,textarea.error{
 .fancybox-inner{
 	overflow: visible !important;
 }
+.hide{
+	display: none;
+}
+.b-btn-container{
+	text-align: center;
+}
 .b-btn{
 	font-family: 'Rubik-Medium';
 	font-size: 1.4rem;
@@ -40,7 +46,7 @@ input.error,textarea.error{
 	background-image: url('../i/sprite.svg#ruble');
 }
 .b-orange-btn{
-	
+
 }
 .b-green-link{
 	font-family: "Rubik-Medium";
@@ -494,10 +500,298 @@ input.error,textarea.error{
 					max-width: 33rem;
 				}
 				.b-popular-offer-item .b-small-btn{
-
+					-webkit-transition: background-color .1s, border-color .1s;
+					-o-transition: background-color .1s, border-color .1s;
+					transition: background-color .1s, border-color .1s;
+				}
+				.b-popular-offer-item:hover .b-small-btn{
+					background-color: #FEDB31;
+					border-color: transparent;
 				}
 
 /* Popular offers ––––––––––––––––––––––––––––––––––––––––––––– Popular offers */
+
+
+/* Calc ––––––––––––––––––––––––––––––––––––––––––––– Calc */
+
+.b-calc{
+	padding-top: 80px;
+	padding-bottom: 64px;
+	position: relative;
+	overflow: hidden;
+}
+.b-calc:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #F2F2F2;
+	top: 46.3rem;
+	left: 0;
+	z-index: -1;
+}
+	.b-calc-with-tabs{
+
+	}
+	.b-calc-with-shadow{
+		box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.08), 
+					0px 0px 5px rgba(0, 0, 0, 0.2);
+	}
+		.b-calc-tab-list{
+			font-family: 'Rubik-Regular';
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+			display: flex;
+			justify-content: space-between;
+		}
+			.b-calc-tab-item{
+				text-align: center;
+				padding: 1.6rem;
+				background-color: #F2F2F2;
+				width: calc(100%/2);
+			}
+			.b-calc-tab-item:nth-child(1){
+				box-shadow: inset -3px -3px 3px 0px rgba(0, 0, 0, 0.08);
+			}
+			.b-calc-tab-item:nth-child(2){
+				box-shadow: inset 3px -3px 3px 0px rgba(0, 0, 0, 0.08);
+			}
+			.b-calc-tab-item.active{
+				background-color: #fff;
+				box-shadow: none;
+			}
+		.b-calc-form{
+			background-color: #fff;
+		}
+			.b-calc-string{
+				border-bottom: 1px solid #DADADA;
+			}
+				.b-block-calc{
+					margin: 0 auto;
+					width: 68rem;
+				}
+				.b-block-calc-sliders{
+					padding: 6.1rem 0 3.2rem;
+				}
+					.b-calc-slider-block{
+						
+					}
+						.b-calc-slider-block label {
+							font-size: 2.4rem;
+							line-height: 2.4rem;
+							font-family: 'Rubik-Regular';
+						}
+						.b-calc-slider{
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+						}
+							.b-slider-range{
+								width: 41.6rem;
+							}
+							.b-calc-input-cont{
+								position: relative;
+							}
+								.b-calc-input-cont input{
+									width: 24rem;
+									font-size: 2.4rem;
+									line-height: 2.8rem;
+									background-color: #F8F8F8;
+									padding: 1rem 1.6rem;
+									border: 1px solid #DADADA;
+									box-sizing: border-box;
+									border-radius: 38px;
+								}
+								.b-calc-input-rub{
+									background-image: url('../i/sprite.svg#ruble');
+									background-size: 1.2rem 1.9rem;
+									background-repeat: no-repeat;
+									background-position: calc(100% - 1.6rem) 50%;
+								}
+							.b-calc-input-month-cont:before{
+								content: 'МЕС.';
+								font-family: 'Rubik-Medium';
+								position: absolute;
+								top: 50%;
+								-webkit-transform: translateY(-50%);
+								-ms-transform: translateY(-50%);
+								-o-transform: translateY(-50%);
+								transform: translateY(-50%);
+								right: 1.6rem;
+								font-size: 1.6rem;
+								line-height: 1.9rem;
+							}
+				.b-calc-tumbler{
+					padding: 32px 0;
+				}
+					.b-calc-tumbler-text{
+						font-family: 'Rubik-Regular';
+						font-size: 1.6rem;
+						line-height: 1.9rem;
+						color: rgba(33, 33, 33, 0.4);
+						display: inline-block;
+						vertical-align: middle;
+						cursor: pointer;
+						user-select: none;
+					}
+					.b-calc-tumbler-text-left{
+						width: 9.3rem;
+						margin-right: 2.6rem;
+					}
+					.b-calc-tumbler-text-right{
+						width: 22rem;
+						margin-left: 3rem;
+					}
+					.b-calc-tumbler-text.active{
+						color: inherit;
+					}
+					.b-calc-tumbler-item{
+						width: 6.4rem;
+						height: 3.6rem;
+						display: inline-block;
+						vertical-align: middle;
+					}
+					.b-calc-tumbler-item input {
+						position: absolute;
+						z-index: -1;
+						opacity: 0;
+						margin: 10px 0 0 20px;
+					}
+					.b-tumbler {
+						position: relative;
+						cursor: pointer;
+					}
+					.b-tumbler:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 6.4rem;
+						height: 3.6rem;
+						border-radius: 30px;
+						background-color: #F8F8F8;
+						border: 1px solid #DADADA;
+						box-sizing: border-box;
+					}
+					.b-tumbler:after {
+						content: '';
+						position: absolute;
+						top: 0.4rem;
+						left: 0.4rem;
+						width: 2.8rem;
+						height: 2.8rem;
+						border: 1px solid #00963F;
+						box-sizing: border-box;
+						box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+						border-radius: 50px;
+						background-color: #fff;
+						-webkit-transition: left .2s;
+						-o-transition: left .2s;
+						transition: left .2s;
+					}
+					.b-calc-tumbler-item input:checked + .b-tumbler:after {
+						left: 3.2rem;
+					}
+				.b-calc-checkboxes{
+					padding-top: 2.6rem;
+					padding-bottom: 2.2rem;
+				}
+					.b-calc-checkbox-item input {
+						position: absolute;
+						z-index: -1;
+						opacity: 0;
+						margin: 1rem 0 0 2rem;
+					}
+					.b-checkbox-text {
+						position: relative;
+						padding-left: 3rem;
+						margin-right: 1.2rem;
+						cursor: pointer;
+						display: inline-block;
+					}
+					.b-checkbox-text:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 2rem;
+						height: 2rem;
+						background-color: #FFF;
+						border: 1px solid #00963F;
+						box-sizing: border-box;
+					}
+					.b-checkbox-text:after {
+						content: '';
+						position: absolute;
+						background-image: url('../i/sprite.svg#check');
+						top: 0.5rem;
+						left: 0.4rem;
+						width: 1.25rem;
+						height: 1rem;
+						-webkit-transition: opacity .1s;
+						-o-transition: opacity .1s;
+						transition: opacity .1s;
+						opacity: 0;
+					}
+					.b-calc-checkbox-item input:checked + .b-checkbox-text:after {
+						opacity: 1;
+					}
+				.b-calc-text-block{
+					padding-top: 1.6rem;
+					padding-bottom: 4rem;
+				}
+					.b-calc-text{
+						max-width: 50rem;
+						font-size: 1.6rem;
+						line-height: 1.9rem;
+						margin-bottom: 3.2rem;
+					}
+
+
+/* Calc ––––––––––––––––––––––––––––––––––––––––––––– Calc */
+
+
+/* Calc slider ––––––––––––––––––––––––––––––––––––––––––––– Calc slider */
+
+.ui-slider-horizontal{
+	height: 4px;
+}
+.ui-widget.ui-widget-content{
+	border: unset;
+	background: #E6E6E6;
+	border-radius: 0;
+}
+.ui-widget.ui-widget-content:before{
+	content: '';
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 3rem;
+}
+.ui-widget-content .ui-state-default{
+	border-radius: 100px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background: #FFFFFF;
+	border: 1px solid #00963F;
+	box-sizing: border-box;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+}
+.ui-slider-horizontal .ui-slider-range{
+	background: #00963F;
+	border-radius: 0
+}
+
+/* Calc slider ––––––––––––––––––––––––––––––––––––––––––––– Calc slider */
+
 
 /* Advices –––––––––––––––––––––––––––––––––––––––––––– Advices */
 .b-advices{

@@ -75,6 +75,60 @@ $(document).ready(function(){
         $this.prevAll(".b-star").addClass("selected");
     });
 
+    $(".b-slider-range").each(function() {
+
+        var $this = $(this),
+            to = Number($(this).attr("data-range-to")),
+            input = $this.parent().find('input');
+            val = Number(input.val());
+
+        input.val(val.toLocaleString());
+
+        $this.slider({
+            range: 'min',
+            min: 0,
+            max: to,
+            value: val,
+            slide: function( event, ui ) {
+                input.val(ui.value.toLocaleString());
+            }
+        });
+    });
+
+    $('.b-calc-tumbler-text').on('click', function(){
+        if (!$(this).hasClass('active')) {
+            if ($('#tumbler').prop('checked') === true) {
+                $('#tumbler').prop('checked', false);
+            } else {
+                $('#tumbler').prop('checked', true);
+            }
+            $('#tumbler').change();
+        }
+    });
+
+    $('#tumbler').on('change', function(){
+        $('.b-calc-tumbler-text').each(function(){
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+            }
+        })
+    });
+
+    $('.b-calc-tab-item').on('click',function(){
+        if (!$(this).hasClass('active')) {
+            var id = $(this).attr('href');
+
+            $('.b-calc-form').addClass('hide');
+            $(id).removeClass('hide');
+
+            $('.b-calc-tab-item').removeClass('active');
+            $(this).addClass('active');
+        }
+        return false;
+    });
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
