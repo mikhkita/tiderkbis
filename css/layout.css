@@ -812,13 +812,10 @@ input.error,textarea.error{
 			display: flex;
 		}
 			.b-news{
-				display: inline-block;
 				vertical-align: top;
-				width: 32.8rem;
-				background: #FFFFFF;
+				/*width: 32.8rem;*/
 				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 				margin-right: 2.4rem;
-				position: relative;
 				padding: 1.6rem 1.6rem 10rem;
 				z-index: 1;
 				-webkit-transition: box-shadow .2s;
@@ -883,7 +880,7 @@ input.error,textarea.error{
 		display: flex;
 	}
 		.b-adv{
-			width: 32.8rem;
+			/*width: 32.8rem;*/
 			margin-right: 2.4rem;
 		    display: inline-flex;
 		    flex-wrap: wrap;
@@ -922,6 +919,37 @@ input.error,textarea.error{
 
 /* Advantages –––––––––––––––––––––––––––––––––––––––––––– Advantages */
 
+
+/* Commercial –––––––––––––––––––––––––––––––––––––––––––– Commercial */
+
+.b-commercial-block{
+	background-image: url('../i/cooperative-full.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 6.6rem 0;
+}
+	.b-commercial-block .b-block{
+		text-align: right;
+	}
+	.b-commercial-inner{
+		width: 37.1rem;
+		display: inline-block;
+		text-align: left;
+		margin-right: 8.8rem;
+	}
+		.b-commercial-inner h3{
+			margin-bottom: 2.4rem;
+		}
+		.b-commercial-text{
+			margin-bottom: 2rem;
+			font-size: 1.6rem;
+			line-height: 1.9rem;
+		}
+		.b-commercial-inner .b-btn{
+			margin-top: 1.2rem;
+		}
+	
+/* Commercial –––––––––––––––––––––––––––––––––––––––––––– Commercial */
 
 
 /* Advices –––––––––––––––––––––––––––––––––––––––––––– Advices */

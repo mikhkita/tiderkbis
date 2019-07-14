@@ -232,17 +232,17 @@ include "header.php";
 				<a href="#" class="b-small-btn">Все новости</a>
 			</div>
 			<div class="b-news-list">
-				<a href="#" class="b-news">
+				<a href="#" class="b-news b-white-tile">
 					<div class="b-news-date">16 июня 2019</div>
 					<div class="b-news-text">КПКГ «Сибирский кредит» выступил спонсором конкурса детского рисунка «Война. Победа. Память»</div>
 					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
 				</a>
-				<a href="#" class="b-news">
+				<a href="#" class="b-news b-white-tile">
 					<div class="b-news-date">8 июня 2019</div>
 					<div class="b-news-text">30 мая 2019 года состоится внеочередное общее собрание членов КПКГ «Сибирский кредит»  в форме собрания уполномоченных</div>
 					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
 				</a>
-				<a href="#" class="b-news">
+				<a href="#" class="b-news b-white-tile">
 					<div class="b-news-date">10 марта 2019</div>
 					<div class="b-news-text">В КПКГ «Сибирский кредит» прошло очередное ежегодное собрание</div>
 					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
@@ -285,6 +285,17 @@ include "header.php";
 						<a href="#" class="b-small-btn">Заявка на заём</a>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="b-commercial-block">
+		<div class="b-block">
+			<div class="b-commercial-inner">
+				<h3>Работа  в кооперативе</h3>
+				<div class="b-commercial-text">Начинать строить карьеру лучше вместе  с лидером рынка. Мы поможем раскрыть  и реализовать ваш потенциал.</div>
+				<div class="b-commercial-text">Мы обладаем всеми инструментами для личного и профессионального развития.  Коллектив - это то, чем мы гордимся  и дорожим!</div>
+				<a href="#" class="b-btn">Вакансии</a>
 			</div>
 		</div>
 	</div>
