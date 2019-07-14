@@ -957,29 +957,23 @@ input.error,textarea.error{
 /* Payments ––––––––––––––––––––––––––––––––––––––––––– Payments */
 
 
-/* White Tile ––––––––––––––––––––––––––––––––––––––––– White Tile */
-.b-white-tile{
-	display: block;
-	background: #FFFFFF;
-	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-	border-radius: 4px;
-	width: 100%;
+/* Cooperative ––––––––––––––––––––––––––––––––––––––––– Cooperative */
+.b-cooperative-tile{
 	height: 19.3rem;
-	position: relative;
 	overflow: hidden;
 	margin-bottom: 2.4rem;
 }
-.b-white-tile:last-child{
+.b-cooperative-tile:last-child{
 	margin-bottom: 0rem;
 }
-	.b-white-tile-title{
+	.b-cooperative-tile-title{
 		position: absolute;
 		left: 1.6rem;
 		bottom: 1.6rem;
 		text-transform: uppercase;
 		line-height: 140%;
 	}
-	.b-white-tile-img{
+	.b-cooperative-tile-img{
 		position: absolute;
 	}
 	.b-man-illustration{
@@ -1012,7 +1006,7 @@ input.error,textarea.error{
 		right: -11rem;	
 	}
 }
-/* White Tile ––––––––––––––––––––––––––––––––––––––––– White Tile */
+/* Cooperative ––––––––––––––––––––––––––––––––––––––––– Cooperative */
 
 
 /* Footer ––––––––––––––––––––––––––––––––––––––––––––– Footer */

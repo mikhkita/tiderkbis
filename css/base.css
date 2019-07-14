@@ -98,6 +98,13 @@ input:-moz-placeholder {
 	background-image: url('../i/sprite.svg');
 	background-size: contain;
 }
+.b-white-tile{
+	display: inline-block;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+	width: 100%;
+	position: relative;
+}
 .sticky{
 	position: -webkit-sticky;
     position: sticky;
