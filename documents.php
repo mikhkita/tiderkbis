@@ -1,7 +1,7 @@
 <? 
 
 $params = array(
-	"TITLE" => "Погашение займа",
+	"TITLE" => "Документы",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
 	),

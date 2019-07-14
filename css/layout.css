@@ -908,16 +908,24 @@ input.error,textarea.error{
 
 /* Content –––––––––––––––––––––––––––––––––––––––––––– Content */
 .b-content{
-
+	padding-bottom: 6.4rem;
 }
 	.b-content h3{
 
+	}
+	.b-left-block{
+		width: 67.8rem;
+		float: left;
+	}
+	.b-right-block{
+		float: right;
+		width: 32.8rem;
 	}
 /* Content –––––––––––––––––––––––––––––––––––––––––––– Content */
 
 /* Payments ––––––––––––––––––––––––––––––––––––––––––– Payments */
 .b-payments{
-	padding-bottom: 1rem;
+	margin-bottom: -5.4rem;
 }
 	.b-payment{
 		margin-bottom: 6.4rem;
@@ -948,6 +956,65 @@ input.error,textarea.error{
 
 			}
 /* Payments ––––––––––––––––––––––––––––––––––––––––––– Payments */
+
+
+/* White Tile ––––––––––––––––––––––––––––––––––––––––– White Tile */
+.b-white-tile{
+	display: block;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	width: 100%;
+	height: 19.3rem;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2.4rem;
+}
+.b-white-tile:last-child{
+	margin-bottom: 0rem;
+}
+	.b-white-tile-title{
+		position: absolute;
+		left: 1.6rem;
+		bottom: 1.6rem;
+		text-transform: uppercase;
+		line-height: 140%;
+	}
+	.b-white-tile-img{
+		position: absolute;
+	}
+	.b-man-illustration{
+		background-image: url('../i/illustration.svg#11');
+		width: 20.5rem;
+		height: 30.6rem;
+		top: 0rem;
+		right: -2rem;
+	}
+	.b-doc-illustration{
+		background-image: url('../i/illustration.svg#12');
+		width: 26.8rem;
+		height: 23.9rem;
+		top: 0rem;
+		right: -10rem;
+	}
+/* Desktop */
+@media (min-width: 1024px) {
+	.b-white-tile-img{
+		-webkit-transition: right 150ms ease-out;
+		   -moz-transition: right 150ms ease-out;
+		    -ms-transition: right 150ms ease-out;
+		   	 -o-transition: right 150ms ease-out;
+				transition: right 150ms ease-out;
+	}
+	.b-white-tile:hover .b-man-illustration{
+		right: -3rem;
+	}
+	.b-white-tile:hover .b-doc-illustration{
+		right: -11rem;	
+	}
+}
+/* White Tile ––––––––––––––––––––––––––––––––––––––––– White Tile */
+
 
 /* Footer ––––––––––––––––––––––––––––––––––––––––––––– Footer */
 .b-footer{

@@ -129,6 +129,10 @@ $(document).ready(function(){
         return false;
     });
 
+    if( $(".sticky").length ){
+        Stickyfill.add($('.sticky'));
+    }
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 

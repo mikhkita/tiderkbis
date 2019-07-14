@@ -98,15 +98,33 @@ input:-moz-placeholder {
 	background-image: url('../i/sprite.svg');
 	background-size: contain;
 }
-.b-text{
-
+.sticky{
+	position: -webkit-sticky;
+    position: sticky;
+    top: 2.4rem;
 }
+.green{
+	color: #00963F;
+}
+.b-text{
+	max-width: 59.2rem;
+}
+	.b-text h3{
+		
+	}
+	.b-text h4{
+		margin-bottom: 24px;
+	}
 	.b-text p{
-		max-width: 59.2rem;
+		
 	}
 	.b-text a{
 		color: #00963F;
 		text-decoration: underline;
+	}
+	.b-text img{
+		margin-top: 3.2rem;
+		margin-bottom: 4rem;
 	}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
