@@ -593,6 +593,15 @@ input.error,textarea.error{
 			.b-calc-string{
 				border-bottom: 1px solid #DADADA;
 			}
+			.b-calc-string:last-child{
+				border-bottom: unset;
+			}
+			.b-calc-string-without-border{
+				border-bottom: unset;
+			}
+				.b-calc-string-without-border .b-calc-checkboxes{
+					padding-bottom: 1.6rem;
+				}
 				.b-block-calc{
 					margin: 0 auto;
 					width: 68rem;
@@ -984,6 +993,10 @@ input.error,textarea.error{
 	.b-left-calc{
 		text-align: left;
 	}
+		.b-left-calc .b-block-calc-sliders{
+			padding-top: 0;
+			padding-bottom: 3.2rem;
+		}
 		.b-left-calc .b-block-calc{
 			margin: 0;
 		}
@@ -991,7 +1004,136 @@ input.error,textarea.error{
 			margin-left: 28px;
 		}
 
+
 /* Savings calc –––––––––––––––––––––––––––––––––––––––––––– Savings calc */
+
+
+/* Select –––––––––––––––––––––––––––––––––––––––––––– Select */
+
+	.select{
+		display: inline-block;
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+		height: 4rem;
+		border: unset;
+		padding: 1.1rem 2rem 1rem;
+		background: #fff;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+		width: 26.4rem;
+		border-radius: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	.chosen-container{
+		display: inline-block;
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+		height: 4rem;
+	}
+		.chosen-container-single .chosen-single{
+			height: auto;
+			background: #FFFFFF;
+			border: 0;
+			border-radius: 4px;
+			box-shadow: unset;
+			padding: 1.1rem 4rem 1rem 2rem;
+		}
+		.chosen-container-active.chosen-with-drop .chosen-single{
+			border: 0;
+			background: #fff;
+			box-shadow: unset;
+		}
+			.chosen-container-single .chosen-single div{
+				/*background-image: url('../i/sprite.svg#arrow-right');
+				background-size: cover;
+				background-position: 50% 50%;
+	    		background-repeat: no-repeat;
+				z-index: 2;
+				width: 6px;
+				height: 12px;
+				-webkit-transform: rotate(90deg);
+				-moz-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				transform: rotate(90deg);*/
+			}
+			.chosen-container-single .chosen-single div:before{
+				content: '';
+				position: absolute;
+				width: 0.9rem;
+				height: 2px;
+				border-radius: 1px;
+				background: #212121;
+				top: 50%;
+				right: 1.4rem;
+				-webkit-transform: rotate(-45deg) translateY(-50%);
+				-ms-transform: rotate(-45deg) translateY(-50%);
+				-o-transform: rotate(-45deg) translateY(-50%);
+				transform: rotate(-45deg) translateY(-50%);
+				-webkit-transition: transform .2s, right .2s;
+				-o-transition: transform .2s, right .2s;
+				transition: transform .2s, right .2s;
+			}
+			.chosen-container-single .chosen-single div:after{
+				content: '';
+				position: absolute;
+				width: 0.9rem;
+				height: 2px;
+				border-radius: 1px;
+				background: #212121;
+				top: 50%;
+				right: 2.1rem;
+				-webkit-transform: rotate(45deg) translateY(-50%);
+				-ms-transform: rotate(45deg) translateY(-50%);
+				-o-transform: rotate(45deg) translateY(-50%);
+				transform: rotate(45deg) translateY(-50%);
+				-webkit-transition: transform .2s, right .2s;
+				-o-transition: transform .2s, right .2s;
+				transition: transform .2s, right .2s;
+			}
+			.chosen-container-active.chosen-with-drop div:before{
+				-webkit-transform: rotate(45deg) translateY(-50%);
+				-ms-transform: rotate(45deg) translateY(-50%);
+				-o-transform: rotate(45deg) translateY(-50%);
+				transform: rotate(45deg) translateY(-50%);
+				right: 1.6rem;
+			}
+			.chosen-container-active.chosen-with-drop div:after{
+				right: 2.0rem;
+				-webkit-transform: rotate(-45deg) translateY(-50%);
+				-ms-transform: rotate(-45deg) translateY(-50%);
+				-o-transform: rotate(-45deg) translateY(-50%);
+				transform: rotate(-45deg) translateY(-50%);
+			}
+				.chosen-container-single .chosen-single span{
+					font-size: 1.6rem;
+					line-height: 1.9rem;
+					margin-right: 0;
+				}
+				.chosen-container .chosen-drop{
+					border: unset;
+					border-top: 1px solid transparent;
+					margin-top: 0;
+				}
+				.chosen-container.chosen-with-drop .chosen-drop{
+					border-top: 1px solid #DADADA;
+				}
+					.chosen-container .chosen-results{
+						padding: 0;
+						margin: 0;
+					}
+						.chosen-container .chosen-results li{
+							padding: 1rem 2rem;
+							font-size: 1.6rem;
+							line-height: 1.9rem;
+						}
+						.chosen-container .chosen-results li.highlighted{
+							background: #F2F2F2;
+							color: #212121;
+						}
+
+/* Select –––––––––––––––––––––––––––––––––––––––––––– Select */
 
 
 /* Advices –––––––––––––––––––––––––––––––––––––––––––– Advices */

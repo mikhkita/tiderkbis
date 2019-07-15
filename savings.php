@@ -40,33 +40,31 @@ include "header.php";
 			</div>
 			<div class="b-calc-string">
 				<div class="b-block">
-					<div class="b-block-calc b-tumbler-block">
-						<div class="b-tumbler-text b-tumbler-text-left active">С равными<br>платежами</div>
-						<label class="b-tumbler-item">
-							<input type="checkbox" id="tumbler">
-							<div class="b-tumbler"></div>
-						</label>
-						<div class="b-tumbler-text b-tumbler-text-right">С начислением процентов<br>на остаток долга</div>
-					</div>
-				</div>
-			</div>
-			<div class="b-calc-string">
-				<div class="b-block">
-					<div class="b-block-calc b-calc-checkboxes">
+					<div class="b-calc-checkboxes">
 						<label class="b-calc-checkbox-item">
-							<input type="radio" name="replenishment">
+							<input type="checkbox" name="replenishment">
 							<div class="b-checkbox-text">Возможность пополнения</div>
 						</label>
 						<label class="b-calc-checkbox-item">
-							<input type="radio" name="refund">
+							<input type="checkbox" name="refund">
 							<div class="b-checkbox-text">Досрочный возврат денег</div>
 						</label>
-						<select name="savings-percent">
+						<select class="select" name="savings-percent">
 							<option value="1">Начисление процентов</option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
 							<option value="4">Начисление процентов</option>
 						</select>
+					</div>
+				</div>
+			</div>
+			<div class="b-calc-string b-calc-string-without-border">
+				<div class="b-block">
+					<div class="b-block-calc b-calc-checkboxes">
+						<label class="b-calc-checkbox-item">
+							<input type="checkbox" name="retired">
+							<div class="b-checkbox-text">Я пенсионер</div>
+						</label>
 					</div>
 				</div>
 			</div>

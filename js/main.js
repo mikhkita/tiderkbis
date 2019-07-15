@@ -79,8 +79,13 @@ $(document).ready(function(){
 
         var $this = $(this),
             to = Number($(this).attr("data-range-to")),
-            input = $this.parent().find('input');
-            val = Number(input.val());
+            input = $this.parent().find('input'),
+            val = Number(input.val()),
+            step = 1;
+
+    if ($this.attr('data-input-id') == 'sum') {
+            step = 100;
+        }   
 
         input.val(val.toLocaleString());
 
@@ -89,6 +94,7 @@ $(document).ready(function(){
             min: 0,
             max: to,
             value: val,
+            step: step,
             slide: function( event, ui ) {
                 input.val(ui.value.toLocaleString());
             }
@@ -115,6 +121,11 @@ $(document).ready(function(){
             }
         })
     });
+
+    $(".select").chosen({
+            width: "264px",
+            disable_search_threshold: 10000
+        });
 
     $('.b-calc-tab-item').on('click',function(){
         if (!$(this).hasClass('active')) {
