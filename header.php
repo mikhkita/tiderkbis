@@ -42,7 +42,7 @@
 		<div class="b-white-header">
 			<div class="b-block clearfix">
 				<ul class="b-main-menu justify">
-					<li><a href="#">Займы</a></li>
+					<li><a href="loan.php">Займы</a></li>
 					<li><a href="savings.php">Сбережения</a></li>
 					<li><a href="payment.php">Погашение займа</a></li>
 					<li><a href="cooperative.php">О кооперативе</a></li>

@@ -93,6 +93,7 @@ include "header.php";
 			</div>
 		</div>
 	</div>
+
 	<div class="b-calc">
 		<div class="b-block">
 			<h3>Калькулятор услуг</h3>
@@ -110,7 +111,7 @@ include "header.php";
 									<div class="b-calc-slider">
 										<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 										<div class="b-calc-input-cont">
-											<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15000">
+											<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000">
 										</div>
 									</div>
 								</div>
@@ -170,7 +171,7 @@ include "header.php";
 									<div class="b-calc-slider">
 										<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 										<div class="b-calc-input-cont">
-											<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15000">
+											<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000">
 										</div>
 									</div>
 								</div>
@@ -224,6 +225,15 @@ include "header.php";
 			</div>
 		</div>
 	</div>
+
+	<!-- <div class="b-calc-results">
+		<div class="b-block">
+			<h3>Вам подходит:</h3>
+			<div class="b-calc-result-item">
+				«Доверительный»
+			</div>
+		</div>
+	</div> -->
 
 	<div class="b b-news-block">
 		<div class="b-block">

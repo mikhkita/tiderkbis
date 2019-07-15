@@ -78,12 +78,12 @@ $(document).ready(function(){
     $(".b-slider-range").each(function() {
 
         var $this = $(this),
-            to = Number($(this).attr("data-range-to")),
+            to = Number($(this).attr("data-range-to").replace(/\s/g, '')),
             input = $this.parent().find('input'),
-            val = Number(input.val()),
+            val = Number(input.val().replace(/\s/g, '')),
             step = 1;
 
-    if ($this.attr('data-input-id') == 'sum') {
+        if ($this.attr('data-input-id') == 'sum') {
             step = 100;
         }   
 
@@ -123,9 +123,9 @@ $(document).ready(function(){
     });
 
     $(".select").chosen({
-            width: "264px",
-            disable_search_threshold: 10000
-        });
+        width: "264px",
+        disable_search_threshold: 10000
+    });
 
     $('.b-calc-tab-item').on('click',function(){
         if (!$(this).hasClass('active')) {

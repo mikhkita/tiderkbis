@@ -740,7 +740,7 @@ input.error,textarea.error{
 					.b-checkbox-text {
 						position: relative;
 						padding-left: 3rem;
-						margin-right: 1.2rem;
+						margin-right: 2.8rem;
 						cursor: pointer;
 						display: inline-block;
 					}
@@ -863,6 +863,7 @@ input.error,textarea.error{
 			}
 			.b-news:hover{
 				box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.15);
+				z-index: 2;
 			}
 				.b-news-date{
 					color: rgba(0, 0, 0, 0.4);
@@ -987,6 +988,14 @@ input.error,textarea.error{
 	
 /* Commercial –––––––––––––––––––––––––––––––––––––––––––– Commercial */
 
+/* Savings –––––––––––––––––––––––––––––––––––––––––––– Savings */
+
+.b-savlings-docs{
+	padding-top: 8rem;
+	padding-bottom: 7.6rem;
+}
+
+/* Savings –––––––––––––––––––––––––––––––––––––––––––– Savings */
 
 /* Savings calc –––––––––––––––––––––––––––––––––––––––––––– Savings calc */
 
@@ -1006,6 +1015,54 @@ input.error,textarea.error{
 
 
 /* Savings calc –––––––––––––––––––––––––––––––––––––––––––– Savings calc */
+
+/* Loan calc –––––––––––––––––––––––––––––––––––––––––––– Loan calc */
+
+	.b-left-calc .b-calc-tab-list{
+		margin-bottom: 6.4rem;
+		position: relative;
+		overflow: hidden;
+		padding-top: 5px;
+	}
+	.b-left-calc .b-calc-tab-list:after{
+	    content: '';
+	    position: absolute;
+	    width: 100%;
+	    height: 10px;
+	    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	    left: 0;
+	    bottom: -10px;
+	}
+		.b-left-calc .b-calc-tab-item{
+			padding: 1.6rem 2.4rem;
+			box-shadow: unset;
+			display: inline-block;
+			width: auto;
+			position: relative;
+			z-index: 5;
+		}
+		.b-left-calc .b-calc-tab-item.active:before{
+		    position: absolute;
+		    content: '';
+		    width: calc(100% + 10px);
+		    height: 10px;
+		    background: #fff;
+		    left: -5px;
+		    bottom: -5px;
+		    z-index: 2;
+		}
+		.b-left-calc .b-calc-tab-item.active:after{
+			position: absolute;
+			content: '';
+			width: calc(100% + 10px);	
+			height: 100%;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+			left: -5px;
+			top: 0;
+		}
+
+
+/* Loan calc –––––––––––––––––––––––––––––––––––––––––––– Loan calc */
 
 
 /* Select –––––––––––––––––––––––––––––––––––––––––––– Select */
