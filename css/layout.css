@@ -786,6 +786,93 @@ input.error,textarea.error{
 /* Calc ––––––––––––––––––––––––––––––––––––––––––––– Calc */
 
 
+/* Calc result ––––––––––––––––––––––––––––––––––––––––––––– Calc result*/
+
+.b-calc-results{
+	padding-bottom: 6.4rem;
+	background-color: #F2F2F2;
+}
+	.b-calc-results h3{
+		margin-bottom: 3.2rem;
+	}
+	.b-calc-result-list{
+		/*display: flex;*/
+		/*justify-content: space-between;*/
+	}
+		.b-calc-result-item{
+			padding: 2.4rem;
+			background: #FFFFFF;
+			width: calc(100%/2 - 1.2rem);
+			display: inline-block;
+			margin-right: 2rem;
+			margin-bottom: 2.4rem;
+		}
+		.b-calc-result-item:nth-child(2n){
+			margin-right: 0;
+		}
+			.b-calc-result-item-top{
+
+			}
+				.b-calc-res-title{
+					font-size: 2.4rem;
+					line-height: 2.4rem;
+					margin-bottom: 4px;
+				}
+				.b-calc-res-subtitle{
+					margin-bottom: 1.9rem;
+					min-height: 1.9rem;
+				}
+				.b-calc-res-info{
+					color: #8F8F8F;
+					font-size: 1.6rem;
+					line-height: 1.9rem;
+					width: 34rem;
+					margin-bottom: 2.4rem;
+				}
+			.b-calc-result-item-bottom{
+
+			}
+				.b-calc-result-sum-string{
+					margin-bottom: 21px;
+				}
+					.b-calc-result-sum{
+						display: inline-block;
+						width: calc(100%/2 - 10px);
+						font-size: 1.6rem;
+						line-height: 1.9rem;
+					}
+					.b-calc-result-sum-info{
+						color: #8F8F8F;
+						margin-bottom: 8px;
+						display: block;
+					}
+					.b-res-big{
+						font-family: 'Rubik-Medium';
+						font-size: 3.2rem;
+						line-height: 3.8rem;
+					}
+						.b-res-big .rub-icon{
+							width: 2.3rem;
+							height: 2.3rem;
+						}
+					.b-res-middle{
+						font-family: 'Rubik-Medium';
+						font-size: 2.4rem;
+						line-height: 2.8rem;
+					}
+				.b-res-btn-container{
+
+				}
+					.b-res-btn-container .b-btn{
+						margin-top: 3px;
+						margin-right: 1.2rem;
+						min-width: auto;
+					    padding: 1.6rem 3rem;
+					}
+
+/* Calc result ––––––––––––––––––––––––––––––––––––––––––––– Calc result*/
+
+
 /* Calc slider ––––––––––––––––––––––––––––––––––––––––––––– Calc slider */
 
 .ui-slider-horizontal{

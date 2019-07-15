@@ -226,14 +226,100 @@ include "header.php";
 		</div>
 	</div>
 
-	<!-- <div class="b-calc-results">
+	<div class="b-calc-results">
 		<div class="b-block">
 			<h3>Вам подходит:</h3>
-			<div class="b-calc-result-item">
-				«Доверительный»
+			<div class="b-calc-result-list">
+				<div class="b-calc-result-item">
+					<div class="b-calc-result-item-top">
+						<div class="b-calc-res-title">«Доверительный»</div>
+						<div class="b-calc-res-subtitle"></div>
+						<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+					</div>
+					<div class="b-calc-result-item-bottom">
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Ежемесячный платёж</span>
+								<span class="b-res-big">2 900 <span class="rub-icon"></span></span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата</span>
+								от <span class="b-res-middle">16%</span> годовых
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Процентная ставка</span>
+								<span class="b-res-middle">41,5%</span> годовых
+							</div>
+						</div>
+						<div class="b-res-btn-container">
+							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="b-calc-result-item">
+					<div class="b-calc-result-item-top">
+						<div class="b-calc-res-title">«Потребительский»</div>
+						<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
+						<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+					</div>
+					<div class="b-calc-result-item-bottom">
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Срок займа</span>
+								<span class="b-res-big">6</span> месяцев
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Процентная ставка</span>
+								от <span class="b-res-middle">41,5%</span> годовых
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+								до <span class="b-res-middle">26,5 %</span>
+							</div>
+						</div>
+					</div>
+					<div class="b-res-btn-container">
+						<a href="#" class="b-btn">Оформить заявку</a>
+						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+					</div>
+				</div>
+				<div class="b-calc-result-item">
+					<div class="b-calc-result-item-top">
+						<div class="b-calc-res-title">«Доверительный»</div>
+						<div class="b-calc-res-subtitle"></div>
+						<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+					</div>
+					<div class="b-calc-result-item-bottom">
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Ежемесячный платёж</span>
+								<span class="b-res-big">2 900 <span class="rub-icon"></span></span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата</span>
+								от <span class="b-res-middle">16%</span> годовых
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Процентная ставка</span>
+								<span class="b-res-middle">41,5%</span> годовых
+							</div>
+						</div>
+						<div class="b-res-btn-container">
+							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 	<div class="b b-news-block">
 		<div class="b-block">
