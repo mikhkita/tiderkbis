@@ -282,10 +282,10 @@ include "header.php";
 								до <span class="b-res-middle">26,5 %</span>
 							</div>
 						</div>
-					</div>
-					<div class="b-res-btn-container">
-						<a href="#" class="b-btn">Оформить заявку</a>
-						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						<div class="b-res-btn-container">
+							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						</div>
 					</div>
 				</div>
 				<div class="b-calc-result-item">
