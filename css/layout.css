@@ -852,6 +852,7 @@ input.error,textarea.error{
 						line-height: 3.8rem;
 					}
 						.b-res-big .rub-icon{
+						    background-image: url(../i/sprite.svg#rub);
 							width: 2.3rem;
 							height: 2.3rem;
 						}
