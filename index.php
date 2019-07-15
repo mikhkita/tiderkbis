@@ -385,6 +385,8 @@ include "header.php";
 		</div>
 	</div>
 
+<? include "advices.php"; ?>
+
 	<div class="b-commercial-block">
 		<div class="b-block">
 			<div class="b-commercial-inner">
@@ -395,13 +397,5 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-<? include "advices.php"; ?>
 
 <? include "footer.php"; ?>
