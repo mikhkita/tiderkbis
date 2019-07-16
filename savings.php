@@ -12,8 +12,8 @@ include "header.php";
 ?>
 
 <div class="b-left-calc">
-	<div class="b-calc-form">
-		<form action="#" method="#">
+	<div class="b-calc-form-block">
+		<form class="b-calc-form" action="#" method="#">
 			<div class="b-calc-string">
 				<div class="b-block">
 					<div class="b-block-calc b-block-calc-sliders">
