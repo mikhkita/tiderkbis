@@ -54,6 +54,20 @@ $(document).ready(function(){
         touchThreshold: 100
     });
 
+    $('.slider-results').slick({
+        dots: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        cssEase: 'ease', 
+        speed: 500,
+        arrows: true,
+        adaptiveHeight: true,
+        prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
+        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
+        touchThreshold: 100
+    });
+
     $(".b-star").hover(function() {
         $(this).addClass("highlight");
         $(this).prevAll(".b-star").addClass("highlight");
@@ -131,7 +145,7 @@ $(document).ready(function(){
         if (!$(this).hasClass('active')) {
             var id = $(this).attr('href');
 
-            $('.b-calc-form').addClass('hide');
+            $('.b-calc-form-block').addClass('hide');
             $(id).removeClass('hide');
 
             $('.b-calc-tab-item').removeClass('active');

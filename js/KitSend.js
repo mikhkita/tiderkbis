@@ -50,35 +50,80 @@ $(document).ready(function(){
 		return rePhone.test(value);
 	});
 
-	$(".ajax").parents("form").each(function(){
+	$(".ajax, .not-ajax").parents("form").each(function(){
 		$(this).validate({
+			onkeyup: (!$(this).hasClass("b-data-order-form"))?false:true,
 			rules: {
 				email: 'email',
-				phone: 'customPhone'
+				phone: 'customPhone',
+				ORDER_PROP_3: 'email',
+				ORDER_PROP_4: 'customPhone',
+				"store-quality":{
+                    required: true
+                },
+                "goods-quality":{
+                    required: true
+                },
+                "manager-quality":{
+                    required: true
+                },
+                "pack-quality":{
+                    required: true
+                },
+                "courier-quality":{
+                    required: true
+                }
+			},
+			errorPlacement: function(error, element) {
+                error.appendTo(element.parents(".b-review-input").addClass("error"));
+            },
+            success: function(label) {
+			    label.parents(".b-review-input").removeClass("error");
+			},
+			errorElement : "span",
+			highlight: function(element, errorClass) {
+			    $(element).addClass("error").parents(".b-input").addClass("error");
+			},
+			unhighlight: function(element) {
+			    $(element).removeClass("error").parents(".b-input").removeClass("error");
 			}
 		});
-		if( $(this).find("input[name=phone]").length ){
-			$(this).find("input[name=phone]").each(function(){
-				var phoneMask = new IMask($(this)[0], {
-		        	mask: '+{7} (000) 000-00-00',
-		        	prepare: function(value, masked){
-				    	if( value == 8 && masked._value.length == 0 ){
-				    		return "+7 (";
-				    	}
+		if( $(this).find("input[name=phone], input[name=addressee-phone], input[name=ORDER_PROP_4], input[name=PERSONAL_PHONE]").length ){
+			$(this).find("input[name=phone], input[name=addressee-phone], input[name=ORDER_PROP_4], input[name=PERSONAL_PHONE]").each(function(){
+				if (typeof IMask == 'function') {
+					var phoneMask = new IMask($(this)[0], {
+			        	mask: '+{7} (000) 000-00-00',
+			        	prepare: function(value, masked){
+					    	if( value == 8 && masked._value.length == 0 ){
+					    		return "+7 (";
+					    	}
 
-				    	if( value == 8 && masked._value == "+7 (" ){
-				    		return "";
-				    	}
+					    	if( value == 8 && masked._value == "+7 (" ){
+					    		return "";
+					    	}
 
-				    	tmp = value.match(/[\d\+]*/g);
-				    	if( tmp && tmp.length ){
-				    		value = tmp.join("");
-				    	}else{
-				    		value = "";
-				    	}
-				    	return value;
-				    }
-		        });
+					    	tmp = value.match(/[\d\+]*/g);
+					    	if( tmp && tmp.length ){
+					    		value = tmp.join("");
+					    	}else{
+					    		value = "";
+					    	}
+					    	return value;
+					    }
+			        });
+				} else {
+					$(this).mask("+7 (999) 999-99-99");
+				}
+			});
+		}
+
+		if( $(this).hasClass("b-data-order-form") ){
+			$(this).find("input[type='text'], input[type='tel'], input[type='email'], textarea, select").blur(function(){
+			   // $(this).valid();
+			});
+
+			$(this).find("input[type='text'], input[type='tel'], input[type='email'], textarea, select").keyup(function(){
+			   // $(this).valid();
 			});
 		}
 	});
@@ -171,10 +216,19 @@ $(document).ready(function(){
 			yaCounter12345678.reachGoal($(this).attr("data-goal"));
 	});
 
-	$(".ajax").parents("form").submit(function(){
-  		if( $(this).find("input.error,select.error,textarea.error").length == 0 ){
+	$(".ajax, .not-ajax").parents("form").submit(function(){
+		var $form = $(this);
+
+  		if( $(this).find("input.error,select.error,textarea.error,.b-postamat-error").length == 0 ){
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
+
+  			if( $(this).find(".not-ajax").length ){
+  				if( $("select#date").length ){
+  					$("select#date").prop("disabled", false);
+  				}
+  				return true;
+  			}
 
   			$this.find(".ajax").attr("onclick", "return false;");
 
@@ -186,32 +240,66 @@ $(document).ready(function(){
 				yaCounter12345678.reachGoal($this.attr("data-goal"));
 			}
 
+			if ($form.hasClass('b-calc-form')) {
+
+				var res = $form.parents('.b-calc').siblings('.b-calc-results'),
+					off = 50,
+					duration = 800;
+
+				res.addClass('preloader');
+
+				$("body, html").animate({
+					scrollTop : res.offset().top-off
+				},duration);
+
+			}
+
   			$.ajax({
 			  	type: $(this).attr("method"),
 			  	url: $(this).attr("action"),
 			  	data:  $this.serialize(),
 				success: function(msg){
-					var $form;
-					if( msg == "1" ){
-						$link = $this.find(".b-thanks-link");
+
+					if( isValidJSON(msg) && msg != "1" && msg != "0"){
+						var json = JSON.parse(msg);
+
+						if( json.RESULT == "success" ){
+
+				        }else{
+				        	$form.find(".b-popup-error").html(json.error);
+				        }
+
 					}else{
-						$link = $(".b-error-link");
-					}
+						if( msg == "1" ){
+							$link = $this.find(".b-thanks-link");
+						}else{
+							$link = $(".b-error-link");
+						}
 
-					if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
-						customHandlers[$this.attr("data-afterAjax")]($this);
-					}
+						if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
+							customHandlers[$this.attr("data-afterAjax")]($this);
+						}
 
-					$.fancybox.close();
-					$link.click();
+						$.fancybox.close();
+						$link.click();
+					}
 				},
 				error: function(){
 					$.fancybox.close();
 					$(".b-error-link").click();
 				},
 				complete: function(){
+
+					setTimeout(function(){
+						if ($form.hasClass('b-calc-form')) {
+							$form.parents('.b-calc').siblings('.b-calc-results').removeClass('preloader');
+						}
+					},1000);
+
 					$this.find(".ajax").removeAttr("onclick");
-					$this.find("input[type=text],textarea").val("");
+					if( !$this.is("#b-form-auth") ){
+						$this.find("input[type=text],textarea").val("");
+					}
 				}
 			});
   		}else{
@@ -224,4 +312,14 @@ $(document).ready(function(){
 		$(this).parents("form").submit();
 		return false;
 	});
+
+	function isValidJSON(src) {
+        var filtered = src;
+        filtered = filtered.replace(/\\["\\\/bfnrtu]/g, '@');
+        filtered = filtered.replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']');
+        filtered = filtered.replace(/(?:^|:|,)(?:\s*\[)+/g, '');
+
+        return (/^[\],:{}\s]*$/.test(filtered));
+    }
+
 });

@@ -18,7 +18,7 @@ include "header.php";
 			<a href="#b-calc-form-2" class="b-calc-tab-item">Материнский капитал</a>
 		</div>
 	</div>
-	<div class="b-calc-form" id="b-calc-form-1">
+	<div class="b-calc-form-block" id="b-calc-form-1">
 		<form action="#" method="#">
 			<div class="b-calc-string">
 				<div class="b-block">
@@ -85,7 +85,7 @@ include "header.php";
 			</div>
 		</form>
 	</div>
-	<div class="b-calc-form hide" id="b-calc-form-2">
+	<div class="b-calc-form-block hide" id="b-calc-form-2">
 		<form action="#" method="#">
 			<div class="b-calc-string">
 				<div class="b-block">
