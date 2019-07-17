@@ -40,6 +40,22 @@ function fancyOpen(el){
     return false;
 }
 
+function slickResults(){
+    $('.slider-results').slick({
+        dots: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        cssEase: 'ease', 
+        speed: 500,
+        arrows: true,
+        adaptiveHeight: true,
+        prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
+        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
+        touchThreshold: 100
+    });
+}
+
 var customHandlers = [];
 
 $(document).ready(function(){	
@@ -49,6 +65,8 @@ $(document).ready(function(){
 	$.validator.addMethod('customPhone', function (value) {
 		return rePhone.test(value);
 	});
+
+	slickResults();
 
 	$(".ajax, .not-ajax").parents("form").each(function(){
 		$(this).validate({
@@ -242,7 +260,7 @@ $(document).ready(function(){
 
 			if ($form.hasClass('b-calc-form')) {
 
-				var res = $form.parents('.b-calc').siblings('.b-calc-results'),
+				var res = $('.b-calc-results'),
 					off = 50,
 					duration = 800;
 
@@ -264,6 +282,59 @@ $(document).ready(function(){
 						var json = JSON.parse(msg);
 
 						if( json.RESULT == "success" ){
+
+							if ($form.attr('data-template')) {
+								var id = $form.attr('data-template');
+
+								var source = $('#'+id).html();
+							    var loanTemplate = Handlebars.compile(source);
+							    var html = '';
+
+							    $('.b-calc-results .b-calc-result-list').html(html);
+
+							    if ($('.b-calc-result-list').hasClass('slider-results')) {
+							    	$('.b-calc-result-list').slick('unslick');
+							    	$('.b-calc-result-list').addClass('isSlider');
+							    	$('.b-calc-result-list').removeClass('slider-results');
+							    }
+
+							    for (var i = 0; i < json.ITEMS.length; i++) {
+							    	var $this = json.ITEMS[i];
+
+							    	if(isObject($this.MONTHLY_PAYMENT)){
+							    		if ($this.MONTHLY_PAYMENT.MIN)
+							    			$this.MONTHLY_PAYMENT.MIN = ($this.MONTHLY_PAYMENT.MIN*1).toLocaleString();
+							    		if($this.MONTHLY_PAYMENT.MAX)
+							    			$this.MONTHLY_PAYMENT.MAX = ($this.MONTHLY_PAYMENT.MAX*1).toLocaleString();
+							    	} else {
+							    		$this.MONTHLY_PAYMENT = ($this.MONTHLY_PAYMENT*1).toLocaleString();
+							    	}
+
+
+						    	  	var context = { 
+								    	id: $this.ID,
+										title: $this.TITLE,
+										subtitle: $this.SUBTITLE,
+										itemInfo: $this.ITEM_INFO,
+										monthlyPayment: $this.MONTHLY_PAYMENT,
+										overpayment: $this.OVERPAYMENT,
+										percentRate: $this.PERCENT_RATE,
+										detailUrl: $this.DETAIL_URL,
+										advatagesList: $this.ADVATAGES_LIST,
+										income: ($this.INCOME*1).toLocaleString(),
+										endSum: ($this.END_SUM*1).toLocaleString()
+								    };
+
+								    html += loanTemplate(context);
+							    }
+
+							    $('.b-calc-results .b-calc-result-list').html(html);
+
+							  	if ($('.b-calc-result-list').hasClass('isSlider') && json.ITEMS.length > 2) {
+							  		$('.b-calc-result-list').addClass('slider-results');
+							    	slickResults();
+							    }
+							}
 
 				        }else{
 				        	$form.find(".b-popup-error").html(json.error);
@@ -292,7 +363,7 @@ $(document).ready(function(){
 
 					setTimeout(function(){
 						if ($form.hasClass('b-calc-form')) {
-							$form.parents('.b-calc').siblings('.b-calc-results').removeClass('preloader');
+							$('.b-calc-results').removeClass('preloader');
 						}
 					},1000);
 
@@ -321,5 +392,10 @@ $(document).ready(function(){
 
         return (/^[\],:{}\s]*$/.test(filtered));
     }
+
+    function isObject(val) {
+	    if (val === null) { return false;}
+	    return ( (typeof val === 'function') || (typeof val === 'object') );
+	}
 
 });

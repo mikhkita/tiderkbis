@@ -104,6 +104,7 @@
 	<script type="text/javascript" src="js/stickyfill.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/mask.js"></script>
+	<script type="text/javascript" src="js/handlebars-v4.1.2.js"></script>
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

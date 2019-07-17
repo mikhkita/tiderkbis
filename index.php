@@ -101,11 +101,11 @@ include "header.php";
 			<h3>Калькулятор услуг</h3>
 			<div class="b-calc-with-tabs b-calc-with-shadow">
 				<div class="b-calc-tab-list">
-					<a href="#b-calc-form-1" class="b-calc-tab-item active">Займы</a>
-					<a href="#b-calc-form-2" class="b-calc-tab-item">Сбережения</a>
+					<a href="#loan-form" class="b-calc-tab-item active">Займы</a>
+					<a href="#savings-form" class="b-calc-tab-item">Сбережения</a>
 				</div>
-				<div class="b-calc-form-block" id="b-calc-form-1">
-					<form class="b-calc-form" action="json.php" method="POST">
+				<div class="b-calc-form-block" id="loan-form">
+					<form class="b-calc-form" action="json.php" method="POST" data-template="loan-template">
 						<div class="b-calc-string">
 							<div class="b-block-calc b-block-calc-sliders">
 								<div class="b-calc-slider-block">
@@ -164,8 +164,8 @@ include "header.php";
 						</div>
 					</form>
 				</div>
-				<div class="b-calc-form-block hide" id="b-calc-form-2">
-					<form class="b-calc-form" action="json.php" method="POST">
+				<div class="b-calc-form-block hide" id="savings-form">
+					<form class="b-calc-form" action="json.php" method="POST" data-template="savings-template">
 						<div class="b-calc-string">
 							<div class="b-block-calc b-block-calc-sliders">
 								<div class="b-calc-slider-block">
@@ -234,25 +234,32 @@ include "header.php";
 			<div class="b-calc-result-list slider-results">
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Доверительный»</div>
-						<div class="b-calc-res-subtitle"></div>
-						<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+						<div class="b-calc-res-title">«Накопление»</div>
+						<ul>
+							<li class="active">Возможности пополнения</li>
+							<li>Капитализация или выплата процентов</li>
+							<li>Досрочный возврат денег</li>
+						</ul>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Ежемесячный платёж</span>
-								<span class="b-res-big">2 900 <span class="rub-icon"></span></span>
+								<span class="b-calc-result-sum-info">Доход</span>
+								Мин. <span class="b-res-big">25 000 <span class="rub-icon"></span></span>
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+								Макс. <span class="b-res-big">32 900 <span class="rub-icon"></span></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата</span>
-								от <span class="b-res-middle">16%</span> годовых
+								<span class="b-calc-result-sum-info">Сумма в конце срока</span>
+								<span class="b-res-middle">40 000 <span class="rub-icon"></span></span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-middle">41,5%</span> годовых
+								<span class="b-res-middle">7%</span> годовых
 							</div>
 						</div>
 						<div class="b-res-btn-container">
@@ -409,6 +416,151 @@ include "header.php";
 			</div>
 		</div>
 	</div>
+
+	<script id="loan-template" type="text/x-handlebars-template">
+		<div class="b-calc-result-item" id={{id}}>
+			<div class="b-calc-result-item-top">
+				<div class="b-calc-res-title">«{{title}}»</div>
+				<div class="b-calc-res-subtitle">{{subtitle}}</div>
+				<div class="b-calc-res-info">{{itemInfo}}</div>
+			</div>
+			<div class="b-calc-result-item-bottom">
+				<div class="b-calc-result-sum-string">
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">Ежемесячный платёж</span>
+						{{#if monthlyPayment.MIN}}
+						Мин. <span class="b-res-big">{{monthlyPayment.MIN}} <span class="rub-icon"></span></span>
+						{{else}}
+						<span class="b-res-big">{{monthlyPayment}} <span class="rub-icon"></span></span>
+						{{/if}}
+					</div>
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">&nbsp;</span>
+						{{#if monthlyPayment.MAX}}
+						Макс. <span class="b-res-big">{{monthlyPayment.MAX}} <span class="rub-icon"></span></span>
+						{{/if}}
+					</div>
+				</div>
+				<div class="b-calc-result-sum-string">
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">Переплата</span>
+						{{#if overpayment.MIN}}
+							от <span class="b-res-middle">{{overpayment.MIN}}%</span>
+							{{#if overpayment.MAX}}
+							 до <span class="b-res-middle">{{overpayment.MAX}}%</span> годовых
+							{{else}}
+							 годовых
+							{{/if}}
+						{{else}}
+							{{#if overpayment.MAX}}
+							до <span class="b-res-middle">{{overpayment.MAX}}%</span> годовых
+							{{else}}
+							<span class="b-res-middle">{{overpayment}}%</span> годовых
+							{{/if}}
+						{{/if}}
+					</div>
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">Процентная ставка</span>
+						{{#if percentRate.MIN}}
+							от <span class="b-res-middle">{{percentRate.MIN}}%</span>
+							{{#if percentRate.MAX}}
+							 до <span class="b-res-middle">{{percentRate.MAX}}%</span> годовых
+							{{else}}
+							 годовых
+							{{/if}}
+						{{else}}
+							{{#if percentRate.MAX}}
+							до <span class="b-res-middle">{{percentRate.MAX}}%</span> годовых
+							{{else}}
+							<span class="b-res-middle">{{percentRate}}%</span> годовых
+							{{/if}}
+						{{/if}}
+					</div>
+				</div>
+				<div class="b-res-btn-container">
+					<a href="#" class="b-btn">Оформить заявку</a>
+					{{#if detailUrl}}
+					<a href="{{detailUrl}}" class="b-btn b-white-btn">Подробнее</a>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script id="savings-template" type="text/x-handlebars-template">
+		<div class="b-calc-result-item" id={{id}}>
+			<div class="b-calc-result-item-top">
+				<div class="b-calc-res-title">«{{title}}»</div>
+				<ul>
+					{{#each advatagesList}}
+						{{#if this.ACTIVE}}
+						<li class="active">{{this.TEXT}}</li>
+						{{else}}
+					    <li>{{this.TEXT}}</li>
+					    {{/if}}
+					{{/each}}
+				</ul>
+			</div>
+			<div class="b-calc-result-item-bottom">
+				<div class="b-calc-result-sum-string">
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">Доход</span>
+						{{#if income.MIN}}
+						Мин. <span class="b-res-big">{{income.MIN}} <span class="rub-icon"></span></span>
+						{{else}}
+						<span class="b-res-big">{{income}} <span class="rub-icon"></span></span>
+						{{/if}}
+					</div>
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">&nbsp;</span>
+						{{#if income.MAX}}
+						Макс. <span class="b-res-big">{{income.MAX}} <span class="rub-icon"></span></span>
+						{{/if}}
+					</div>
+				</div>
+				<div class="b-calc-result-sum-string">
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">Сумма в конце срока</span>
+						{{#if endSum.MIN}}
+							от <span class="b-res-middle">{{endSum.MIN}} <span class="rub-icon"></span></span>
+							{{#if endSum.MAX}}
+							 до <span class="b-res-middle">{{endSum.MAX}} <span class="rub-icon"></span></span> 
+							{{/if}}
+						{{else}}
+							{{#if endSum.MAX}}
+							до <span class="b-res-middle">{{endSum.MAX}} <span class="rub-icon"></span></span>
+							{{else}}
+							<span class="b-res-middle">{{endSum}} <span class="rub-icon"></span></span>
+							{{/if}}
+						{{/if}}
+					</div>
+					<div class="b-calc-result-sum">
+						<span class="b-calc-result-sum-info">Процентная ставка</span>
+						{{#if percentRate.MIN}}
+							от <span class="b-res-middle">{{percentRate.MIN}}%</span>
+							{{#if percentRate.MAX}}
+							 до <span class="b-res-middle">{{percentRate.MAX}}%</span> годовых
+							{{else}}
+							 годовых
+							{{/if}}
+						{{else}}
+							{{#if percentRate.MAX}}
+							до <span class="b-res-middle">{{percentRate.MAX}}%</span> годовых
+							{{else}}
+							<span class="b-res-middle">{{percentRate}}%</span> годовых
+							{{/if}}
+						{{/if}}
+					</div>
+				</div>
+				<div class="b-res-btn-container">
+					<a href="#" class="b-btn">Оформить заявку</a>
+					{{#if detailUrl}}
+					<a href="{{detailUrl}}" class="b-btn b-white-btn">Подробнее</a>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</script>
 
 	<div class="b b-news-block">
 		<div class="b-block">

@@ -54,20 +54,6 @@ $(document).ready(function(){
         touchThreshold: 100
     });
 
-    $('.slider-results').slick({
-        dots: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        cssEase: 'ease', 
-        speed: 500,
-        arrows: true,
-        adaptiveHeight: true,
-        prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
-        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
-        touchThreshold: 100
-    });
-
     $(".b-star").hover(function() {
         $(this).addClass("highlight");
         $(this).prevAll(".b-star").addClass("highlight");
@@ -183,6 +169,10 @@ $(document).ready(function(){
             $accordeon.addClass("opened");
         }
     });
+
+    $('.preloader').each(function(){
+        $(this).removeClass('preloader');
+    })
 
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
