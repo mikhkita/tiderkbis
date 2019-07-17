@@ -71,6 +71,20 @@
 					'MIN' => 41.5
 				),
 			),
+			2 => array(
+				'ID' => 3,
+				'TITLE' => 'Потребительский',
+				'SUBTITLE' => 'с начислением процентов на остаток долга',
+				'ITEM_INFO' => 'Без обеспечения, начисление процентов  на остаток долга',
+				'DETAIL_URL' => 'detail.php',
+				'MONTHLY_PAYMENT' => 2900,
+				'OVERPAYMENT' => array(
+					'MAX' => 26.5
+				),
+				'PERCENT_RATE' => array(
+					'MIN' => 41.5
+				),
+			),
 		),
 	);
 

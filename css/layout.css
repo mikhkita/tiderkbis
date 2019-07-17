@@ -30,6 +30,9 @@ input.error,textarea.error{
 	-o-transition: background .1s;
 	transition: background .1s;
 }
+.b-btn.hide{
+	display: none;
+}
 .b-btn:hover{
 	background: #F3C92E;
 }
@@ -420,6 +423,15 @@ input.error,textarea.error{
 				right: 0;
 			    background-position: 2rem 50%;
 				background-image: url('../i/sprite.svg#arrow-right');				
+			}
+			.b-slick-count{
+				position: absolute;
+				bottom: 1.4rem;
+				font-family: 'Rubik-Medium';
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+				left: 12.5rem;
+				letter-spacing: 0.05em;
 			}
 			.b-main-slider .b-btn{
 				box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
@@ -830,6 +842,10 @@ input.error,textarea.error{
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
+	.b-calc-results .b-btn-container{
+		margin-top: 1.6rem;
+		margin-bottom: 2.4rem;
+	}
 	.slider-results{
 		padding-bottom: 8.1rem;
 	}
@@ -881,6 +897,9 @@ input.error,textarea.error{
 			.b-calc-result-item:nth-child(2n){
 				margin-right: 0;
 			}
+			.max-4-items .b-calc-result-item:nth-child(n+5){
+				display: none;
+			}
 			.slider-results .b-calc-result-item{
 				display: inline-block;
 				margin: 0 1.2rem;
@@ -913,14 +932,16 @@ input.error,textarea.error{
 							margin-bottom: 14px;
 							padding-left: 32px;
 							color: #707070;
-							background-position: 0 50%;
+							background-position: -5px 50%;
 							background-repeat: no-repeat;
-							background-size: 15px 12px;
-							background-image: url('../i/sprite.svg#check');
+							background-size: 22px 24px;
+							background-image: url('../i/sprite.svg#cross');
 						}
 						.b-calc-result-item-top li.active{
 							color: #00963F;
 							background-image: url('../i/sprite.svg#check');
+							background-position: 0 50%;
+							background-size: 15px 12px;
 						}
 						.b-calc-result-item-top li:last-child{
 							margin-bottom: 0;

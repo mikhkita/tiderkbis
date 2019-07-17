@@ -54,6 +54,16 @@ $(document).ready(function(){
         touchThreshold: 100
     });
 
+    $('.b-btn-more').on('click', function(){
+        $(this).parents('.max-4-items').removeClass('max-4-items');
+        if ($(this).parent().hasClass('b-btn-container')) {
+            $(this).parent().addClass('hide');
+        } else {
+            $(this).addClass('hide');
+        }
+        return false;
+    })
+
     $(".b-star").hover(function() {
         $(this).addClass("highlight");
         $(this).prevAll(".b-star").addClass("highlight");

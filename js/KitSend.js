@@ -41,19 +41,33 @@ function fancyOpen(el){
 }
 
 function slickResults(){
+
+	var slickCounter = '<div class="b-slick-count"><span id="current">1</span> / <span id="count"></span></div>';
+
     $('.slider-results').slick({
         dots: false,
         slidesToShow: 2,
         slidesToScroll: 2,
         infinite: true,
         cssEase: 'ease', 
-        speed: 500,
+        speed: 400,
         arrows: true,
         adaptiveHeight: true,
         prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
-        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
+        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>'+slickCounter,
         touchThreshold: 100
     });
+}
+
+function changeSlickCounter(currentSlide, slideCount){
+
+	if (slideCount != 1 && slideCount%2 != 0) {
+		slideCount ++;
+	};
+
+	$('#current').text((currentSlide + 2)/2);
+    $('#count').text((slideCount)/2);
+    
 }
 
 var customHandlers = [];
@@ -67,6 +81,15 @@ $(document).ready(function(){
 	});
 
 	slickResults();
+
+	$('.b-calc-result-list').on('afterChange', function(event, slick, currentSlide, nextSlide){
+	    changeSlickCounter(slick.currentSlide, slick.slideCount);
+	});
+
+	if ($('.b-slick-count').length) {
+	    var slick = $('.b-calc-result-list').slick('getSlick');
+	    changeSlickCounter(slick.currentSlide, slick.slideCount);
+	}
 
 	$(".ajax, .not-ajax").parents("form").each(function(){
 		$(this).validate({
@@ -333,6 +356,9 @@ $(document).ready(function(){
 							  	if ($('.b-calc-result-list').hasClass('isSlider') && json.ITEMS.length > 2) {
 							  		$('.b-calc-result-list').addClass('slider-results');
 							    	slickResults();
+ 	
+							    	var slick = $('.b-calc-result-list').slick('getSlick');
+	    							changeSlickCounter(slick.currentSlide, slick.slideCount);
 							    }
 							}
 
