@@ -392,16 +392,8 @@ $(document).ready(function(){
 					$(".b-error-link").click();
 				},
 				complete: function(){
-
-					setTimeout(function(){
-						if ($form.hasClass('b-calc-form')) {
-							$('.b-calc-results').removeClass('preloader');
-						}
-					},1000);
-
-					$this.find(".ajax").removeAttr("onclick");
-					if( !$this.is("#b-form-auth") ){
-						$this.find("input[type=text],textarea").val("");
+					if ($form.hasClass('b-calc-form')) {
+						$('.b-calc-results').removeClass('preloader');
 					}
 				}
 			});

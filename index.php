@@ -588,37 +588,37 @@ include "header.php";
 		</div>
 	</div>
 
-	<div class="b b-adv-block">
+	<div class="b b-advantages-block">
 		<div class="b-block">
 			<h3>Нам доверяют<br> более 10 000 пайщиков</h3>
-			<div class="b-adv-list">
+			<div class="b-advantages-list">
 				<div class="b-adv">
-					<div class="b-adv-top">
-						<div class="b-1-adv-illustration b-adv-illustration"></div>
-						<div class="b-adv-title">Более чем 30 кооперативных  участков</div>
+					<div class="b-advantages-top">
+						<div class="b-1-advantages-illustration b-advantages-illustration"></div>
+						<div class="b-advantages-title">Более чем 30 кооперативных  участков</div>
 					</div>
-					<div class="b-adv-bottom">
-						<div class="b-adv-text">На территории Сибирсокого <br>Федерального округа</div>
+					<div class="b-advantages-bottom">
+						<div class="b-advantages-text">На территории Сибирсокого <br>Федерального округа</div>
 						<a href="#" class="b-small-btn">КОнтакты</a>
 					</div>
 				</div>
 				<div class="b-adv">
-					<div class="b-adv-top">
-						<div class="b-2-adv-illustration b-adv-illustration"></div>
-						<div class="b-adv-title">Минимум  документов</div>
+					<div class="b-advantages-top">
+						<div class="b-2-advantages-illustration b-advantages-illustration"></div>
+						<div class="b-advantages-title">Минимум  документов</div>
 					</div>
-					<div class="b-adv-bottom">
-						<div class="b-adv-text">Основной документ —<br>паспорт гражданина РФ</div>
+					<div class="b-advantages-bottom">
+						<div class="b-advantages-text">Основной документ —<br>паспорт гражданина РФ</div>
 						<a href="#" class="b-small-btn">Документы</a>
 					</div>
 				</div>
 				<div class="b-adv">
-					<div class="b-adv-top">
-						<div class="b-3-adv-illustration b-adv-illustration"></div>
-						<div class="b-adv-title">Быстрое оформление</div>
+					<div class="b-advantages-top">
+						<div class="b-3-advantages-illustration b-advantages-illustration"></div>
+						<div class="b-advantages-title">Быстрое оформление</div>
 					</div>
-					<div class="b-adv-bottom">
-						<div class="b-adv-text">Оформление <br>в течение 1 часа</div>
+					<div class="b-advantages-bottom">
+						<div class="b-advantages-text">Оформление <br>в течение 1 часа</div>
 						<a href="#" class="b-small-btn">Заявка на заём</a>
 					</div>
 				</div>

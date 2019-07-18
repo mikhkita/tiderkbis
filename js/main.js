@@ -225,6 +225,19 @@ $(document).ready(function(){
             });
         }
     }
+
+    $('.b-close').on('click',function(){
+        $('html').removeClass('city-open');
+    });
+
+    $('.b-city-btn').on('click', function(){
+        $('html').addClass('city-open');
+    });
+
+    $(document).on('click', '.city-open .b-dark-background', function(){
+        $('html').removeClass('city-open');
+    });
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 

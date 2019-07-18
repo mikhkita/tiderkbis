@@ -154,6 +154,31 @@ input.error,textarea.error{
 .b.gray{
 	background-color: #F2F2F2;
 }
+
+.city-open{
+	overflow: hidden;
+}
+
+.b-dark-background{
+	position: absolute;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: visibility 400ms ease-out, opacity 400ms ease-out;
+	-o-transition: visibility 400ms ease-out, opacity 400ms ease-out;
+	transition: visibility 400ms ease-out, opacity 400ms ease-out;
+	background-color: rgba(174, 174, 174, 0.7);
+}
+
+.city-open .b-dark-background{
+	opacity: 1;
+	visibility: visible;
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	
 }	
@@ -187,6 +212,68 @@ input.error,textarea.error{
 @media (min-width: 1920px) {
 	
 }
+
+/* City select ––––––––––––––––––––––––––––––––––––––––––––– City select */
+
+.b-city-select-block{
+	position: absolute;
+	top: -100vh;
+	visibility: hidden;
+	left: 0;
+	width: 100vw;
+	padding: 2.4rem 12.4rem 10.4rem 12.4rem;
+	background: #FFF;
+	z-index: 5;
+	-webkit-transition: top 400ms ease-out, visibility 400ms;
+	-o-transition: top 400ms ease-out, visibility 400ms;
+	transition: top 400ms ease-out, visibility 400ms;
+}
+.city-open .b-city-select-block{
+	top: 0;
+	visibility: visible;
+}
+	.b-city-select-block .b-block{
+		width: 100%;
+	}
+		.b-close{
+			margin-bottom: 4.3rem;
+		}
+			.b-icon-cross{
+				float: right;
+				display: block;
+				width: 6.4rem;
+				height: 6.4rem;
+				border-radius: 10rem;
+				border: 1px solid #212121;
+				background-image: url('../i/sprite.svg#cross');
+				background-position: 50% 50%;
+				background-size: 31px 31px;
+			}
+		.b-city-select-block h3{
+			line-height: 2.4rem;
+			margin-bottom: 6.8rem;
+		}
+		.b-city-select-block ul{
+			display: inline-block;
+			width: 25.5rem;
+			margin-right: 1rem;
+		}
+			.b-city-select-block li{
+				
+			}
+				.b-city-select-block li a{
+					font-size: 2.4rem;
+					line-height: 2.8rem;
+					display: block;
+					padding: 0.8rem 0;
+				}
+@media (min-width: 1024px) {
+	.b-city-select-block li a:hover{
+		color: #00963F;
+	}
+}
+
+/* City select ––––––––––––––––––––––––––––––––––––––––––––– City select */
 
 
 /* Header ––––––––––––––––––––––––––––––––––––––––––––– Header */
@@ -234,7 +321,10 @@ input.error,textarea.error{
 
 				}
 				.b-city-btn-arrow{
-
+					background-image: url('../i/sprite.svg#arrow-down');
+					width: 1.2rem;
+					height: 1.2rem;
+					margin-left: 0.4rem;
 				}
 			.b-phone{
 				
@@ -277,6 +367,7 @@ input.error,textarea.error{
 						width: 2.4rem;
 						height: 2.4rem;	
 						margin-right: 0.4rem;
+						cursor: pointer;
 					}
 					.b-search-btn-text{
 
@@ -332,7 +423,7 @@ input.error,textarea.error{
 	.b-personal-btn .b-personal-btn-text,
 	.b-search-btn .b-search-btn-text,
 	.b-phone,
-	.b-city-btn{
+	a.b-city-btn{
 		-webkit-transition: color 100ms ease-out;
 		   -moz-transition: color 100ms ease-out;
 		    -ms-transition: color 100ms ease-out;
@@ -359,7 +450,7 @@ input.error,textarea.error{
 	.b-personal-btn:hover .b-personal-btn-text,
 	.b-search-btn:hover .b-search-btn-text,
 	.b-phone:hover,
-	.b-city-btn:hover{
+	a.b-city-btn:hover{
 		color: #9E9E9E;
 	}
 }
@@ -494,6 +585,20 @@ input.error,textarea.error{
 			.arrow-left-icon:hover,
 			.arrow-right-icon:hover{
 				background-color: #E6E6E6;
+			}
+			.b-main-slider .arrow-left-icon,
+			.b-main-slider .arrow-right-icon{
+			    -webkit-transition: background-color .1s, transform .1s, box-shadow .1s;
+			    -o-transition: background-color .1s, transform .1s, box-shadow .1s;
+			    transition: background-color .1s, transform .1s, box-shadow .1s;
+			}
+			.b-main-slider .arrow-left-icon:active,
+			.b-main-slider .arrow-right-icon:active{
+				-webkit-transform: translateY(2px);
+				-ms-transform: translateY(2px);
+				-o-transform: translateY(2px);
+				transform: translateY(2px);
+				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 			}
 			.arrow-left-icon:active,
 			.arrow-right-icon:active{
@@ -1202,11 +1307,11 @@ input.error,textarea.error{
 
 /* Advantages –––––––––––––––––––––––––––––––––––––––––––– Advantages */
 
-.b-adv-block{
+.b-advantages-block{
 	padding-top: 16px;
 	padding-bottom: 76px;
 }
-	.b-adv-list{
+	.b-advantages-list{
 		display: flex;
 	}
 		.b-adv{
@@ -1219,29 +1324,29 @@ input.error,textarea.error{
 		.b-adv:last-child{
 			margin-right: 0;
 		}
-			.b-adv-illustration{
+			.b-advantages-illustration{
 				height: 17rem;
 				margin-bottom: 2.4rem;
 			}
-			.b-1-adv-illustration{
+			.b-1-advantages-illustration{
 				width: 17.4rem;
 				background-image: url('../i/illustration.svg#4');
 			}
-			.b-2-adv-illustration{
+			.b-2-advantages-illustration{
 				width: 16.3rem;
 				background-image: url('../i/illustration.svg#5');
 			}
-			.b-3-adv-illustration{
+			.b-3-advantages-illustration{
 				width: 16rem;
 				background-image: url('../i/illustration.svg#6');
 			}
-			.b-adv-title{
+			.b-advantages-title{
 				max-width: 20rem;
 				font-size: 2.4rem;
 				line-height: 2.8rem;
 				margin-bottom: 1.6rem;
 			}
-			.b-adv-text{
+			.b-advantages-text{
 				font-size: 1.6rem;
 				line-height: 2.2rem;
 				margin-bottom: 2.4rem;
