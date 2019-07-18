@@ -1,9 +1,10 @@
 <? 
 
 $params = array(
-	"TITLE" => "Лучшие условия по займам для вас",
+	"TITLE" => "Заявка на заём",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
+		"Займы" => "loan.php",
 	),
 );
 

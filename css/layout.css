@@ -39,13 +39,18 @@ input.error,textarea.error{
 .b-white-btn{
 	border: 1px solid #DADADA;
 	background: #FFF;
-	-webkit-transition: border .1s;
-	-o-transition: border .1s;
-	transition: border .1s;
+	-webkit-transition: border .1s, background .1s;
+	-o-transition: border .1s, background .1s;
+	transition: border .1s, background .1s;
 }
 .b-white-btn:hover{
 	border: 1px solid #212121;
 	background: #FFF;
+}
+.b-white-btn:active{
+	border: 1px solid #DADADA;
+	background: #E9E9E9;
+	color: #A3A3A3;
 }
 .b-small-btn{
 	font-family: 'Rubik-Medium';
@@ -59,6 +64,7 @@ input.error,textarea.error{
 	border: 1px solid #DADADA;
 	border-radius: 6.8rem;
 }
+
 .rub-icon{
 	width: 1.4rem;
 	height: 1.4rem;
@@ -137,14 +143,19 @@ input.error,textarea.error{
 /* Desktop */
 @media (min-width: 1024px) {
 	.b-small-btn{
-		-webkit-transition: border-color 100ms ease-out;
-		   -moz-transition: border-color 100ms ease-out;
-		    -ms-transition: border-color 100ms ease-out;
-		   	 -o-transition: border-color 100ms ease-out;
-				transition: border-color 100ms ease-out;
+		-webkit-transition: border-color 100ms ease-out, background 100ms ease-out;
+		   -moz-transition: border-color 100ms ease-out, background 100ms ease-out;
+		    -ms-transition: border-color 100ms ease-out, background 100ms ease-out;
+		   	 -o-transition: border-color 100ms ease-out, background 100ms ease-out;
+				transition: border-color 100ms ease-out, background 100ms ease-out;
 	}
 		.b-small-btn:hover{
 			border-color: #212121;
+		}
+		.b-small-btn:active{
+			border-color: #DADADA;
+			background: #E9E9E9;
+			color: #A3A3A3;
 		}
 }
 @media (min-width: 1440px) {
@@ -227,6 +238,9 @@ input.error,textarea.error{
 						border: 1px solid rgba(0, 150, 63, 0.3);
 						border-radius: 100px;
 						margin-right: 0.8rem;
+						-webkit-transition: background-color 100ms ease-out, border-color 100ms ease-out;
+						-o-transition: background-color 100ms ease-out, border-color 100ms ease-out;
+						transition: background-color 100ms ease-out, border-color 100ms ease-out;
 					}
 					.b-personal-btn-text{
 
@@ -288,7 +302,11 @@ input.error,textarea.error{
 }
 /* Desktop */
 @media (min-width: 1024px) {
-	ul.b-main-menu li a{
+	ul.b-main-menu li a,
+	.b-personal-btn .b-personal-btn-text,
+	.b-search-btn .b-search-btn-text,
+	.b-phone,
+	.b-city-btn{
 		-webkit-transition: color 100ms ease-out;
 		   -moz-transition: color 100ms ease-out;
 		    -ms-transition: color 100ms ease-out;
@@ -297,6 +315,26 @@ input.error,textarea.error{
 	}
 	ul.b-main-menu li a:hover{
 		color: #00963F;
+	}
+	ul.b-main-menu li a:active{
+		color: #4DB679;
+	}
+	.b-menu-btn-icon:hover{
+		background-image: url('../i/sprite.svg#menu');
+	}
+	.b-menu-btn-icon:active{
+		background-image: url('../i/sprite.svg#menu');
+	}
+	.b-personal-btn:hover .b-personal-btn-icon{
+		background-color: #00963F;
+		border-color: #00963F;
+		background-image: url('../i/sprite.svg#user');
+	}
+	.b-personal-btn:hover .b-personal-btn-text,
+	.b-search-btn:hover .b-search-btn-text,
+	.b-phone:hover,
+	.b-city-btn:hover{
+		color: #9E9E9E;
 	}
 }
 @media (min-width: 1440px) {
@@ -413,6 +451,9 @@ input.error,textarea.error{
 				background-repeat: no-repeat;
 				z-index: 1;
 				box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+				-webkit-transition: background-color .1s;
+				-o-transition: background-color .1s;
+				transition: background-color .1s;
 			}
 			.arrow-left-icon{
 				right: 6.1rem;
@@ -423,6 +464,14 @@ input.error,textarea.error{
 				right: 0;
 			    background-position: 2rem 50%;
 				background-image: url('../i/sprite.svg#arrow-right');				
+			}
+			.arrow-left-icon:hover,
+			.arrow-right-icon:hover{
+				background-color: #E6E6E6;
+			}
+			.arrow-left-icon:active,
+			.arrow-right-icon:active{
+				background-color: #DEDEDE;
 			}
 			.b-slick-count{
 				position: absolute;
@@ -546,6 +595,9 @@ input.error,textarea.error{
 				.b-popular-offer-item:hover .b-small-btn{
 					background-color: #FEDB31;
 					border-color: transparent;
+				}
+				.b-popular-offer-item .b-small-btn:active{
+				    color: #212121;
 				}
 
 /* Popular offers ––––––––––––––––––––––––––––––––––––––––––––– Popular offers */
@@ -881,6 +933,10 @@ input.error,textarea.error{
 		.b-calc-result-list .arrow-right-icon:hover{
 			background-color: #333333;
 		    background-image: url(../i/sprite.svg#arrow-right-white);
+		}
+		.b-calc-result-list .arrow-left-icon:active,
+		.b-calc-result-list .arrow-right-icon:active{
+			background-color: #7A7A7A;
 		}
 			.b-calc-result-item{
 				padding: 2.4rem;

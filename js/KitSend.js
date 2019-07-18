@@ -67,7 +67,7 @@ function changeSlickCounter(currentSlide, slideCount){
 
 	$('#current').text((currentSlide + 2)/2);
     $('#count').text((slideCount)/2);
-    
+
 }
 
 var customHandlers = [];
@@ -287,7 +287,13 @@ $(document).ready(function(){
 					off = 50,
 					duration = 800;
 
+				console.log()
+
 				res.addClass('preloader');
+				if (res.hasClass('max-4-items')) {
+					res.removeClass('max-4-items');
+					res.find('.b-btn-container').addClass('hide');
+				}
 
 				$("body, html").animate({
 					scrollTop : res.offset().top-off
