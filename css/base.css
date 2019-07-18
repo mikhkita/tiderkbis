@@ -164,12 +164,12 @@ input:-moz-placeholder {
 		font-size: 10px;
 	}
 	.b-block{
-		width: 1032px;
+	    width: calc( 100vw - 4.8rem );
 	}
 }
 @media (min-width: 1440px) {
 	html {
-		font-size: calc(10px + 2 * (100vw - 1920px) / 480);
+		font-size: calc(10px + 2 * (100vw - 1440px) / 480);
 	}
 }
 @media (min-width: 1920px) {

@@ -313,6 +313,9 @@ input.error,textarea.error{
 					background-size: 2.4rem 1.8rem;
 					width: 4.6rem;
 					height: 4.6rem;
+					-webkit-transition: opacity 100ms ease-out;
+					-o-transition: opacity 100ms ease-out;
+					transition: opacity 100ms ease-out;
 				}
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	
@@ -343,15 +346,15 @@ input.error,textarea.error{
 		color: #4DB679;
 	}
 	.b-menu-btn-icon:hover{
-		background-image: url('../i/sprite.svg#menu');
+		background-image: url('../i/sprite.svg#menu-green');
 	}
 	.b-menu-btn-icon:active{
-		background-image: url('../i/sprite.svg#menu');
+		opacity: 0.6;
 	}
 	.b-personal-btn:hover .b-personal-btn-icon{
 		background-color: #00963F;
 		border-color: #00963F;
-		background-image: url('../i/sprite.svg#user');
+		background-image: url('../i/sprite.svg#user-white');
 	}
 	.b-personal-btn:hover .b-personal-btn-text,
 	.b-search-btn:hover .b-search-btn-text,
