@@ -13,7 +13,7 @@ include "header.php";
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
-					<a href="#" class="b-btn">Оформить заявку</a>
+					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 				</div>
 			</div>
 		</div>
@@ -22,7 +22,7 @@ include "header.php";
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
-					<a href="#" class="b-btn">Оформить заявку</a>
+					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 				</div>
 			</div>
 		</div>
@@ -31,7 +31,7 @@ include "header.php";
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
-					<a href="#" class="b-btn">Оформить заявку</a>
+					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 				</div>
 			</div>
 		</div>
@@ -158,7 +158,7 @@ include "header.php";
 							<div class="b-block-calc b-calc-text-block">
 								<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
 								<div class="b-btn-container">
-									<a href="#" class="ajax b-btn">Рассчитать</a>
+									<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
 								</div>
 							</div>
 						</div>
@@ -218,7 +218,7 @@ include "header.php";
 							<div class="b-block-calc b-calc-text-block">
 								<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
 								<div class="b-btn-container">
-									<a href="#" class="ajax b-btn">Рассчитать</a>
+									<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
 								</div>
 							</div>
 						</div>
@@ -263,7 +263,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="#" class="b-btn b-white-btn">Подробнее</a>
 						</div>
 					</div>
@@ -292,7 +292,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="#" class="b-btn b-white-btn">Подробнее</a>
 						</div>
 					</div>
@@ -321,7 +321,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="#" class="b-btn b-white-btn">Подробнее</a>
 						</div>
 					</div>
@@ -350,7 +350,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="#" class="b-btn b-white-btn">Подробнее</a>
 						</div>
 					</div>
@@ -379,7 +379,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="#" class="b-btn b-white-btn">Подробнее</a>
 						</div>
 					</div>
@@ -408,7 +408,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn">Оформить заявку</a>
+							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="#" class="b-btn b-white-btn">Подробнее</a>
 						</div>
 					</div>
@@ -478,7 +478,7 @@ include "header.php";
 					</div>
 				</div>
 				<div class="b-res-btn-container">
-					<a href="#" class="b-btn">Оформить заявку</a>
+					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 					{{#if detailUrl}}
 					<a href="{{detailUrl}}" class="b-btn b-white-btn">Подробнее</a>
 					{{/if}}
@@ -553,7 +553,7 @@ include "header.php";
 					</div>
 				</div>
 				<div class="b-res-btn-container">
-					<a href="#" class="b-btn">Оформить заявку</a>
+					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 					{{#if detailUrl}}
 					<a href="{{detailUrl}}" class="b-btn b-white-btn">Подробнее</a>
 					{{/if}}
@@ -634,7 +634,7 @@ include "header.php";
 				<h3>Работа  в кооперативе</h3>
 				<div class="b-commercial-text">Начинать строить карьеру лучше вместе  с лидером рынка. Мы поможем раскрыть  и реализовать ваш потенциал.</div>
 				<div class="b-commercial-text">Мы обладаем всеми инструментами для личного и профессионального развития.  Коллектив - это то, чем мы гордимся  и дорожим!</div>
-				<a href="#" class="b-btn">Вакансии</a>
+				<a href="#" class="b-btn"><span class="b-btn-text">Вакансии</span></a>
 			</div>
 		</div>
 	</div>

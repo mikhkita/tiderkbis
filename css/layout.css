@@ -15,6 +15,7 @@ input.error,textarea.error{
 .b-btn-container{
 	text-align: center;
 }
+
 .b-btn{
 	font-family: 'Rubik-Medium';
 	font-size: 1.4rem;
@@ -26,9 +27,31 @@ input.error,textarea.error{
 	text-align: center;
 	background: #FEDB31;
 	border-radius: 6.8rem;
-	-webkit-transition: background .1s;
-	-o-transition: background .1s;
-	transition: background .1s;
+	overflow: hidden;
+	position: relative;
+	-webkit-transition: background 100ms ease-out;
+	-o-transition: background 100ms ease-out;
+	transition: background 100ms ease-out;
+}
+.b-btn-text{
+	position: relative;
+	z-index: 2;
+}
+.ripple {
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: #FEDB31;
+	transform: scale(0);
+	position: absolute;
+	opacity: 1;
+	animation: ripple 0.5s linear;
+}
+@keyframes ripple {
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
 }
 .b-btn.hide{
 	display: none;
