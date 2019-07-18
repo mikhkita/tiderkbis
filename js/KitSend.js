@@ -84,7 +84,7 @@ $(document).ready(function(){
 		return rePhone.test(value);
 	});
 
-	slickResults();
+	// slickResults();
 
 	$('.b-calc-result-list').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		var id = slick.$slider.parents('.b-calc-results').attr('id');
@@ -349,7 +349,9 @@ $(document).ready(function(){
 							    var list = $('#'+resID).find('.b-calc-result-list');
 
 							    if (list.hasClass('slider-results')) {
-							    	list.slick('unslick');
+							    	if (list.hasClass('slick-initialized')) {
+							    		list.slick('unslick');
+							    	}
 							    	list.addClass('isSlider');
 							    	list.removeClass('slider-results');
 							    }
