@@ -13,7 +13,7 @@ include "header.php";
 
 <div class="b-left-calc">
 	<div class="b-calc-form-block">
-		<form class="b-calc-form" action="json.php" method="POST" data-template="savings-template">
+		<form class="b-calc-form" action="savings-json.php" method="POST" data-template="savings-template" data-results-id="savings-results">
 			<div class="b-calc-string">
 				<div class="b-block">
 					<div class="b-block-calc b-block-calc-sliders">
@@ -81,7 +81,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-calc-results b-calc-inner-results">
+<div class="b-calc-results b-calc-inner-results" id="savings-results">
 	<div class="b-block">
 		<div class="b-calc-result-list">
 			<div class="b-calc-result-item">

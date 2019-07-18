@@ -111,19 +111,41 @@ $(document).ready(function(){
         });
     });
 
+    $('.b-calc-slider input').on('input',function(){
+
+        var val = $(this).val(),
+            max = Number($(this).parents('.b-calc-slider').find('.b-slider-range').attr('data-range-to').replace(/\s/g, ''));
+
+        if (val == '') {
+            val = 0;
+        }
+
+        if (val > max) {
+            val = max;   
+        }
+
+        console.log(val);
+
+        $(this).val(Number(val).toLocaleString());
+
+        $(this).parents('.b-calc-slider').find('.b-slider-range').slider( "value", val );
+
+    })
+
     $('.b-tumbler-text').on('click', function(){
         if (!$(this).hasClass('active')) {
-            if ($('#tumbler').prop('checked') === true) {
-                $('#tumbler').prop('checked', false);
+            var tumbler = $(this).siblings('.b-tumbler-item').find('input');
+            if (tumbler.prop('checked') === true) {
+                tumbler.prop('checked', false);
             } else {
-                $('#tumbler').prop('checked', true);
+                tumbler.prop('checked', true);
             }
-            $('#tumbler').change();
+            $(tumbler).change();
         }
     });
 
-    $('#tumbler').on('change', function(){
-        $('.b-tumbler-text').each(function(){
+    $('.tumbler').on('change', function(){
+        $(this).parents('.b-tumbler-item').siblings('.b-tumbler-text').each(function(){
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
             } else {
@@ -144,11 +166,19 @@ $(document).ready(function(){
             $('.b-calc-form-block').addClass('hide');
             $(id).removeClass('hide');
 
+            $('.b-calc-results').addClass('hide');
+            if (!$(id+'-results').hasClass('not-ajax-results')) {
+                $(id+'-results').removeClass('hide');
+            }
+
             $('.b-calc-tab-item').removeClass('active');
             $(this).addClass('active');
         }
         return false;
     });
+
+    $('.b-calc-results.invisible').addClass('hide');
+    $('.invisible').removeClass('invisible');
 
     if( $(".sticky").length ){
         Stickyfill.add($('.sticky'));

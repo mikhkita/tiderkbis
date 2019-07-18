@@ -12,6 +12,10 @@ input.error,textarea.error{
 .hide{
 	display: none;
 }
+.invisible{
+	/*opacity: 0;*/
+	/*visibility: hidden;*/
+}
 .b-btn-container{
 	text-align: center;
 }
@@ -248,6 +252,12 @@ input.error,textarea.error{
 				background-image: url('../i/sprite.svg#cross');
 				background-position: 50% 50%;
 				background-size: 31px 31px;
+				-webkit-transition: border .1s;
+				-o-transition: border .1s;
+				transition: border .1s;
+			}
+			.b-icon-cross:hover{
+				border: 1px solid #00963F;
 			}
 		.b-city-select-block h3{
 			line-height: 2.4rem;

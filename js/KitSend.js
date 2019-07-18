@@ -42,31 +42,35 @@ function fancyOpen(el){
 
 function slickResults(){
 
-	var slickCounter = '<div class="b-slick-count"><span id="current">1</span> / <span id="count"></span></div>';
+	var slickCounter = '<div class="b-slick-count"><span class="current-slick">1</span> / <span class="count-slick"></span></div>';
 
-    $('.slider-results').slick({
-        dots: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        cssEase: 'ease', 
-        speed: 400,
-        arrows: true,
-        adaptiveHeight: true,
-        prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
-        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>'+slickCounter,
-        touchThreshold: 100
-    });
+    $('.slider-results').each(function(){
+    	if (!$(this).hasClass('slick-initialized')) {
+    		$(this).slick({
+		        dots: false,
+		        slidesToShow: 2,
+		        slidesToScroll: 2,
+		        infinite: true,
+		        cssEase: 'ease', 
+		        speed: 400,
+		        arrows: true,
+		        adaptiveHeight: true,
+		        prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
+		        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>'+slickCounter,
+		        touchThreshold: 100
+		    });
+    	}
+    })
 }
 
-function changeSlickCounter(currentSlide, slideCount){
+function changeSlickCounter(id, currentSlide, slideCount){
 
 	if (slideCount != 1 && slideCount%2 != 0) {
 		slideCount ++;
 	};
 
-	$('#current').text((currentSlide + 2)/2);
-    $('#count').text((slideCount)/2);
+	$('#'+id+' .current-slick').text((currentSlide + 2)/2);
+    $('#'+id+' .count-slick').text((slideCount)/2);
 
 }
 
@@ -83,12 +87,17 @@ $(document).ready(function(){
 	slickResults();
 
 	$('.b-calc-result-list').on('afterChange', function(event, slick, currentSlide, nextSlide){
-	    changeSlickCounter(slick.currentSlide, slick.slideCount);
+		var id = slick.$slider.parents('.b-calc-results').attr('id');
+	    changeSlickCounter(id, slick.currentSlide, slick.slideCount);
 	});
 
 	if ($('.b-slick-count').length) {
-	    var slick = $('.b-calc-result-list').slick('getSlick');
-	    changeSlickCounter(slick.currentSlide, slick.slideCount);
+		$('.b-slick-count').each(function(){
+			console.log('this');
+			var slick = $(this).parents('.b-calc-result-list').slick('getSlick'),
+				id = slick.$slider.parents('.b-calc-results').attr('id');
+	    	changeSlickCounter(id, slick.currentSlide, slick.slideCount);
+		});
 	}
 
 	$(".ajax, .not-ajax").parents("form").each(function(){
@@ -283,17 +292,32 @@ $(document).ready(function(){
 
 			if ($form.hasClass('b-calc-form')) {
 
-				var res = $('.b-calc-results'),
+				var resID = $form.attr('data-results-id'),
+					res = $('#'+resID),
+					flag = false,
 					off = 50,
 					duration = 800;
 
-				console.log()
+				$('.b-calc-results').each(function(){
+					if ($(this).hasClass('hide')) {
+						flag = true;
+					}
+				});
+
+				if (flag) {
+					$('.b-calc-results').addClass('hide');
+					$('#'+resID).removeClass('hide');
+				}
+
+				$('#'+resID).removeClass('hide');
 
 				res.addClass('preloader');
 				if (res.hasClass('max-4-items')) {
 					res.removeClass('max-4-items');
 					res.find('.b-btn-container').addClass('hide');
 				}
+
+				console.log($form.attr('data-results-id'));
 
 				$("body, html").animate({
 					scrollTop : res.offset().top-off
@@ -313,18 +337,21 @@ $(document).ready(function(){
 						if( json.RESULT == "success" ){
 
 							if ($form.attr('data-template')) {
-								var id = $form.attr('data-template');
+
+								var id = $form.attr('data-template'),
+									resID = $form.attr('data-results-id');
 
 								var source = $('#'+id).html();
 							    var loanTemplate = Handlebars.compile(source);
 							    var html = '';
 
-							    $('.b-calc-results .b-calc-result-list').html(html);
+							    $('#'+resID+' .b-calc-result-list').html(html);
+							    var list = $('#'+resID).find('.b-calc-result-list');
 
-							    if ($('.b-calc-result-list').hasClass('slider-results')) {
-							    	$('.b-calc-result-list').slick('unslick');
-							    	$('.b-calc-result-list').addClass('isSlider');
-							    	$('.b-calc-result-list').removeClass('slider-results');
+							    if (list.hasClass('slider-results')) {
+							    	list.slick('unslick');
+							    	list.addClass('isSlider');
+							    	list.removeClass('slider-results');
 							    }
 
 							    for (var i = 0; i < json.ITEMS.length; i++) {
@@ -338,7 +365,6 @@ $(document).ready(function(){
 							    	} else {
 							    		$this.MONTHLY_PAYMENT = ($this.MONTHLY_PAYMENT*1).toLocaleString();
 							    	}
-
 
 						    	  	var context = { 
 								    	id: $this.ID,
@@ -357,14 +383,19 @@ $(document).ready(function(){
 								    html += loanTemplate(context);
 							    }
 
-							    $('.b-calc-results .b-calc-result-list').html(html);
+							    $('#'+resID+' .b-calc-result-list').html(html);
+							    console.log($('#'+resID));
+							    if ($('#'+resID).hasClass('not-ajax-results')) {
+							    	$('#'+resID).removeClass('not-ajax-results');
+							    }
 
-							  	if ($('.b-calc-result-list').hasClass('isSlider') && json.ITEMS.length > 2) {
-							  		$('.b-calc-result-list').addClass('slider-results');
+							  	if ($('#'+resID+' .b-calc-result-list').hasClass('isSlider') && json.ITEMS.length > 2) {
+							  		$('#'+resID+' .b-calc-result-list').addClass('slider-results');
 							    	slickResults();
  	
-							    	var slick = $('.b-calc-result-list').slick('getSlick');
-	    							changeSlickCounter(slick.currentSlide, slick.slideCount);
+							    	var slick = $('#'+resID+' .b-calc-result-list').slick('getSlick'),
+							    		id = slick.$slider.parents('.b-calc-results').attr('id');
+	    							changeSlickCounter(id, slick.currentSlide, slick.slideCount);
 							    }
 							}
 
