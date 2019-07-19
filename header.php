@@ -1,3 +1,8 @@
+<?
+
+$version = "1";
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +21,8 @@
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
 	<link rel="stylesheet" href="css/datepicker.min.css" type="text/css">
-	<link rel="stylesheet" href="css/base.css" type="text/css">
-	<link rel="stylesheet" href="css/layout.css" type="text/css">
+	<link rel="stylesheet" href="css/base.css?<?=$version?>" type="text/css">
+	<link rel="stylesheet" href="css/layout.css?<?=$version?>" type="text/css">
 
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 </head>

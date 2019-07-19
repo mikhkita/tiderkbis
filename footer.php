@@ -107,7 +107,7 @@
 	<script type="text/javascript" src="js/mask.js"></script>
 	<script type="text/javascript" src="js/handlebars-v4.1.2.js"></script>
 	<script type="text/javascript" src="js/datepicker.min.js"></script>
-	<script type="text/javascript" src="js/KitSend.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/KitSend.js?<?=$version?>"></script>
+	<script type="text/javascript" src="js/main.js?<?=$version?>"></script>
 </body>
 </html>
