@@ -49,12 +49,14 @@ include "header.php";
 							<input type="checkbox" name="refund">
 							<div class="b-checkbox-text">Досрочный возврат денег</div>
 						</label>
-						<select class="select" name="savings-percent">
-							<option value="1">Начисление процентов</option>
-							<option value="2">Начисление процентов</option>
-							<option value="3">Начисление процентов</option>
-							<option value="4">Начисление процентов</option>
-						</select>
+						<div class="calc-select-cont">
+							<select class="select" name="savings-percent">
+								<option value="1">Начисление процентов</option>
+								<option value="2">Начисление процентов</option>
+								<option value="3">Начисление процентов</option>
+								<option value="4">Начисление процентов</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -154,10 +154,75 @@ $(document).ready(function(){
         })
     });
 
-    $(".select").chosen({
-        width: "264px",
-        disable_search_threshold: 10000
+    $(".select").each(function(){
+        $(this).chosen({
+            width: "100%",
+            disable_search_threshold: 10000
+        });
+
+        if ($(this).siblings('.chosen-container').find('span')) {
+            var text = $(this).siblings('.chosen-container').find('.chosen-single span').text();
+            if(text.indexOf('*') != (-1) ){
+                console.log(text.indexOf('*'));
+                //
+            }
+        }
+    })
+
+    $(".b-input input, .b-input select").each(function(){
+        $(this).parents(".b-input").removeClass("focus");
+        if( $(this).val() != "" && $(this).val() != "+7 (   )    -  -  " ){
+            $(this).parents(".b-input").addClass("not-empty");
+        }else{
+            $(this).parents(".b-input").removeClass("not-empty");
+        }
     });
+
+    if( isIE() ){
+        $("body").on('mousedown click', ".b-input input, .b-input textarea", function(e) {
+            $(this).parents(".b-input").addClass("focus");
+        });
+    }
+
+    $("body").on("focusin", ".b-input input, .b-input textarea", function(){
+        $(this).parents(".b-input").addClass("focus");
+    });
+
+    $("body").on("change", ".b-input select", function(){
+        if( $(this).val() != ""){
+            $(this).parents(".b-input").addClass("not-empty");
+        }else{
+            $(this).parents(".b-input").removeClass("not-empty");
+        }
+    });
+
+    $("body").on("focusout", ".b-input input, .b-input textarea", function(){
+        $(this).parents(".b-input").removeClass("focus");
+        if( $(this).val() != "" && $(this).val() != "+7 (   )    -  -  " ){
+            $(this).parents(".b-input").addClass("not-empty");
+        }else{
+            $(this).parents(".b-input").removeClass("not-empty");
+        }
+    });
+
+    function isIE() {
+        var rv = -1;
+        if (navigator.appName == 'Microsoft Internet Explorer')
+        {
+            var ua = navigator.userAgent;
+            var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+            if (re.exec(ua) != null)
+                rv = parseFloat( RegExp.$1 );
+        }
+        else if (navigator.appName == 'Netscape')
+        {
+            var ua = navigator.userAgent;
+            var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+            if (re.exec(ua) != null)
+                rv = parseFloat( RegExp.$1 );
+        }
+        return rv == -1 ? false: true;
+    }
 
     $('.b-calc-tab-item').on('click',function(){
         if (!$(this).hasClass('active')) {
