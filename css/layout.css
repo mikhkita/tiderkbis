@@ -3,8 +3,8 @@ label.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border: 1px solid #F00 !important;
-	box-shadow: 0 0px 0px 1px #F00;
+	/*border: 1px solid #F00 !important;*/
+	/*box-shadow: 0 0px 0px 1px #F00;*/
 }
 .fancybox-inner{
 	overflow: visible !important;
@@ -2139,6 +2139,10 @@ input.error,textarea.error{
 		width: 100%;
 		background: transparent;
 	}
+	.b-input input.error,
+	.b-input textarea.error{
+		border-color: #DC3C3C;
+	}
 	.b-input select{
 		width: 100%;
 	}
@@ -2214,6 +2218,10 @@ input.datepicker-here{
 				font-family: 'Rubik-Regular';
 				font-size: 1.6rem;
 				line-height: 1.9rem;
+				color: #212121;
+			}
+			.datepicker--nav-title:hover{
+				color: #212121;	
 			}
 		.datepicker--cells{
 			padding-top: 1rem;
@@ -2230,16 +2238,21 @@ input.datepicker-here{
 			.datepicker--cell-day.-current-{
 				height: 34px;
 			}
-			.datepicker--cell.-selected-,
-			.datepicker--cell.-focus-,
 			.datepicker--cell.-current-{
-				background: #DEDEDE;
+				color: #212121!important;
+				background: #F2F2F2!important;
 			}
+			.datepicker--cell.-selected-,
+			.datepicker--cell.-focus-{
+				color: #212121!important;
+				background: #DEDEDE!important;
+			}
+
 			.datepicker--cell-day.-weekend-{
 				color: #DC3C3C;
 			}
-			.datepicker--cell-day.-other-month-{
-				display: none;
+			.datepicker--cell-day.-other-month-.-weekend-{
+				opacity: 0.4;
 			}
 
 /* Datepicker --––––––––––––––––––––––––––––––––––––––––– Datepicker */

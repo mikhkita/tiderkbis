@@ -163,10 +163,96 @@ $(document).ready(function(){
         if ($(this).siblings('.chosen-container').find('span')) {
             var text = $(this).siblings('.chosen-container').find('.chosen-single span').text();
             if(text.indexOf('*') != (-1) ){
-                console.log(text.indexOf('*'));
+                // console.log(text.indexOf('*'));
                 //
             }
         }
+    })
+
+    $('.datepicker-here').each(function(){
+        var data = $(this).data('datepicker');
+    });
+
+    $('.datepicker-here').on('change', function(){
+        var data = $(this).data('datepicker');
+
+        var arDate = explode('.',$(this).val());
+
+        if (arDate[0].length != 0) {
+            if (arDate.length == 1) {
+                if (arDate[0].length = 0) {
+                    arDate[0] = '01';
+                }
+
+                if (arDate[0] == "0") {
+                    arDate[0] = "01";
+                }
+
+                var date = new Date('1900','0',arDate[0]);
+            }
+
+            if (arDate.length == 2) {
+                if (arDate[1].length != 0) {
+                    if (arDate[1] == '0') {
+                        arDate[1] = '01';    
+                    }
+                    arDate[1] = arDate[1] - 1;
+                } else {
+                    arDate[1] = '01';
+                }
+                var date = new Date('1900', arDate[1], arDate[0]);
+            }
+
+            if (arDate.length == 3) {
+                arDate[1] = arDate[1] - 1;
+
+                if (arDate[2].length == 3) {
+                    arDate[2] = arDate[2]+'0';
+                }
+
+                var date = new Date(arDate[2], arDate[1], arDate[0]);
+            }
+        } else {
+            var date = new Date('1900','0','01');
+        }
+
+        data.selectDate(date);
+    });
+
+    $('#app-sum').on('input', function(){
+
+        var val = $(this).val();
+        console.log(val);
+        val = Number(val).toLocaleString();
+        $(this).val(val);
+
+    });
+
+    $('input[name=name], input[name=surname], input[name=patronymic]').on('input', function(){
+        val = $(this).val().replace(/[^А-Яа-яЁё]/gi,'').replace(/\s+/gi,', ');
+        val = val.charAt(0).toUpperCase() + val.substr(1);
+        $(this).val(val);
+    })
+
+    $('input[name=series]').on('input', function(){
+        
+        if ($(this).val().length > 4) {
+            var val = $(this).val();
+            $(this).val(val.substr(0,4));
+        } else {
+            $(this).val($(this).val().replace(/\D/g, ''));
+        }
+        
+    })
+    $('input[name=number]').on('input', function(){
+
+        if ($(this).val().length > 6) {
+            var val = $(this).val();
+            $(this).val(val.substr(0,6));
+        } else {
+            $(this).val($(this).val().replace(/\D/g, ''));
+        }
+
     })
 
     $(".b-input input, .b-input select").each(function(){
@@ -321,6 +407,65 @@ $(document).ready(function(){
         }
     }
 
+    if( $(".datepicker-here").length ){
+        $(".datepicker-here").each(function(){
+            if (typeof IMask == 'function') {
+                var patternMask = new IMask($(this)[0], {
+                    mask: 'DD.MM.YYYY',
+                    groups: {
+                        DD: new IMask.MaskedPattern.Group.Range([1, 31]),
+                        MM: new IMask.MaskedPattern.Group.Range([1, 12]),
+                        YYYY: new IMask.MaskedPattern.Group.Range([1900, 2019]),
+                    },
+                    prepare: function(value, masked){
+                        var numbers = masked._value.replace(/[^0-9]+/g,"");
+                        if( value > 3 && masked._value.length == 0 || value > 1 && numbers.length == 2 || value > 3 && masked._value.length == 13 || value > 1 && numbers.length == 10){
+                            var val = "0"+value+".";
+                            return "0"+value+".";
+                        }
+                        if( masked._value.length == 1 || masked._value.length == 4 || masked._value.length == 14 || masked._value.length == 17 ){
+                            var val = value+".";
+                            return val; 
+                        }
+                        if (masked._value.length >= 10) {
+                            return value;
+                        }
+                        return value;
+                    }
+                });
+            }
+        });
+    }
+
+    if( $("input[name=phone]").length ){
+        $("input[name=phone]").each(function(){
+            if (typeof IMask == 'function') {
+                var phoneMask = new IMask($(this)[0], {
+                    mask: '+{7} (000) 000-00-00',
+                    prepare: function(value, masked){
+                        if( value == 8 && masked._value.length == 0 ){
+                            return "+7 (";
+                        }
+
+                        if( value == 8 && masked._value == "+7 (" ){
+                            return "";
+                        }
+
+                        tmp = value.match(/[\d\+]*/g);
+                        if( tmp && tmp.length ){
+                            value = tmp.join("");
+                        }else{
+                            value = "";
+                        }
+                        return value;
+                    }
+                });
+            } else {
+                $(this).mask("+7 (999) 999-99-99");
+            }
+        });
+    }
+
     $('.b-close').on('click',function(){
         $('html').removeClass('city-open');
     });
@@ -332,6 +477,40 @@ $(document).ready(function(){
     $(document).on('click', '.city-open .b-dark-background', function(){
         $('html').removeClass('city-open');
     });
+
+    function explode( delimiter, string ) {
+
+        var emptyArray = { 0: '' };
+
+        if ( arguments.length != 2
+            || typeof arguments[0] == 'undefined'
+            || typeof arguments[1] == 'undefined' )
+        {
+            return null;
+        }
+
+        if ( delimiter === ''
+            || delimiter === false
+            || delimiter === null )
+        {
+            return false;
+        }
+
+        if ( typeof delimiter == 'function'
+            || typeof delimiter == 'object'
+            || typeof string == 'function'
+            || typeof string == 'object' )
+        {
+            return emptyArray;
+        }
+
+        if ( delimiter === true ) {
+            delimiter = '1';
+        }
+
+        return string.toString().split ( delimiter.toString() );
+    }
+
 
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
