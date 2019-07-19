@@ -13,8 +13,7 @@ input.error,textarea.error{
 	display: none;
 }
 .invisible{
-	/*opacity: 0;*/
-	/*visibility: hidden;*/
+	visibility: hidden;
 }
 .b-btn-container{
 	text-align: center;
@@ -1043,10 +1042,10 @@ input.error,textarea.error{
 	.slider-results{
 		padding-bottom: 8.1rem;
 	}
-	.slider-results:not(.slick-initialized){
+	/*.slider-results:not(.slick-initialized){
 		overflow: hidden;
 		max-height: 38.7rem;
-	}
+	}*/
 	.b-calc-result-list.slick-slider .slick-track,
 	.b-calc-result-list.slick-slider .slick-list{
 		margin: 0 -12px;
