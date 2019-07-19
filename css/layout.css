@@ -1329,11 +1329,11 @@ input.error,textarea.error{
 
 /* Advantages –––––––––––––––––––––––––––––––––––––––––––– Advantages */
 
-.b-advantages-block{
+.b-index-bottom-block{
 	padding-top: 16px;
 	padding-bottom: 76px;
 }
-	.b-advantages-list{
+	.b-index-bottom-list{
 		display: flex;
 	}
 		.b-adv{
@@ -1346,29 +1346,29 @@ input.error,textarea.error{
 		.b-adv:last-child{
 			margin-right: 0;
 		}
-			.b-advantages-illustration{
+			.b-index-bottom-illustration{
 				height: 17rem;
 				margin-bottom: 2.4rem;
 			}
-			.b-1-advantages-illustration{
+			.b-1-index-bottom-illustration{
 				width: 17.4rem;
 				background-image: url('../i/illustration.svg#4');
 			}
-			.b-2-advantages-illustration{
+			.b-2-index-bottom-illustration{
 				width: 16.3rem;
 				background-image: url('../i/illustration.svg#5');
 			}
-			.b-3-advantages-illustration{
+			.b-3-index-bottom-illustration{
 				width: 16rem;
 				background-image: url('../i/illustration.svg#6');
 			}
-			.b-advantages-title{
+			.b-index-bottom-title{
 				max-width: 20rem;
 				font-size: 2.4rem;
 				line-height: 2.8rem;
 				margin-bottom: 1.6rem;
 			}
-			.b-advantages-text{
+			.b-index-bottom-text{
 				font-size: 1.6rem;
 				line-height: 2.2rem;
 				margin-bottom: 2.4rem;
@@ -2176,6 +2176,12 @@ input.error,textarea.error{
 
 /* Datepicker --––––––––––––––––––––––––––––––––––––––––– Datepicker */
 
+input.datepicker-here{
+	background-image: url('../i/sprite.svg#calendar');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 14px) 50%;
+}
 	.-bottom-left- .datepicker--pointer{
 		display: none;
 	}
