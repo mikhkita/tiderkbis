@@ -35,6 +35,7 @@ input.error,textarea.error{
 	-webkit-transition: background 100ms ease-out;
 	-o-transition: background 100ms ease-out;
 	transition: background 100ms ease-out;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .b-btn-text{
 	position: relative;
@@ -372,6 +373,7 @@ input.error,textarea.error{
 				}
 					.b-search-btn-icon,
 					.b-search-icon{
+						background: transparent;
 						background-image: url('../i/sprite.svg#search');
 						width: 2.4rem;
 						height: 2.4rem;	
@@ -446,6 +448,7 @@ input.error,textarea.error{
 		color: #4DB679;
 	}
 	.b-menu-btn-icon:hover{
+		background-color: #FFF;
 		background-image: url('../i/sprite.svg#menu-green');
 	}
 	.b-menu-btn-icon:active{
@@ -1698,17 +1701,22 @@ input.error,textarea.error{
 				cursor: pointer;
 			}
 			.b-star-icon{
+				background: rgba(255,255,255,0.34);
 				background-image: url('../i/sprite.svg#star');	
 				width: 5.4rem;
 				height: 4rem;
 			}
 				.b-star-icon.selected{
+					background: rgba(255,255,255,0.54);
 					background-image: url('../i/sprite.svg#star-selected');	
 				}
 				.hover .b-star-icon.selected{
+					background: transparent;
 					background-image: url('../i/sprite.svg#star');	
 				}
-				.b-star-icon.highlight{
+				.b-star-icon.highlight,
+				.hover .b-star-icon.highlight{
+					background: #FFF;
 					background-image: url('../i/sprite.svg#star-filled') !important;	
 				}
 /* Rating ––––––––––––––––––––––––––––––––––––––––––––– Rating */
@@ -1858,6 +1866,11 @@ input.error,textarea.error{
 			background-color: #DADADA;
 		}
 		.b-accordeon-head{
+			-webkit-user-select: none;
+			   -moz-user-select: none;
+			    -ms-user-select: none;
+			   	 -o-user-select: none;
+					user-select: none;
 			cursor: pointer;
 			position: relative;
 			padding: 2.4rem 0rem 2.4rem;
