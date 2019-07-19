@@ -1336,14 +1336,14 @@ input.error,textarea.error{
 	.b-index-bottom-list{
 		display: flex;
 	}
-		.b-adv{
+		.b-index-bottom-item{
 			/*width: 32.8rem;*/
 			margin-right: 2.4rem;
 		    display: inline-flex;
 		    flex-wrap: wrap;
 		    align-content: space-between;
 		}
-		.b-adv:last-child{
+		.b-index-bottom-item:last-child{
 			margin-right: 0;
 		}
 			.b-index-bottom-illustration{

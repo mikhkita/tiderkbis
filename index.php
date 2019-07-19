@@ -785,7 +785,7 @@ include "header.php";
 		<div class="b-block">
 			<h3>Нам доверяют<br> более 10 000 пайщиков</h3>
 			<div class="b-index-bottom-list">
-				<div class="b-adv">
+				<div class="b-index-bottom-item">
 					<div class="b-index-bottom-top">
 						<div class="b-1-index-bottom-illustration b-index-bottom-illustration"></div>
 						<div class="b-index-bottom-title">Более чем 30 кооперативных  участков</div>
@@ -795,7 +795,7 @@ include "header.php";
 						<a href="#" class="b-small-btn">КОнтакты</a>
 					</div>
 				</div>
-				<div class="b-adv">
+				<div class="b-index-bottom-item">
 					<div class="b-index-bottom-top">
 						<div class="b-2-index-bottom-illustration b-index-bottom-illustration"></div>
 						<div class="b-index-bottom-title">Минимум  документов</div>
@@ -805,7 +805,7 @@ include "header.php";
 						<a href="#" class="b-small-btn">Документы</a>
 					</div>
 				</div>
-				<div class="b-adv">
+				<div class="b-index-bottom-item">
 					<div class="b-index-bottom-top">
 						<div class="b-3-index-bottom-illustration b-index-bottom-illustration"></div>
 						<div class="b-index-bottom-title">Быстрое оформление</div>
