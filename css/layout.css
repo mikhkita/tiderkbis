@@ -1701,23 +1701,19 @@ input.error,textarea.error{
 				cursor: pointer;
 			}
 			.b-star-icon{
-				background: rgba(255,255,255,0.34);
-				background-image: url('../i/sprite.svg#star');	
+				background: rgba(255,255,255,0.34) url('../i/sprite.svg#star');	
 				width: 5.4rem;
 				height: 4rem;
 			}
 				.b-star-icon.selected{
-					background: rgba(255,255,255,0.54);
-					background-image: url('../i/sprite.svg#star-selected');	
+					background: rgba(255,255,255,0.54) url('../i/sprite.svg#star-selected');	
 				}
 				.hover .b-star-icon.selected{
-					background: transparent;
-					background-image: url('../i/sprite.svg#star');	
+					background: transparent url('../i/sprite.svg#star');	
 				}
 				.b-star-icon.highlight,
 				.hover .b-star-icon.highlight{
-					background: #FFF;
-					background-image: url('../i/sprite.svg#star-filled') !important;	
+					background: #FFF url('../i/sprite.svg#star-filled') !important;	
 				}
 /* Rating ––––––––––––––––––––––––––––––––––––––––––––– Rating */
 
