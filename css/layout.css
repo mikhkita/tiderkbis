@@ -3,8 +3,8 @@ label.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border: 1px solid #F00 !important;
-	box-shadow: 0 0px 0px 1px #F00;
+	/*border: 1px solid #F00 !important;*/
+	/*box-shadow: 0 0px 0px 1px #F00;*/
 }
 .fancybox-inner{
 	overflow: visible !important;
@@ -1333,46 +1333,46 @@ input.error,textarea.error{
 
 /* Advantages –––––––––––––––––––––––––––––––––––––––––––– Advantages */
 
-.b-advantages-block{
+.b-index-bottom-block{
 	padding-top: 16px;
 	padding-bottom: 76px;
 }
-	.b-advantages-list{
+	.b-index-bottom-list{
 		display: flex;
 	}
-		.b-adv{
+		.b-index-bottom-item{
 			/*width: 32.8rem;*/
 			margin-right: 2.4rem;
 		    display: inline-flex;
 		    flex-wrap: wrap;
 		    align-content: space-between;
 		}
-		.b-adv:last-child{
+		.b-index-bottom-item:last-child{
 			margin-right: 0;
 		}
-			.b-advantages-illustration{
+			.b-index-bottom-illustration{
 				height: 17rem;
 				margin-bottom: 2.4rem;
 			}
-			.b-1-advantages-illustration{
+			.b-1-index-bottom-illustration{
 				width: 17.4rem;
 				background-image: url('../i/illustration.svg#4');
 			}
-			.b-2-advantages-illustration{
+			.b-2-index-bottom-illustration{
 				width: 16.3rem;
 				background-image: url('../i/illustration.svg#5');
 			}
-			.b-3-advantages-illustration{
+			.b-3-index-bottom-illustration{
 				width: 16rem;
 				background-image: url('../i/illustration.svg#6');
 			}
-			.b-advantages-title{
+			.b-index-bottom-title{
 				max-width: 20rem;
 				font-size: 2.4rem;
 				line-height: 2.8rem;
 				margin-bottom: 1.6rem;
 			}
-			.b-advantages-text{
+			.b-index-bottom-text{
 				font-size: 1.6rem;
 				line-height: 2.2rem;
 				margin-bottom: 2.4rem;
@@ -2143,6 +2143,10 @@ input.error,textarea.error{
 		width: 100%;
 		background: transparent;
 	}
+	.b-input input.error,
+	.b-input textarea.error{
+		border-color: #DC3C3C;
+	}
 	.b-input select{
 		width: 100%;
 	}
@@ -2180,6 +2184,12 @@ input.error,textarea.error{
 
 /* Datepicker --––––––––––––––––––––––––––––––––––––––––– Datepicker */
 
+input.datepicker-here{
+	background-image: url('../i/sprite.svg#calendar');
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 14px) 50%;
+}
 	.-bottom-left- .datepicker--pointer{
 		display: none;
 	}
@@ -2212,6 +2222,10 @@ input.error,textarea.error{
 				font-family: 'Rubik-Regular';
 				font-size: 1.6rem;
 				line-height: 1.9rem;
+				color: #212121;
+			}
+			.datepicker--nav-title:hover{
+				color: #212121;	
 			}
 		.datepicker--cells{
 			padding-top: 1rem;
@@ -2228,16 +2242,21 @@ input.error,textarea.error{
 			.datepicker--cell-day.-current-{
 				height: 34px;
 			}
-			.datepicker--cell.-selected-,
-			.datepicker--cell.-focus-,
 			.datepicker--cell.-current-{
-				background: #DEDEDE;
+				color: #212121!important;
+				background: #F2F2F2!important;
 			}
+			.datepicker--cell.-selected-,
+			.datepicker--cell.-focus-{
+				color: #212121!important;
+				background: #DEDEDE!important;
+			}
+
 			.datepicker--cell-day.-weekend-{
 				color: #DC3C3C;
 			}
-			.datepicker--cell-day.-other-month-{
-				display: none;
+			.datepicker--cell-day.-other-month-.-weekend-{
+				opacity: 0.4;
 			}
 
 /* Datepicker --––––––––––––––––––––––––––––––––––––––––– Datepicker */
