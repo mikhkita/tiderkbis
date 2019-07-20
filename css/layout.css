@@ -157,6 +157,10 @@ input.error,textarea.error{
 .b.gray{
 	background-color: #F2F2F2;
 }
+.grey-text,
+.gray-text{
+	color: rgba(33, 33, 33, 0.5);
+}
 
 .city-open{
 	overflow: hidden;
@@ -2238,6 +2242,45 @@ input.error,textarea.error{
 
 /* Datepicker --––––––––––––––––––––––––––––––––––––––––– Datepicker */
 
+/* Vacancies ---––––––––––––––––––––––––––––––––––––––––– Vacancies */
+.b-vacancy-tile{
+	margin-bottom: 1.6rem;
+	padding: 1.6rem;
+	-webkit-transition: box-shadow 200ms ease-out;
+	   -moz-transition: box-shadow 200ms ease-out;
+	    -ms-transition: box-shadow 200ms ease-out;
+	   	 -o-transition: box-shadow 200ms ease-out;
+			transition: box-shadow 200ms ease-out;
+}
+	.b-vacancy-tile:hover{
+		box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.15);
+	    z-index: 2;
+	}
+	.b-vacancy-tile .b-city-btn{
+		margin-bottom: 2.5rem;
+	}
+		.b-vacancy-tile .b-city-btn-icon{display: inline-block;vertical-align: middle;margin-top: -0.2rem;}
+		.b-vacancy-tile .b-city-btn-text{
+			color: #00963F;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	.b-vacancy-tile h4{
+		margin-bottom: 1rem;
+	}
+	.b-vacancy-tile .b-vacancy-section{
+		margin-bottom: 0.8rem;
+	}
+	.b-vacancy-tile .b-vacancy-skill{
+
+	}
+.b-right-vacancies{
+
+}
+	.b-right-vacancies h4{
+
+	}
+/* Vacancies ---––––––––––––––––––––––––––––––––––––––––– Vacancies */
 
 /* Footer ––––––––––––––––––––––––––––––––––––––––––––– Footer */
 .b-footer{
