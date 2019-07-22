@@ -124,8 +124,6 @@ $(document).ready(function(){
             val = max;   
         }
 
-        console.log(val);
-
         $(this).val(Number(val).toLocaleString());
 
         $(this).parents('.b-calc-slider').find('.b-slider-range').slider( "value", val );
@@ -216,15 +214,17 @@ $(document).ready(function(){
             var date = new Date('1900','0','01');
         }
 
+        $(this).valid();
         data.selectDate(date);
     });
 
     $('#app-sum').on('input', function(){
 
         var val = $(this).val();
-        console.log(val);
-        val = Number(val).toLocaleString();
-        $(this).val(val);
+        if (val != '') {
+            val = Number(val).toLocaleString();
+            $(this).val(val);
+        }
 
     });
 
@@ -244,20 +244,30 @@ $(document).ready(function(){
         }
         
     })
-    $('input[name=number]').on('input', function(){
 
-        if ($(this).val().length > 6) {
-            var val = $(this).val();
-            $(this).val(val.substr(0,6));
-        } else {
-            $(this).val($(this).val().replace(/\D/g, ''));
+    $('input[name=number]').each(function(){
+        if (typeof IMask == 'function') {
+            var patternMask = new IMask($(this)[0], {
+                mask: '000000',
+                prepare: function(value, masked){
+                    if (value.length > 6) {
+                        var val = value;
+                        val = val.substr(0,6);
+                        return val;
+                    } else {
+                        return value.replace(/\D/g, '');
+                    }
+                }
+            });
         }
+    });
 
-    })
-
-    $(".b-input input, .b-input select").each(function(){
+    $(".b-input input:not([type='submit']), .b-input select").each(function(){
         $(this).parents(".b-input").removeClass("focus");
-        if( $(this).val() != "" && $(this).val() != "+7 (   )    -  -  " ){
+        if( 
+            ($(this).val() != "" && $(this).val() != "+7 (   )    -  -  "  ) || 
+            ($(this).parents(".search-string") && $(this).val() != '')
+        ){
             $(this).parents(".b-input").addClass("not-empty");
         }else{
             $(this).parents(".b-input").removeClass("not-empty");
@@ -323,6 +333,19 @@ $(document).ready(function(){
             }
 
             $('.b-calc-tab-item').removeClass('active');
+            $(this).addClass('active');
+        }
+        return false;
+    });
+
+    $('.b-personal-tab').on('click',function(){
+        if (!$(this).hasClass('active')) {
+            var id = $(this).attr('href');
+
+            $('.b-tab-content').addClass('hide');
+            $(id).removeClass('hide');
+
+            $('.b-personal-tab').removeClass('active');
             $(this).addClass('active');
         }
         return false;
@@ -468,15 +491,243 @@ $(document).ready(function(){
 
     $('.b-close').on('click',function(){
         $('html').removeClass('city-open');
+        $('html').removeClass('vacancy-open');
+        return false;
     });
 
     $('.b-city-btn').on('click', function(){
         $('html').addClass('city-open');
     });
 
+    $('.vacancy-form-open').on('click', function(){
+        $('html').addClass('vacancy-open');
+    });
+
     $(document).on('click', '.city-open .b-dark-background', function(){
         $('html').removeClass('city-open');
     });
+
+    $('.b-filter-reset').on('click',function(){
+        $(this).parents('form').find('input, select').each(function(){
+
+            if ($(this).hasClass('select')) {
+                $(this).val('').trigger("chosen:updated");
+                return;
+            }
+
+            if ($(this).parent().hasClass('b-input not-empty')) {
+                $(this).parent().removeClass('not-empty');
+            }
+
+            $(this).val('');
+        });
+
+        if ($(this).parents('form').attr('id') == 'vacancy-form') {
+            $(this).parents('form').submit();
+        }
+        
+    });
+
+    $('#vacancy-form').on('change', function(){
+        $(this).submit();
+    });
+
+    $("#vacancy-form").on('submit', function(){
+        var $form = $(this);
+        $form.parents('.b-vacancy-content').find('.b-left-vacancies').addClass('preloader');
+        $.ajax({
+            type: $(this).attr("method"),
+            url: $(this).attr("action"),
+            data:  $form.serialize(),
+            success: function(msg){
+                if( isValidJSON(msg) && msg != "1" && msg != "0"){
+                    var json = JSON.parse(msg);
+                    if( json.RESULT == "success" ){
+
+                        $form.parents('.b-vacancy-content').find('.b-left-vacancies').removeClass('preloader');
+                        var loanTemplate = Handlebars.compile($('#vacancy-template').html());
+                        var html = '';
+
+                        for (var i = 0; i < json.ITEMS.length; i++) {
+                            
+                            var $this = json.ITEMS[i];
+                            var context = { 
+                                name: $this.NAME,
+                                city: $this.CITY,
+                                position: $this.POSITION,
+                                experience: $this.EXPERIENCE,
+                                detailUrl: $this.DETAIL_URL,
+                            };
+
+                            html += loanTemplate(context);
+                        }
+
+                        $('.b-left-vacancies').html(html);
+
+                    }else{
+                        $form.find(".b-popup-error").html(json.error);
+                    }
+                }else{
+                    if( msg == "1" ){
+                        $link = $this.find(".b-thanks-link");
+                    }else{
+                        $link = $(".b-error-link");
+                    }
+
+                    $.fancybox.close();
+                    $link.click();
+                }
+            },
+            error: function(){
+                $.fancybox.close();
+                $(".b-error-link").click();
+            },
+            complete: function(){
+                if ($form.hasClass('b-calc-form')) {
+                    $('.b-calc-results').removeClass('preloader');
+                }
+            }
+        });
+
+        return false;
+
+    });
+
+    setTimeout(function(){
+        $('.b-cookies-block').addClass('loaded');
+    },500);
+
+    $(document).on('click', '.close-cookie', function(){
+        $(this).parents('.loaded').removeClass('loaded');
+        return false;
+    });
+
+    autosize(document.querySelectorAll('textarea'));
+
+    $('#loan-application-form, .b-vacancy-detail-form').find('input, select, textarea').on('change', function(){
+        if($(this).valid() == 1){
+            $(this).addClass('valid');
+        } else {
+            $(this).removeClass('valid');
+        }
+    });
+
+    $('.b-search-btn span').on('click', function(){
+        $('.b-header-top').addClass('only-icon');
+        setTimeout(function(){
+            $('.b-header-top').addClass('show-input');
+        },200);
+        setTimeout(function(){
+            $('.b-header-top').addClass('show-full-input');
+        },600);
+        setTimeout(function(){
+            $('.b-search-input input').focus();
+        },1000);
+    })
+
+    $('.search-close').on('click', function(){
+        $('.b-header-top').removeClass('show-full-input');
+        setTimeout(function(){
+            $('.b-header-top').removeClass('show-input');
+        },600);
+        setTimeout(function(){
+            $('.b-header-top').removeClass('only-icon');
+        },700);
+    })
+
+    $("#contacts-select").on('change', function(){
+        var val = $(this).find('option:selected').val();
+        $('.b-contacts-accordeon .b-accordeon-list').addClass('hide');
+        $('#'+val).removeClass('hide');
+    });
+
+    $('.b-change-form-link').on('click', function(){
+        var id = $(this).attr('href');
+        $('.b-personal-form-block').addClass('hide');
+        $(id).removeClass('hide');
+        return false;
+    });
+
+    if ($('#pluploadCont').length){
+        var uploader = new plupload.Uploader({
+            runtimes : 'html5',
+            browse_button : 'pickfiles', // you can pass an id...
+            container: document.getElementById('pluploadCont'), // ... or DOM Element itself
+            url : 'addFile.php ',
+            // url : $('.b-vacancy-detail-form').attr("data-file-action"),
+            multi_selection: false,
+            drop_element : 'pluploadCont',
+            
+            filters : {
+                max_file_size : '20mb',
+                mime_types: [
+                    {title : "Documents", extensions : "doc,docx,pdf,rtf,xls,xlsx"},
+                ]
+            },
+
+            init: {
+                Init: function(up, info) {
+                    console.log('[Init]', 'Info:', info, 'Features:', up.features);
+                },
+                PostInit: function() {
+                    
+                },
+                FilesAdded: function(up, files) {
+                    plupload.each(files, function(file) {
+                        if (up.files.length > 1) {
+                            up.removeFile(up.files[0]);
+                        }
+                        // document.getElementById('filelist').innerHTML = '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+                        // document.getElementById("pickfiles").innerHTML = "Резюме выбрано";
+                        $("#original_filename").val(file.name);
+                        document.getElementById("pickfiles").className = "attach successful";
+                    });
+                    up.start();
+                    
+                },
+                UploadProgress: function(up, file) {
+                    // document.getElementById("pickfiles").innerHTML = "Загрузка&nbsp;" + file.percent + "%";
+                },
+                FileUploaded: function(up, file, res) {
+                    // document.getElementById("pickfiles").innerHTML = "Файл прикреплен";
+                    document.getElementById("pickfiles").className = "attach successful";
+                    var json = JSON.parse(res.response);
+
+                    $("#random_filename").val(json.filePath); 
+                    $('.b-resume').removeClass('hide');
+                    $('.b-resume-name').text(file.name);
+                    $('.b-dragndrop-block').addClass('success');
+                },
+                Error: function(up, err) {
+
+                    $('.b-dragndrop-block').addClass('error');
+                    console.log(err);
+
+                    if (err.code == -600) {
+                        document.getElementById("plupload-error").innerHTML = "Файл слишком большой";
+                        document.getElementById("pickfiles").className = "attach error";
+                    };
+                    if (err.code == -601) {
+                        document.getElementById("plupload-error").innerHTML = "Неверный формат файла";
+                        document.getElementById("pickfiles").className = "attach error";
+                    };
+
+                    setTimeout(function(){
+                        $('.b-dragndrop-block').removeClass('error');
+                    }, 2000);
+
+                }
+            }
+        });
+        uploader.init();
+    }
+
+    $(document).on('click', '.b-resume .icon-cross', function(){
+        $(this).parents('.b-resume').addClass('hide');
+        $('#original_filename').val('');
+        $('#random_filename').val('');
+        $('.b-dragndrop-block').removeClass('success');
+    })
 
     function explode( delimiter, string ) {
 
@@ -509,6 +760,15 @@ $(document).ready(function(){
         }
 
         return string.toString().split ( delimiter.toString() );
+    }
+
+    function isValidJSON(src) {
+        var filtered = src;
+        filtered = filtered.replace(/\\["\\\/bfnrtu]/g, '@');
+        filtered = filtered.replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']');
+        filtered = filtered.replace(/(?:^|:|,)(?:\s*\[)+/g, '');
+
+        return (/^[\],:{}\s]*$/.test(filtered));
     }
 
 

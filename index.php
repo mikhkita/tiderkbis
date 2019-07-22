@@ -107,7 +107,7 @@ include "header.php";
 						<a href="#savings" class="b-calc-tab-item">Сбережения</a>
 					</div>
 					<div class="b-calc-form-block" id="loan">
-						<form class="b-calc-form" action="loan-json.php" method="POST" data-template="loan-template" data-results-id="loan-results">
+						<form class="b-calc-form" action="ajax/loan-json.php" method="POST" data-template="loan-template" data-results-id="loan-results">
 							<div class="b-calc-string">
 								<div class="b-block-calc b-block-calc-sliders">
 									<div class="b-calc-slider-block">
@@ -167,7 +167,7 @@ include "header.php";
 						</form>
 					</div>
 					<div class="b-calc-form-block hide" id="savings">
-						<form class="b-calc-form" action="savings-json.php" method="POST" data-template="savings-template" data-results-id="savings-results">
+						<form class="b-calc-form" action="ajax/savings-json.php" method="POST" data-template="savings-template" data-results-id="savings-results">
 							<div class="b-calc-string">
 								<div class="b-block-calc b-block-calc-sliders">
 									<div class="b-calc-slider-block">

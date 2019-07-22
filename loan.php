@@ -20,7 +20,7 @@ include "header.php";
 			</div>
 		</div>
 		<div class="b-calc-form-block" id="loan">
-			<form action="json.php" method="POST" data-template="loan-template" class="b-calc-form" data-results-id="loan-results">
+			<form action="ajax/loan-json.php" method="POST" data-template="loan-template" class="b-calc-form" data-results-id="loan-results">
 				<div class="b-calc-string">
 					<div class="b-block">
 						<div class="b-block-calc b-block-calc-sliders">
@@ -87,7 +87,7 @@ include "header.php";
 			</form>
 		</div>
 		<div class="b-calc-form-block hide" id="mother">
-			<form action="json.php" method="POST" data-template="loan-template" class="b-calc-form" data-results-id="mother-results">
+			<form action="ajax/loan-json.php" method="POST" data-template="loan-template" class="b-calc-form" data-results-id="mother-results">
 				<div class="b-calc-string">
 					<div class="b-block">
 						<div class="b-block-calc b-block-calc-sliders">
@@ -558,7 +558,7 @@ include "header.php";
 	</div>
 </script>
 
-<div class="b-savlings-docs">
+<div class="b-savings-docs">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h3>Документы</h3>

@@ -13,7 +13,7 @@ include "header.php";
 
 <div class="b-left-calc">
 	<div class="b-calc-form-block">
-		<form class="b-calc-form" action="savings-json.php" method="POST" data-template="savings-template" data-results-id="savings-results">
+		<form class="b-calc-form" action="ajax/savings-json.php" method="POST" data-template="savings-template" data-results-id="savings-results">
 			<div class="b-calc-string">
 				<div class="b-block">
 					<div class="b-block-calc b-block-calc-sliders">
@@ -243,7 +243,7 @@ include "header.php";
 	</div>
 </script>
 
-<div class="b-savlings-docs">
+<div class="b-savings-docs">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h3>Документы</h3>

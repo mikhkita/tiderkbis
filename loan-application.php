@@ -13,13 +13,13 @@ include "header.php";
 ?>
 
 <div class="b-loan-app-form">
-	<form action="#">
+	<form action="#" id="loan-application-form">
 		<div class="b-loan-app-cont">
 			<div class="b-block">
 				<h3>Информация о займе</h3>
 				<div class="b-loan-app-block">
 					<div class="b-input b-1-app-input">
-						<select class="select" name="savings-percent" data-placeholder="Вид займа*" required>
+						<select class="select" name="loan-type" data-placeholder="Вид займа" required>
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
@@ -27,11 +27,11 @@ include "header.php";
 						</select>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="text" name="app-sum" id="app-sum" oninput="this.value = this.value.replace(/\D/g, '')">
+						<input type="text" name="app-sum" id="app-sum" oninput="this.value = this.value.replace(/\D/g, '')" required>
 						<label for="app-sum">Сумма займа<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<select class="select" name="savings-percent" data-placeholder="Срок займа*" required>
+						<select class="select" name="loan-term" data-placeholder="Срок займа" required>
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
@@ -46,45 +46,45 @@ include "header.php";
 				<h3>Личные данные</h3>
 				<div class="b-loan-app-block">
 					<div class="b-input b-1-app-input">
-						<input type="text" name="name">
+						<input type="text" name="name" required>
 						<label for="name">Имя<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="text" name="surname">
+						<input type="text" name="surname" required>
 						<label for="surname">Фамилия<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="text" name="patronymic">
+						<input type="text" name="patronymic" required>
 						<label for="patronymic">Отчество<span class="required">*</span></label>
 					</div>
 				</div>
 				<div class="b-loan-app-block">
 					<div class="b-input b-1-app-input">
-						<input type="text" class="datepicker-here" name="birthdate" data-view="years">
+						<input type="text" class="datepicker-here" name="birthdate" data-view="years" required>
 						<label for="birthdate">Дата рождения<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="text" name="birthplace">
+						<input type="text" name="birthplace" required>
 						<label for="birthplace">Место рождения<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="text" name="passport-address">
+						<input type="text" name="passport-address" required>
 						<label for="passport-address">Адрес прописки<span class="required">*</span></label>
 					</div>
 				</div>
 				<div class="b-loan-app-block">
 					<div class="b-input b-2-app-input">
-						<input type="text" name="address">
+						<input type="text" name="address" required>
 						<label for="address">Адрес фактического проживания<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="phone" name="phone">
+						<input type="phone" name="phone" required>
 						<label for="phone">Телефон<span class="required">*</span></label>
 					</div>
 				</div>
 				<div class="b-loan-app-block">
 					<div class="b-input b-1-app-input">
-						<input type="phone" name="email">
+						<input type="phone" name="email" required>
 						<label for="email">Е-mail<span class="required">*</span></label>
 					</div>
 				</div>
@@ -95,21 +95,21 @@ include "header.php";
 				<h3>Паспорт</h3>
 				<div class="b-loan-app-block">
 					<div class="b-input b-1-app-input">
-						<input type="phone" name="series">
+						<input type="phone" name="series" required>
 						<label for="series">Серия<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="phone" name="number">
+						<input type="phone" name="number" required>
 						<label for="number">Номер<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<input type="text" class="datepicker-here" name="birthdate" data-view="years">
-						<label for="birthdate">Дата выдачи<span class="required">*</span></label>
+						<input type="text" class="datepicker-here" name="give-date" data-view="years" required>
+						<label for="give-date">Дата выдачи<span class="required">*</span></label>
 					</div>
 				</div>
 				<div class="b-loan-app-block">
 					<div class="b-input b-2-app-input">
-						<input type="phone" name="give-by">
+						<input type="phone" name="give-by" required>
 						<label for="give-by">Кем выдан<span class="required">*</span></label>
 					</div>
 				</div>
@@ -124,7 +124,7 @@ include "header.php";
 						<label for="work">Место работы</label>
 					</div>
 					<div class="b-input b-1-app-input">
-						<select class="select" name="savings-percent" data-placeholder="Подтверждение дохода">
+						<select class="select" name="income-proof" data-placeholder="Подтверждение дохода">
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
@@ -132,7 +132,7 @@ include "header.php";
 						</select>
 					</div>
 					<div class="b-input b-1-app-input">
-						<select class="select" name="savings-percent" data-placeholder="Поручитель*">
+						<select class="select" name="guarantor" data-placeholder="Поручитель">
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
@@ -162,7 +162,7 @@ include "header.php";
 			<div class="b-block">
 				<div class="b-loan-app-cont-string">
 					<a href="#" class="ajax b-btn"><span class="b-btn-text">Оформить заём</span></a>
-					<div class="b-loan-app-error hide">Некоторые заполненные поля  содержат ошибку</div>
+					<div class="b-error-text hide">Некоторые заполненные поля  содержат ошибку</div>
 				</div>
 				<div class="b-loan-app-cont-string">
 					<div class="b-loan-app-btn-text">Нажимая кнопку «Оформить заём», я даю согласие  на <a href="/personal">обработку моих персональных данных</a></div>

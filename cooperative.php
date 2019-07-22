@@ -27,11 +27,11 @@ include "header.php";
 			</div>
 		</div>
 		<div class="b-right-block sticky">
-			<a href="#" class="b-white-tile b-cooperative-tile">
+			<a href="online-reception.php" class="b-white-tile b-cooperative-tile">
 				<span class="b-cooperative-tile-title">Онлайн-<br> приёмная</span>
 				<span class="b-cooperative-tile-img b-man-illustration"></span>
 			</a>
-			<a href="#" class="b-white-tile b-cooperative-tile">
+			<a href="documents.php" class="b-white-tile b-cooperative-tile">
 				<span class="b-cooperative-tile-title">Документы</span>
 				<span class="b-cooperative-tile-img b-doc-illustration"></span>
 			</a>

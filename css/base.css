@@ -73,6 +73,12 @@ h4{
 	line-height: 2.8rem;
 	font-family: 'Rubik-Regular';
 }
+strong{
+	font-family: "Rubik-Bold";
+}
+b{
+	font-family: 'Rubik-Medium';
+}
 .b{
 	position: relative;
 }
@@ -134,6 +140,48 @@ input:-moz-placeholder {
 		margin-top: 3.2rem;
 		margin-bottom: 4rem;
 	}
+	.b-text ol{
+		counter-reset: myCounter;
+		margin-top: 2.4rem;
+	}
+	.b-text ol ul{
+		color: rgba(33, 33, 33, 0.5);
+	}
+		.b-text ol > li{
+		  list-style: none;
+		  padding-left: 3.7rem;
+		  line-height: 2rem;
+		  margin-bottom: 2.4rem;
+		}
+		.b-text ol > li:before {
+			position: absolute;
+			left: 0;
+			counter-increment: myCounter;
+			content:counter(myCounter) ".";
+			font-family: 'Rubik-Bold';
+			display: inline-block;
+			text-align: left;
+			font-size: 1.6rem;
+			line-height: 2rem;
+			width: 2.2rem;
+		}
+	.b-text ul{
+		margin-left: 4.9rem;
+		margin-top: 1.6rem;
+	}
+		.b-text ul > li{
+			list-style: none;
+			margin-bottom: 2rem;
+			line-height: 2rem;
+		}
+		.b-text ul > li:before {
+			content:"-";
+			display: inline-block;
+			text-align: left;
+			font-size: 1.6rem;
+			line-height: 2rem;
+			margin-right: 0.5rem;
+		}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	

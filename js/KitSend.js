@@ -80,6 +80,8 @@ $(document).ready(function(){
 	var rePhone = /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
 		tePhone = '+7 (999) 999-99-99';
 
+	$.validator.setDefaults({ ignore: ":hidden:not(.select)" });
+
 	$.validator.addMethod('customPhone', function (value) {
 		return rePhone.test(value);
 	});
@@ -102,27 +104,15 @@ $(document).ready(function(){
 
 	$(".ajax, .not-ajax").parents("form").each(function(){
 		$(this).validate({
-			onkeyup: (!$(this).hasClass("b-data-order-form"))?false:true,
 			rules: {
 				email: 'email',
 				phone: 'customPhone',
-				ORDER_PROP_3: 'email',
-				ORDER_PROP_4: 'customPhone',
-				"store-quality":{
-                    required: true
-                },
-                "goods-quality":{
-                    required: true
-                },
-                "manager-quality":{
-                    required: true
-                },
-                "pack-quality":{
-                    required: true
-                },
-                "courier-quality":{
-                    required: true
-                }
+				number: {
+					minlength: 6,
+				},
+				series: {
+					minlength: 4,	
+				}
 			},
 			errorPlacement: function(error, element) {
                 error.appendTo(element.parents(".b-review-input").addClass("error"));
@@ -138,8 +128,9 @@ $(document).ready(function(){
 			    $(element).removeClass("error").parents(".b-input").removeClass("error");
 			}
 		});
-		if( $(this).find("input[name=phone], input[name=addressee-phone], input[name=ORDER_PROP_4], input[name=PERSONAL_PHONE]").length ){
-			$(this).find("input[name=phone], input[name=addressee-phone], input[name=ORDER_PROP_4], input[name=PERSONAL_PHONE]").each(function(){
+
+		if( $(this).find("input[name=phone]").length ){
+			$(this).find("input[name=phone]").each(function(){
 				if (typeof IMask == 'function') {
 					var phoneMask = new IMask($(this)[0], {
 			        	mask: '+{7} (000) 000-00-00',
@@ -165,6 +156,16 @@ $(document).ready(function(){
 					$(this).mask("+7 (999) 999-99-99");
 				}
 			});
+		}
+
+		if ($(this).find('#original_filename')) {
+			$(this).find('#original_filename').each(function(){
+				if($(this).val() == ''){
+					$(this).parents('b-dragndrop-block').addClass('ajax-error');
+				} else {
+					$(this).parents('b-dragndrop-block').removeClass('ajax-error');
+				}
+			})
 		}
 
 		if( $(this).hasClass("b-data-order-form") ){
@@ -269,9 +270,13 @@ $(document).ready(function(){
 	$(".ajax, .not-ajax").parents("form").submit(function(){
 		var $form = $(this);
 
-  		if( $(this).find("input.error,select.error,textarea.error,.b-postamat-error").length == 0 ){
+  		if( $(this).find("input.error, select.error, textarea.error").length == 0 ){
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
+
+			if ($form.find('.b-error-text') && !$form.find('.b-error-text').hasClass('hide')) {
+  				$form.find('.b-error-text').addClass('hide');
+  			}
 
   			if( $(this).find(".not-ajax").length ){
   				if( $("select#date").length ){
@@ -401,8 +406,12 @@ $(document).ready(function(){
 							    }
 							}
 
+							if( json.ACTION == "reload" ){
+	                            window.location.reload();
+	                        }
+
 				        }else{
-				        	$form.find(".b-popup-error").html(json.error);
+				        	$form.find(".b-popup-error").html(json.ERROR);
 				        }
 
 					}else{
@@ -412,9 +421,9 @@ $(document).ready(function(){
 							$link = $(".b-error-link");
 						}
 
-						if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
-							customHandlers[$this.attr("data-afterAjax")]($this);
-						}
+						// if( $this.attr("data-afterAjax") && customHandlers[$this.attr("data-afterAjax")] ){
+						// 	customHandlers[$this.attr("data-afterAjax")]($this);
+						// }
 
 						$.fancybox.close();
 						$link.click();
@@ -431,7 +440,10 @@ $(document).ready(function(){
 				}
 			});
   		}else{
-  			$(this).find("input.error,select.error,textarea.error").eq(0).focus();
+  			$(this).find("input.error, select.error, textarea.error").eq(0).focus();
+  			if ($form.find('.b-error-text') && $form.find('.b-error-text').hasClass('hide')) {
+  				$form.find('.b-error-text').removeClass('hide');
+  			}
   		}
   		return false;
   	});
