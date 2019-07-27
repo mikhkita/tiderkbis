@@ -407,7 +407,7 @@ input.error,textarea.error{
 				.b-header .b-logo-mobile{
 					display: none;
 					width: 23.1rem;
-					max-width: calc(100% - 7rem);
+					max-width: calc(100% - 8rem);
 					height: 3rem;
 					background-image: url('../i/logo-mobile.svg');
 				    background-size: contain;
@@ -941,7 +941,10 @@ input.error,textarea.error{
 				left: 12.5rem;
 				letter-spacing: 0.05em;
 			}
-			.b-main-slider .b-btn{
+			.b-main-slider .btn-shadow{
+				display: inline-block;
+				line-height: 0;
+			    border-radius: 6.8rem;
 				box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
 			}
 @media (min-width: 1024px) {
@@ -972,11 +975,13 @@ input.error,textarea.error{
 	.b-slider-item-info{
 		width: 100%;
 	}
+		.b-main-slider .btn-shadow{
+			width: 22rem;
+			margin: 0 auto;
+			display: block;
+		}
 		.b-main-slider .b-btn{
 		    padding: 1.6rem 4rem;
-		    width: 22rem;
-		    margin: 0 auto;
-		    display: block;
 		}
 	.slick-dots{
 	    position: absolute;
@@ -1058,6 +1063,18 @@ input.error,textarea.error{
 					line-height: 1.9rem;
 					text-transform: uppercase;
 				}
+		.b-illustration-list .slick-dots{
+			bottom: -3.4rem;
+		}
+			.b-illustration-list .slick-dots li:not(.slick-active){
+				border-color: #BABABA;
+			}
+
+@media screen and (max-width: 767px) {
+	.b-illustration-list{
+		margin: 0 -1.6rem;
+	}
+}
 
 /* Main illustrations ––––––––––––––––––––––––––––––––––––––––––––– Main illustrations */
 
@@ -1079,7 +1096,7 @@ input.error,textarea.error{
 		}
 			.b-popular-offer-item-top{
 				position: relative;
-				height: 208px;
+				height: 20.8rem;
 			}
 				.b-popular-offer-item-img{
 					width: 100%;
@@ -1095,8 +1112,8 @@ input.error,textarea.error{
 					font-family: 'Rubik-Medium';
 					font-size: 1.4rem;
 					line-height: 1.7rem;
-					right: 16px;
-					top: 16px;
+					right: 1.6rem;
+					top: 1.6rem;
 				}
 			.b-popular-offer-item-bottom{
 				padding: 1.6rem 1.6rem 3.2rem;
@@ -1120,6 +1137,34 @@ input.error,textarea.error{
 				.b-popular-offer-item .b-small-btn:active{
 				    color: #212121;
 				}
+@media screen and (max-width: 767px) {
+	.b-popular-offers-list{
+		display: block;
+	}
+	.b-popular-offer-item{
+		width: 100%;
+		margin-bottom: 1.6rem;
+	}
+	.b-popular-offer-item-top{
+		height: 12rem;
+	}
+	.b-popular-offer-item-bottom{
+		padding: 1.6rem;
+	}
+	.b-popular-offer-item-name{
+	    font-size: 1.6rem;
+    	line-height: 1.9rem;
+    	margin-bottom: 1.6rem;
+    	width: 25rem;
+	}
+	.b-popular-offer-item-type{
+		right: 0.8rem;
+		top: 0.8rem;
+	}
+	.b-popular-offers{
+		padding-bottom: 0.8rem;
+	}
+}
 
 /* Popular offers ––––––––––––––––––––––––––––––––––––––––––––– Popular offers */
 
@@ -1197,7 +1242,7 @@ input.error,textarea.error{
 				.b-block-calc-sliders{
 					padding: 6.1rem 0 3.2rem;
 				}
-				.b-calc-form-block-savings .b-calc-slider-block{
+				.b-calc-form-block-savings .b-block-calc-sliders{
 					max-width: 68rem;
 				}
 					.b-calc-slider-block{
@@ -1376,6 +1421,12 @@ input.error,textarea.error{
 						line-height: 1.9rem;
 						margin-bottom: 3.2rem;
 					}
+
+@media screen and (max-width: 767px) {
+	.b-calc{
+	    padding-top: 4rem;
+	}
+}
 
 
 /* Calc ––––––––––––––––––––––––––––––––––––––––––––– Calc */

@@ -13,7 +13,7 @@ include "header.php";
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
-					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>
@@ -22,7 +22,7 @@ include "header.php";
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
-					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>
@@ -31,7 +31,7 @@ include "header.php";
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
-					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,7 @@ include "header.php";
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
-					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>

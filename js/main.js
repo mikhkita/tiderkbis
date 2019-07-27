@@ -63,6 +63,16 @@ $(document).ready(function(){
           ]
     });
 
+    function illustrationSlider(){
+        $('.b-main-illustrations .b-illustration-list').slick({
+            slidesToShow: 1,
+            dots: true,
+            arrows: false,
+            slidesToScroll: 1,
+            touchThreshold: 100,
+        })
+    }
+
     $('.b-btn-more').on('click', function(){
         $(this).parents('.max-4-items').removeClass('max-4-items');
         if ($(this).parent().hasClass('b-btn-container')) {
@@ -779,6 +789,33 @@ $(document).ready(function(){
 
         return (/^[\],:{}\s]*$/.test(filtered));
     }
+
+    function illustrationSlider(){
+        $('.b-main-illustrations .b-illustration-list').slick({
+            slidesToShow: 1,
+            dots: true,
+            arrows: false,
+            slidesToScroll: 1,
+            touchThreshold: 100,
+        })
+    }
+
+    if(window.innerWidth < 768) {
+        illustrationSlider();
+    }
+
+    $(window).resize(function(){
+
+        if(window.innerWidth < 768) {
+            if(! $('.b-main-illustrations .b-illustration-list').hasClass('slick-initialized')){
+                illustrationSlider();
+            }
+        }else{
+            if($('.b-main-illustrations .b-illustration-list').hasClass('slick-initialized')){
+                $('.b-main-illustrations .b-illustration-list').slick('unslick');
+            }
+        }
+    });
 
 
     // // Первая анимация элементов в слайде
