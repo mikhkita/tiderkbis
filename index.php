@@ -35,6 +35,15 @@ include "header.php";
 				</div>
 			</div>
 		</div>
+		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+			<div class="b-block">
+				<div class="b-slider-item-info">
+					<h2>Займы на любые цели</h2>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="b-main-illustrations">
@@ -166,7 +175,7 @@ include "header.php";
 							</div>
 						</form>
 					</div>
-					<div class="b-calc-form-block hide" id="savings">
+					<div class="b-calc-form-block b-calc-form-block-savings hide" id="savings">
 						<form class="b-calc-form" action="ajax/savings-json.php" method="POST" data-template="savings-template" data-results-id="savings-results">
 							<div class="b-calc-string">
 								<div class="b-block-calc b-block-calc-sliders">
@@ -191,29 +200,35 @@ include "header.php";
 								</div>
 							</div>
 							<div class="b-calc-string">
-								<div class="b-block-calc b-calc-checkboxes">
-									<label class="b-calc-checkbox-item">
-										<input type="radio" name="b-person-type">
-										<div class="b-checkbox-text">Я пенсионер</div>
-									</label>
-									<label class="b-calc-checkbox-item">
-										<input type="radio" name="b-person-type">
-										<div class="b-checkbox-text">Я работник бюджетной сферы</div>
-									</label>
-									<label class="b-calc-checkbox-item">
-										<input type="radio" name="b-person-type">
-										<div class="b-checkbox-text">Я предприниматель</div>
-									</label>
+								<div class="b-block-calc">
+									<div class="b-calc-checkboxes">
+										<label class="b-calc-checkbox-item">
+											<input type="checkbox" name="replenishment">
+											<div class="b-checkbox-text">Возможность пополнения</div>
+										</label>
+										<label class="b-calc-checkbox-item">
+											<input type="checkbox" name="refund">
+											<div class="b-checkbox-text">Досрочный возврат денег</div>
+										</label>
+										<div class="calc-select-cont">
+											<select class="select" name="savings-percent">
+												<option value="1">Начисление процентов</option>
+												<option value="2">Начисление процентов</option>
+												<option value="3">Начисление процентов</option>
+												<option value="4">Начисление процентов</option>
+											</select>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="b-calc-string">
-								<div class="b-block-calc b-tumbler-block">
-									<div class="b-tumbler-text b-tumbler-text-left active">С равными<br>платежами</div>
-									<label class="b-tumbler-item">
-										<input type="checkbox" class="tumbler">
-										<div class="b-tumbler"></div>
-									</label>
-									<div class="b-tumbler-text b-tumbler-text-right">С начислением процентов<br>на остаток долга</div>
+							<div class="b-calc-string b-calc-string-without-border">
+								<div class="b-block">
+									<div class="b-block-calc b-calc-checkboxes">
+										<label class="b-calc-checkbox-item">
+											<input type="checkbox" name="retired">
+											<div class="b-checkbox-text">Я пенсионер</div>
+										</label>
+									</div>
 								</div>
 							</div>
 							<div class="b-calc-string">

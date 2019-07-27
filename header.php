@@ -104,6 +104,7 @@ if (isset($_SESSION['isFirstTime'])) {
 			</div>
 			<div class="b-white-header">
 				<div class="b-block clearfix">
+					<a href="index.php" class="b-logo-mobile"></a>
 					<ul class="b-main-menu justify">
 						<li><a href="loan.php">Займы</a></li>
 						<li><a href="savings.php">Сбережения</a></li>
@@ -112,9 +113,19 @@ if (isset($_SESSION['isFirstTime'])) {
 						<li><a href="online-reception.php">Онлайн-приёмная</a></li>
 						<li><a href="contacts.php">Контакты</a></li>
 					</ul>
-					<a href="#" class="b-menu-btn">
-						<span class="b-menu-btn-icon"></span>
-					</a>
+					<div class="b-menu-right-cont">
+						<div class="b-search-btn b-search-btn-mobile">
+							<span class="b-search-btn-icon"></span>
+							<form action="search.php" method="GET" class="b-search-input">
+								<input type="text" name="q">
+								<input type="submit">
+								<a href="#" class="search-close b-icon-cross"></a>
+							</form>
+						</div>	
+						<a href="#" class="b-menu-btn">
+							<span class="b-menu-btn-icon"></span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

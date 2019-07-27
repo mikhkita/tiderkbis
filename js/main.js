@@ -51,7 +51,16 @@ $(document).ready(function(){
         arrows: true,
         prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
         nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
-        touchThreshold: 100
+        touchThreshold: 100,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                dots: true,
+              }
+            },
+          ]
     });
 
     $('.b-btn-more').on('click', function(){
@@ -612,7 +621,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.b-search-btn span').on('click', function(){
+    $('.b-search-btn:not(.b-search-btn-mobile) span').on('click', function(){
         $('.b-header-top').addClass('only-icon');
         setTimeout(function(){
             $('.b-header-top').addClass('show-input');
