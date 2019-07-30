@@ -1043,7 +1043,7 @@ input.error,textarea.error{
 }
 	.b-slider-item{
 		height: 48rem;
-		/*width: 1330px;*/
+		width: calc(100vw + 50px);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 0px 0px;	
