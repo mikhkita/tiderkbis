@@ -48,12 +48,12 @@ include "header.php";
 				<div class="b-calc-string">
 					<div class="b-block">
 						<div class="b-block-calc b-tumbler-block">
-							<div class="b-tumbler-text b-tumbler-text-left active">С равными<br>платежами</div>
+							<div class="b-tumbler-text b-tumbler-text-left active">С равными <br>платежами</div>
 							<label class="b-tumbler-item">
 								<input type="checkbox" class="tumbler">
 								<div class="b-tumbler"></div>
 							</label>
-							<div class="b-tumbler-text b-tumbler-text-right">С начислением процентов<br>на остаток долга</div>
+							<div class="b-tumbler-text b-tumbler-text-right">С начислением процентов <br>на остаток долга</div>
 						</div>
 					</div>
 				</div>

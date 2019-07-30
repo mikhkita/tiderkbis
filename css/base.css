@@ -139,6 +139,7 @@ input:-moz-placeholder {
 	.b-text img{
 		margin-top: 3.2rem;
 		margin-bottom: 4rem;
+		max-width: 100%;
 	}
 	.b-text ol{
 		counter-reset: myCounter;
@@ -213,6 +214,10 @@ input:-moz-placeholder {
 	}
 	.b-btn:hover{
 		background: #F3C92E;
+	}
+	h1{
+		font-size: 3.2rem;
+		line-height: 3.8rem;
 	}
 	h3{
 		font-size: 2.4rem;

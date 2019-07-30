@@ -7,7 +7,7 @@ if (end($arPage) == 'loan-detail.php') {
 	$detailPageClass = "b-navigation-detail";
 }
 
-setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
+// setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,16 +68,16 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 				</div>
 			</div>
 			<ul class="b-burger-menu-list">
-				<li><a href="#">Займы</a></li>
-				<li><a href="#">Сбережения</a></li>
+				<li><a href="loan.php">Займы</a></li>
+				<li><a href="savings.php">Сбережения</a></li>
 				<li><a href="payment.php">Погашение займа</a></li>
 				<li><a href="cooperative.php">О кооперативе</a></li>
-				<li><a href="#">Онлайн-приёмная</a></li>
+				<li><a href="online-reception.php">Онлайн-приёмная</a></li>
 				<li><a href="documents.php">Документы</a></li>
-				<li><a href="#">Вакансии</a></li>
-				<li><a href="#">Новости</a></li>
-				<li><a href="#">Полезные советы</a></li>
-				<li><a href="#">Контакты</a></li>
+				<li><a href="vacancies.php">Вакансии</a></li>
+				<li><a href="news.php">Новости</a></li>
+				<li><a href="advices-list.php">Полезные советы</a></li>
+				<li><a href="contacts.php">Контакты</a></li>
 			</ul>
 			<ul class="b-burger-soc clearfix">
 				<li><a href="#" class="b-soc ok-icon" target="_blank"></a></li>

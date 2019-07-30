@@ -16,12 +16,12 @@ include "header.php";
 		<h3>Задать вопрос</h3>
 		<form action="#">
 			<div class="b-tumbler-block">
-				<div class="b-tumbler-text b-tumbler-text-left active">Хочу, чтобы мне<br>позвонили</div>
+				<div class="b-tumbler-text b-tumbler-text-left active">Хочу, чтобы мне <br>позвонили</div>
 				<label class="b-tumbler-item">
 					<input type="checkbox" class="tumbler">
 					<div class="b-tumbler"></div>
 				</label>
-				<div class="b-tumbler-text b-tumbler-text-right">Хочу, чтобы мне<br>написали</div>
+				<div class="b-tumbler-text b-tumbler-text-right">Хочу, чтобы мне <br>написали</div>
 			</div>
 			<div class="b-input-cont">
 				<div class="b-half-input-cont">

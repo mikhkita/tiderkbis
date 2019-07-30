@@ -18,25 +18,27 @@ include "header.php";
 			<div class="b-block">
 				<h3>Информация о займе</h3>
 				<div class="b-loan-app-block">
-					<div class="b-input b-1-app-input">
-						<select class="select" name="loan-type" data-placeholder="Вид займа" required>
+					<div class="b-input b-1-app-input loan-select">
+						<select class="select" name="loan-type" data-placeholder="Вид займа" placeholder="Вид займа" required>
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
 							<option value="4">Начисление процентов</option>
 						</select>
+						<label for="loan-type">Вид займа<span class="required">*</span></label>
 					</div>
 					<div class="b-input b-1-app-input">
 						<input type="text" name="app-sum" id="app-sum" oninput="this.value = this.value.replace(/\D/g, '')" required>
 						<label for="app-sum">Сумма займа<span class="required">*</span></label>
 					</div>
-					<div class="b-input b-1-app-input">
+					<div class="b-input b-1-app-input loan-select">
 						<select class="select" name="loan-term" data-placeholder="Срок займа" required>
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
 							<option value="4">Начисление процентов</option>
 						</select>
+						<label for="loan-term">Срок займа<span class="required">*</span></label>
 					</div>
 				</div>
 			</div>
@@ -123,21 +125,23 @@ include "header.php";
 						<input type="phone" name="work">
 						<label for="work">Место работы</label>
 					</div>
-					<div class="b-input b-1-app-input">
+					<div class="b-input b-1-app-input loan-select">
 						<select class="select" name="income-proof" data-placeholder="Подтверждение дохода">
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
 							<option value="4">Начисление процентов</option>
 						</select>
+						<label for="income-proof">Подтверждение дохода<span class="required">*</span></label>
 					</div>
-					<div class="b-input b-1-app-input">
+					<div class="b-input b-1-app-input loan-select">
 						<select class="select" name="guarantor" data-placeholder="Поручитель">
 							<option value=""></option>
 							<option value="2">Начисление процентов</option>
 							<option value="3">Начисление процентов</option>
 							<option value="4">Начисление процентов</option>
 						</select>
+						<label for="guarantor">Поручитель<span class="required">*</span></label>
 					</div>
 				</div>
 				<div class="b-loan-app-block">
