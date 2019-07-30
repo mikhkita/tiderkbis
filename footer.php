@@ -19,13 +19,9 @@
 				<li><a href="cooperative.php">О кооперативе</a></li>
 				<li><a href="#">Онлайн-приёмная</a></li>
 				<li><a href="documents.php">Документы</a></li>
-			</ul>
-			<ul class="b-footer-menu">
 				<li><a href="#">Займы</a></li>
 				<li><a href="payment.php">Погашение займа</a></li>
 				<li><a href="#">Сбережения</a></li>
-			</ul>
-			<ul class="b-footer-menu">
 				<li><a href="#">Вакансии</a></li>
 				<li><a href="#">Новости</a></li>
 				<li><a href="#">Полезные советы</a></li>
@@ -100,6 +96,7 @@
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
 	<script type="text/javascript" src="js/plupload.full.min.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
 	<script type="text/javascript" src="js/autosize.min.js"></script>

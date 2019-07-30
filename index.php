@@ -8,38 +8,38 @@ include "header.php";
 
 ?>
 	<div class="b-main-slider">
-		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
-					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
 					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>
-		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
-					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
 					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>
-		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
-					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
 					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>
-		<div class="b-slider-item" style="background-image: url('i/main-back.jpg');">
+		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
-					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие  или сделать что-то, о чем вы давно мечтали</div>
+					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
 					<div class="btn-shadow"><a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
@@ -87,7 +87,7 @@ include "header.php";
 						<div class="b-popular-offer-item-type">займы</div>
 					</div>
 					<div class="b-popular-offer-item-bottom">
-						<div class="b-popular-offer-item-name">Заём под  «Материнский&nbsp;капитал»</div>
+						<div class="b-popular-offer-item-name">Заём под «Материнский&nbsp;капитал»</div>
 						<div class="b-small-btn">Подробнее</div>
 					</div>
 				</a>
@@ -119,7 +119,7 @@ include "header.php";
 						<form class="b-calc-form" action="ajax/loan-json.php" method="POST" data-template="loan-template" data-results-id="loan-results">
 							<div class="b-calc-string">
 								<div class="b-block-calc b-block-calc-sliders">
-									<div class="b-calc-slider-block">
+									<div class="b-calc-slider-block clearfix">
 										<label for="sum">Сумма займа</label>
 										<div class="b-calc-slider">
 											<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
@@ -128,7 +128,7 @@ include "header.php";
 											</div>
 										</div>
 									</div>
-									<div class="b-calc-slider-block">
+									<div class="b-calc-slider-block clearfix">
 										<label for="date">Срок займа</label>
 										<div class="b-calc-slider">
 											<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
@@ -141,7 +141,7 @@ include "header.php";
 							</div>
 							<div class="b-calc-string">
 								<div class="b-block-calc b-tumbler-block">
-									<div class="b-tumbler-text b-tumbler-text-left active">С равными<br>платежами</div>
+									<div class="b-tumbler-text b-tumbler-text-left active">С равными <br>платежами</div>
 									<label class="b-tumbler-item">
 										<input type="checkbox" name="payment-type" class="tumbler">
 										<div class="b-tumbler"></div>
@@ -167,7 +167,7 @@ include "header.php";
 							</div>
 							<div class="b-calc-string">
 								<div class="b-block-calc b-calc-text-block">
-									<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+									<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 									<div class="b-btn-container">
 										<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
 									</div>
@@ -179,7 +179,7 @@ include "header.php";
 						<form class="b-calc-form" action="ajax/savings-json.php" method="POST" data-template="savings-template" data-results-id="savings-results">
 							<div class="b-calc-string">
 								<div class="b-block-calc b-block-calc-sliders">
-									<div class="b-calc-slider-block">
+									<div class="b-calc-slider-block clearfix">
 										<label for="sum">Сумма займа</label>
 										<div class="b-calc-slider">
 											<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
@@ -188,7 +188,7 @@ include "header.php";
 											</div>
 										</div>
 									</div>
-									<div class="b-calc-slider-block">
+									<div class="b-calc-slider-block clearfix">
 										<label for="date">Срок займа</label>
 										<div class="b-calc-slider">
 											<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
@@ -200,24 +200,22 @@ include "header.php";
 								</div>
 							</div>
 							<div class="b-calc-string">
-								<div class="b-block-calc">
-									<div class="b-calc-checkboxes">
-										<label class="b-calc-checkbox-item">
-											<input type="checkbox" name="replenishment">
-											<div class="b-checkbox-text">Возможность пополнения</div>
-										</label>
-										<label class="b-calc-checkbox-item">
-											<input type="checkbox" name="refund">
-											<div class="b-checkbox-text">Досрочный возврат денег</div>
-										</label>
-										<div class="calc-select-cont">
-											<select class="select" name="savings-percent">
-												<option value="1">Начисление процентов</option>
-												<option value="2">Начисление процентов</option>
-												<option value="3">Начисление процентов</option>
-												<option value="4">Начисление процентов</option>
-											</select>
-										</div>
+								<div class="b-block-calc b-calc-checkboxes">
+									<label class="b-calc-checkbox-item">
+										<input type="checkbox" name="replenishment">
+										<div class="b-checkbox-text">Возможность пополнения</div>
+									</label>
+									<label class="b-calc-checkbox-item">
+										<input type="checkbox" name="refund">
+										<div class="b-checkbox-text">Досрочный возврат денег</div>
+									</label>
+									<div class="calc-select-cont">
+										<select class="select" name="savings-percent">
+											<option value="1">Начисление процентов</option>
+											<option value="2">Сбережение</option>
+											<option value="3">Начисление процентов</option>
+											<option value="4">Сбережение</option>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -233,7 +231,7 @@ include "header.php";
 							</div>
 							<div class="b-calc-string">
 								<div class="b-block-calc b-calc-text-block">
-									<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+									<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 									<div class="b-btn-container">
 										<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
 									</div>
@@ -289,7 +287,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Потребительский»</div>
 							<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
-							<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+							<div class="b-calc-res-info">Без обеспечения, начисление процентов на остаток долга</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -318,7 +316,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
-							<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+							<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -347,7 +345,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
-							<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+							<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -376,7 +374,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Потребительский»</div>
 							<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
-							<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+							<div class="b-calc-res-info">Без обеспечения, начисление процентов на остаток долга</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -405,7 +403,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
-							<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+							<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -478,7 +476,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Потребительский»</div>
 							<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
-							<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+							<div class="b-calc-res-info">Без обеспечения, начисление процентов на остаток долга</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -507,7 +505,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
-							<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+							<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -536,7 +534,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
-							<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+							<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -565,7 +563,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Потребительский»</div>
 							<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
-							<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+							<div class="b-calc-res-info">Без обеспечения, начисление процентов на остаток долга</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -594,7 +592,7 @@ include "header.php";
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
-							<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+							<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 						</div>
 						<div class="b-calc-result-item-bottom">
 							<div class="b-calc-result-sum-string">
@@ -622,7 +620,6 @@ include "header.php";
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<script id="loan-template" type="text/x-handlebars-template">
@@ -655,15 +652,13 @@ include "header.php";
 						{{#if overpayment.MIN}}
 							от <span class="b-res-middle">{{overpayment.MIN}}%</span>
 							{{#if overpayment.MAX}}
-							 до <span class="b-res-middle">{{overpayment.MAX}}%</span> годовых
-							{{else}}
-							 годовых
+							 до <span class="b-res-middle">{{overpayment.MAX}}%</span>
 							{{/if}}
 						{{else}}
 							{{#if overpayment.MAX}}
-							до <span class="b-res-middle">{{overpayment.MAX}}%</span> годовых
+							до <span class="b-res-middle">{{overpayment.MAX}}%</span>
 							{{else}}
-							<span class="b-res-middle">{{overpayment}}%</span> годовых
+							<span class="b-res-middle">{{overpayment}}%</span>
 							{{/if}}
 						{{/if}}
 					</div>
@@ -784,7 +779,7 @@ include "header.php";
 				</a>
 				<a href="#" class="b-news b-white-tile">
 					<div class="b-news-date">8 июня 2019</div>
-					<div class="b-news-text">30 мая 2019 года состоится внеочередное общее собрание членов КПКГ «Сибирский кредит»  в форме собрания уполномоченных</div>
+					<div class="b-news-text">30 мая 2019 года состоится внеочередное общее собрание членов КПКГ «Сибирский кредит» в форме собрания уполномоченных</div>
 					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
 				</a>
 				<a href="#" class="b-news b-white-tile">
@@ -798,25 +793,25 @@ include "header.php";
 
 	<div class="b b-index-bottom-block">
 		<div class="b-block">
-			<h3>Нам доверяют<br> более 10 000 пайщиков</h3>
+			<h3>Нам доверяют более 10&nbsp;000 пайщиков</h3>
 			<div class="b-index-bottom-list">
 				<div class="b-index-bottom-item">
 					<div class="b-index-bottom-top">
 						<div class="b-1-index-bottom-illustration b-index-bottom-illustration"></div>
-						<div class="b-index-bottom-title">Более чем 30 кооперативных  участков</div>
+						<div class="b-index-bottom-title">Более чем 30 кооперативных участков</div>
 					</div>
 					<div class="b-index-bottom-bottom">
-						<div class="b-index-bottom-text">На территории Сибирсокого <br>Федерального округа</div>
+						<div class="b-index-bottom-text">На территории Сибирсокого <br>Федерального округа</div>
 						<a href="#" class="b-small-btn">КОнтакты</a>
 					</div>
 				</div>
 				<div class="b-index-bottom-item">
 					<div class="b-index-bottom-top">
 						<div class="b-2-index-bottom-illustration b-index-bottom-illustration"></div>
-						<div class="b-index-bottom-title">Минимум  документов</div>
+						<div class="b-index-bottom-title">Минимум документов</div>
 					</div>
 					<div class="b-index-bottom-bottom">
-						<div class="b-index-bottom-text">Основной документ —<br>паспорт гражданина РФ</div>
+						<div class="b-index-bottom-text">Основной документ — <br>паспорт гражданина РФ</div>
 						<a href="#" class="b-small-btn">Документы</a>
 					</div>
 				</div>
@@ -826,7 +821,7 @@ include "header.php";
 						<div class="b-index-bottom-title">Быстрое оформление</div>
 					</div>
 					<div class="b-index-bottom-bottom">
-						<div class="b-index-bottom-text">Оформление <br>в течение 1 часа</div>
+						<div class="b-index-bottom-text">Оформление<br> в течение 1 часа</div>
 						<a href="#" class="b-small-btn">Заявка на заём</a>
 					</div>
 				</div>
@@ -839,9 +834,9 @@ include "header.php";
 	<div class="b-commercial-block">
 		<div class="b-block">
 			<div class="b-commercial-inner">
-				<h3>Работа  в кооперативе</h3>
-				<div class="b-commercial-text">Начинать строить карьеру лучше вместе  с лидером рынка. Мы поможем раскрыть  и реализовать ваш потенциал.</div>
-				<div class="b-commercial-text">Мы обладаем всеми инструментами для личного и профессионального развития.  Коллектив - это то, чем мы гордимся  и дорожим!</div>
+				<h3>Работа в кооперативе</h3>
+				<div class="b-commercial-text">Начинать строить карьеру лучше вместе с лидером рынка. Мы поможем раскрыть и реализовать ваш потенциал.</div>
+				<div class="b-commercial-text">Мы обладаем всеми инструментами для личного и профессионального развития.  Коллектив - это то, чем мы гордимся и дорожим!</div>
 				<a href="#" class="b-btn"><span class="b-btn-text">Вакансии</span></a>
 			</div>
 		</div>

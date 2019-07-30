@@ -219,6 +219,7 @@ input:-moz-placeholder {
 		line-height: 2.8rem;
 		margin-bottom: 2.4rem;
 		max-width: 32rem;
+		font-family: 'Rubik-Bold';
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1080px) {

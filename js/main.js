@@ -73,6 +73,39 @@ $(document).ready(function(){
         })
     }
 
+    function newsSlider(){
+        $('.b-news-list').slick({
+            slidesToShow: 1,
+            dots: false,
+            arrows: false,
+            slidesToScroll: 1,
+            touchThreshold: 100,
+            variableWidth: true
+        })
+    }
+
+    function adviceSlider(){
+        $('.b-advice-list').slick({
+            slidesToShow: 1,
+            dots: false,
+            arrows: false,
+            slidesToScroll: 1,
+            touchThreshold: 100,
+            variableWidth: true
+        })
+    }
+    function changeSliderImg(slide){
+        if(window.innerWidth > 768) {
+            slide.css('background-image', 'url(' + slide.attr('data-img-url') + ')');
+        } else {
+            slide.css('background-image', 'url(' + slide.attr('data-mobile-img-url') + ')');
+        }
+    }
+
+    $('.b-slider-item').each(function(){
+        changeSliderImg($(this));
+    })
+
     $('.b-btn-more').on('click', function(){
         $(this).parents('.max-4-items').removeClass('max-4-items');
         if ($(this).parent().hasClass('b-btn-container')) {
@@ -116,7 +149,7 @@ $(document).ready(function(){
             step = 100;
         }   
 
-        input.val(val.toLocaleString());
+        input.val(new Intl.NumberFormat('ru-RU').format(val));
 
         $this.slider({
             range: 'min',
@@ -125,7 +158,7 @@ $(document).ready(function(){
             value: val,
             step: step,
             slide: function( event, ui ) {
-                input.val(ui.value.toLocaleString());
+                input.val(new Intl.NumberFormat('ru-RU').format(ui.value));
             }
         });
     });
@@ -143,7 +176,7 @@ $(document).ready(function(){
             val = max;   
         }
 
-        $(this).val(Number(val).toLocaleString());
+        $(this).val(new Intl.NumberFormat('ru-RU').format(Number(val)));
 
         $(this).parents('.b-calc-slider').find('.b-slider-range').slider( "value", val );
 
@@ -241,7 +274,7 @@ $(document).ready(function(){
 
         var val = $(this).val();
         if (val != '') {
-            val = Number(val).toLocaleString();
+            val = new Intl.NumberFormat('ru-RU').format(Number(val));
             $(this).val(val);
         }
 
@@ -802,18 +835,46 @@ $(document).ready(function(){
 
     if(window.innerWidth < 768) {
         illustrationSlider();
+        newsSlider();
+        adviceSlider();
     }
 
     $(window).resize(function(){
 
+        if ($('.b-main-slider').length) {
+            $('.b-slider-item').each(function(){
+                changeSliderImg($(this));
+            })
+        }
+
         if(window.innerWidth < 768) {
+
             if(! $('.b-main-illustrations .b-illustration-list').hasClass('slick-initialized')){
                 illustrationSlider();
             }
+
+            if(! $('.b-news-list').hasClass('slick-initialized')){
+                newsSlider();
+            }
+
+            if(! $('.b-advice-list').hasClass('slick-initialized')){
+                adviceSlider();
+            }
+
         }else{
+
             if($('.b-main-illustrations .b-illustration-list').hasClass('slick-initialized')){
                 $('.b-main-illustrations .b-illustration-list').slick('unslick');
             }
+
+            if($('.b-news-list').hasClass('slick-initialized')){
+                $('.b-news-list').slick('unslick');
+            }
+
+            if($('.b-advice-list').hasClass('slick-initialized')){
+                $('.b-advice-list').slick('unslick');
+            }
+
         }
     });
 
