@@ -51,7 +51,7 @@ $(document).ready(function(){
         speed: 500,
         arrows: true,
         fade: true,
-        variableWidth: true,
+        // variableWidth: true,
         prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
         nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
         touchThreshold: 100,
