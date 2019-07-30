@@ -43,12 +43,15 @@ $(document).ready(function(){
 
     $(".b-main-slider").slick({
         dots: false,
+        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
         cssEase: 'ease', 
         speed: 500,
         arrows: true,
+        fade: true,
+        variableWidth: true,
         prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
         nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
         touchThreshold: 100,
@@ -544,6 +547,7 @@ $(document).ready(function(){
     $('.b-close').on('click',function(){
         $('html').removeClass('city-open');
         $('html').removeClass('vacancy-open');
+        $('html').removeClass('burger-open');
         return false;
     });
 
@@ -555,8 +559,20 @@ $(document).ready(function(){
         $('html').addClass('vacancy-open');
     });
 
+    $('.b-menu-btn').on('click', function(){
+        $('html').addClass('burger-open');
+    });
+
     $(document).on('click', '.city-open .b-dark-background', function(){
         $('html').removeClass('city-open');
+    });
+
+    $(document).on('click', '.vacancy-open .b-dark-background', function(){
+        $('html').removeClass('vacancy-open');
+    });
+
+    $(document).on('click', '.burger-open .b-dark-background', function(){
+        $('html').removeClass('burger-open');
     });
 
     $('.b-filter-reset').on('click',function(){

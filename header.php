@@ -6,10 +6,8 @@ if (end($arPage) == 'loan-detail.php') {
 	$isDetail = true;
 	$detailPageClass = "b-navigation-detail";
 }
-if (isset($_SESSION['isFirstTime'])) {
-	$_SESSION['isFirstTime'] = true;
-}
 
+setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,7 +59,34 @@ if (isset($_SESSION['isFirstTime'])) {
 			</ul>
 		</div>
 	</div>
-	<? if($_SESSION['isFirstTime']): ?>
+	<div class="b-burger-menu-block">
+		<div class="b-block">
+			<div class="b-top-burger-block">
+				<a href="index.php" class="b-burger-logo"></a>
+				<div class="b-close clearfix">
+					<a href="#" class="b-icon-cross"></a>
+				</div>
+			</div>
+			<ul class="b-burger-menu-list">
+				<li><a href="#">Займы</a></li>
+				<li><a href="#">Сбережения</a></li>
+				<li><a href="payment.php">Погашение займа</a></li>
+				<li><a href="cooperative.php">О кооперативе</a></li>
+				<li><a href="#">Онлайн-приёмная</a></li>
+				<li><a href="documents.php">Документы</a></li>
+				<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Полезные советы</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<ul class="b-burger-soc clearfix">
+				<li><a href="#" class="b-soc ok-icon" target="_blank"></a></li>
+				<li><a href="#" class="b-soc vk-icon" target="_blank"></a></li>
+				<li><a href="#" class="b-soc yt-icon" target="_blank"></a></li>
+			</ul>
+		</div>
+	</div>
+	<? if(!isset($_COOKIE['isFirstTime'])): ?>
 	<div class="b-cookies-block">
 		<div class="b-cookies-text">КПКГ "Сибирский кредит" использует файлы cookie. Подробная информация в <a href="#" class="green dashed">правилах по обработке персональных данных</a>. Вы можете запретить сохранение cookie в настройках своего браузера.</div>
 		<a href="#" class="b-btn close-cookie">Продолжить работу</a>

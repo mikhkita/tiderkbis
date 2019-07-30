@@ -180,7 +180,7 @@ include "header.php";
 							<div class="b-calc-string">
 								<div class="b-block-calc b-block-calc-sliders">
 									<div class="b-calc-slider-block clearfix">
-										<label for="sum">Сумма займа</label>
+										<label for="sum">Сумма</label>
 										<div class="b-calc-slider">
 											<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 											<div class="b-calc-input-cont">
@@ -189,7 +189,7 @@ include "header.php";
 										</div>
 									</div>
 									<div class="b-calc-slider-block clearfix">
-										<label for="date">Срок займа</label>
+										<label for="date">Срок хранения сбережений</label>
 										<div class="b-calc-slider">
 											<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
 											<div class="b-calc-input-cont b-calc-input-month-cont">

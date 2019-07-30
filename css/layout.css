@@ -153,13 +153,15 @@ input.error,textarea.error{
 	opacity: 0.5;
 }
 
-.city-open, .vacancy-open{
+.city-open, 
+.vacancy-open, 
+.burger-open{
 	overflow: hidden;
 }
 
 .b-dark-background{
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
 	width: 100vw;
 	height: 100vh;
 	top: 0;
@@ -173,7 +175,8 @@ input.error,textarea.error{
 }
 
 .city-open .b-dark-background,
-.vacancy-open .b-dark-background{
+.vacancy-open .b-dark-background,
+.burger-open .b-dark-background{
 	opacity: 1;
 	visibility: visible;
 }
@@ -232,7 +235,7 @@ input.error,textarea.error{
 	width: 100vw;
 	padding: 2.4rem 12.4rem 10.4rem 12.4rem;
 	background: #FFF;
-	z-index: 5;
+	z-index: 15;
 	-webkit-transition: top 400ms ease-out, visibility 400ms;
 	-o-transition: top 400ms ease-out, visibility 400ms;
 	transition: top 400ms ease-out, visibility 400ms;
@@ -546,6 +549,7 @@ input.error,textarea.error{
 						.b-personal-btn-icon{
 							background-image: url('../i/sprite.svg#user');
 							background-size: 2.4rem;
+							background-position: 50% 50%;
 							width: 4.6rem;
 							height: 4.6rem;	
 							border: 1px solid rgba(0, 150, 63, 0.3);
@@ -872,6 +876,97 @@ input.error,textarea.error{
 }
 /* Navigation ––––––––––––––––––––––––––––––––––––––––– Navigation */
 
+
+/* Burger menu ––––––––––––––––––––––––––––––––––––––––– Burger menu */
+
+.b-burger-menu-block{
+	position: absolute;
+	top: -100vh;
+	visibility: hidden;
+	left: 0;
+	width: 100vw;
+	padding-top: 2.4rem;
+	padding-bottom: 8.7rem;
+	background: #FFF;
+	z-index: 15;
+	-webkit-transition: top 400ms ease-out, visibility 400ms;
+	-o-transition: top 400ms ease-out, visibility 400ms;
+	transition: top 400ms ease-out, visibility 400ms;
+}
+.burger-open .b-burger-menu-block{
+	top: 0;
+	visibility: visible;
+
+}
+	.b-top-burger-block{
+		display: block;
+	}
+		.b-top-burger-block .b-close{
+			display: inline-block;
+			vertical-align: top;
+			float: right;
+		}
+		.b-burger-logo{
+			width: 8.1rem;
+			height: 11rem;
+			display: inline-block;
+			vertical-align: top;
+			background-color: #FFF;
+			background-image: url('../i/logo.svg');
+		    background-size: contain;
+		    background-position: 50% 50%;
+		    background-repeat: no-repeat;
+		    margin-top: 2.5rem;
+		    margin-bottom: 7.3rem;
+		}
+		.b-burger-menu-list{
+		    display: block;
+		    vertical-align: top;
+		    column-count: 4;
+		    font-size: 2.4rem;
+		    line-height: 2.8rem;
+		    margin-bottom: 6.4rem;
+		}
+			.b-burger-menu-list li{
+				margin-bottom: 2.4rem;
+			}
+		.b-burger-soc{
+
+		}
+			.b-burger-soc li{
+				display: inline-block;
+				margin-right: 0.8rem;
+			}
+			.b-burger-soc .b-soc{
+				opacity: 1;
+			}
+@media (min-width: 1024px) {
+	.b-burger-menu-list li a:hover{
+		color: #00963F;
+	}
+}
+@media screen and (max-width: 767px){
+	.b-burger-menu-block{
+	    padding-bottom: 3.2rem;
+	}
+		.b-burger-menu-list{
+			column-count: 2;
+		    font-size: 1.6rem;
+	    	line-height: 1.9rem;
+	    	margin-bottom: 4rem;
+		}
+			.b-burger-logo{
+				margin-bottom: 4rem;
+			}
+			.b-burger-menu-list li{
+				margin-bottom: 1.6rem;
+			}
+
+}
+
+/* Burger menu ––––––––––––––––––––––––––––––––––––––––– Burger menu */
+
+
 /* Main slider ––––––––––––––––––––––––––––––––––––––––––––– Main slider */
 .b-main-slider{
 	/*height: 100px;*/
@@ -881,11 +976,18 @@ input.error,textarea.error{
 }
 	.b-slider-item{
 		height: 48rem;
+		width: 1330px;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: 50% 0;	
+		background-position: 0px 0px;	
 		background-color: #F2F2F2; 
 		padding: 4rem 0;
+		-webkit-transition: background-position 5s linear, opacity .5s !important;
+		-o-transition: background-position 5s linear, opacity .5s !important;
+		transition: background-position 5s linear, opacity .5s !important;
+	}
+	.b-slider-item.slick-current{
+		background-position: -50px 0px;	
 	}
 		.b-slider-item .b-block{
 			height: 100%;
@@ -1788,6 +1890,12 @@ input.error,textarea.error{
 		.slider-results .b-calc-result-item{
 			width: 28.5rem;
 		}
+			.b-calc-res-title{
+				margin-bottom: 3.2rem;
+			}
+			.b-calc-res-subtitle{
+				margin-bottom: 0.8rem;
+			}
 			.b-calc-res-info{
 				font-size: 1.4rem;
 				line-height: 1.7rem;
@@ -1931,10 +2039,14 @@ input.error,textarea.error{
 			.b-news-list .slick-list{
 				padding: 2.4rem 1.6rem;
 			}
+			.b-news-list .slick-track{
+				display: flex;
+			}
 			.b-news{
 				margin-right: 1.6rem;
 				width: 28.5rem;
 				padding: 1.6rem 1.6rem 5.6rem;
+				height: auto;
 			}
 			.b-news-block .b-title-with-button{
 				margin-bottom: 0;
@@ -2552,9 +2664,13 @@ input.error,textarea.error{
 		.b-advice-list .slick-list{
 			padding: 0 1.6rem;
 		}
+		.b-advice-list .slick-track{
+			display: flex;
+		}
 		.b-advice{
 			margin-right: 1.6rem;
 			width: 28.5rem;
+			height: auto;
 		}
 		.b-advice .b-green-link {
 		    left: 1.6rem;
