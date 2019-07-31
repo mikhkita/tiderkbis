@@ -8,7 +8,8 @@ include "header.php";
 
 ?>
 	<div class="b-main-slider">
-		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
+		<div class="b-slider-item">
+			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
@@ -17,7 +18,8 @@ include "header.php";
 				</div>
 			</div>
 		</div>
-		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
+		<div class="b-slider-item">
+			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
@@ -26,7 +28,8 @@ include "header.php";
 				</div>
 			</div>
 		</div>
-		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
+		<div class="b-slider-item">
+			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
@@ -35,7 +38,8 @@ include "header.php";
 				</div>
 			</div>
 		</div>
-		<div class="b-slider-item" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg">
+		<div class="b-slider-item">
+			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
 			<div class="b-block">
 				<div class="b-slider-item-info">
 					<h2>Займы на любые цели</h2>
@@ -151,16 +155,16 @@ include "header.php";
 							</div>
 							<div class="b-calc-string">
 								<div class="b-block-calc b-calc-checkboxes">
-									<label class="b-calc-checkbox-item">
-										<input type="checkbox" name="isRetired">
+									<label class="b-calc-checkbox-item b-radio-item">
+										<input type="radio" name="calcRadio">
 										<div class="b-checkbox-text">Я пенсионер</div>
 									</label>
-									<label class="b-calc-checkbox-item">
-										<input type="checkbox" name="isBudget">
+									<label class="b-calc-checkbox-item b-radio-item">
+										<input type="radio" name="calcRadio">
 										<div class="b-checkbox-text">Я работник бюджетной сферы</div>
 									</label>
-									<label class="b-calc-checkbox-item">
-										<input type="checkbox" name="isBusinessman">
+									<label class="b-calc-checkbox-item b-radio-item">
+										<input type="radio" name="calcRadio">
 										<div class="b-checkbox-text">Я предприниматель</div>
 									</label>
 								</div>
@@ -801,8 +805,8 @@ include "header.php";
 						<div class="b-index-bottom-title">Более чем 30 кооперативных участков</div>
 					</div>
 					<div class="b-index-bottom-bottom">
-						<div class="b-index-bottom-text">На территории Сибирсокого <br>Федерального округа</div>
-						<a href="#" class="b-small-btn">КОнтакты</a>
+						<div class="b-index-bottom-text">На территории Сибирского <br>Федерального округа</div>
+						<a href="#" class="b-small-btn">Контакты</a>
 					</div>
 				</div>
 				<div class="b-index-bottom-item">

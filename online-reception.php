@@ -29,9 +29,13 @@ include "header.php";
 						<input type="text" name="name">
 						<label for="name">Ваше имя</label>
 					</div>
-					<div class="b-input">
+					<div class="b-input b-online-changed-inputs">
 						<input type="text" name="phone">
 						<label for="phone">Ваш телефон</label>
+					</div>
+					<div class="b-input b-online-changed-inputs hide">
+						<input type="text" name="email">
+						<label for="email">Ваш e-mail</label>
 					</div>
 				</div>
 				<div class="b-half-input-cont">
@@ -45,10 +49,10 @@ include "header.php";
 				<div class="b-block">
 					<div class="b-reception-cont-string">
 						<a href="#" class="ajax b-btn"><span class="b-btn-text">Задать вопрос</span></a>
-						<div class="b-error-text hide">Некоторые заполненные поля  содержат ошибку</div>
+						<div class="b-error-text hide">Некоторые заполненные поля содержат ошибку</div>
 					</div>
 					<div class="b-reception-cont-string">
-						<div class="b-loan-app-btn-text">Нажимая кнопку «Оформить заём», я даю согласие  на <a href="/personal">обработку моих персональных данных</a></div>
+						<div class="b-loan-app-btn-text">Нажимая кнопку «Оформить заём», я даю согласие на <a href="/personal">обработку моих персональных данных</a></div>
 					</div>
 				</div>
 			</div>
@@ -88,7 +92,7 @@ include "header.php";
 							<div class="b-question-date">1.07.2019</div>
 						</div>
 						<div class="b-question-text">
-							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб.,  с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
+							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб., с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
 						</div>
 						<div class="b-answer-block">
 							<div class="b-answer-name">Кредитный консультант:</div>
@@ -101,7 +105,7 @@ include "header.php";
 							<div class="b-question-date">1.07.2019</div>
 						</div>
 						<div class="b-question-text">
-							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб.,  с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
+							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб., с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
 						</div>
 						<div class="b-answer-block">
 							<div class="b-answer-name">Кредитный консультант:</div>
@@ -129,7 +133,7 @@ include "header.php";
 							<div class="b-question-date">1.07.2019</div>
 						</div>
 						<div class="b-question-text">
-							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб.,  с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
+							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб., с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
 						</div>
 						<div class="b-answer-block">
 							<div class="b-answer-name">Кредитный консультант:</div>
@@ -155,7 +159,7 @@ include "header.php";
 							<div class="b-question-date">1.07.2019</div>
 						</div>
 						<div class="b-question-text">
-							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб.,  с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
+							Здравствуйте, если у вас взяли займ 15000, но не внесли ещё платёж, можно оформить займ на 150000 руб., с справкой о заработной плате, погасить тот займ в 15000 и платить один этот?
 						</div>
 						<div class="b-answer-block">
 							<div class="b-answer-name">Кредитный консультант:</div>

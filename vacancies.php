@@ -53,20 +53,22 @@ include "header.php";
 					<input type="text" name="position">
 					<label for="position">Должность</label>
 				</div>
-				<div class="b-input">
+				<div class="b-input loan-select">
 					<select class="select" name="city" data-placeholder="Населенный пункт">
 						<option value=""></option>
 						<option value="2">Томск</option>
 						<option value="3">Новосибирск</option>
 						<option value="4">Москва</option>
 					</select>
+					<label for="city">Населенный пункт</label>
 				</div>
-				<div class="b-input">
+				<div class="b-input loan-select">
 					<select class="select" name="exp" data-placeholder="Опыт работы">
 						<option value=""></option>
 						<option value="2">Без опыта</option>
 						<option value="3">С опытом</option>
 					</select>
+					<label for="exp">Опыт работы</label>
 				</div>
 				<a href="#" class="b-btn b-white-btn b-filter-reset">Сбросить фильтр</a>
 			</form>

@@ -201,6 +201,9 @@ input:-moz-placeholder {
 	transition: background 100ms ease-out;
 	-webkit-mask-image: -webkit-radial-gradient(white, black);
 }
+.b-btn:hover{
+	background: #F3C92E;
+}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	
@@ -211,9 +214,6 @@ input:-moz-placeholder {
 	}*/
 	.b-block{
 		width: calc( 100vw - 3.2rem );
-	}
-	.b-btn:hover{
-		background: #F3C92E;
 	}
 	h1{
 		font-size: 3.2rem;

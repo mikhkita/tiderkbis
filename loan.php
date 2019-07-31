@@ -2,6 +2,7 @@
 
 $params = array(
 	"TITLE" => "Лучшие условия по займам для вас",
+	"SUBTITLE" => "без страхования и до 100 000 рублей без обеспечения",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
 	),
@@ -60,16 +61,16 @@ include "header.php";
 				<div class="b-calc-string b-calc-string-without-border">
 					<div class="b-block">
 						<div class="b-block-calc b-calc-checkboxes">
-							<label class="b-calc-checkbox-item">
-								<input type="checkbox" name="retired">
+							<label class="b-calc-checkbox-item b-radio-item">
+								<input type="radio" name="retired">
 								<div class="b-checkbox-text">Я пенсионер</div>
 							</label>
-							<label class="b-calc-checkbox-item">
-								<input type="checkbox" name="retired">
+							<label class="b-calc-checkbox-item b-radio-item">
+								<input type="radio" name="retired">
 								<div class="b-checkbox-text">Я работник бюджетной сферы</div>
 							</label>
-							<label class="b-calc-checkbox-item">
-								<input type="checkbox" name="retired">
+							<label class="b-calc-checkbox-item b-radio-item">
+								<input type="radio" name="retired">
 								<div class="b-checkbox-text">Я предприниматель</div>
 							</label>
 						</div>
@@ -78,7 +79,7 @@ include "header.php";
 				<div class="b-calc-string">
 					<div class="b-block">
 						<div class="b-block-calc b-calc-text-block">
-							<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+							<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 							<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
 							<a href="#" class="b-btn b-white-btn">Сбросить фильтр</a>
 						</div>
@@ -147,7 +148,7 @@ include "header.php";
 				<div class="b-calc-string">
 					<div class="b-block">
 						<div class="b-block-calc b-calc-text-block">
-							<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+							<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 							<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
 							<a href="#" class="b-btn b-white-btn">Сбросить фильтр</a>
 						</div>
@@ -162,157 +163,257 @@ include "header.php";
 			<div class="b-calc-result-list">
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
+						<div class="b-calc-res-title">«Доверительный»</div>
+						<div class="b-calc-res-subtitle"></div>
+						<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
+								<span class="b-res-big">6</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									<span class="b-res-middle">15,5%</span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
+								<span class="b-res-middle">53%</span> годовых
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
+						<div class="b-calc-res-title">«Потребительский»</div>
+						<div class="b-calc-res-subtitle">с равными (аннуитетными) платежами</div>
+						<div class="b-calc-res-info">Без обеспечения, оплата равными  платежами</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
+								от <span class="b-res-big">13</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									до <span class="b-res-middle">25,8%</span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
+									от <span class="b-res-middle">41,5%</span> годовых
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
+						<div class="b-calc-res-title">«Потребительский»</div>
+						<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
+						<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
+								от <span class="b-res-big">13</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									до <span class="b-res-middle">22,8%</span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
+									от <span class="b-res-middle">41.5%</span> годовых
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
+						<div class="b-calc-res-title">«Потребительский»</div>
+						<div class="b-calc-res-subtitle">с равными (аннуитетными) платежами</div>
+						<div class="b-calc-res-info">Льготный, без поручителей, на сумму до 100 000 рублей, при условии получения пенсии у нас</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
+								от <span class="b-res-big">13</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									до <span class="b-res-middle">26,5%</span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
+									от <span class="b-res-middle">41.5%</span> годовых
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
+						<div class="b-calc-res-title">«Доверительный»</div>
+						<div class="b-calc-res-subtitle"></div>
+						<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
+								<span class="b-res-big">6</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									<span class="b-res-middle">15,5%</span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
+								<span class="b-res-middle">53%</span> годовых
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
+						<div class="b-calc-res-title">«Потребительский»</div>
+						<div class="b-calc-res-subtitle">с равными (аннуитетными) платежами</div>
+						<div class="b-calc-res-info">Без обеспечения, оплата равными  платежами</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
+								от <span class="b-res-big">13</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									до <span class="b-res-middle">25,8%</span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
+									от <span class="b-res-middle">41,5%</span> годовых
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="#" class="b-btn b-white-btn">Подробнее</a>
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="b-calc-result-item">
+					<div class="b-calc-result-item-top">
+						<div class="b-calc-res-title">«Потребительский»</div>
+						<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
+						<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+					</div>
+					<div class="b-calc-result-item-bottom">
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Срок займа</span>
+								от <span class="b-res-big">13</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									до <span class="b-res-middle">22,8%</span>
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Процентная ставка</span>
+									от <span class="b-res-middle">41.5%</span> годовых
+							</div>
+						</div>
+						<div class="b-res-btn-container">
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="b-calc-result-item">
+					<div class="b-calc-result-item-top">
+						<div class="b-calc-res-title">«Потребительский»</div>
+						<div class="b-calc-res-subtitle">с равными (аннуитетными) платежами</div>
+						<div class="b-calc-res-info">Льготный, без поручителей, на сумму до 100 000 рублей, при условии получения пенсии у нас</div>
+					</div>
+					<div class="b-calc-result-item-bottom">
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Срок займа</span>
+								от <span class="b-res-big">13</span> месяцев
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">&nbsp;</span>
+							</div>
+						</div>
+						<div class="b-calc-result-sum-string">
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Переплата за год</span>
+									до <span class="b-res-middle">26,5%</span>
+							</div>
+							<div class="b-calc-result-sum">
+								<span class="b-calc-result-sum-info">Процентная ставка</span>
+									от <span class="b-res-middle">41.5%</span> годовых
+							</div>
+						</div>
+						<div class="b-res-btn-container">
+							<a href="#" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -520,15 +621,13 @@ include "header.php";
 					{{#if overpayment.MIN}}
 						от <span class="b-res-middle">{{overpayment.MIN}}%</span>
 						{{#if overpayment.MAX}}
-						 до <span class="b-res-middle">{{overpayment.MAX}}%</span> годовых
-						{{else}}
-						 годовых
+						 до <span class="b-res-middle">{{overpayment.MAX}}%</span>
 						{{/if}}
 					{{else}}
 						{{#if overpayment.MAX}}
-						до <span class="b-res-middle">{{overpayment.MAX}}%</span> годовых
+						до <span class="b-res-middle">{{overpayment.MAX}}%</span>
 						{{else}}
-						<span class="b-res-middle">{{overpayment}}%</span> годовых
+						<span class="b-res-middle">{{overpayment}}%</span>
 						{{/if}}
 					{{/if}}
 				</div>
@@ -567,16 +666,16 @@ include "header.php";
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents clearfix">
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит»</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика(поручителя, залогодателя)</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт для общих условий предоставления займа</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступление в кооператив</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>
 		</div>

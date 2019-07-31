@@ -928,6 +928,13 @@ input.error,textarea.error{
 			margin-top: 1.3rem;
 			margin-bottom: 2.4rem;
 		}
+		.b-navigation h1.before-subtitle{
+			margin-bottom: 0.8rem;
+		}
+		h4.subtitle{
+			margin-bottom: 4rem;
+			color: rgba(33, 33, 33, 0.5);
+		}
 @media (min-width: 1024px) {
 	.b-breadcrumbs li a:hover{
 		color: #00963F;
@@ -1043,19 +1050,25 @@ input.error,textarea.error{
 }
 	.b-slider-item{
 		height: 48rem;
-		width: calc(100vw + 50px);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 0px 0px;	
-		background-color: #F2F2F2; 
 		padding: 4rem 0;
-		-webkit-transition: background-position 5s linear, opacity .5s !important;
-		-o-transition: background-position 5s linear, opacity .5s !important;
-		transition: background-position 5s linear, opacity .5s !important;
 	}
-	.b-slider-item.slick-current{
-		background-position: -50px 0px;	
-	}
+		.b-slider-item-img{
+			width: calc(100vw + 50px);
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-size: cover;
+			position: absolute;
+			-webkit-transition: transform 7s linear;
+			-o-transition: transform 7s linear;
+			transition: transform 7s linear;
+		}
+		.slick-current .b-slider-item-img{
+			-webkit-transform: translateX(-50px);
+			-ms-transform: translateX(-50px);
+			-o-transform: translateX(-50px);
+			transform: translateX(-50px);
+		}
 		.b-slider-item .b-block{
 			height: 100%;
 		}
@@ -1611,6 +1624,16 @@ input.error,textarea.error{
 						-o-transition: opacity .1s;
 						transition: opacity .1s;
 						opacity: 0;
+					}
+					.b-radio-item .b-checkbox-text:before{
+						border-radius: 100px;
+					}
+					.b-radio-item .b-checkbox-text:after{
+						background-color: #00963F;
+						background-image: none;
+						width: 1rem;
+						border-radius: 100px;
+						left: 0.5rem;
 					}
 					.b-calc-checkbox-item input:checked + .b-checkbox-text:before {
 						border: 1px solid #00963F;
@@ -4078,6 +4101,14 @@ input.datepicker-here{
 		font-size: 2.4rem;
 		line-height: 2.8rem;
 	}
+
+@media screen and (max-width: 767px) {
+	.b-right-vacancies .b-filter-reset{
+		width: 220px;
+		display: block;
+		margin: 0 auto;
+	}
+}
 
 /* Vacancies ---––––––––––––––––––––––––––––––––––––––––– Vacancies */
 

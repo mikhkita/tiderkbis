@@ -1,6 +1,6 @@
 <?
 
-$version = "1";
+$version = "2";
 $arPage = explode('/', $_SERVER['REQUEST_URI']);
 if (end($arPage) == 'loan-detail.php') {
 	$isDetail = true;
@@ -164,7 +164,12 @@ if (end($arPage) == 'loan-detail.php') {
 					<li><span><?=$params["TITLE"]?></span></li>
 				</ul>
 				<? if (!$isDetail): ?>
-					<h1><?=$params["TITLE"]?></h1>
+					<? if (!$params["SUBTITLE"]): ?>
+						<h1><?=$params["TITLE"]?></h1>
+					<? else: ?>
+						<h1 class="before-subtitle"><?=$params["TITLE"]?></h1>
+						<h4 class="subtitle"><?=$params["SUBTITLE"]?></h4>
+					<? endif; ?>
 				<? endif; ?>
 			</div>
 		</div>

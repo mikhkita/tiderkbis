@@ -18,7 +18,7 @@ include "header.php";
 				<div class="b-block">
 					<div class="b-block-calc b-block-calc-sliders">
 						<div class="b-calc-slider-block">
-							<label for="sum">Сумма займа</label>
+							<label for="sum">Сумма</label>
 							<div class="b-calc-slider">
 								<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 								<div class="b-calc-input-cont">
@@ -27,7 +27,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-calc-slider-block">
-							<label for="date">Срок займа</label>
+							<label for="date">Срок хранения сбережений</label>
 							<div class="b-calc-slider">
 								<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
 								<div class="b-calc-input-cont b-calc-input-month-cont">
@@ -73,7 +73,7 @@ include "header.php";
 			<div class="b-calc-string">
 				<div class="b-block">
 					<div class="b-block-calc b-calc-text-block">
-						<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+						<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 						<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
 						<a href="#" class="b-btn b-white-btn">Сбросить фильтр</a>
 					</div>
@@ -88,9 +88,9 @@ include "header.php";
 		<div class="b-calc-result-list">
 			<div class="b-calc-result-item">
 				<div class="b-calc-result-item-top">
-					<div class="b-calc-res-title">«Накопление»</div>
+					<div class="b-calc-res-title">«Доход»</div>
 					<ul>
-						<li class="active">Возможности пополнения</li>
+						<li>Возможности пополнения</li>
 						<li>Капитализация или выплата процентов</li>
 						<li>Досрочный возврат денег</li>
 					</ul>
@@ -103,7 +103,7 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum">
 							<span class="b-calc-result-sum-info">Процентная ставка</span>
-							<span class="b-res-big">7%</span> годовых
+							до <span class="b-res-big">9%</span> годовых
 						</div>
 					</div>
 					<div class="b-res-btn-container">
@@ -125,7 +125,7 @@ include "header.php";
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
 							<span class="b-calc-result-sum-info">Срок займа</span>
-							от <span class="b-res-big">6</span> месяцев
+							<span class="b-res-big">12</span> месяцев
 						</div>
 						<div class="b-calc-result-sum">
 							<span class="b-calc-result-sum-info">Процентная ставка</span>
@@ -140,7 +140,85 @@ include "header.php";
 			</div>
 			<div class="b-calc-result-item">
 				<div class="b-calc-result-item-top">
-					<div class="b-calc-res-title">«Накопление»</div>
+					<div class="b-calc-res-title">«Процент»</div>
+					<ul>
+						<li>Возможности пополнения</li>
+						<li class="active">Капитализация или выплата процентов</li>
+						<li>Досрочный возврат денег</li>
+					</ul>
+				</div>
+				<div class="b-calc-result-item-bottom">
+					<div class="b-calc-result-sum-string">
+						<div class="b-calc-result-sum">
+							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-res-big">12</span> месяцев
+						</div>
+						<div class="b-calc-result-sum">
+							<span class="b-calc-result-sum-info">Процентная ставка</span>
+							<span class="b-res-big">7%</span> годовых
+						</div>
+					</div>
+					<div class="b-res-btn-container">
+						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+					</div>
+				</div>
+			</div>
+			<div class="b-calc-result-item">
+				<div class="b-calc-result-item-top">
+					<div class="b-calc-res-title">«Особый»</div>
+					<ul>
+						<li>Возможности пополнения</li>
+						<li class="active">Капитализация или выплата процентов</li>
+						<li>Досрочный возврат денег</li>
+					</ul>
+				</div>
+				<div class="b-calc-result-item-bottom">
+					<div class="b-calc-result-sum-string">
+						<div class="b-calc-result-sum">
+							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-res-big">12</span> месяцев
+						</div>
+						<div class="b-calc-result-sum">
+							<span class="b-calc-result-sum-info">Процентная ставка</span>
+							<span class="b-res-big">3%</span> годовых
+						</div>
+					</div>
+					<div class="b-res-btn-container">
+						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+					</div>
+				</div>
+			</div>
+			<div class="b-calc-result-item">
+				<div class="b-calc-result-item-top">
+					<div class="b-calc-res-title">«Универсальный»</div>
+					<ul>
+						<li class="active">Возможности пополнения</li>
+						<li class="active">Капитализация или выплата процентов</li>
+						<li class="active">Досрочный возврат денег</li>
+					</ul>
+				</div>
+				<div class="b-calc-result-item-bottom">
+					<div class="b-calc-result-sum-string">
+						<div class="b-calc-result-sum">
+							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-res-big">12</span> месяцев
+						</div>
+						<div class="b-calc-result-sum">
+							<span class="b-calc-result-sum-info">Процентная ставка</span>
+							<span class="b-res-big">2%</span> годовых
+						</div>
+					</div>
+					<div class="b-res-btn-container">
+						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+					</div>
+				</div>
+			</div>
+			<div class="b-calc-result-item">
+				<div class="b-calc-result-item-top">
+					<div class="b-calc-res-title">«До востребования»</div>
 					<ul>
 						<li class="active">Возможности пополнения</li>
 						<li>Капитализация или выплата процентов</li>
@@ -151,11 +229,11 @@ include "header.php";
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
 							<span class="b-calc-result-sum-info">Срок займа</span>
-							от <span class="b-res-big">6</span> месяцев
+							Не установлен
 						</div>
 						<div class="b-calc-result-sum">
 							<span class="b-calc-result-sum-info">Процентная ставка</span>
-							<span class="b-res-big">7%</span> годовых
+							<span class="b-res-big">0,5%</span> годовых
 						</div>
 					</div>
 					<div class="b-res-btn-container">
@@ -250,10 +328,10 @@ include "header.php";
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents clearfix">
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит»</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика(поручителя, залогодателя)</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработкуперсональных данных</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
 		</div>

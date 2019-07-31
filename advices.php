@@ -8,7 +8,7 @@
 			<a href="advice-detail.php" class="b-advice">
 				<div class="b-img" style="background-image: url('i/advice-1.jpg');"></div>
 				<div class="b-advice-text">
-					<h4>Как получить  льготные условия</h4>
+					<h4>Как получить льготные условия</h4>
 					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
 				</div>
 			</a>

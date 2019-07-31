@@ -20,7 +20,7 @@
 					</div>
 					<div class="b-popup-error"></div>
 					<div class="b-btn-cont">
-						<a href="#" class="ajax b-btn">Войти</a>
+						<a href="#" class="b-btn ajax"><span class="b-btn-text">Войти</span></a>
 					</div>
 				</form>
 				<div class="b-btn-cont">
@@ -54,7 +54,7 @@
 					</div>
 					<div class="b-popup-error"></div>
 					<div class="b-btn-cont">
-						<a href="#" class="b-btn ajax">Войти</a>
+						<a href="#" class="b-btn ajax"><span class="b-btn-text">Регистрация</span></a>
 					</div>
 				</form>
 				<div class="b-btn-cont">

@@ -50,26 +50,19 @@
 				'TITLE' => 'Доверительный',
 				'ITEM_INFO' => 'Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей',
 				'DETAIL_URL' => 'detail.php',
-				'MONTHLY_PAYMENT' => array(
-					'MIN' => 2200,
-					'MAX' => 2500
-				),
+				'MONTHLY_PAYMENT' => 2900,
 				'OVERPAYMENT' => 16,
 				'PERCENT_RATE' => 41.5,
 			),
 			1 => array(
 				'ID' => 2,
 				'TITLE' => 'Потребительский',
-				'SUBTITLE' => 'с начислением процентов на остаток долга',
-				'ITEM_INFO' => 'Без обеспечения, начисление процентов  на остаток долга',
+				'SUBTITLE' => 'с равными (аннуитетными) платежами',
+				'ITEM_INFO' => 'Без обеспечения, оплата равными  платежами',
 				'DETAIL_URL' => 'detail.php',
 				'MONTHLY_PAYMENT' => 2900,
-				'OVERPAYMENT' => array(
-					'MAX' => 26.5
-				),
-				'PERCENT_RATE' => array(
-					'MIN' => 41.5
-				),
+				'OVERPAYMENT' => 16,
+				'PERCENT_RATE' => 41.5,
 			),
 			2 => array(
 				'ID' => 3,
@@ -78,12 +71,8 @@
 				'ITEM_INFO' => 'Без обеспечения, начисление процентов  на остаток долга',
 				'DETAIL_URL' => 'detail.php',
 				'MONTHLY_PAYMENT' => 2900,
-				'OVERPAYMENT' => array(
-					'MAX' => 26.5
-				),
-				'PERCENT_RATE' => array(
-					'MIN' => 41.5
-				),
+				'OVERPAYMENT' => 16,
+				'PERCENT_RATE' => 41.5,
 			),
 		),
 	);

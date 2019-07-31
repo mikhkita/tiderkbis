@@ -23,7 +23,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-content b-contacts-accordeon">
+<div class="b-content b-contacts-accordeon b-only-one-accordeon">
 	<div class="b-accordeon-list" id="tsk">
 		<div class="b-accordeon opened">
 			<div class="b-block">
