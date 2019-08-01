@@ -161,7 +161,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 					<? foreach ($params["BREADCRUMBS"] as $title => $url): ?>
 						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=$url?>" title="<?=$title?>" itemprop="url"><span itemprop="title"><?=$title?></span></a></li>
 					<? endforeach; ?>
-					<li><span><?=$params["TITLE"]?></span></li>
+					<li><span><?=($params["BREADCRUMBS_TITLE"])?$params["BREADCRUMBS_TITLE"]:$params["TITLE"]?></span></li>
 				</ul>
 				<? if (!$isDetail): ?>
 					<? if (!$params["SUBTITLE"]): ?>

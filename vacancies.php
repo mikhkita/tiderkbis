@@ -21,7 +21,7 @@ include "header.php";
 <div class="b-vacancy-content">
 	<div class="b-block clearfix">
 		<div class="b-left-block b-left-vacancies">
-			<a href="#" class="b-white-tile b-vacancy-tile">
+			<a href="vacancy-detail.php" class="b-white-tile b-vacancy-tile">
 				<div class="b-city-btn">
 					<span class="b-city-btn-icon"></span><span class="b-city-btn-text">Барабинск</span>
 				</div>
@@ -29,7 +29,7 @@ include "header.php";
 				<div class="grey-text b-vacancy-section">Поддержка, продажи</div>
 				<div class="b-vacancy-skill">Без опыта</div>
 			</a>
-			<a href="#" class="b-white-tile b-vacancy-tile">
+			<a href="vacancy-detail.php" class="b-white-tile b-vacancy-tile">
 				<div class="b-city-btn">
 					<span class="b-city-btn-icon"></span><span class="b-city-btn-text">Томск</span>
 				</div>
@@ -37,7 +37,7 @@ include "header.php";
 				<div class="grey-text b-vacancy-section">Поддержка, продажи</div>
 				<div class="b-vacancy-skill">Без опыта</div>
 			</a>
-			<a href="#" class="b-white-tile b-vacancy-tile">
+			<a href="vacancy-detail.php" class="b-white-tile b-vacancy-tile">
 				<div class="b-city-btn">
 					<span class="b-city-btn-icon"></span><span class="b-city-btn-text">Томск</span>
 				</div>

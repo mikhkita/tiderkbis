@@ -44,6 +44,7 @@ $(document).ready(function(){
     $(".b-main-slider").slick({
         dots: false,
         autoplay: true,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,

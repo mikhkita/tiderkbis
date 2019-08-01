@@ -18,7 +18,7 @@ include "header.php";
 		<div class="b-personal-top-block">
 			<div class="b-personal-tabs">
 				<a href="#loan" class="b-personal-tab active">Мои займы</a>
-				<a href="#contribution" class="b-personal-tab">Мои вклады</a>
+				<a href="#contribution" class="b-personal-tab">Мои сбережения</a>
 				<a href="#archives" class="b-personal-tab">Архив</a>
 			</div>
 			<a href="#" class="b-settings-link">

@@ -1,6 +1,7 @@
 <? 
 
 $params = array(
+	"BREADCRUMBS_TITLE" => "Сбережения",
 	"TITLE" => "Лучшие условия по сбережениям",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
