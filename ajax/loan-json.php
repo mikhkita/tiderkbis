@@ -53,6 +53,7 @@
 				'MONTHLY_PAYMENT' => 2900,
 				'OVERPAYMENT' => 16,
 				'PERCENT_RATE' => 41.5,
+				'DETAIL_URL' => 'loan-detail.php'
 			),
 			1 => array(
 				'ID' => 2,
@@ -63,6 +64,7 @@
 				'MONTHLY_PAYMENT' => 2900,
 				'OVERPAYMENT' => 16,
 				'PERCENT_RATE' => 41.5,
+				'DETAIL_URL' => 'loan-detail.php'
 			),
 			2 => array(
 				'ID' => 3,
@@ -73,6 +75,7 @@
 				'MONTHLY_PAYMENT' => 2900,
 				'OVERPAYMENT' => 16,
 				'PERCENT_RATE' => 41.5,
+				'DETAIL_URL' => 'loan-detail.php'
 			),
 		),
 	);

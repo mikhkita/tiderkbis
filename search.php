@@ -19,7 +19,7 @@
 		</div>
 		<div class="b-search-results">
 			<? if ($_GET['q']): ?>
-				<a href="#" class="b-search-res b-white-tile">
+				<a href="loan.php" class="b-search-res b-white-tile">
 					<div class="b-search-res-img"></div>
 					<div class="b-search-right">
 						<div class="b-search-breadcrumbs">
@@ -32,7 +32,7 @@
 						<div class="b-search-res-type">Раздел сайта</div>
 					</div>
 				</a>
-				<a href="#" class="b-search-res b-white-tile">
+				<a href="payment.php" class="b-search-res b-white-tile">
 					<div class="b-search-res-img" style="background-image: url('i/illustration.svg#repayment-1');"></div>
 					<div class="b-search-right">
 						<div class="b-search-breadcrumbs">
@@ -45,7 +45,7 @@
 						<div class="b-search-res-type">Раздел сайта</div>
 					</div>
 				</a>
-				<a href="#" class="b-search-res b-white-tile">
+				<a href="payment.php" class="b-search-res b-white-tile">
 					<div class="b-search-res-img" style="background-image: url('i/advice-3.jpg');"></div>
 					<div class="b-search-right">
 						<div class="b-search-breadcrumbs">

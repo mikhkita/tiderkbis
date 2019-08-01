@@ -449,7 +449,7 @@ $(document).ready(function(){
         var links = $(".b-btn:not(.b-white-btn)");
         for(var i = 0; i < links.length; i++){
             links[i].addEventListener('click', function (event) {
-                event.preventDefault();
+                // event.preventDefault();
 
                 // Remove any old one
                 var ripple = document.querySelector('.ripple');

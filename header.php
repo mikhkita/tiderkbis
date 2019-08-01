@@ -1,13 +1,13 @@
 <?
 
-$version = "2";
+$version = "3";
 $arPage = explode('/', $_SERVER['REQUEST_URI']);
 if (end($arPage) == 'loan-detail.php') {
 	$isDetail = true;
 	$detailPageClass = "b-navigation-detail";
 }
 
-// setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
+setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,9 +80,9 @@ if (end($arPage) == 'loan-detail.php') {
 				<li><a href="contacts.php">Контакты</a></li>
 			</ul>
 			<ul class="b-burger-soc clearfix">
-				<li><a href="#" class="b-soc ok-icon" target="_blank"></a></li>
-				<li><a href="#" class="b-soc vk-icon" target="_blank"></a></li>
-				<li><a href="#" class="b-soc yt-icon" target="_blank"></a></li>
+				<li><a href="https:\\ok.ru" class="b-soc ok-icon" target="_blank"></a></li>
+				<li><a href="https:\\vk.com" class="b-soc vk-icon" target="_blank"></a></li>
+				<li><a href="https:\\youtube.com" class="b-soc yt-icon" target="_blank"></a></li>
 			</ul>
 		</div>
 	</div>

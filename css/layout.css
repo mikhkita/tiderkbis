@@ -2270,6 +2270,7 @@ input.error,textarea.error{
 	background-image: url('../i/cooperative-full.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: 50% 0;
 	padding: 6.6rem 0;
 }
 	.b-commercial-block .b-block{
@@ -4182,6 +4183,7 @@ input.datepicker-here{
 .b-vanacy-about-block{
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: 50% 0;
 	padding: 8rem 0;
 }
 	.b-vanacy-about-block h3{

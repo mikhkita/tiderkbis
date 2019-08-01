@@ -17,18 +17,18 @@
 		<div class="b-block justify">
 			<ul class="b-footer-menu">
 				<li><a href="cooperative.php">О кооперативе</a></li>
-				<li><a href="#">Онлайн-приёмная</a></li>
+				<li><a href="online-reception.php">Онлайн-приёмная</a></li>
 				<li><a href="documents.php">Документы</a></li>
-				<li><a href="#">Займы</a></li>
+				<li><a href="loan.php">Займы</a></li>
 				<li><a href="payment.php">Погашение займа</a></li>
-				<li><a href="#">Сбережения</a></li>
-				<li><a href="#">Вакансии</a></li>
-				<li><a href="#">Новости</a></li>
-				<li><a href="#">Полезные советы</a></li>
+				<li><a href="savings.php">Сбережения</a></li>
+				<li><a href="vacancies.php">Вакансии</a></li>
+				<li><a href="news.php">Новости</a></li>
+				<li><a href="advices-list.php">Полезные советы</a></li>
 			</ul>
 			<div class="b-footer-info">
 				<div class="b-footer-search">
-					<form action="#" id="footer-search">
+					<form action="search.php" id="footer-search">
 						<input type="text" name="q" placeholder="Поиск...">
 						<input type="submit" class="b-search-icon">
 					</form>
@@ -49,9 +49,9 @@
 				<div class="b-footer-bottom">
 					<a href="https://paraweb.me/" class="b-paraweb b-paraweb-icon" target="_blank"></a>
 					<ul class="b-footer-soc clearfix">
-						<li><a href="#" class="b-soc ok-icon" target="_blank"></a></li>
-						<li><a href="#" class="b-soc vk-icon" target="_blank"></a></li>
-						<li><a href="#" class="b-soc yt-icon" target="_blank"></a></li>
+						<li><a href="https:\\ok.ru" class="b-soc ok-icon" target="_blank"></a></li>
+						<li><a href="https:\\vk.com" class="b-soc vk-icon" target="_blank"></a></li>
+						<li><a href="https:\\youtube.com" class="b-soc yt-icon" target="_blank"></a></li>
 					</ul>
 				</div>
 			</div>

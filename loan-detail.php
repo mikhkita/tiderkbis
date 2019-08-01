@@ -48,7 +48,7 @@ include "header.php";
 				</div>
 				<div class="b-res-bottom-info">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
 				<div class="b-res-btn-container">
-					<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+					<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 				</div>
 			</div>
 		</div>
@@ -94,7 +94,7 @@ include "header.php";
 			<li>Для пенсионеров ограничение по возрасту— до 75 лет</li>
 			<li>Для займа от 100 т.р. в качестве обеспечения принимаются поручительство либо имущественный залог</li>
 		</ul>
-		<a href="#" class="b-btn">Оформить заявку</a>
+		<a href="loan-application.php" class="b-btn">Оформить заявку</a>
 	</div>
 </div>
 

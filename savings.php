@@ -107,8 +107,8 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -133,8 +133,8 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -159,8 +159,8 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -185,8 +185,8 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -211,8 +211,8 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -237,8 +237,8 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="#" class="b-btn b-white-btn">Подробнее</a>
+						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -312,7 +312,7 @@ include "header.php";
 				</div>
 			</div>
 			<div class="b-res-btn-container">
-				<a href="#" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+				<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 				{{#if detailUrl}}
 				<a href="{{detailUrl}}" class="b-btn b-white-btn">Подробнее</a>
 				{{/if}}

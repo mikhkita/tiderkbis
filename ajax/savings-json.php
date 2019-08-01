@@ -94,7 +94,7 @@
 			0 => array(
 				'ID' => 1,
 				'TITLE' => 'Накопление',
-				'DETAIL_URL' => 'detail.php',
+				'DETAIL_URL' => 'savings.php',
 				'INCOME' => 25000,
 				'END_SUM' => 40000,
 				'PERCENT_RATE' => 41.5,
@@ -114,7 +114,7 @@
 			1 => array(
 				'ID' => 2,
 				'TITLE' => 'Доход',
-				'DETAIL_URL' => 'detail.php',
+				'DETAIL_URL' => 'savings.php',
 				'INCOME' => 15000,
 				'END_SUM' => 20000,
 				'PERCENT_RATE' => 7,
