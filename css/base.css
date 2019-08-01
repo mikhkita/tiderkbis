@@ -209,9 +209,9 @@ input:-moz-placeholder {
 	
 }
 @media screen and (max-width: 767px) {
-	/*html {
-		font-size: calc(10px + 13 * (100vw - 320px) / 447);
-	}*/
+	html {
+		font-size: calc(10px + 4 * (100vw - 375px) / 392);
+	}
 	.b-block{
 		width: calc( 100vw - 3.2rem );
 	}
