@@ -46,7 +46,7 @@ include "header.php";
 						</div>
 					</div>
 				</div>
-				<div class="b-res-bottom-info">Все расчеты являются предварительными и могут отличаться  от фактически полученных</div>
+				<div class="b-res-bottom-info">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 				<div class="b-res-btn-container">
 					<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
 				</div>
@@ -71,12 +71,12 @@ include "header.php";
 			<div class="b-documents-right">
 				<div class="b-document">
 					<span class="b-document-icon"></span>
-					<span class="b-document-text">Справка о доходах за последние  6 месяцев</span>
+					<span class="b-document-text">Справка о доходах за последние 6 месяцев</span>
 					<span class="b-document-or">Либо</span>
 				</div>
 				<div class="b-document">
 					<span class="b-document-icon"></span>
-					<span class="b-document-text">Свидетельство о регистрации  в качестве предпринимателя</span>
+					<span class="b-document-text">Свидетельство о регистрации в качестве предпринимателя</span>
 					<span class="b-document-or">Либо</span>
 				</div>
 				<div class="b-document">

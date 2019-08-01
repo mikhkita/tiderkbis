@@ -1,6 +1,7 @@
 <? 
 
 $params = array(
+	"BREADCRUMBS_TITLE" => "Займы",
 	"TITLE" => "Лучшие условия по займам для вас",
 	"SUBTITLE" => "без страхования и до 100 000 рублей без обеспечения",
 	"BREADCRUMBS" => array(
@@ -96,7 +97,7 @@ include "header.php";
 					<div class="b-calc-result-item-top">
 						<div class="b-calc-res-title">«Доверительный»</div>
 						<div class="b-calc-res-subtitle"></div>
-						<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+						<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
@@ -128,7 +129,7 @@ include "header.php";
 					<div class="b-calc-result-item-top">
 						<div class="b-calc-res-title">«Потребительский»</div>
 						<div class="b-calc-res-subtitle">с равными (аннуитетными) платежами</div>
-						<div class="b-calc-res-info">Без обеспечения, оплата равными  платежами</div>
+						<div class="b-calc-res-info">Без обеспечения, оплата равными платежами</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
@@ -160,7 +161,7 @@ include "header.php";
 					<div class="b-calc-result-item-top">
 						<div class="b-calc-res-title">«Потребительский»</div>
 						<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
-						<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+						<div class="b-calc-res-info">Без обеспечения, начисление процентов на остаток долга</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
@@ -224,7 +225,7 @@ include "header.php";
 					<div class="b-calc-result-item-top">
 						<div class="b-calc-res-title">«Доверительный»</div>
 						<div class="b-calc-res-subtitle"></div>
-						<div class="b-calc-res-info">Без поручителей, без справки о доходах,  на сумму / до 15 000 рублей</div>
+						<div class="b-calc-res-info">Без поручителей, без справки о доходах, на сумму / до 15 000 рублей</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
@@ -256,7 +257,7 @@ include "header.php";
 					<div class="b-calc-result-item-top">
 						<div class="b-calc-res-title">«Потребительский»</div>
 						<div class="b-calc-res-subtitle">с равными (аннуитетными) платежами</div>
-						<div class="b-calc-res-info">Без обеспечения, оплата равными  платежами</div>
+						<div class="b-calc-res-info">Без обеспечения, оплата равными платежами</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
@@ -288,7 +289,7 @@ include "header.php";
 					<div class="b-calc-result-item-top">
 						<div class="b-calc-res-title">«Потребительский»</div>
 						<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
-						<div class="b-calc-res-info">Без обеспечения, начисление процентов  на остаток долга</div>
+						<div class="b-calc-res-info">Без обеспечения, начисление процентов на остаток долга</div>
 					</div>
 					<div class="b-calc-result-item-bottom">
 						<div class="b-calc-result-sum-string">
@@ -439,7 +440,7 @@ include "header.php";
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт для общих условий предоставления займа</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт общих условий предоставления займов</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>

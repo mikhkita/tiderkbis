@@ -1,4 +1,8 @@
 $(document).ready(function(){	
+    var isDesktop = false,
+        isTablet = false,
+        isMobile = false;
+
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -41,9 +45,24 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
+    if( myWidth > 1024 ){
+        isDesktop = true;
+        isTablet = false;
+        isMobile = false;
+    }else if( myWidth > 767 ){
+        isDesktop = false;
+        isTablet = true;
+        isMobile = false;
+    }else{
+        isDesktop = false;
+        isTablet = false;
+        isMobile = true;
+    }
+
     $(".b-main-slider").slick({
         dots: false,
         autoplay: true,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
@@ -419,7 +438,7 @@ $(document).ready(function(){
     $('.b-calc-results.invisible').addClass('hide');
     $('.invisible').removeClass('invisible');
 
-    if( $(".sticky").length ){
+    if( $(".sticky").length && !isMobile){
         Stickyfill.add($('.sticky'));
     }
 
@@ -606,9 +625,15 @@ $(document).ready(function(){
         
     });
 
-    $('#vacancy-form').on('change', function(){
-        $(this).submit();
-    });
+    if(!isMobile){
+        $('#vacancy-form').on('change', function(){
+            $(this).submit();
+        });
+    }else{
+        $('.mobile-search').on('click', function(){
+            $('#vacancy-form').submit();
+        });
+    }
 
     $("#vacancy-form").on('submit', function(){
         var $form = $(this);

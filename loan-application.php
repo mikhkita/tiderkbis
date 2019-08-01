@@ -166,10 +166,10 @@ include "header.php";
 			<div class="b-block">
 				<div class="b-loan-app-cont-string">
 					<a href="#" class="ajax b-btn"><span class="b-btn-text">Оформить заём</span></a>
-					<div class="b-error-text hide">Некоторые заполненные поля  содержат ошибку</div>
+					<div class="b-error-text hide">Некоторые заполненные поля содержат ошибку</div>
 				</div>
 				<div class="b-loan-app-cont-string">
-					<div class="b-loan-app-btn-text">Нажимая кнопку «Оформить заём», я даю согласие  на <a href="/personal">обработку моих персональных данных</a></div>
+					<div class="b-loan-app-btn-text">Нажимая кнопку «Оформить заём», я даю согласие на <a href="/personal">обработку моих персональных данных</a></div>
 				</div>
 			</div>
 		</div>
@@ -183,16 +183,16 @@ include "header.php";
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents clearfix">
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит»</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика(поручителя, залогодателя)</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработкуперсональных данных</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт для общих условий предоставления займа</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступление в кооператив</span></a>
+			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
 			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>
 		</div>

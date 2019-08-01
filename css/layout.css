@@ -1,4 +1,40 @@
 @charset "utf-8";
+@keyframes a{
+	0%{
+		-webkit-transform:translateX(2.5%);
+		transform:translateX(2.5%);
+		opacity:0
+	}
+	5%{
+		opacity:1
+	}
+	95%{
+		opacity:1
+	}
+	to{
+		opacity:1;
+		-webkit-transform:translateX(-2.5%);
+		transform:translateX(-2.5%);
+	}
+}
+@-webkit-keyframes a{
+	0%{
+		-webkit-transform:translateX(2.5%);
+		transform:translateX(2.5%);
+		opacity:0
+	}
+	5%{
+		opacity:1
+	}
+	95%{
+		opacity:1
+	}
+	to{
+		opacity:1;
+		-webkit-transform:translateX(-2.5%);
+		transform:translateX(-2.5%);
+	}
+}
 label.error{
 	display: none !important;
 }
@@ -1053,21 +1089,18 @@ input.error,textarea.error{
 		padding: 4rem 0;
 	}
 		.b-slider-item-img{
-			width: calc(100vw + 50px);
+			width: 105%;
 			height: 100%;
 			top: 0;
-			left: 0;
 			background-size: cover;
 			position: absolute;
 			-webkit-transition: transform 7s linear;
 			-o-transition: transform 7s linear;
 			transition: transform 7s linear;
+			left: -2.5%;
 		}
 		.slick-current .b-slider-item-img{
-			-webkit-transform: translateX(-50px);
-			-ms-transform: translateX(-50px);
-			-o-transform: translateX(-50px);
-			transform: translateX(-50px);
+			animation: a 7s linear forwards;
 		}
 		.b-slider-item .b-block{
 			height: 100%;
@@ -1181,10 +1214,10 @@ input.error,textarea.error{
 	    margin-bottom: 5.5rem;
 	}
 	.b-main-slider{
-		max-height: 42.6rem;
+		max-height: 37.1rem;
 	}
 	.b-slider-item{
-		height: 42.6rem;
+		height: 37.1rem;
 		padding-top: 9.5rem;
 		padding-bottom: 5.8rem;
 	}
@@ -1290,6 +1323,12 @@ input.error,textarea.error{
 	.b-illustration-list{
 		margin: 0 -1.6rem;
 	}
+	.b-main-illustrations {
+	    padding: 2.4rem 0 6rem 0;
+	}
+	.b-main-illustrations .slick-dots{
+		padding-right: 2rem;
+	}
 }
 
 /* Main illustrations ––––––––––––––––––––––––––––––––––––––––––––– Main illustrations */
@@ -1382,6 +1421,13 @@ input.error,textarea.error{
 	}
 	.b-popular-offers{
 		padding-bottom: 0.8rem;
+	}
+	.b-popular-offers {
+	    padding: 2.4rem 0;
+	}
+	.b-popular-offer-item-bottom .b-small-btn{
+		background-color: #FEDB31;
+		border: 0;
 	}
 }
 
@@ -1657,6 +1703,7 @@ input.error,textarea.error{
 @media screen and (max-width: 767px) {
 	.b-calc{
 	    padding-top: 4rem;
+	    padding-bottom: 0;
 	}
 		.b-calc h3{
 			margin-left: 1.6rem;
@@ -2126,6 +2173,9 @@ input.error,textarea.error{
 	.b-news-block{
 		padding-top: 4.2rem;
 		padding-bottom: 1.6rem;
+		background: -webkit-linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);
+		background: -o-linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);
+		background: linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);
 	}
 		.b-news-list{
 			display: block;
@@ -2223,33 +2273,37 @@ input.error,textarea.error{
 				margin-bottom: 2.4rem;
 			}
 @media screen and (max-width: 767px) {
-	.b-index-bottom-block h3{
-		max-width: 30rem;
+	.b-index-bottom-block {
+	    padding-top: 0;
+	    padding-bottom: 4rem;
 	}
-		.b-index-bottom-list{
-			display: block;
+		.b-index-bottom-block h3{
+			max-width: 30rem;
 		}
-			.b-index-bottom-item{
+			.b-index-bottom-list{
 				display: block;
-				margin-bottom: 3.2rem;
 			}
-			.b-index-bottom-item:last-child{
-				margin-bottom: 0;
-			}
-			.b-index-bottom-illustration{
-				margin-bottom: 1.6rem;
-			}
-			.b-index-bottom-title{
-				max-width: 33rem;
-				margin-bottom: 0.8rem;
-			}
-			.b-index-bottom-text{
-				margin-bottom: 1.6rem;
-				max-width: 25rem;
-			}
-			.b-index-bottom-text br{
-				display: none;
-			}
+				.b-index-bottom-item{
+					display: block;
+					margin-bottom: 3.2rem;
+				}
+				.b-index-bottom-item:last-child{
+					margin-bottom: 0;
+				}
+				.b-index-bottom-illustration{
+					margin-bottom: 1.6rem;
+				}
+				.b-index-bottom-title{
+					max-width: 33rem;
+					margin-bottom: 0.8rem;
+				}
+				.b-index-bottom-text{
+					margin-bottom: 1.6rem;
+					max-width: 25rem;
+				}
+				.b-index-bottom-text br{
+					display: none;
+				}
 }
 @media (min-width: 1024px) {
 
@@ -2297,6 +2351,7 @@ input.error,textarea.error{
 	.b-commercial-block{
 		padding-top: 10.6rem;
 		padding-bottom: 2.4rem;
+		background-position: 26% 0;
 	}
 	.b-commercial-inner{
 		width: 100%;
@@ -2800,6 +2855,9 @@ input.error,textarea.error{
 	
 }	
 @media screen and (max-width: 767px) {
+	.b-advices .b-block {
+	    padding: 2.4rem 0rem;
+	}
 	.b-advice-list{
 		display: block;
 		margin: 0 -1.6rem;
@@ -3344,6 +3402,27 @@ input.error,textarea.error{
 		background-color: rgba(33, 33, 33, 0.6);
 	}
 }
+@media (max-width: 767px){
+	.b-accordeon.opened .b-accordeon-head h4{
+		font-family: 'Rubik-Medium';
+	}
+	.b-accordeon-list .b-block {
+	    width: 100vw;
+	}
+	.b-accordeon-list .b-accordeon-head{
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
+	.b-accordeon-head .b-arrow-icon{
+		right: 1.6rem;
+	}
+	.b-accordeon-body {
+	    padding: 0rem 0rem 4rem;
+	}
+	.b-document{
+		padding: 0 1.6rem;
+	}
+}
 /* Accordeon --––––––––––––––––––––––––––––––––––––––––– Accordeon */
 
 
@@ -3387,7 +3466,7 @@ input.error,textarea.error{
 		.b-document-icon{
 			background-image: url('../i/sprite.svg#document');
 			width: 3.2rem;
-			height: 3.2rem;
+			height: 3.3rem;
 			display: inline-block;
 			vertical-align: top;
 			margin-top: 0.4rem;
@@ -4062,6 +4141,9 @@ input.datepicker-here{
 	opacity: 1;
 	visibility: visible;
 }
+	.b-left-vacancies h4{
+		display: none;
+	}
 	.b-vacancy-tile{
 		margin-bottom: 1.6rem;
 		padding: 1.6rem;
@@ -4077,6 +4159,7 @@ input.datepicker-here{
 		}
 		.b-vacancy-tile .b-city-btn{
 			margin-bottom: 2.5rem;
+			display: inline-block;
 		}
 			.b-vacancy-tile .b-city-btn-icon{display: inline-block;vertical-align: middle;margin-top: -0.2rem;}
 			.b-vacancy-tile .b-city-btn-text{
@@ -4096,6 +4179,7 @@ input.datepicker-here{
 .b-right-vacancies{
 
 }
+	.b-left-vacancies h4,
 	.b-right-vacancies h4{
 		margin-bottom: 1.9rem;
 	}	
@@ -4124,12 +4208,36 @@ input.datepicker-here{
 		line-height: 2.8rem;
 	}
 
+.mobile-search{
+	display: none;
+}
+
 @media screen and (max-width: 767px) {
-	.b-right-vacancies .b-filter-reset{
-		width: 220px;
-		display: block;
-		margin: 0 auto;
+	.b-left-vacancies h4,
+	.b-right-vacancies h4{
+		font-family: 'Rubik-Medium';
 	}
+	.b-left-vacancies h4{
+		display: block;
+	}
+	.b-right-vacancies{
+		width: 34.3rem;
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+		.b-btn.mobile-search{
+			display: inline-block;
+			margin-right: 4px;
+			padding: 1.6rem 1.3rem;
+			min-width: 16.7rem;
+		}
+		.b-right-vacancies .b-filter-reset{
+			display: inline-block;
+			min-width: 16.7rem;
+			padding: 1.5rem 1.3rem;
+			color: rgba(33, 33, 33, 0.4);
+			border-color: rgba(33, 33, 33, 0.4);
+		}
 }
 
 /* Vacancies ---––––––––––––––––––––––––––––––––––––––––– Vacancies */
@@ -4139,6 +4247,9 @@ input.datepicker-here{
 .b-vacancy-detail{
 
 }
+	.b-vacancy-btn-mobile{
+		display: none;
+	}
 	.b-vacancy-top-chain{
 		font-size: 2.4rem;
 		line-height: 2.2rem;
@@ -4218,6 +4329,45 @@ input.datepicker-here{
 .b-vacancy-bottom-block{
 	padding-top: 6.4rem;
 	padding-bottom: 1.6rem;
+}
+
+@media screen and (max-width: 767px){
+	.b-vacancy-top-chain {
+	    font-size: 1.6rem;
+	    line-height: 2.2rem;
+	    margin-bottom: 2.4rem;
+	}
+		.b-vacancy-top-chain li{
+			display: block;
+			margin-bottom: 0.8rem;
+		}
+		.b-vacancy-top-chain li:before,
+		.b-vacancy-top-chain li:not(:last-child):before{
+			display: none;
+		}
+		.b-vacancy-top-chain .b-city-btn-icon {
+		    width: 1.5rem;
+		    height: 1.8rem;
+		    vertical-align: top;
+		    margin-right: 0.5rem;
+		}
+	.b-vacancy-btn-mobile{
+		display: inline-block;
+		margin-bottom: 4rem;
+	}
+	.b-vacancy-text {
+	    padding-bottom: 4rem;
+	}
+	.b-vanacy-about-block {
+	    padding: 2.4rem 0;
+	}
+	.b-vanacy-about-block h3 {
+	    margin-bottom: 1.6rem;
+	    font-family: 'Rubik-Medium';
+	}
+	.b-vacancy-bottom-block {
+	    padding-top: 4.4rem;
+	}
 }
 
 /* Vacancy detail ---––––––––––––––––––––––––––––––––––––––––– Vacancy detail */

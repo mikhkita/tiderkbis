@@ -70,6 +70,7 @@ include "header.php";
 					</select>
 					<label for="exp">Опыт работы</label>
 				</div>
+				<a href="#" class="b-btn mobile-search">Поиск</a>
 				<a href="#" class="b-btn b-white-btn b-filter-reset">Сбросить фильтр</a>
 			</form>
 		</div>
