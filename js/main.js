@@ -158,13 +158,9 @@ $(document).ready(function(){
 
         $this.addClass("selected");
         $this.prevAll(".b-star").addClass("selected");
-        $this.parents('.b-rating-block').find('.b-rating-before').addClass('hide');
-        $this.parents('.b-rating-block').find('.b-rating-after').removeClass('hide');
 
-        setTimeout(function(){
-            $this.parents('.b-rating-block').addClass("hide");
-            $this.parents('.b-rating-block').siblings('.b-rating-thanks-block').removeClass("hide");
-        },2000)
+        $this.parents('.b-rating-block').addClass("hide");
+        $this.parents('.b-rating-block').siblings('.b-rating-thanks-block').removeClass("hide");
     });
 
     $(".b-slider-range").each(function() {

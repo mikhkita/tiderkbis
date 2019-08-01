@@ -1,6 +1,6 @@
 <?
 
-$version = "3";
+$version = "5";
 $arPage = explode('/', $_SERVER['REQUEST_URI']);
 if (end($arPage) == 'loan-detail.php') {
 	$isDetail = true;

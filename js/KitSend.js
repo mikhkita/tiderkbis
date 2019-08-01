@@ -344,6 +344,14 @@ $(document).ready(function(){
 
 			}
 
+			if ($form.attr('id') == 'b-rating-form') {
+				$('.b-rating-block').removeClass('hide');
+				$('.b-rating-thanks-block').addClass('hide');
+	        	$('.b-rating-before').addClass('hide');
+	        	$('.b-rating-after').removeClass('hide');
+	        	return false;
+            }
+
   			$.ajax({
 			  	type: $(this).attr("method"),
 			  	url: $(this).attr("action"),
@@ -422,10 +430,6 @@ $(document).ready(function(){
 
 							if( json.ACTION == "reload" ){
 	                            window.location.reload();
-	                        }
-
-	                        if ($form.attr('id') == 'b-rating-form') {
-	                        	
 	                        }
 
 				        }else{
