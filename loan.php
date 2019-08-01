@@ -14,10 +14,10 @@ include "header.php";
 
 <div class="b-calc-cont">
 	<div class="b-left-calc">
-		<div class="b-calc-tab-list">
+		<div class="b-calc-tab-list not-tabs">
 			<div class="b-block">
-				<a href="#loan" class="b-calc-tab-item active">Потребительский заём</a>
-				<a href="#mother" class="b-calc-tab-item">Материнский капитал</a>
+				<a href="#" onclick="return false;" class="b-calc-tab-item active">Потребительский заём</a>
+				<a href="mother.php" class="b-calc-tab-item">Материнский капитал</a>
 			</div>
 		</div>
 		<div class="b-calc-form-block" id="loan">
@@ -87,75 +87,6 @@ include "header.php";
 				</div>
 			</form>
 		</div>
-		<div class="b-calc-form-block hide" id="mother">
-			<form action="ajax/loan-json.php" method="POST" data-template="loan-template" class="b-calc-form" data-results-id="mother-results">
-				<div class="b-calc-string">
-					<div class="b-block">
-						<div class="b-block-calc b-block-calc-sliders">
-							<div class="b-calc-slider-block">
-								<label for="sum">Сумма займа</label>
-								<div class="b-calc-slider">
-									<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
-									<div class="b-calc-input-cont">
-										<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000">
-									</div>
-								</div>
-							</div>
-							<div class="b-calc-slider-block">
-								<label for="date">Срок займа</label>
-								<div class="b-calc-slider">
-									<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
-									<div class="b-calc-input-cont b-calc-input-month-cont">
-										<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-string">
-					<div class="b-block">
-						<div class="b-calc-checkboxes">
-							<label class="b-calc-checkbox-item">
-								<input type="checkbox" name="replenishment">
-								<div class="b-checkbox-text">Возможность пополнения</div>
-							</label>
-							<label class="b-calc-checkbox-item">
-								<input type="checkbox" name="refund">
-								<div class="b-checkbox-text">Досрочный возврат денег</div>
-							</label>
-							<div class="calc-select-cont">
-								<select class="select" name="savings-percent">
-									<option value="1">Начисление процентов</option>
-									<option value="2">Начисление процентов</option>
-									<option value="3">Начисление процентов</option>
-									<option value="4">Начисление процентов</option>
-								</select>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-string b-calc-string-without-border">
-					<div class="b-block">
-						<div class="b-block-calc b-calc-checkboxes">
-							<label class="b-calc-checkbox-item">
-								<input type="checkbox" name="retired">
-								<div class="b-checkbox-text">Я пенсионер</div>
-							</label>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-string">
-					<div class="b-block">
-						<div class="b-block-calc b-calc-text-block">
-							<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
-							<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
-							<a href="#" class="b-btn b-white-btn">Сбросить фильтр</a>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
 	</div>
 
 	<div class="b-calc-results max-4-items b-calc-inner-results" id="loan-results">
@@ -189,7 +120,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -221,7 +152,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -253,7 +184,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -285,7 +216,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -317,7 +248,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -349,7 +280,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -381,7 +312,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -413,173 +344,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="b-btn-container">
-				<a href="#" class="b-btn b-btn-more"><span class="b-btn-text">Показать все</span></a>
-			</div>
-		</div>
-	</div>
-
-	<div class="b-calc-results max-4-items b-calc-inner-results invisible" id="mother-results">
-		<div class="b-block">
-			<div class="b-calc-result-list">
-				<div class="b-calc-result-item">
-					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
-					</div>
-					<div class="b-calc-result-item-bottom">
-						<div class="b-calc-result-sum-string">
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
-							</div>
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
-							</div>
-						</div>
-						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-result-item">
-					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
-					</div>
-					<div class="b-calc-result-item-bottom">
-						<div class="b-calc-result-sum-string">
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
-							</div>
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
-							</div>
-						</div>
-						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-result-item">
-					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
-					</div>
-					<div class="b-calc-result-item-bottom">
-						<div class="b-calc-result-sum-string">
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
-							</div>
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
-							</div>
-						</div>
-						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-result-item">
-					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
-					</div>
-					<div class="b-calc-result-item-bottom">
-						<div class="b-calc-result-sum-string">
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
-							</div>
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
-							</div>
-						</div>
-						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-result-item">
-					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
-					</div>
-					<div class="b-calc-result-item-bottom">
-						<div class="b-calc-result-sum-string">
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
-							</div>
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
-							</div>
-						</div>
-						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
-						</div>
-					</div>
-				</div>
-				<div class="b-calc-result-item">
-					<div class="b-calc-result-item-top">
-						<div class="b-calc-res-title">«Накопление»</div>
-						<ul>
-							<li class="active">Возможности пополнения</li>
-							<li>Капитализация или выплата процентов</li>
-							<li>Досрочный возврат денег</li>
-						</ul>
-					</div>
-					<div class="b-calc-result-item-bottom">
-						<div class="b-calc-result-sum-string">
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Срок займа</span>
-								от <span class="b-res-big">6</span> месяцев
-							</div>
-							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Процентная ставка</span>
-								<span class="b-res-big">7%</span> годовых
-							</div>
-						</div>
-						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
+							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>

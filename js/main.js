@@ -133,11 +133,19 @@ $(document).ready(function(){
         var $this = $(this);
 
         //здесь будет ajax-запрос
+
         $this.parent().find(".b-star").removeClass("highlight").removeClass("selected");
         $(".b-stars").removeClass("hover");
 
         $this.addClass("selected");
         $this.prevAll(".b-star").addClass("selected");
+        $this.parents('.b-rating-block').find('.b-rating-before').addClass('hide');
+        $this.parents('.b-rating-block').find('.b-rating-after').removeClass('hide');
+
+        setTimeout(function(){
+            $this.parents('.b-rating-block').addClass("hide");
+            $this.parents('.b-rating-block').siblings('.b-rating-thanks-block').removeClass("hide");
+        },2000)
     });
 
     $(".b-slider-range").each(function() {
@@ -376,21 +384,23 @@ $(document).ready(function(){
     }
 
     $('.b-calc-tab-item').on('click',function(){
-        if (!$(this).hasClass('active')) {
-            var id = $(this).attr('href');
+        if (!$(this).parents('.b-calc-tab-list').hasClass('not-tabs')) {
+            if (!$(this).hasClass('active')) {
+                var id = $(this).attr('href');
 
-            $('.b-calc-form-block').addClass('hide');
-            $(id).removeClass('hide');
+                $('.b-calc-form-block').addClass('hide');
+                $(id).removeClass('hide');
 
-            $('.b-calc-results').addClass('hide');
-            if (!$(id+'-results').hasClass('not-ajax-results')) {
-                $(id+'-results').removeClass('hide');
+                $('.b-calc-results').addClass('hide');
+                if (!$(id+'-results').hasClass('not-ajax-results')) {
+                    $(id+'-results').removeClass('hide');
+                }
+
+                $('.b-calc-tab-item').removeClass('active');
+                $(this).addClass('active');
             }
-
-            $('.b-calc-tab-item').removeClass('active');
-            $(this).addClass('active');
+            return false;
         }
-        return false;
     });
 
     $('.b-personal-tab').on('click',function(){

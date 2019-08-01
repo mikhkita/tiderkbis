@@ -1,14 +1,38 @@
 	<? if( $withoutRating !== true ): ?>
+
 	<div class="b b-rating">
 		<div class="b-block">
-			<h3>Помогите нам стать лучше</h3>
-			<p>Оцените нашу новую страницу</p>
-			<div class="b-stars">
-				<div class="b-star b-star-icon selected"></div>
-				<div class="b-star b-star-icon selected"></div>
-				<div class="b-star b-star-icon selected"></div>
-				<div class="b-star b-star-icon "></div>
-				<div class="b-star b-star-icon "></div>
+			<div class="b-rating-block">
+				<div class="b-rating-before">
+					<h3>Помогите нам стать лучше</h3>
+					<p>Оцените нашу новую страницу</p>
+				</div>
+				<div class="b-rating-after hide">
+					<h3>Благодарим вас за оценку</h3>
+					<p>Мы очень ценим ваше мнение и обязательно к нему прислушаемся</p>
+				</div>
+				<div class="b-stars">
+					<div class="b-star b-star-icon selected"></div>
+					<div class="b-star b-star-icon selected"></div>
+					<div class="b-star b-star-icon selected"></div>
+					<div class="b-star b-star-icon "></div>
+					<div class="b-star b-star-icon "></div>
+				</div>
+			</div>
+			<div class="b-rating-thanks-block hide">
+				<h3>Спасибо, что оценили эту страницу</h3>
+				<p>Вы можете написать нам свои замечания и мы посмотрим, что можно с этим сделать</p>
+				<form action="#" id="b-rating-form">
+					<div class="b-half-input-cont">
+						<div class="b-input">
+							<textarea name="comment" rows="3" required></textarea>
+							<label for="comment">Ваше сообщение</label>
+						</div>
+						<div class="b-btn-container">
+							<a href="#" class="b-btn ajax">Отправить</a>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

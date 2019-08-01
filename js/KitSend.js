@@ -424,6 +424,10 @@ $(document).ready(function(){
 	                            window.location.reload();
 	                        }
 
+	                        if ($form.attr('id') == 'b-rating-form') {
+	                        	
+	                        }
+
 				        }else{
 				        	$form.find(".b-popup-error").html(json.ERROR);
 				        }

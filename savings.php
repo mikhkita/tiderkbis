@@ -90,7 +90,7 @@ include "header.php";
 				<div class="b-calc-result-item-top">
 					<div class="b-calc-res-title">«Доход»</div>
 					<ul>
-						<li>Возможности пополнения</li>
+						<li>Возможность пополнения</li>
 						<li>Капитализация или выплата процентов</li>
 						<li>Досрочный возврат денег</li>
 					</ul>
@@ -108,7 +108,6 @@ include "header.php";
 					</div>
 					<div class="b-res-btn-container">
 						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -116,7 +115,7 @@ include "header.php";
 				<div class="b-calc-result-item-top">
 					<div class="b-calc-res-title">«Накопление»</div>
 					<ul>
-						<li class="active">Возможности пополнения</li>
+						<li class="active">Возможность пополнения</li>
 						<li>Капитализация или выплата процентов</li>
 						<li>Досрочный возврат денег</li>
 					</ul>
@@ -134,7 +133,6 @@ include "header.php";
 					</div>
 					<div class="b-res-btn-container">
 						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -142,7 +140,7 @@ include "header.php";
 				<div class="b-calc-result-item-top">
 					<div class="b-calc-res-title">«Процент»</div>
 					<ul>
-						<li>Возможности пополнения</li>
+						<li>Возможность пополнения</li>
 						<li class="active">Капитализация или выплата процентов</li>
 						<li>Досрочный возврат денег</li>
 					</ul>
@@ -160,7 +158,6 @@ include "header.php";
 					</div>
 					<div class="b-res-btn-container">
 						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -168,7 +165,7 @@ include "header.php";
 				<div class="b-calc-result-item-top">
 					<div class="b-calc-res-title">«Особый»</div>
 					<ul>
-						<li>Возможности пополнения</li>
+						<li>Возможность пополнения</li>
 						<li class="active">Капитализация или выплата процентов</li>
 						<li>Досрочный возврат денег</li>
 					</ul>
@@ -186,7 +183,6 @@ include "header.php";
 					</div>
 					<div class="b-res-btn-container">
 						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -194,7 +190,7 @@ include "header.php";
 				<div class="b-calc-result-item-top">
 					<div class="b-calc-res-title">«Универсальный»</div>
 					<ul>
-						<li class="active">Возможности пополнения</li>
+						<li class="active">Возможность пополнения</li>
 						<li class="active">Капитализация или выплата процентов</li>
 						<li class="active">Досрочный возврат денег</li>
 					</ul>
@@ -212,7 +208,6 @@ include "header.php";
 					</div>
 					<div class="b-res-btn-container">
 						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -220,7 +215,7 @@ include "header.php";
 				<div class="b-calc-result-item-top">
 					<div class="b-calc-res-title">«До востребования»</div>
 					<ul>
-						<li class="active">Возможности пополнения</li>
+						<li class="active">Возможность пополнения</li>
 						<li>Капитализация или выплата процентов</li>
 						<li>Досрочный возврат денег</li>
 					</ul>
@@ -238,7 +233,6 @@ include "header.php";
 					</div>
 					<div class="b-res-btn-container">
 						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
-						<a href="loan-detail.php" class="b-btn b-white-btn">Подробнее</a>
 					</div>
 				</div>
 			</div>

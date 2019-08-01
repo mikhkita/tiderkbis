@@ -146,16 +146,16 @@ include "header.php";
 				</div>
 				<div class="b-loan-app-block">
 					<div class="b-loan-app-checkboxes">
-						<label class="b-calc-checkbox-item">
-							<input type="checkbox" name="retired">
+						<label class="b-calc-checkbox-item b-radio-item">
+							<input type="radio" name="retired">
 							<div class="b-checkbox-text">Я пенсионер</div>
 						</label>
-						<label class="b-calc-checkbox-item">
-							<input type="checkbox" name="retired">
+						<label class="b-calc-checkbox-item b-radio-item">
+							<input type="radio" name="retired">
 							<div class="b-checkbox-text">Я работник бюджетной сферы</div>
 						</label>
-						<label class="b-calc-checkbox-item">
-							<input type="checkbox" name="retired">
+						<label class="b-calc-checkbox-item b-radio-item">
+							<input type="radio" name="retired">
 							<div class="b-checkbox-text">Я предприниматель</div>
 						</label>
 					</div>

@@ -28,7 +28,7 @@
 				// ),
 				'ADVATAGES_LIST' => array(
 					0 => array(
-						'TEXT' => 'Возможности пополнения',
+						'TEXT' => 'Возможность пополнения',
 						'ACTIVE' => 'Y'
 					),
 					1 => array(
@@ -94,13 +94,13 @@
 			0 => array(
 				'ID' => 1,
 				'TITLE' => 'Накопление',
-				'DETAIL_URL' => 'savings.php',
+				// 'DETAIL_URL' => 'savings.php',
 				'INCOME' => 25000,
 				'END_SUM' => 40000,
 				'PERCENT_RATE' => 41.5,
 				'ADVATAGES_LIST' => array(
 					0 => array(
-						'TEXT' => 'Возможности пополнения',
+						'TEXT' => 'Возможность пополнения',
 						'ACTIVE' => 'Y'
 					),
 					1 => array(
@@ -114,13 +114,13 @@
 			1 => array(
 				'ID' => 2,
 				'TITLE' => 'Доход',
-				'DETAIL_URL' => 'savings.php',
+				// 'DETAIL_URL' => 'savings.php',
 				'INCOME' => 15000,
 				'END_SUM' => 20000,
 				'PERCENT_RATE' => 7,
 				'ADVATAGES_LIST' => array(
 					0 => array(
-						'TEXT' => 'Возможности пополнения',
+						'TEXT' => 'Возможность пополнения',
 						'ACTIVE' => 'Y'
 					),
 					1 => array(
