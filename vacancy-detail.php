@@ -83,6 +83,9 @@ include "header.php";
 				</li>
 			</ul>
 		</div>
+		<div class="b-center-mobile">
+			<a href="#" class="b-vacancy-btn-mobile ajax b-btn"><span class="b-btn-text">Откликнуться</span></a>
+		</div>
 		<div class="b-vacancy-text">
 			<h4>Обязанности:</h4>
 			<ul>
@@ -111,7 +114,9 @@ include "header.php";
 				<li>Корпоративное обучение;</li>
 				<li>Возможность развития вместе с лидером рынка.</li>
 			</ul>
-			<a href="#" class="b-btn vacancy-form-open">Откликнуться</a>
+			<div class="b-center-mobile">
+				<a href="#" class="b-btn vacancy-form-open">Откликнуться</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -134,7 +139,7 @@ include "header.php";
 					<div class="b-index-bottom-title">Более чем 30 кооперативных участков</div>
 				</div>
 				<div class="b-index-bottom-bottom">
-					<div class="b-index-bottom-text">На территории Сибирсокого<br>Федерального округа</div>
+					<div class="b-index-bottom-text">На территории Сибирсокого <br>Федерального округа</div>
 				</div>
 			</div>
 			<div class="b-index-bottom-item">
@@ -143,7 +148,7 @@ include "header.php";
 					<div class="b-index-bottom-title">Минимум документов</div>
 				</div>
 				<div class="b-index-bottom-bottom">
-					<div class="b-index-bottom-text">Основной документ —<br>паспорт гражданина РФ</div>
+					<div class="b-index-bottom-text">Основной документ — <br>паспорт гражданина РФ</div>
 				</div>
 			</div>
 			<div class="b-index-bottom-item">
@@ -152,7 +157,7 @@ include "header.php";
 					<div class="b-index-bottom-title">Быстрое оформление</div>
 				</div>
 				<div class="b-index-bottom-bottom">
-					<div class="b-index-bottom-text">Оформление<br>в течение 1 часа</div>
+					<div class="b-index-bottom-text">Оформление <br>в течение 1 часа</div>
 				</div>
 			</div>
 		</div>

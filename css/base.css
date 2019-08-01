@@ -112,11 +112,6 @@ input:-moz-placeholder {
 	width: 100%;
 	position: relative;
 }
-.sticky{
-	position: -webkit-sticky;
-    position: sticky;
-    top: 2.4rem;
-}
 .green{
 	color: #00963F;
 }
@@ -205,6 +200,14 @@ input:-moz-placeholder {
 	background: #F3C92E;
 }
 
+@media screen and (min-width: 768px){
+	.sticky{
+		position: -webkit-sticky;
+	    position: sticky;
+	    top: 2.4rem;
+	}
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	
 }
@@ -225,6 +228,9 @@ input:-moz-placeholder {
 		margin-bottom: 2.4rem;
 		max-width: 32rem;
 		font-family: 'Rubik-Bold';
+	}
+	.b-center-mobile{
+		text-align: center;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1080px) {
