@@ -59,6 +59,16 @@ $(document).ready(function(){
         isMobile = true;
     }
 
+    if(isMobile){
+        if($(".b-vacancy-detail-form-desktop input").length){
+            $(".b-vacancy-detail-form-mobile").append($(".b-vacancy-detail-form-desktop .b-input"));
+        }
+    }else{
+        if($("b-vacancy-detail-form-mobile input").length){
+            $(".b-vacancy-detail-form-desktop").append($(".b-vacancy-detail-form-mobile .b-input"));
+        }
+    }
+
     $(".b-main-slider").slick({
         dots: false,
         autoplay: true,
