@@ -12,7 +12,7 @@ include "header.php";
 ?>
 
 <div class="b-content">
-	<div class="b-accordeon-list">
+	<div class="b-documents-accordeon b-accordeon-list">
 		<div class="b-accordeon opened">
 			<div class="b-block">
 				<div class="b-accordeon-head">

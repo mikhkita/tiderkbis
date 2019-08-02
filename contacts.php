@@ -19,6 +19,7 @@ include "header.php";
 				<option value="nsk">Новосибирск</option>
 				<option value="msk">Москва</option>
 			</select>
+			<span class="b-city-btn-icon"></span>
 		</div>
 	</div>
 </div>
