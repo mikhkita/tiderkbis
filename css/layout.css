@@ -4735,6 +4735,43 @@ input.datepicker-here{
 	}
 }
 
+@media screen and (max-width: 767px){
+	.b-personal-form {
+	    padding-top: 9rem;
+	    padding-bottom: 9rem;
+	}
+		.b-personal-form-block{
+			width: 100%;
+		}
+			.b-personal-form-block h1{
+				text-align: left;
+			}
+			.b-personal-form-block .b-input{
+				width: 100%;
+			}
+			.b-personal-form-block .b-popup-error {
+			    margin-bottom: 2rem;
+			}
+			.b-auth-form {
+			    padding-top: 1.2rem;
+			}
+			.b-remember-pass{
+				margin-bottom: 1.4rem;
+			}
+			.b-personal-form-block h4 {
+			    text-align: left;
+			}
+		.b-tumbler-block {
+		    padding: 2.4rem 0 0.8rem 0;
+		}
+		.b-personal-form-block .b-tumbler-text-left {
+		    margin-right: 1.2rem;
+		}
+		.b-personal-form-block .b-input{
+			max-width: none;
+		}
+
+}
 
 /* Personal form ---––––––––––––––––––––––––––––––––––––––––– Personal form */
 

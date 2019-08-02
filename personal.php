@@ -14,7 +14,7 @@ include "header.php";
 <div class="b-personal">
 	<div class="b-block">
 		<h3>Викторов Виктор</h3>
-		<a href="#" class="logout-link">Выход</a>
+		<a href="#" class="logout-link"><span class="b-logout-icon"></span>Выход</a>
 		<div class="b-personal-top-block">
 			<div class="b-personal-tabs">
 				<a href="#loan" class="b-personal-tab active">Мои займы</a>

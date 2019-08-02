@@ -34,12 +34,12 @@
 				<form action="ajax/auth.php">
 					<h4>Тип регистрации:</h4>
 					<div class="b-tumbler-block">
-						<div class="b-tumbler-text b-tumbler-text-left active">По номеру договора<br>займа и ФИО</div>
+						<div class="b-tumbler-text b-tumbler-text-left active">По номеру договора <br>займа и ФИО</div>
 						<label class="b-tumbler-item">
 							<input type="checkbox" class="tumbler" name="reg-type">
 							<div class="b-tumbler"></div>
 						</label>
-						<div class="b-tumbler-text b-tumbler-text-right">По номеру договора<br>накопления и ФИО</div>
+						<div class="b-tumbler-text b-tumbler-text-right">По номеру договора <br>накопления и ФИО</div>
 					</div>
 					<div class="b-input">
 						<input type="text" name="doc-number" required>
