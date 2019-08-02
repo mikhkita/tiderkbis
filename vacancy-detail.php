@@ -21,6 +21,7 @@ include "header.php";
 		<h4>Расскажите о себе</h4>
 		<form id="vacancy-item-1" action="#" method="POST" class="b-vacancy-detail-form" data-file-action="addFile.php">
 			<div class="b-half-input-cont">
+				<div class="b-vacancy-detail-form-mobile"></div>
 				<div class="b-input">
 					<input type="text" name="surname" required>
 					<label for="surname">Фамилия<span class="required">*</span></label>
@@ -31,9 +32,11 @@ include "header.php";
 				</div>
 			</div>
 			<div class="b-half-input-cont">
-				<div class="b-input">
-					<input type="text" name="name" required>
-					<label for="name">Имя<span class="required">*</span></label>
+				<div class="b-vacancy-detail-form-desktop">
+					<div class="b-input">
+						<input type="text" name="name" required>
+						<label for="name">Имя<span class="required">*</span></label>
+					</div>
 				</div>
 				<div class="b-input">
 					<input type="text" name="email" required>
@@ -44,12 +47,14 @@ include "header.php";
 			<div class="b-dragndrop-block success" id="pluploadCont">
 				<input id="original_filename" type="hidden" name="original_filename">
 				<input id="random_filename" type="hidden" name="random_filename">
-				<div class="b-dragndrop-text">Перетащите или <a class="attach" href="javascript:;" id="pickfiles">загрузите</a> сюда ваше резюме</div>
+				<div class="b-dragndrop-text"><span class="b-dragndrop-text-desktop">Перетащите или </span><a class="attach" href="javascript:;" id="pickfiles">загрузите</a> сюда ваше резюме<span class="required">*</span></div>
 				<div id="plupload-error" class="plupload-error"></div>
 			</div>
 			<div class="b-resume">
-				<span class="b-document-icon"></span>
-				<span class="b-resume-name">Resume.doc</span>
+				<div class="b-resume-group">
+					<span class="b-document-icon"></span>
+					<span class="b-resume-name">Resume.doc</span>
+				</div>
 				<span class="icon-cross"></span>
 			</div>
 			<div class="b-vacancy-detail-bottom">
@@ -84,7 +89,7 @@ include "header.php";
 			</ul>
 		</div>
 		<div class="b-center-mobile">
-			<a href="#" class="b-vacancy-btn-mobile ajax b-btn"><span class="b-btn-text">Откликнуться</span></a>
+			<a href="#" class="b-btn b-vacancy-btn-mobile vacancy-form-open">Откликнуться</a>
 		</div>
 		<div class="b-vacancy-text">
 			<h4>Обязанности:</h4>
@@ -121,7 +126,8 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-vanacy-about-block" style="background-image: url('i/vacancy-about.jpg');">
+<div class="b-vanacy-about-block">
+	<!-- <div class="b-vanacy-mobile-back" style="background-image: url('i/vacancy-about.jpg');"></div> -->
 	<div class="b-block">
 		<h3>О нас</h3>
 		<p>Кредитный потребительский кооператив граждан (КПКГ) «Сибирский кредит» — это добровольный союз жителей Сибирского федерального округа, объединивших личные сбережения для оказания взаимовыгодных финансовых услуг друг другу: выдачи займов, хранения и накопления сбережений.<br><br>
