@@ -3132,6 +3132,57 @@ input.error,textarea.error{
 	}
 }
 
+@media screen and (max-width: 767px){
+	.b-search {
+	    padding-top: 3.2rem;
+	    padding-bottom: 3.2rem;
+	}
+	.b-search-res-img{
+		width: 10.4rem;
+		height: 10.4rem;
+	}
+	.b-search-right{
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 12rem);
+		margin-left: 1.2rem;
+	}
+	.b-search-breadcrumbs ul {
+	    margin-bottom: 1rem;
+	}
+		.b-search-breadcrumbs li{
+			font-size: 1.4rem;
+	    	line-height: 1.7rem;
+	    	margin-right: 3rem;
+		}
+		.b-search-breadcrumbs li:last-child{
+			margin-right: 0;
+		}
+			.b-search-breadcrumbs li:not(:last-child) span:after{
+				top: 40%;
+			}
+	.b-search-res-title {
+		font-family: 'Rubik-Medium';
+	    font-size: 1.6rem;
+	    line-height: 1.9rem;
+	    margin-bottom: 0.8rem;
+	    padding-right: 1.6rem;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	}
+	.b-search-res-type{
+		font-size: 1.4rem;
+	    line-height: 1.7rem;
+	}
+	.b-search-results {
+	    padding-top: 2.4rem;
+	}
+		.b-search-res{
+			margin-bottom: 0.8rem;
+		}
+}
+
 /* Search –––––––––––––––––––––––––––––––––––––––––––– Search */
 
 
@@ -4722,6 +4773,55 @@ input.datepicker-here{
 		vertical-align: middle;
 		background-image: url('../i/illustration.svg#shareholder');
 	}
+	.b-shareholder-illustration.mobile{
+		display: none;
+	}
+.b-shareholder-advices-mobile{
+	display: none;
+}
+
+@media screen and (max-width: 767px){
+	.b-shareholder-illustration.mobile{
+		display: block;
+	}
+	.b-shareholder-illustration.desktop{
+		display: none;
+	}
+	.b-shareholder-illustration {
+		margin: 2.4rem 0;
+	    width: 21rem;
+	    height: 16.7rem;
+	}
+	.b-shareholder-text {
+	    width: 100%;
+	    margin-right: 0;
+	}
+
+	.b-shareholder {
+	    margin-bottom: 4rem;
+	}
+
+	.b-shareholder-docs .b-title-with-button{
+		margin-bottom: 2.4rem;
+	}
+	.b-shareholder-docs .b-documents{
+		margin-bottom: 1.6rem;
+	}
+		.b-shareholder-docs .b-documents-left {
+		    width: 100%;
+		}
+			.b-shareholder-docs .b-documents-left .b-document{
+				width: 100%;
+				padding: 0;
+			}
+			.b-shareholder-docs .b-document-icon{
+				margin-top: 0;
+				vertical-align: middle;
+			}
+	.b-shareholder-advices-mobile{
+		display: block;
+	}
+}
 
 /* Shareholder ---––––––––––––––––––––––––––––––––––––––––– Shareholder */
 
