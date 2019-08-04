@@ -14,6 +14,11 @@
 					<input type="submit" value="">
 				</div>
 			</form>
+			<div class="b-404-btn-mobile b-center-mobile">
+				<a href="loan-application.php" class="b-btn">
+					<span class="b-btn-text">Оформить заём</span>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

@@ -63,6 +63,9 @@ $(document).ready(function(){
         if($(".b-vacancy-detail-form-desktop input").length){
             $(".b-vacancy-detail-form-mobile").append($(".b-vacancy-detail-form-desktop .b-input"));
         }
+        if($(".b-reception-cont textarea").attr("rows") > 1){
+            $(".b-reception-cont textarea").attr({"rows": 1});
+        }
     }else{
         if($("b-vacancy-detail-form-mobile input").length){
             $(".b-vacancy-detail-form-desktop").append($(".b-vacancy-detail-form-mobile .b-input"));

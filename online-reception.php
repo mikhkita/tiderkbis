@@ -47,7 +47,7 @@ include "header.php";
 			</div>
 			<div class="b-reception-bottom-cont">
 				<div class="b-block">
-					<div class="b-reception-cont-string">
+					<div class="b-reception-cont-string b-center-mobile">
 						<a href="#" class="ajax b-btn"><span class="b-btn-text">Задать вопрос</span></a>
 						<div class="b-error-text hide">Некоторые заполненные поля содержат ошибку</div>
 					</div>
