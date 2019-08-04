@@ -232,6 +232,10 @@ input:-moz-placeholder {
 	.b-center-mobile{
 		text-align: center;
 	}
+	.b-text img{
+		max-width: calc(100% + 3.2rem);
+    	margin-left: -1.6rem;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1080px) {
 	html {
