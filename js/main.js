@@ -654,6 +654,7 @@ $(document).ready(function(){
     }else{
         $('.mobile-search').on('click', function(){
             $('#vacancy-form').submit();
+            return false;
         });
     }
 
