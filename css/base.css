@@ -112,6 +112,9 @@ input:-moz-placeholder {
 	width: 100%;
 	position: relative;
 }
+.b-title-mobile{
+	display: none;
+}
 .green{
 	color: #00963F;
 }
@@ -228,6 +231,9 @@ input:-moz-placeholder {
 		margin-bottom: 2.4rem;
 		max-width: 32rem;
 		font-family: 'Rubik-Bold';
+	}
+	.b-title-mobile{
+		display: block;
 	}
 	.b-center-mobile{
 		text-align: center;

@@ -165,6 +165,7 @@ include "header.php";
 		<div class="b-loan-app-cont">
 			<div class="b-block">
 				<div class="b-loan-app-cont-string">
+					<div class="b-error-text-mobile"></div>
 					<a href="#" class="ajax b-btn"><span class="b-btn-text">Оформить заём</span></a>
 					<div class="b-error-text hide">Некоторые заполненные поля содержат ошибку</div>
 				</div>
