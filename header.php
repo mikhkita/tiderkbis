@@ -2,7 +2,7 @@
 
 $version = "5";
 $arPage = explode('/', $_SERVER['REQUEST_URI']);
-if (end($arPage) == 'loan-detail.php') {
+if (end($arPage) == 'loan-detail.php' || end($arPage) == 'loan-detail-no-calc.php') {
 	$isDetail = true;
 	$detailPageClass = "b-navigation-detail";
 }
@@ -86,9 +86,39 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 			</ul>
 		</div>
 	</div>
+	<div class="b-politics-block">
+		<div class="b-block">
+			<div class="b-politics-block-top clearfix">
+				<div class="b-close clearfix">
+					<a href="#" class="b-icon-cross"></a>
+				</div>
+			</div>
+			<div class="b-politics-block-bottom">
+				<h3>Согласие на обработку персональных данных</h3>
+				<p>Указанные мною выше сведения соответствуют действительности. В период подготовки к заключению договора займа и в период его действия я предоставляю КПКГ «Сибирский кредит» право проверять сведения, касающиеся выдачи и возврата займа методами, разрешенными законами РФ. Даю согласие на обработку кооперативом моих персональных данных для достижения целей, предусмотренных уставом КПКГ «Сибирский кредит», в соответствии с законом от 27.07.2006 N 152-ФЗ «О персональных данных»</p>
+			</div>
+		</div>
+	</div>
+	<div class="b-politics-block-with-btns">
+		<div class="b-block">
+			<div class="b-politics-block-top clearfix">
+				<div class="b-close clearfix">
+					<a href="#" class="b-icon-cross"></a>
+				</div>
+			</div>
+			<div class="b-politics-block-bottom">
+				<h3>Согласие на обработку персональных данных</h3>
+				<p>Указанные мною выше сведения соответствуют действительности. В период подготовки к заключению договора займа и в период его действия я предоставляю КПКГ «Сибирский кредит» право проверять сведения, касающиеся выдачи и возврата займа методами, разрешенными законами РФ. Даю согласие на обработку кооперативом моих персональных данных для достижения целей, предусмотренных уставом КПКГ «Сибирский кредит», в соответствии с законом от 27.07.2006 N 152-ФЗ «О персональных данных»</p>
+				<div class="b-btn-block">
+					<a href="#" class="b-btn b-close b-white-btn">Не принимаю</a>
+					<a href="#" class="b-btn b-close" id="agree-btn">Принимаю</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<? if(!isset($_COOKIE['isFirstTime'])): ?>
 	<div class="b-cookies-block">
-		<div class="b-cookies-text">КПКГ "Сибирский кредит" использует файлы cookie. Подробная информация в <a href="#" class="green dashed">правилах по обработке персональных данных</a>. Вы можете запретить сохранение cookie в настройках своего браузера.</div>
+		<div class="b-cookies-text">КПКГ "Сибирский кредит" использует файлы cookie. Подробная информация в <a href="#" class="green dashed politics">правилах по обработке персональных данных</a>. Вы можете запретить сохранение cookie в настройках своего браузера.</div>
 		<a href="#" class="b-btn close-cookie">Продолжить работу</a>
 		<a href="#" class="close-cookie icon-cross"></a>
 	</div>
@@ -110,7 +140,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 								<a href="tel:83822513614" class="b-phone"><span class="b-phone-icon"></span>(3822) 51-36-14</a>
 							</div>
 							<div class="b-header-right">
-								<a href="personal.php" class="b-personal-btn">
+								<a href="personal-forms.php" class="b-personal-btn">
 									<span class="b-personal-btn-icon"></span><span class="b-personal-btn-text">Личный кабинет</span>
 								</a>
 								<div class="b-search-btn">

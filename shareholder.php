@@ -4,6 +4,7 @@ $params = array(
 	"TITLE" => "Стать пайщиком",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
+		"О кооперативе" => "index.php"
 	),
 );
 
@@ -32,11 +33,11 @@ include "header.php";
 		</div>
 		<div class="b-documents clearfix">
 			<div class="b-documents-left">
-				<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
-				<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных</span></a>
-				<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступление в&nbsp;кооператив</span></a>
-				<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
-				<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
+				<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
+				<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных</span></a>
+				<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступление в&nbsp;кооператив</span></a>
+				<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
+				<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
 			</div>
 		</div>
 	</div>

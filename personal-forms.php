@@ -31,7 +31,8 @@
 		<div class="b-personal-form-block hide" id="reg">
 			<h1>Регистрация</h1>
 			<div class="b-reg-form">
-				<form action="ajax/auth.php">
+				<form action="ajax/auth.php" class="form-with-politics" method="POST">
+					<input type="hidden" id="politics-agreement" value="N">
 					<h4>Тип регистрации:</h4>
 					<div class="b-tumbler-block">
 						<div class="b-tumbler-text b-tumbler-text-left active">По номеру договора <br>займа и ФИО</div>

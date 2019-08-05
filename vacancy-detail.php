@@ -19,7 +19,8 @@ include "header.php";
 		</div>
 		<h3>Откликнуться на вакансию</h3>
 		<h4>Расскажите о себе</h4>
-		<form id="vacancy-item-1" action="#" method="POST" class="b-vacancy-detail-form" data-file-action="addFile.php">
+		<form id="vacancy-item-1" action="ajax/success.php" method="POST" class="b-vacancy-detail-form form-with-politics" data-file-action="addFile.php">
+			<input type="hidden" id="politics-agreement" value="N">
 			<div class="b-half-input-cont">
 				<div class="b-vacancy-detail-form-mobile"></div>
 				<div class="b-input">
@@ -44,13 +45,13 @@ include "header.php";
 				</div>
 			</div>
 				
-			<div class="b-dragndrop-block success" id="pluploadCont">
+			<div class="b-dragndrop-block" id="pluploadCont">
 				<input id="original_filename" type="hidden" name="original_filename">
 				<input id="random_filename" type="hidden" name="random_filename">
 				<div class="b-dragndrop-text"><span class="b-dragndrop-text-desktop">Перетащите или </span><a class="attach" href="javascript:;" id="pickfiles">загрузите</a> сюда ваше резюме<span class="required">*</span></div>
 				<div id="plupload-error" class="plupload-error"></div>
 			</div>
-			<div class="b-resume">
+			<div class="b-resume hide">
 				<div class="b-resume-group">
 					<span class="b-document-icon"></span>
 					<span class="b-resume-name">Resume.doc</span>
@@ -64,7 +65,7 @@ include "header.php";
 						<div class="b-error-text hide">Некоторые заполненные поля содержат ошибку</div>
 					</div>
 					<div class="b-loan-app-cont-string">
-						<div class="b-loan-app-btn-text">Нажимая кнопку «Откликнуться», я даю согласие на <a href="/personal">обработку моих персональных данных</a></div>
+						<div class="b-loan-app-btn-text">Нажимая кнопку «Откликнуться», я даю согласие на <a href="#" class="politics">обработку моих персональных данных</a></div>
 					</div>
 				</div>
 			</div>

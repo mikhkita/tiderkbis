@@ -192,13 +192,13 @@ include "header.php";
 				<div class="b-personal-tile-list">
 					<div class="b-personal-tile-item">
 						<div class="b-personal-tile-item-string">
-							<div class="b-personal-tile-item-name">«Вклад»</div>
+							<div class="b-personal-tile-item-name">«Накопление»</div>
 							<div class="b-personal-tile-item-info">Договор № КП000000627 от 24 сентября 2018 г.</div>
 						</div>
 						<div class="b-personal-tile-item-string">
 							<div class="b-personal-tile-half-string">
 								<div class="b-personal-tile-string-top">
-									<span>Cумма</span>
+									<span>Cумма сбережения</span>
 								</div>
 								<div class="b-personal-tile-string-bottom">
 									<span><b>50 000 </b></span><span class="rub-icon"></span>
@@ -214,52 +214,22 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-personal-tile-item-string">
-							<div class="b-personal-tile-half-string">
+							<div class="b-personal-tile-string">
 								<div class="b-personal-tile-string-top">
-									<span>Ближайший платеж</span>
+									<span>Срок окончания сбережения</span>
 								</div>
 								<div class="b-personal-tile-string-bottom">
-									<span><b>24 ноября</b></span>
-								</div>
-							</div>
-							<div class="b-personal-tile-half-string">
-								<div class="b-personal-tile-string-top">
-									<span>Штраф</span>
-								</div>
-								<div class="b-personal-tile-string-bottom">
-									<span><b>37 </b></span><span class="rub-icon"></span>
+									<span><b>20.01.2022</b></span>
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
-							<div class="b-personal-tile-half-string btn-cont">
-								<a href="#" class="b-btn">Оплатить</a>
-							</div>
-							<div class="b-personal-tile-half-string">
+						<div class="b-personal-tile-item-string">
+							<div class="b-personal-tile-string">
 								<div class="b-personal-tile-string-top">
-									<span class="b-res-big"><b>6737 </b><span class="rub-icon"></span></span>
+									<span>Доход по окончанию срока</span>
 								</div>
 								<div class="b-personal-tile-string-bottom">
-									<span class="b-small gray">до 24.09.2019</span>
-								</div>
-							</div>
-						</div>
-						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
-							<div class="b-personal-tile-half-string btn-cont">
-								<a href="#" class="b-btn b-white-btn">Закрыть досрочно</a>
-							</div>
-							<div class="b-personal-tile-half-string">
-								<span class="b-res-middle gray">31 763 <span class="rub-icon"></span></span>
-							</div>
-						</div>
-						<div class="b-personal-tile-accordeon b-accordeon-list">
-							<div class="b-accordeon">
-								<div class="b-accordeon-head">
-									<h4>Детальная информация по займу</h4>
-									<span class="b-arrow-icon"></span>
-								</div>
-								<div class="b-accordeon-body">
-									<span>Текст детальной информации</span>
+									<span class="b-res-big"><b>20 000 </b><span class="rub-icon"></span></span>
 								</div>
 							</div>
 						</div>

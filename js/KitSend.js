@@ -285,6 +285,12 @@ $(document).ready(function(){
 		var $form = $(this);
 
   		if( $(this).find("input.error, select.error, textarea.error").length == 0 ){
+
+  			if ($form.hasClass('form-with-politics') && $('#politics-agreement').val() == 'N') {
+  				$('html').addClass('politics-with-btns-open');
+  				return false;
+  			}
+
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
 
@@ -430,6 +436,10 @@ $(document).ready(function(){
 
 							if( json.ACTION == "reload" ){
 	                            window.location.reload();
+	                        }
+
+	                        if (json.MOVETO) {
+	                        	window.location.replace(json.MOVETO);
 	                        }
 
 				        }else{

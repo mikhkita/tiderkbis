@@ -191,7 +191,9 @@ input.error,textarea.error{
 
 .city-open, 
 .vacancy-open, 
-.burger-open{
+.burger-open,
+.politics-open,
+.politics-with-btns-open{
 	overflow: hidden;
 }
 
@@ -212,7 +214,9 @@ input.error,textarea.error{
 
 .city-open .b-dark-background,
 .vacancy-open .b-dark-background,
-.burger-open .b-dark-background{
+.burger-open .b-dark-background,
+.politics-open .b-dark-background,
+.politics-with-btns-open .b-dark-background{
 	opacity: 1;
 	visibility: visible;
 }
@@ -530,7 +534,7 @@ input.error,textarea.error{
 					display: block;
 					background-color: #FFF;
 					margin-bottom: -6.5rem;
-					margin-right: 2.4rem;
+					margin-right: 2.1rem;
 				}
 				.b-header .b-logo-mobile{
 					display: none;
@@ -551,14 +555,14 @@ input.error,textarea.error{
 						height: 11rem;
 					}
 				.b-city-btn{
-					margin-right: 2.6rem;
+					margin-right: 2.3rem;
 				}
 					.b-city-btn-icon{
 						background-image: url('../i/sprite.svg#location');
 						width: 1.3rem;
 						height: 1.6rem;
 						margin-right: 0.8rem;
-						margin-top: -0.3rem;
+						margin-top: -0.1rem;
 					}
 					.b-city-btn-text{
 
@@ -614,7 +618,7 @@ input.error,textarea.error{
 					left: -100vw;
 				}
 					.b-personal-btn{
-						margin-right: 24px;
+						margin-right: 2.4rem;
 						position: relative;
 					}
 					.b-personal-btn:after{
@@ -667,7 +671,7 @@ input.error,textarea.error{
 							background-image: url('../i/sprite.svg#search');
 							width: 2.4rem;
 							height: 2.4rem;	
-							margin-right: 0.4rem;
+							/*margin-right: 0.4rem;*/
 							cursor: pointer;
 						}
 						.b-search-btn-icon:before{
@@ -954,6 +958,7 @@ input.error,textarea.error{
 		background-color: #00963F;
 		border-color: #00963F;
 		background-image: url('../i/sprite.svg#user-white');
+		background-position: 50% 53%;
 	}
 	.b-personal-btn:hover .b-personal-btn-text,
 	.b-search-btn:hover .b-search-btn-text,
@@ -1018,6 +1023,7 @@ input.error,textarea.error{
 		.b-navigation h1{
 			margin-top: 1.3rem;
 			margin-bottom: 2.4rem;
+		    max-width: 88rem;
 		}
 		.b-navigation h1.before-subtitle{
 			margin-bottom: 0.8rem;
@@ -1138,10 +1144,61 @@ input.error,textarea.error{
 /* Burger menu ––––––––––––––––––––––––––––––––––––––––– Burger menu */
 
 
+/* Politics block ––––––––––––––––––––––––––––––––––––––––– Politics block */
+
+.b-politics-block,
+.b-politics-block-with-btns{
+	position: fixed;
+	top: -100vh;
+	visibility: hidden;
+	left: 0;
+	width: 100vw;
+	padding-top: 2.4rem;
+	padding-bottom: 11.4rem;
+	background: #FFF;
+	z-index: 15;
+	-webkit-transition: top 400ms ease-out, visibility 400ms;
+	-o-transition: top 400ms ease-out, visibility 400ms;
+	transition: top 400ms ease-out, visibility 400ms;
+}
+.vacancy-open .b-politics-block-with-btns{
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+}
+.b-politics-block-with-btns{
+	padding-bottom: 8rem;
+}
+.politics-open .b-politics-block,
+.politics-with-btns-open .b-politics-block-with-btns{
+	top: 0;
+	visibility: visible;
+}
+	.b-politics-block-top{
+		display: block;
+	}
+		.b-politics-block-top .b-close{
+			display: inline-block;
+			vertical-align: top;
+			float: right;
+			margin-bottom: 3.2rem;
+		}
+		.b-politics-block-bottom{
+			max-width: 51.8rem;
+		}
+		.b-politics-block-bottom .b-btn-block{
+			margin-top: 6.4rem;
+		}
+			.b-politics-block-bottom .b-btn-block .b-white-btn{
+				margin-right: 2rem;
+				min-width: 15.5rem;
+			}
+			.b-politics-block-bottom .b-btn-block .b-close{
+				margin-bottom: 0;
+			}
+/* Politics block ––––––––––––––––––––––––––––––––––––––––– Politics block */
+
+
 /* Main slider ––––––––––––––––––––––––––––––––––––––––––––– Main slider */
 .b-main-slider{
-	/*height: 100px;*/
-	/*background-color: #ccc;*/
 	overflow: hidden;
 	max-height: 48rem;
 }
@@ -1149,18 +1206,15 @@ input.error,textarea.error{
 		height: 48rem;
 		padding: 4rem 0;
 	}
-		.b-slider-item-img{
+		.b-slider-item img{
 			width: 105%;
-			height: 100%;
+			height: auto;
 			top: 0;
 			background-size: cover;
 			position: absolute;
-			-webkit-transition: transform 7s linear;
-			-o-transition: transform 7s linear;
-			transition: transform 7s linear;
 			left: -2.5%;
 		}
-		.slick-current .b-slider-item-img{
+		.slick-current img{
 			animation: a 7s linear forwards;
 		}
 		.b-slider-item .b-block{
@@ -1175,7 +1229,7 @@ input.error,textarea.error{
 					font-size: 4.8rem;
 					line-height: 4.8rem;
 					display: block;
-					max-width: 30.6rem;
+					/*max-width: 30.6rem;*/
 					margin-bottom: 2.4rem;
 				}
 				.b-slider-item-text{
@@ -1270,6 +1324,9 @@ input.error,textarea.error{
 		max-width: 26rem;
 		margin-bottom: 1.6rem;
 	}
+		.b-slider-item-info h2 br{
+			display: none;
+		}
 	.b-slider-item-text{
 	    max-width: 22rem;
 	    margin-bottom: 5.5rem;
@@ -2053,6 +2110,7 @@ input.error,textarea.error{
 							color: #8F8F8F;
 							margin-bottom: 0.8rem;
 							display: block;
+							max-width: 20rem;
 						}
 						.b-calc-result-sum-info .mobile{
 							display: none;
@@ -2250,7 +2308,11 @@ input.error,textarea.error{
 
 /* News –––––––––––––––––––––––––––––––––––––––––––– News */
 .b-news-block{
-	padding: 64px 0;
+	padding: 6.4rem 0;
+}
+.b-news-page .b-news-block{
+	padding: 0;
+	padding-bottom: 1.6rem;
 }
 	.b-news .b-block{
 		padding: 4rem 0rem;
@@ -2266,12 +2328,14 @@ input.error,textarea.error{
 			}
 		.b-news-list{
 			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 			.b-news{
 				vertical-align: top;
-				/*width: 32.8rem;*/
+				width: 32.8rem;
 				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-				margin-right: 2.4rem;
+				/*margin-right: 2.4rem;*/
 				padding: 1.6rem 1.6rem 10rem;
 				z-index: 1;
 				-webkit-transition: box-shadow .2s;
@@ -2279,7 +2343,10 @@ input.error,textarea.error{
 				transition: box-shadow .2s;
 			}
 			.b-news:last-child{
-				margin-right: 0rem;
+				/*margin-right: 0rem;*/
+			}
+			.b-news-page .b-news{
+				margin-bottom: 2.4rem;
 			}
 				.b-news-date{
 					color: rgba(0, 0, 0, 0.4);
@@ -2349,6 +2416,28 @@ input.error,textarea.error{
 	
 }
 /* News –––––––––––––––––––––––––––––––––––––––––––– News */
+
+/* Detail news –––––––––––––––––––––––––––––––––––––––––––– Detail news */
+
+.b-detail-news{
+	margin-top: -0.8rem;
+	padding-bottom: 6.4rem;
+}
+	.b-detail-news .b-news-date{
+		font-size: 2.4rem;
+		line-height: 3.4rem;
+		color: rgba(33, 33, 33, 0.5);
+		margin-bottom: 3.2rem;
+	}
+	.b-detail-news h4{
+		line-height: 3.4rem;
+	}
+	.b-detail-news p{
+		line-height: 2rem;
+	}
+	.b-detail-news img{
+		margin-top: 4rem;
+	}
 
 /* Advantages –––––––––––––––––––––––––––––––––––––––––––– Advantages */
 
@@ -2632,6 +2721,9 @@ input.error,textarea.error{
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+	.b-loan-detail-no-calc{
+
+	}
 		.b-loan-detail-cont-back{
 			display: none;
 		}
@@ -2649,8 +2741,14 @@ input.error,textarea.error{
 				.b-loan-detail-cont .b-calc-result-item-top{
 					margin-bottom: 4rem;
 				}
+				.b-loan-detail-no-calc .b-calc-result-item-top{
+					margin-bottom: 6.4rem;
+				}
 					.b-loan-detail-cont .b-calc-res-bottom-cont{
 						display: block;
+					}
+					.b-loan-detail-no-calc .b-calc-res-bottom-cont{
+						margin-bottom: 3.2rem;
 					}
 						.b-loan-detail-cont .b-res-row{
 							display: inline-block;
@@ -3578,6 +3676,13 @@ input.error,textarea.error{
 		top: 0rem;
 		right: -10rem;
 	}
+	.b-cooperative-tile .b-shareholder-illustration{
+		background-image: url('../i/illustration.svg#payshit');
+	    width: 26.9rem;
+	    height: 19rem;
+	    right: -2.3rem;
+	    top: 0px;
+	}
 /* Desktop */
 @media (min-width: 1024px) {
 	.b-cooperative-tile-img{
@@ -3592,6 +3697,9 @@ input.error,textarea.error{
 	}
 	.b-cooperative-tile:hover .b-doc-illustration{
 		right: -11rem;	
+	}
+	.b-cooperative-tile:hover .b-shareholder-illustration{
+		right: -4rem;	
 	}
 }
 @media screen and (max-width: 767px){
@@ -3872,7 +3980,7 @@ input.error,textarea.error{
 	position: fixed;
 	text-align: left;
 	padding: 2.9rem 10rem 3rem 2.4rem;
-	z-index: 100;
+	z-index: 9;
 	width: calc(100% - 4.8rem);
 	max-width: 123.2rem;
 	background: #FFFFFF;
@@ -5610,6 +5718,42 @@ input.datepicker-here{
 	    height: 25.5rem;
 	}
 }
+
+/* Success page ---––––––––––––––––––––––––––––––––––––––––– Success page */
+
+
+.b-success{
+	margin-top: 12.9rem;
+	margin-bottom: 6.4rem;
+}
+	.b-success-img{
+		width: 32.8rem;
+		height: 30.5rem;
+		background-image: url('../i/illustration.svg#success-1');
+	}
+	.b-success h3{
+		line-height: 3.6rem;
+		margin-bottom: 3.2rem;
+		margin-top: 3.2rem;
+	}
+	.b-success p{
+		max-width: 39.5rem;
+		margin-bottom: 3.2rem;
+		line-height: 2rem;
+	}
+
+@media screen and (max-width: 767px) {
+	.b-success{
+		margin-top: 3rem;
+	}
+		.b-success-img {
+		    width: 25.8rem;
+		    height: 24.5rem;
+		}
+}
+
+
+/* Success page ---––––––––––––––––––––––––––––––––––––––––– Success page */
 
 /* Footer ––––––––––––––––––––––––––––––––––––––––––––– Footer */
 .b-footer{

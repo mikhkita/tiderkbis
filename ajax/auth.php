@@ -1,19 +1,17 @@
 <?php 
 	
-	//success
+	//error
 
 	// $arRes = array(
-	// 	'RESULT' => 'success',
-	// 	'ACTION' => 'reload',
+	// 	'RESULT' => 'error',
 	// );
 
-	//error
+	//success
+
 	$arRes = array(
-		'RESULT' => 'error',
-		'ERROR' => 'Введён неправильный логин или пароль'
+		'RESULT' => 'success',
+		'MOVETO' => 'personal.php'
 	);
-
-
 
 	echo json_encode($arRes);
 ?>
