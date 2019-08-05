@@ -124,7 +124,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
@@ -159,7 +159,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
@@ -194,7 +194,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
@@ -229,7 +229,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
@@ -264,7 +264,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
@@ -299,7 +299,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
@@ -334,7 +334,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
@@ -369,7 +369,7 @@ include "header.php";
 							</div>
 						</div>
 						<div class="b-res-btn-container">
-							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
+							<a href="loan-application.php" class="b-btn b-btn-application" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
 							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>

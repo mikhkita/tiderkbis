@@ -128,7 +128,7 @@ input:-moz-placeholder {
 		margin-bottom: 24px;
 	}
 	.b-text p{
-		
+		max-width: 100%;
 	}
 	.b-text a{
 		color: #00963F;

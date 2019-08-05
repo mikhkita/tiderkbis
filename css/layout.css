@@ -2714,6 +2714,8 @@ input.error,textarea.error{
 	}
 	.b-left-calc .b-btn,
 	.b-left-calc .b-white-btn{
+		padding: 1.6rem 0.4rem;
+		width: calc(14.8rem + 2 * (100vw - 320px) / 55);
 		font-size: calc(11px + 3 * (100vw - 320px) / 55);
 	}
 }
@@ -3720,6 +3722,10 @@ input.error,textarea.error{
 	    width: 20.2rem;
     	height: 17.9rem;
 	    top: 1.5rem;
+	}
+	.b-cooperative-tile .b-shareholder-illustration{
+	    width: 16.9rem;
+	    top: -5rem;
 	}
 	.b-cooperative-tile{
 		height: 14rem;
@@ -4775,6 +4781,11 @@ input.datepicker-here{
 			border-color: rgba(33, 33, 33, 0.4);
 		}
 }
+@media screen and (max-width: 375px){
+	.b-btn.mobile-search{
+	    min-width: calc(12rem + 4.7 * (100vw - 320px) / 55);
+	}
+}
 
 /* Vacancies ---––––––––––––––––––––––––––––––––––––––––– Vacancies */
 
@@ -5776,7 +5787,8 @@ input.datepicker-here{
 	margin-top: 4rem;
 }
 	.b-mother-block .b-left-block{
-		width: 59.2rem;	
+		width: 100%;	
+		max-width: 59.2rem;
 	}
 		.b-mother-block h3{
 			margin-bottom: 3.2rem;
@@ -5787,6 +5799,7 @@ input.datepicker-here{
 			.b-mother-illustration{
 				width: 41.2rem;
 				height: 30.5rem;
+				max-width: 100%;
 				background-image: url('../i/house-illustration.svg');
 				background-size: cover;
 				background-position: 50% 50%;
