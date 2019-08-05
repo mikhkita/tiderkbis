@@ -15,6 +15,46 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+
+        if( myWidth > 1024 ){
+            isDesktop = true;
+            isTablet = false;
+            isMobile = false;
+        }else if( myWidth > 767 ){
+            isDesktop = false;
+            isTablet = true;
+            isMobile = false;
+        }else{
+            isDesktop = false;
+            isTablet = false;
+            isMobile = true;
+        }
+
+        if(isMobile){
+            if($(".b-vacancy-detail-form-desktop input").length){
+                $(".b-vacancy-detail-form-mobile").append($(".b-vacancy-detail-form-desktop .b-input"));
+            }
+            if($(".b-reception-cont textarea").attr("rows") > 1){
+                $(".b-reception-cont textarea").attr({"rows": 1});
+            }
+            if($(".b-loan-app-cont-string > .b-error-text").length){
+                $(".b-error-text-mobile").append($(".b-loan-app-cont-string .b-error-text"));
+            }
+            if($(".b-calc-results").length){
+                $(".b-calc-results.max-4-items").removeClass("max-4-items");
+                $(".b-calc-results .b-btn-container").remove();
+                $(".b-calc-result-list").addClass("slider-results");
+                slickResults();
+                var slick = $('.b-calc-result-list').slick('getSlick'),
+                    id = slick.$slider.parents('.b-calc-results').attr('id');
+                changeSlickCounter(id, slick.currentSlide, slick.slideCount);
+            }
+        }else{
+            if($(".b-vacancy-detail-form-mobile input").length){
+                $(".b-vacancy-detail-form-desktop").append($(".b-vacancy-detail-form-mobile .b-input"));
+            }
+        }
+
     }
     $(window).resize(resize);
     resize();
@@ -44,30 +84,6 @@ $(document).ready(function(){
         }
     }
     $.fn.placeholder();
-
-    if( myWidth > 1024 ){
-        isDesktop = true;
-        isTablet = false;
-        isMobile = false;
-    }else if( myWidth > 767 ){
-        isDesktop = false;
-        isTablet = true;
-        isMobile = false;
-    }else{
-        isDesktop = false;
-        isTablet = false;
-        isMobile = true;
-    }
-
-    if(isMobile){
-        if($(".b-vacancy-detail-form-desktop input").length){
-            $(".b-vacancy-detail-form-mobile").append($(".b-vacancy-detail-form-desktop .b-input"));
-        }
-    }else{
-        if($("b-vacancy-detail-form-mobile input").length){
-            $(".b-vacancy-detail-form-desktop").append($(".b-vacancy-detail-form-mobile .b-input"));
-        }
-    }
 
     $(".b-main-slider").slick({
         dots: false,

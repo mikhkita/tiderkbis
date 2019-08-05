@@ -1043,7 +1043,12 @@ input.error,textarea.error{
 	}
 	.b-navigation h1{
 		max-width: 311px;
-		margin-bottom: 0.8rem;
+	}
+	h4.subtitle{
+		padding-top: 0.8rem;
+		margin-bottom: 2.4rem;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
 	}
 }
 /* Navigation ––––––––––––––––––––––––––––––––––––––––– Navigation */
@@ -1904,6 +1909,13 @@ input.error,textarea.error{
 					margin-bottom: 2.4rem;
 				}
 
+	.b-calc-string-without-border{
+		border-bottom: 1px solid #DADADA;
+	}
+		.b-calc-string-without-border .b-calc-checkboxes {
+		    padding-bottom: 2.4rem;
+		}
+
 }
 @media screen and (max-width: 375px){
 	.b-tumbler-text{
@@ -2095,6 +2107,9 @@ input.error,textarea.error{
 							display: block;
 							max-width: 20rem;
 						}
+						.b-calc-result-sum-info .mobile{
+							display: none;
+						}
 						.b-res-big{
 							font-family: 'Rubik-Medium';
 							font-size: 3.2rem;
@@ -2130,6 +2145,7 @@ input.error,textarea.error{
 		display: block;
 	}
 		.b-calc-results{
+			padding-top: 4rem;
 			padding-bottom: 4rem;
 		}
 			.slider-results{
@@ -2145,9 +2161,18 @@ input.error,textarea.error{
 		.b-calc-result-item,
 		.slider-results .b-calc-result-item{
 			width: 28.5rem;
+			margin: 0 0.8rem;
+		}
+		/*.b-calc-result-list{
+			margin: 0 -1.6rem;
+		}*/
+		.b-calc-result-list.slick-slider .slick-track,
+		.b-calc-result-list.slick-slider .slick-list{
+			margin: 0 -1.6rem;
+			left: 1.6rem;
 		}
 			.b-calc-res-title{
-				margin-bottom: 3.2rem;
+				margin-bottom: 2.4rem;
 			}
 			.b-calc-res-subtitle{
 				margin-bottom: 0.8rem;
@@ -2158,18 +2183,38 @@ input.error,textarea.error{
 				width: auto;
 				margin-bottom: 1.9rem;
 			}
+		.b-calc-result-sum-string{
+			display: flex;
+		}
+		.b-calc-result-sum{
+			font-size: 1.4rem;
+    		line-height: 1.7rem;
+		}
 		.b-calc-result-sum-string:first-child .b-calc-result-sum{
 			width: 100%;
 		}
 		.b-calc-result-sum-string:not(:first-child) .b-calc-result-sum:first-child{
-			width: 108px;
-			margin-right: 7px;
+			width: auto;
+			padding-right: 1.1rem;
+			margin-right: 0;
 		}
 		.b-calc-result-sum-string:not(:first-child) .b-calc-result-sum:last-child{
-			width: 134px;
+			width: auto;
 		}
 		.b-calc-result-sum-info{
-			max-width: 10rem;
+			color: rgba(33, 33, 33, 0.5);
+			max-width: 100%;
+			font-size: 1.6rem;
+    		line-height: 1.9rem;
+		}
+		.b-calc-result-sum-info .mobile{
+			display: inline;
+		}
+		.b-calc-result-sum-info .desktop{
+			display: none;
+		}
+		.b-calc-result-sum-string:first-child .b-calc-result-sum .b-calc-result-sum-info{
+			color: #333;
 		}
 		.b-calc-result-sum-string:first-child .b-calc-result-sum:last-child .b-calc-result-sum-info{
 			display: none;
@@ -2183,6 +2228,27 @@ input.error,textarea.error{
 		}
 		.b-res-btn-container .b-white-btn{
 			display: none;
+		}
+	.b-calc-inner-results{
+
+	}
+		.b-calc-inner-results .b-title-mobile{
+			margin-bottom: 2.4rem;
+		}
+	.b-res-btn-container{
+
+	}
+		.b-res-btn-container .b-btn{
+			margin-top: 0;
+		}
+		.b-res-btn-container .b-btn-application{
+			display: none;
+		}
+		.b-res-btn-container .b-btn-detail{
+			display: inline-block;
+			background-color: #FEDB31;
+			border: 0;
+			padding: 1.6rem 5.6rem;
 		}
 
 }
@@ -2296,9 +2362,9 @@ input.error,textarea.error{
 	.b-news-block{
 		padding-top: 4.2rem;
 		padding-bottom: 1.6rem;
-		background: -webkit-linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);
+		/*background: -webkit-linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);
 		background: -o-linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);
-		background: linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);
+		background: linear-gradient(rgba(194,194,194,0.2) 0%, rgba(255,255,255,1) 10%);*/
 	}
 		.b-news-list{
 			display: block;
@@ -2528,7 +2594,7 @@ input.error,textarea.error{
 @media screen and (max-width: 767px){
 	.b-savings-docs{
 		padding-top: 4rem;
-		padding-bottom: 4rem;
+		padding-bottom: 0;
 	}
 }
 
@@ -2644,15 +2710,20 @@ input.error,textarea.error{
 
 
 /* Loan detail –––––––––––––––––––––––––––––––––––––––––––– Loan detail */
-
-	.b-loan-detail-cont	{
+	
+	.b-loan-detail-cont {
+		position: relative;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	.b-loan-detail-no-calc{
 
 	}
-		.b-loan-detail-cont	.b-block{
+		.b-loan-detail-cont-back{
+			display: none;
+		}
+		.b-loan-detail-cont .b-block{
+			z-index: 2;
 			padding: 6.4rem 0;
 		}
 			.b-loan-detail-cont .b-calc-result-item{
@@ -2743,6 +2814,100 @@ input.error,textarea.error{
 
 		}
 
+@media screen and (max-width: 767px){
+	.b-loan-detail-cont{
+		background-position: 90% 50%;
+	}
+	.b-loan-detail-cont-back{
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,0.6);
+	}
+	.b-loan-detail-cont .b-block{
+		padding: 2.4rem 0 4rem 0;
+	}
+	.b-loan-detail-cont .b-calc-result-item {
+	    margin-top: 0;
+	    width: 100%;
+	    margin: 0;
+	}
+	.b-loan-detail-cont .b-calc-res-info{
+		margin-top: 2.4rem;
+		font-size: 1.6rem;
+    	line-height: 1.9rem;
+	}
+	.b-loan-detail-cont .b-calc-result-item-top {
+	    margin-bottom: 2.4rem;
+	}
+	.b-loan-detail-cont .b-res-row{
+		width: 50%;
+		margin-right: 0;
+	}
+	.b-loan-detail-cont .b-res-row:nth-child(1){
+		margin-right: 5.4rem
+	}
+	.b-loan-detail-cont .b-res-row:nth-child(2){
+		width: calc(50% - 5.8rem);
+	}
+	.b-loan-detail-cont .b-res-row:last-child{
+		width: 100%;
+	}
+		.b-loan-detail-cont .b-res-row:last-child .b-calc-result-sum {
+		    margin-bottom: 2.4rem;
+		}
+	.b-loan-detail-cont .b-res-bottom-info {
+	    max-width: 28rem;
+	    margin-bottom: 1.6rem;
+	}
+	.b-loan-detail-docs {
+	    padding-top: 4rem;
+	    padding-bottom: 4rem;
+	}	
+		.b-loan-detail-docs .b-title-with-button {
+		    margin-bottom: 2.4rem;
+		}
+			.b-loan-detail-docs .b-title-with-button h4 {
+			    font-family: 'Rubik-Bold';
+			    line-height: 3rem;
+			    max-width: 18rem;
+			    margin-bottom: 0rem;
+			    display: inline-block;
+			    vertical-align: middle;
+			}
+			.b-loan-detail-docs .b-title-with-button .b-small-btn{
+				vertical-align: top;
+			}
+			.b-loan-detail-docs .b-documents-left,
+			.b-loan-detail-docs .b-documents-right{
+				width: 100%;
+			}
+				.b-loan-detail-docs .b-documents-left .b-document,
+				.b-loan-detail-docs .b-documents-right .b-document{
+				    width: 100%;
+				    padding: 0;
+				}
+					.b-loan-detail-docs .b-documents-left .b-document .b-document-icon{
+						vertical-align: middle;
+					}
+					.b-loan-detail-docs .b-document .b-document-or {
+					    position: relative;
+					    bottom: -1.1rem;
+					}
+
+	.b-detail-other {
+	    padding-top: 4rem;
+	    padding-bottom: 4rem;
+	}
+		.b-detail-other ul {
+		    margin-bottom: 2.4rem;
+		}
+}
+
 /* Loan detail –––––––––––––––––––––––––––––––––––––––––––– Loan detail */
 
 
@@ -2808,7 +2973,8 @@ input.error,textarea.error{
 					-o-transform: rotate(90deg);
 					transform: rotate(90deg);*/
 				}
-				.chosen-container-single .chosen-single div:before{
+				.chosen-container-single .chosen-single div:before,
+				.select-mobile-arrow:before{
 					content: '';
 					position: absolute;
 					width: 0.9rem;
@@ -2825,7 +2991,8 @@ input.error,textarea.error{
 					-o-transition: transform .2s, right .2s;
 					transition: transform .2s, right .2s;
 				}
-				.chosen-container-single .chosen-single div:after{
+				.chosen-container-single .chosen-single div:after,
+				.select-mobile-arrow:after{
 					content: '';
 					position: absolute;
 					width: 0.9rem;
@@ -3134,11 +3301,37 @@ input.error,textarea.error{
 			font-size: 1.7rem;
 		}
 
+.b-404-btn-mobile .b-btn{
+	display: none;
+}
+
 /* Desktop */
 @media (min-width: 1024px) {
 	.b-404-text a:hover{
 		border-bottom: 1px solid #00963F;
 	}
+}
+
+@media screen and (max-width: 767px) {
+	.b-404 {
+	    padding-top: 1rem;
+	}
+		.b-404-img{
+			width: 100%;
+   			height: 24.5rem;
+   			margin-bottom: 11.3rem;
+		}
+		.b-404-text,
+		.b-404-cont .search-string{
+			display: none;
+		}
+	.b-404-btn-mobile{
+
+	}
+		.b-404-btn-mobile .b-btn{
+			display: inline-block;
+			margin-bottom: 1.6rem;
+		}
 }
 
 /* 404 –––––––––––––––––––––––––––––––––––––––––––– 404 */
@@ -3279,6 +3472,13 @@ input.error,textarea.error{
 		.b-search-res{
 			margin-bottom: 0.8rem;
 		}
+	.b-no-search-res{
+		padding-top: 1.6rem;
+		padding-bottom: 1.6rem;
+		width: 100%;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+	}
 }
 
 /* Search –––––––––––––––––––––––––––––––––––––––––––– Search */
@@ -3376,7 +3576,9 @@ input.error,textarea.error{
 	.b-right-block{
 		float: unset;
 		max-width: 100%;
+		width: 100%;
 		margin-top: 40px;
+		margin-right: 0;
 	}
 }
 /* Content –––––––––––––––––––––––––––––––––––––––––––– Content */
@@ -3413,6 +3615,24 @@ input.error,textarea.error{
 			.b-payment-text a{
 
 			}
+
+@media screen and (max-width: 767px) {
+	.b-payments {
+	    margin-bottom: -4rem;
+	}
+	.b-payment .b-payment-img {
+	    width: 12.2rem;
+	    height: 15rem;
+	    margin-right: 0;
+	    margin-bottom: 1.6rem;
+	}
+	.b-payment-text h4 {
+	    margin-bottom: 1.6rem;
+	}
+	.b-payment {
+	    margin-bottom: 3.2rem;
+	}
+}
 /* Payments ––––––––––––––––––––––––––––––––––––––––––– Payments */
 
 
@@ -3492,7 +3712,7 @@ input.error,textarea.error{
 	}
 	.b-cooperative-tile-title{
 		font-size: 14px;
-		line-height: 14px;
+		line-height: 20px;
 		font-family: 'Rubik-Medium';
 	}
 }
@@ -3960,11 +4180,38 @@ input.error,textarea.error{
 	    transition: transform .2s, right .2s;
 	    z-index: 2;
 	}
-	.b-loan-app-cont-string .b-btn{
-		width: 220px;
-		display: block;
-		margin: 0 auto;
+	.b-loan-app-cont-string {
+	    margin-bottom: 1.6rem;
 	}
+		.b-loan-app-cont-string .b-btn{
+			width: 220px;
+			display: block;
+			margin: 0 auto;
+		}
+		.b-error-text-mobile .b-error-text{
+			margin-left: 0;
+	    	margin-bottom: 1.6rem;
+		}
+	.b-loan-app-docs{
+	    margin-top: 0;
+	}
+		.b-loan-app-docs .b-title-with-button,
+		.b-savings-docs .b-title-with-button{
+		    margin-bottom: 2.4rem;
+		}
+		.b-loan-app-docs .b-documents,
+		.b-savings-docs .b-documents{
+			margin-bottom: 1.6rem;
+		}
+			.b-loan-app-docs .b-document,
+			.b-savings-docs .b-document{
+				padding: 0;
+			}
+				.b-loan-app-docs .b-document-icon,
+				.b-savings-docs .b-document-icon{
+					vertical-align: middle;
+				}
+
 }
 
 /* Loan app --––––––––––––––––––––––––––––––––––––––––– Loan app */
@@ -4037,8 +4284,50 @@ input.error,textarea.error{
 	}
 	.b-reception-cont .b-tumbler-text-right{
 		max-width: 110px;
-	    margin-left: 5px;
+	    margin-left: 1.2rem;
 	}
+	.b-reception-cont h3 {
+	    margin-bottom: 2.4rem;
+	}
+	.b-tumbler-block{
+		margin-bottom: 3rem;
+	}
+	.b-reception-cont .b-half-input-cont {
+	    width: 100%;
+	    display: block;
+	    margin-right: 0;
+	}
+	.b-reception-cont .b-half-input-cont:last-child .b-input{
+		margin-bottom: 0;
+	}
+	/*.b-left-calc .b-calc-tab-list {
+	    margin-bottom: 2rem;
+	}*/
+	.b-questions-answers-cont {
+	    padding-bottom: 4rem;
+	}
+		.b-questions-answers-cont .b-calc-form-block .b-block{
+			width: calc(100% - 3.2rem);
+	    	margin: 0 auto;
+		}
+		.b-question-date {
+		    float: right;
+		}
+		.b-question-text {
+		    font-size: 1.7rem;
+		    line-height: 2.2rem;
+		}
+		.b-question-tile {
+		    margin-bottom: 1.6rem;
+		}
+		.b-answer-block {
+		    padding-left: 0;
+		}
+	.b-pagination {
+		margin-top: 1.6rem;
+	    text-align: center;
+	}
+
 }
 
 /* Online reception --––––––––––––––––––––––––––––––––––––––––– Online reception */
@@ -4797,6 +5086,9 @@ input.datepicker-here{
 		.b-contacts-inner-block-bottom{
 
 		}
+	.select-mobile-arrow{
+		display: none;
+	}
 
 @media screen and (max-width: 767px){
 	.b-contacts-select-cont {
@@ -4858,6 +5150,30 @@ input.datepicker-here{
 	.contacts-icon {
 	    margin-right: 1.2rem;
 	}
+	.b-contacts-select-cont{
+		position: relative;
+	    margin-top: 1.4rem;
+	    margin-bottom: 2.4rem;
+	    padding-bottom: 0;
+	}
+		.b-contacts-select-cont select{
+			background-image: url(../i/sprite.svg#location);
+		    background-size: 1.4rem 2rem;
+		    background-position: 1.3rem 50%;
+		    background-repeat: no-repeat;
+		}
+		.select-mobile-arrow{
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		    display: block;
+		    width: 18px;
+		    height: 100%;
+		}
+		.select-mobile-arrow:before,
+		.select-mobile-arrow:after{
+			background-color: #00963F;
+		}
 }
 
 /* Contacts ---––––––––––––––––––––––––––––––––––––––––– Contacts */
@@ -5034,9 +5350,9 @@ input.datepicker-here{
 			.b-personal-form-block h4 {
 			    text-align: left;
 			}
-		.b-tumbler-block {
+		/*.b-tumbler-block {
 		    padding: 2.4rem 0 0.8rem 0;
-		}
+		}*/
 		.b-personal-form-block .b-tumbler-text-left {
 		    margin-right: 1.2rem;
 		}

@@ -86,6 +86,7 @@ include "header.php";
 
 <div class="b-calc-results b-calc-inner-results" id="savings-results">
 	<div class="b-block">
+		<h3 class="b-title-mobile">Вам подходит:</h3>
 		<div class="b-calc-result-list">
 			<div class="b-calc-result-item">
 				<div class="b-calc-result-item-top">

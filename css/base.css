@@ -112,6 +112,9 @@ input:-moz-placeholder {
 	width: 100%;
 	position: relative;
 }
+.b-title-mobile{
+	display: none;
+}
 .green{
 	color: #00963F;
 }
@@ -229,8 +232,15 @@ input:-moz-placeholder {
 		max-width: 32rem;
 		font-family: 'Rubik-Bold';
 	}
+	.b-title-mobile{
+		display: block;
+	}
 	.b-center-mobile{
 		text-align: center;
+	}
+	.b-text img{
+		max-width: calc(100% + 3.2rem);
+    	margin-left: -1.6rem;
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1080px) {
