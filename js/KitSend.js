@@ -438,6 +438,10 @@ $(document).ready(function(){
 	                            window.location.reload();
 	                        }
 
+	                        if (json.ACTION == "success-page") {
+	                        	window.location.replace("/success.php");
+	                        }
+
 				        }else{
 				        	$form.find(".b-popup-error").html(json.ERROR);
 				        }
