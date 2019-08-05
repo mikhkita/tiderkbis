@@ -13,7 +13,9 @@ include "header.php";
 ?>
 <div class="b-detail-advice">
 	<div class="b-block">
-		<div class="b-detail-advice-img" style="background-image: url('i/detail-advice.jpg');"></div>
+		<picture>
+			<img src="i/detail-advice.jpg">
+		</picture>
 		<div class="b-text">
 			<p>Для того, чтобы получить деньги от государства на погашение ипотеки, заемщик должен соответствовать одновременно 6 критериям, указанным ниже. Для того, чтобы получить деньги от государства на погашение ипотеки, заемщик должен соответствовать одновременно 6 критериям, указанным ниже.</p>
 			<ol>

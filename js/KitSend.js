@@ -286,6 +286,15 @@ $(document).ready(function(){
 
   		if( $(this).find("input.error, select.error, textarea.error").length == 0 ){
 
+  			if ($form.hasClass('change-pass-form')) {
+  				if ($('input[name=newpass]').val() !== $('input[name=confirmpass]').val()) {
+  					$('.b-settings-text').removeClass('success, hide').addClass('error');
+  					$('.b-settings-text').html('Пароли не совпадают');
+  					$('input[name=newpass]').eq(0).focus();
+  					return false;
+  				}
+  			}
+
   			if ($form.hasClass('form-with-politics') && $('#politics-agreement').val() == 'N') {
   				$('html').addClass('politics-with-btns-open');
   				return false;
@@ -313,6 +322,10 @@ $(document).ready(function(){
 
 			if( $this.attr("data-goal") ){
 				yaCounter12345678.reachGoal($this.attr("data-goal"));
+			}
+
+			if ($form.find(".b-settings-text")) {
+				$(this).removeClass('hide');
 			}
 
 			if ($form.hasClass('b-calc-form')) {
@@ -442,10 +455,20 @@ $(document).ready(function(){
 	                        	window.location.replace(json.MOVETO);
 	                        }
 
+	                        if ($form.find(".b-settings-text")) {
+								$form.find(".b-settings-text").html(json.SUCCESS_TEXT);
+					        	$form.find(".b-settings-text").removeClass('hide, error');
+					        	$form.find(".b-settings-text").addClass('success');
+					        }
+
 				        }else{
 				        	$form.find(".b-popup-error").html(json.ERROR);
-				        }
-
+				        	if ($form.find(".b-settings-text")) {
+								$form.find(".b-settings-text").html(json.ERROR);
+					        	$form.find(".b-settings-text").removeClass('hide, success');
+					        	$form.find(".b-settings-text").addClass('error');
+					        }
+						}
 					}else{
 						if( msg == "1" ){
 							$link = $this.find(".b-thanks-link");

@@ -11,7 +11,7 @@ include "header.php";
 		<div class="b-slider-item">
 			<picture>
 			  <source media="(max-width: 767px)" srcset="i/main-back-mobile.jpg">
-			  <img src="i/main-back-1.jpg">
+			  <img src="i/main-back-1-full.jpg">
 			</picture>
 			<div class="b-block">
 				<div class="b-slider-item-info">
@@ -24,7 +24,7 @@ include "header.php";
 		<div class="b-slider-item">
 			<picture>
 			  <source media="(max-width: 767px)" srcset="i/main-back-2.jpg">
-			  <img src="i/main-back-2.jpg">
+			  <img src="i/main-back-2-full.jpg">
 			</picture>
 			<div class="b-block">
 				<div class="b-slider-item-info">
@@ -36,8 +36,8 @@ include "header.php";
 		</div>
 		<div class="b-slider-item">
 			<picture>
-			  <source media="(max-width: 767px)" srcset="i/main-back-mobile.jpg">
-			  <img src="i/main-back-3.jpg">
+			  <source media="(max-width: 767px)" srcset="i/main-back-3.jpg">
+			  <img src="i/main-back-3-full.jpg">
 			</picture>
 			<div class="b-block">
 				<div class="b-slider-item-info">

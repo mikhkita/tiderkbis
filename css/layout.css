@@ -1210,7 +1210,6 @@ input.error,textarea.error{
 			width: 105%;
 			height: auto;
 			top: 0;
-			background-size: cover;
 			position: absolute;
 			left: -2.5%;
 		}
@@ -1349,6 +1348,7 @@ input.error,textarea.error{
 		}
 		.b-main-slider .b-btn{
 		    padding: 1.6rem 4rem;
+		    width: 22rem;
 		}
 	.slick-dots{
 	    position: absolute;
@@ -1917,13 +1917,21 @@ input.error,textarea.error{
 		}
 
 }
+
+@media screen and (max-width: 767px){
+	.b-tumbler-text-left{
+		max-width: 12.2rem;
+	}
+	.b-tumbler-text-right{
+		max-width: 11rem;
+	    margin-left: 1.2rem;
+	}
+}
 @media screen and (max-width: 375px){
 	.b-tumbler-text{
 		font-size: calc(14px + 2 * (100vw - 320px) / 55);
 	}
 	.b-tumbler-text-left{
-		/*max-width: 8rem;*/
-	    /*max-width: 10.9rem;*/
 		max-width: calc(80px + 21 * (100vw - 320px) / 55);
 	}
 	.b-tumbler-text-right{
@@ -2672,7 +2680,7 @@ input.error,textarea.error{
 		width: 100%;
 	}
 		.b-left-calc .b-calc-tab-item{
-			width: calc(100%/2 - 3px);
+			width: calc(100%/2 - 4px);
 			padding: 4px;
 		}
 		.b-left-calc .b-calc-tab-list{
@@ -3240,11 +3248,11 @@ input.error,textarea.error{
 .b-detail-advice{
 	padding-bottom: 4rem;
 }
-	.b-detail-advice-img{
-		height: 25.3rem;
+	.b-detail-advice img{
 		background-size: cover;
 		background-position: 50% 50%;
 		margin-bottom: 3.2rem;
+		max-width: 100%;
 	}
 
 /* Detail advices –––––––––––––––––––––––––––––––––––––––––––– Detail advices */
@@ -4278,13 +4286,6 @@ input.error,textarea.error{
 @media screen and (max-width: 767px){
 	.b-reception-cont .b-tumbler-block{
 		padding: 0;
-	}
-	.b-reception-cont .b-tumbler-text-left{
-		max-width: 122px;
-	}
-	.b-reception-cont .b-tumbler-text-right{
-		max-width: 110px;
-	    margin-left: 1.2rem;
 	}
 	.b-reception-cont h3 {
 	    margin-bottom: 2.4rem;
@@ -5402,7 +5403,7 @@ input.datepicker-here{
 			.b-personal-tabs{
 				display: inline-block;
 			}
-				.b-personal-tab{
+				.b-personal-tab:not(.b-settings-link){
 					display: inline-block;
 					width: 15.2rem;
 					padding: 1.6rem 0.7rem 1.5rem 0.7rem;
@@ -5416,7 +5417,7 @@ input.datepicker-here{
 					-o-transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
 					transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
 				}
-				.b-personal-tab.active{
+				.b-personal-tab.active:not(.b-settings-link){
 					background-color: #FEDB31;
 					box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
 				}
@@ -5448,16 +5449,39 @@ input.datepicker-here{
 					transition: transform 200ms ease-out;
 				}
 		.b-tab-content-container{
-			background-color: #F2F2F2;
-			padding-top: 2.4rem;
-			padding-bottom: 1.4rem;
+			
 		}
 			.b-tab-content{
-				
+				padding-top: 2.4rem;
+				padding-bottom: 1.4rem;
+			}
+			.b-tab-content.gray{
+				background-color: #F2F2F2;
 			}
 				.b-personal-tile-list{
-
+				    /*display: flex;
+    				justify-content: space-between;
+    				flex-wrap: wrap;*/
 				}
+					.b-settings-block{
+						max-width: 50.4rem;
+					}
+						.b-lk2-illustration{
+							width: 22.6rem;
+							height: 19.6rem;
+							background-image: url('../i/illustration.svg#lk-2');
+							background-size: cover;
+						    right: -4rem;
+    						top: 3.8rem;
+						}
+						.b-lk1-illustration{
+							width: 25.5rem;
+							height: 23.5rem;
+							background-image: url('../i/illustration.svg#lk-1');
+							background-size: cover;
+						    right: -5rem;
+    						top: 2.8rem;
+						}
 					.b-personal-tile-item{
 						background-color: #FFF; 
 						width: 50.5rem;
@@ -5486,7 +5510,7 @@ input.datepicker-here{
 							border-bottom: unset;
 						}
 						.b-personal-tile-accordeon .b-accordeon-body{
-
+						    padding: 1.6rem 0rem 2.4rem;
 						}
 							.b-personal-tile-accordeon .b-accordeon-head .b-arrow-icon{
 								right: 1.6rem;
@@ -5499,6 +5523,9 @@ input.datepicker-here{
 					.b-personal-tile-item .gray{
 						opacity: 0.5;
 					}
+					.b-personal-tile-item .red{
+						color: #DC3C3C;
+					}
 					.b-personal-tile-item .b-small{
 						font-size: 1.4rem;
 						line-height: 1.7rem;
@@ -5506,11 +5533,17 @@ input.datepicker-here{
 						.b-personal-tile-item-string{
 							padding: 1.6rem;
 						}
+						.b-personal-tile-item-string.b-accordeon-list{
+							padding: 1rem 1.6rem;
+						}
 						.b-personal-tile-item-string.big-pt{
 							padding-top: 2.4rem;
 						}
 						.b-personal-tile-item-string.big-pb{
-							padding-bottom: 2.4rem
+							padding-bottom: 2.4rem;
+						}
+						.b-personal-tile-item-string.large-pb{
+							padding-bottom: 3.7rem;
 						}
 						.big-pt.big-pb .b-personal-tile-string-top{
 							margin-bottom: 2px;
@@ -5544,7 +5577,28 @@ input.datepicker-here{
 								.b-personal-tile-string-bottom{
 
 								}
-
+						.loan-detail-table{
+							width: 100%;
+						}
+						.loan-detail-table tr:not(:first-child){
+							border-top: 1px solid #DADADA;
+						}
+						.loan-detail-table th,
+						.loan-detail-table td{
+							padding: 0.8rem 0;
+						}
+						.loan-detail-table th:last-child,
+						.loan-detail-table td:last-child{
+							width: 8.3rem;
+						}
+						.loan-detail-table th{
+							vertical-align: top;
+							font-family: 'Rubik-Medium';
+						}
+						.loan-detail-table th.center,
+						.loan-detail-table td.center{
+							text-align: center;
+						}
 @media (min-width: 1024px) {
 	.b-personal .logout-link:hover{
 		border-color: transparent;
@@ -5557,6 +5611,15 @@ input.datepicker-here{
 	}
 	.b-personal-tab:not(.active):hover{
 		box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+	}
+	.b-personal-tab.b-settings-link:hover{
+		box-shadow: unset;
+	}
+	.b-white-tile:hover .b-lk2-illustration{
+		right: -5rem;
+	}
+	.b-white-tile:hover .b-lk1-illustration{
+		right: -6rem;
 	}
 }
 
@@ -5676,6 +5739,33 @@ input.datepicker-here{
 				background-size: cover;
 				background-position: 50% 50%;
 			}
+
+/* Settings form ---––––––––––––––––––––––––––––––––––––––––– Settings form */
+
+.b-settings-form form{
+	max-width: 50.4rem;
+}
+	.b-settings-form p{
+		max-width: 41.6rem;
+		margin-bottom: 3.8rem;
+	}
+	.b-settings-form .b-input{
+		margin-bottom: 2.4rem;
+	}
+	.b-settings-form .b-btn{
+		margin-top: 1.6rem;
+	}
+	.b-settings-text{
+		padding-bottom: 0.8rem;
+	}
+	.b-settings-text.success{
+		color: #00963F;
+	}
+	.b-settings-text.error{
+		color: #DC3C3C;
+	}
+
+/* Settings form ---––––––––––––––––––––––––––––––––––––––––– Settings form */
 
 
 /* Success page ---––––––––––––––––––––––––––––––––––––––––– Success page */
