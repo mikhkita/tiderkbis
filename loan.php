@@ -31,7 +31,7 @@ include "header.php";
 								<div class="b-calc-slider">
 									<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 									<div class="b-calc-input-cont">
-										<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000">
+										<input class="b-calc-input-rub b-range-input" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000" default-value="15 000">
 									</div>
 								</div>
 							</div>
@@ -40,7 +40,7 @@ include "header.php";
 								<div class="b-calc-slider">
 									<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
 									<div class="b-calc-input-cont b-calc-input-month-cont">
-										<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6">
+										<input class="b-calc-input-month b-range-input" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6" default-value="6">
 									</div>
 								</div>
 							</div>
@@ -82,7 +82,7 @@ include "header.php";
 						<div class="b-block-calc b-calc-text-block">
 							<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 							<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
-							<a href="#" class="b-btn b-white-btn">Сбросить фильтр</a>
+							<a href="#" class="b-btn b-white-btn b-filter-reset">Сбросить фильтр</a>
 						</div>
 					</div>
 				</div>
@@ -92,6 +92,7 @@ include "header.php";
 
 	<div class="b-calc-results max-4-items b-calc-inner-results" id="loan-results">
 		<div class="b-block">
+			<h3 class="b-title-mobile">Вам подходит:</h3>
 			<div class="b-calc-result-list">
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
@@ -111,8 +112,11 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
-									<span class="b-res-middle">15,5%</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
+								<span class="b-res-middle">15,5%</span>
 							</div>
 							<div class="b-calc-result-sum">
 								<span class="b-calc-result-sum-info">Процентная ставка</span>
@@ -121,7 +125,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -143,7 +147,10 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
 									до <span class="b-res-middle">25,8%</span>
 							</div>
 							<div class="b-calc-result-sum">
@@ -153,7 +160,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -175,7 +182,10 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
 									до <span class="b-res-middle">22,8%</span>
 							</div>
 							<div class="b-calc-result-sum">
@@ -185,7 +195,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -207,7 +217,10 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
 									до <span class="b-res-middle">26,5%</span>
 							</div>
 							<div class="b-calc-result-sum">
@@ -217,7 +230,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -239,7 +252,10 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
 									<span class="b-res-middle">15,5%</span>
 							</div>
 							<div class="b-calc-result-sum">
@@ -249,7 +265,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -271,7 +287,10 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
 									до <span class="b-res-middle">25,8%</span>
 							</div>
 							<div class="b-calc-result-sum">
@@ -281,7 +300,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -303,7 +322,10 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
 									до <span class="b-res-middle">22,8%</span>
 							</div>
 							<div class="b-calc-result-sum">
@@ -313,7 +335,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -335,7 +357,10 @@ include "header.php";
 						</div>
 						<div class="b-calc-result-sum-string">
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">Переплата за год</span>
+								<span class="b-calc-result-sum-info">
+									<span class="mobile">Переплата</span>
+									<span class="desktop">Переплата за год</span>
+								</span>
 									до <span class="b-res-middle">26,5%</span>
 							</div>
 							<div class="b-calc-result-sum">
@@ -345,7 +370,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn b-btn-detail" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -383,7 +408,10 @@ include "header.php";
 			</div>
 			<div class="b-calc-result-sum-string">
 				<div class="b-calc-result-sum">
-					<span class="b-calc-result-sum-info">Переплата</span>
+					<span class="b-calc-result-sum-info">
+						<span class="mobile">Переплата</span>
+						<span class="desktop">Переплата за год</span>
+					</span>
 					{{#if overpayment.MIN}}
 						от <span class="b-res-middle">{{overpayment.MIN}}%</span>
 						{{#if overpayment.MAX}}
@@ -416,9 +444,9 @@ include "header.php";
 				</div>
 			</div>
 			<div class="b-res-btn-container">
-				<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+				<a href="loan-application.php" class="b-btn b-btn-application b-btn-application"><span class="b-btn-text">Оформить заявку</span></a>
 				{{#if detailUrl}}
-				<a href="{{detailUrl}}" class="b-btn b-white-btn">Подробнее</a>
+				<a href="{{detailUrl}}" class="b-btn b-white-btn b-btn-detail">Подробнее</a>
 				{{/if}}
 			</div>
 		</div>
@@ -432,18 +460,18 @@ include "header.php";
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents clearfix">
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика(поручителя, залогодателя)</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт общих условий предоставления займов</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт общих условий предоставления займов</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>
 		</div>
 	</div>
 </div>

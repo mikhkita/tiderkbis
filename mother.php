@@ -1,7 +1,7 @@
 <? 
 
 $params = array(
-	"TITLE" => "Лучшие условия по займам для вас",
+	"TITLE" => "Материнский капитал",
 	"SUBTITLE" => "без страхования и до 100 000 рублей без обеспечения",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
@@ -42,12 +42,12 @@ include "header.php";
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents b-documents-gray clearfix">
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Копии паспортов заемщика и поручителя</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заемщика и поручителя </span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка из пенсионного фонда о размере материнского капитала</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Копии СНИЛС заёмщика и поручителя</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Сертификат на материнский капитал</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Копия Свидетельства о регистрации права на приобретаемое жилье или копия Разрешения на строительство жилого дома или Договор долевого участия (при долевом строительстве).</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Копии паспортов заемщика и поручителя</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заемщика и поручителя </span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка из пенсионного фонда о размере материнского капитала</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Копии СНИЛС заёмщика и поручителя</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Сертификат на материнский капитал</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Копия Свидетельства о регистрации права на приобретаемое жилье или копия Разрешения на строительство жилого дома или Договор долевого участия (при долевом строительстве).</span></a>
 		</div>
 	</div>
 </div>

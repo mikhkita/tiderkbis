@@ -14,14 +14,21 @@ include "header.php";
 <div class="b-personal">
 	<div class="b-block">
 		<h3>Викторов Виктор</h3>
+		<a href="#" class="b-settings-link b-settings-link-mobile">
+			<span class="icon-settings"></span>
+			<span>Настройки</span>
+		</a>
 		<a href="#" class="logout-link"><span class="b-logout-icon"></span>Выход</a>
 		<div class="b-personal-top-block">
 			<div class="b-personal-tabs">
 				<a href="#loan" class="b-personal-tab active">Мои займы</a>
-				<a href="#contribution" class="b-personal-tab">Мои сбережения</a>
+				<a href="#contribution" class="b-personal-tab">
+					<span class="b-personal-tab-desktop">Мои сбережения</span>
+					<span class="b-personal-tab-mobile">Мои вклады</span>
+				</a>
 				<a href="#archives" class="b-personal-tab">Архив</a>
 			</div>
-			<a href="#" class="b-settings-link">
+			<a href="#" class="b-settings-link b-settings-link-desktop">
 				<span class="icon-settings"></span>
 				<span>Настройки</span>
 			</a>
@@ -72,7 +79,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn">Оплатить</a>
 							</div>
@@ -85,7 +92,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn b-white-btn">Закрыть досрочно</a>
 							</div>
@@ -146,7 +153,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn">Оплатить</a>
 							</div>
@@ -159,7 +166,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn b-white-btn">Закрыть досрочно</a>
 							</div>
@@ -224,7 +231,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn">Оплатить</a>
 							</div>
@@ -237,7 +244,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn b-white-btn">Закрыть досрочно</a>
 							</div>
@@ -302,7 +309,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn">Оплатить</a>
 							</div>
@@ -315,7 +322,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn b-white-btn">Закрыть досрочно</a>
 							</div>
@@ -376,7 +383,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn">Оплатить</a>
 							</div>
@@ -389,7 +396,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn b-white-btn">Закрыть досрочно</a>
 							</div>
@@ -450,7 +457,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn">Оплатить</a>
 							</div>
@@ -463,7 +470,7 @@ include "header.php";
 								</div>
 							</div>
 						</div>
-						<div class="b-personal-tile-item-string big-pt big-pb">
+						<div class="b-personal-tile-item-string tile-with-button big-pt big-pb">
 							<div class="b-personal-tile-half-string btn-cont">
 								<a href="#" class="b-btn b-white-btn">Закрыть досрочно</a>
 							</div>

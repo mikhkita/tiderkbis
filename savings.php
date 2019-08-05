@@ -53,7 +53,7 @@ include "header.php";
 						<div class="calc-select-cont">
 							<select class="select" name="savings-percent">
 								<option value="1">Начисление процентов</option>
-								<option value="2">Начисление процентов</option>
+								<option value="2">Сохранение процентов</option>
 								<option value="3">Начисление процентов</option>
 								<option value="4">Начисление процентов</option>
 							</select>
@@ -76,7 +76,7 @@ include "header.php";
 					<div class="b-block-calc b-calc-text-block">
 						<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 						<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
-						<a href="#" class="b-btn b-white-btn">Сбросить фильтр</a>
+						<a href="#" class="b-btn b-white-btn b-filter-reset">Сбросить фильтр</a>
 					</div>
 				</div>
 			</div>
@@ -86,6 +86,7 @@ include "header.php";
 
 <div class="b-calc-results b-calc-inner-results" id="savings-results">
 	<div class="b-block">
+		<h3 class="b-title-mobile">Вам подходит:</h3>
 		<div class="b-calc-result-list">
 			<div class="b-calc-result-item">
 				<div class="b-calc-result-item-top">
@@ -99,7 +100,7 @@ include "header.php";
 				<div class="b-calc-result-item-bottom">
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-calc-result-sum-info">Срок хранения сбережений</span>
 							от <span class="b-res-big">6</span> месяцев
 						</div>
 						<div class="b-calc-result-sum">
@@ -124,7 +125,7 @@ include "header.php";
 				<div class="b-calc-result-item-bottom">
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-calc-result-sum-info">Срок хранения сбережений</span>
 							<span class="b-res-big">12</span> месяцев
 						</div>
 						<div class="b-calc-result-sum">
@@ -149,7 +150,7 @@ include "header.php";
 				<div class="b-calc-result-item-bottom">
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-calc-result-sum-info">Срок хранения сбережений</span>
 							<span class="b-res-big">12</span> месяцев
 						</div>
 						<div class="b-calc-result-sum">
@@ -174,7 +175,7 @@ include "header.php";
 				<div class="b-calc-result-item-bottom">
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-calc-result-sum-info">Срок хранения сбережений</span>
 							<span class="b-res-big">12</span> месяцев
 						</div>
 						<div class="b-calc-result-sum">
@@ -199,7 +200,7 @@ include "header.php";
 				<div class="b-calc-result-item-bottom">
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-calc-result-sum-info">Срок хранения сбережений</span>
 							<span class="b-res-big">12</span> месяцев
 						</div>
 						<div class="b-calc-result-sum">
@@ -224,7 +225,7 @@ include "header.php";
 				<div class="b-calc-result-item-bottom">
 					<div class="b-calc-result-sum-string">
 						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Срок займа</span>
+							<span class="b-calc-result-sum-info">Срок хранения сбережений</span>
 							Не установлен
 						</div>
 						<div class="b-calc-result-sum">
@@ -323,12 +324,12 @@ include "header.php";
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents clearfix">
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика(поручителя, залогодателя)</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработкуперсональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
 		</div>
 	</div>
 </div>

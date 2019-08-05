@@ -14,7 +14,8 @@ include "header.php";
 <div class="b-reception-cont">
 	<div class="b-block">
 		<h3>Задать вопрос</h3>
-		<form action="#">
+		<form action="#" class="form-with-politics" method="POST">
+			<input type="hidden" id="politics-agreement" value="N">
 			<div class="b-tumbler-block">
 				<div class="b-tumbler-text b-tumbler-text-left active">Хочу, чтобы мне <br>позвонили</div>
 				<label class="b-tumbler-item">
@@ -47,12 +48,12 @@ include "header.php";
 			</div>
 			<div class="b-reception-bottom-cont">
 				<div class="b-block">
-					<div class="b-reception-cont-string">
+					<div class="b-reception-cont-string b-center-mobile">
 						<a href="#" class="ajax b-btn"><span class="b-btn-text">Задать вопрос</span></a>
 						<div class="b-error-text hide">Некоторые заполненные поля содержат ошибку</div>
 					</div>
 					<div class="b-reception-cont-string">
-						<div class="b-loan-app-btn-text">Нажимая кнопку «Задать вопрос», я даю согласие на <a href="/personal">обработку моих персональных данных</a></div>
+						<div class="b-loan-app-btn-text">Нажимая кнопку «Задать вопрос», я даю согласие на <a href="#" class="politics">обработку моих персональных данных</a></div>
 					</div>
 				</div>
 			</div>

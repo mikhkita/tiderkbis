@@ -10,8 +10,7 @@ $params = array(
 
 include "header.php";
 ?>
-<div class="b-loan-detail-cont" style="background-image: url('i/loan-detail.jpg');">
-	<div class="b-loan-detail-cont-back"></div>
+<div class="b-loan-detail-cont b-loan-detail-no-calc" style="background-image: url('i/loan-detail.jpg');">
 	<div class="b-block">
 		<h1><?=$params['TITLE']?></h1>
 		<div class="b-calc-result-item big-results">
@@ -21,20 +20,6 @@ include "header.php";
 			<div class="b-calc-result-item-bottom">
 				<div class="b-calc-res-bottom-cont">
 					<div class="b-res-row">
-						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Сумма займа</span>
-							<span class="b-res-middle gray-text">15 000 <span class="rub-icon"></span></span>
-						</div>
-						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Ежемесячный платёж</span>
-							<span class="b-res-middle">2 900 <span class="rub-icon"></span></span>
-						</div>
-					</div>
-					<div class="b-res-row">
-						<div class="b-calc-result-sum">
-							<span class="b-calc-result-sum-info">Срок займа</span>
-							<span class="b-res-middle gray-text">6 мес.</span>
-						</div>
 						<div class="b-calc-result-sum">
 							<span class="b-calc-result-sum-info">Переплата</span>
 							<span class="b-res-middle">16%</span>

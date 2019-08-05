@@ -15,6 +15,46 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+
+        if( myWidth > 1024 ){
+            isDesktop = true;
+            isTablet = false;
+            isMobile = false;
+        }else if( myWidth > 767 ){
+            isDesktop = false;
+            isTablet = true;
+            isMobile = false;
+        }else{
+            isDesktop = false;
+            isTablet = false;
+            isMobile = true;
+        }
+
+        if(isMobile){
+            if($(".b-vacancy-detail-form-desktop input").length){
+                $(".b-vacancy-detail-form-mobile").append($(".b-vacancy-detail-form-desktop .b-input"));
+            }
+            if($(".b-reception-cont textarea").attr("rows") > 1){
+                $(".b-reception-cont textarea").attr({"rows": 1});
+            }
+            if($(".b-loan-app-cont-string > .b-error-text").length){
+                $(".b-error-text-mobile").append($(".b-loan-app-cont-string .b-error-text"));
+            }
+            if($(".b-calc-results").length){
+                $(".b-calc-results.max-4-items").removeClass("max-4-items");
+                $(".b-calc-results .b-btn-container").remove();
+                $(".b-calc-result-list").addClass("slider-results");
+                slickResults();
+                var slick = $('.b-calc-result-list').slick('getSlick'),
+                    id = slick.$slider.parents('.b-calc-results').attr('id');
+                changeSlickCounter(id, slick.currentSlide, slick.slideCount);
+            }
+        }else{
+            if($(".b-vacancy-detail-form-mobile input").length){
+                $(".b-vacancy-detail-form-desktop").append($(".b-vacancy-detail-form-mobile .b-input"));
+            }
+        }
+
     }
     $(window).resize(resize);
     resize();
@@ -44,30 +84,6 @@ $(document).ready(function(){
         }
     }
     $.fn.placeholder();
-
-    if( myWidth > 1024 ){
-        isDesktop = true;
-        isTablet = false;
-        isMobile = false;
-    }else if( myWidth > 767 ){
-        isDesktop = false;
-        isTablet = true;
-        isMobile = false;
-    }else{
-        isDesktop = false;
-        isTablet = false;
-        isMobile = true;
-    }
-
-    if(isMobile){
-        if($(".b-vacancy-detail-form-desktop input").length){
-            $(".b-vacancy-detail-form-mobile").append($(".b-vacancy-detail-form-desktop .b-input"));
-        }
-    }else{
-        if($("b-vacancy-detail-form-mobile input").length){
-            $(".b-vacancy-detail-form-desktop").append($(".b-vacancy-detail-form-mobile .b-input"));
-        }
-    }
 
     $(".b-main-slider").slick({
         dots: false,
@@ -133,10 +149,10 @@ $(document).ready(function(){
         }
     }
 
-    $('.b-slider-item').each(function(){
-        var img = $(this).find('.b-slider-item-img');
-        changeSliderImg(img);
-    })
+    // $('.b-slider-item').each(function(){
+    //     var img = $(this).find('picture');
+    //     changeSliderImg(img);
+    // })
 
     $('.b-btn-more').on('click', function(){
         $(this).parents('.max-4-items').removeClass('max-4-items');
@@ -579,12 +595,14 @@ $(document).ready(function(){
         });
     }
 
-    $('.b-close').on('click',function(){
-        $('html').removeClass('city-open');
-        $('html').removeClass('vacancy-open');
-        $('html').removeClass('burger-open');
-        return false;
-    });
+    // $('.b-close').on('click',function(){
+    //     $('html').removeClass('city-open');
+    //     $('html').removeClass('vacancy-open');
+    //     $('html').removeClass('burger-open');
+    //     $('html').removeClass('politics-open');
+    //     $('html').removeClass('politics-with-btns-open');
+    //     return false;
+    // });
 
     $('.b-city-btn').on('click', function(){
         $('html').addClass('city-open');
@@ -592,43 +610,76 @@ $(document).ready(function(){
 
     $('.vacancy-form-open').on('click', function(){
         $('html').addClass('vacancy-open');
+        return false;
     });
 
     $('.b-menu-btn').on('click', function(){
         $('html').addClass('burger-open');
     });
 
-    $(document).on('click', '.city-open .b-dark-background', function(){
+    $('.politics').on('click', function(){
+        $('html').addClass('politics-open');
+        return false;
+    });
+
+    $('.politics-with-btns').on('click', function(){
+        $('html').addClass('politics-with-btns-open');
+        return false;
+    });
+
+    $(document).on('click', '.city-open .b-dark-background, .b-city-select-block .b-close', function(){
         $('html').removeClass('city-open');
+        return false;
     });
 
-    $(document).on('click', '.vacancy-open .b-dark-background', function(){
+    $(document).on('click', '.vacancy-open .b-dark-background, .b-detail-vacancy-form-cont .b-close', function(){
         $('html').removeClass('vacancy-open');
+        return false;
     });
 
-    $(document).on('click', '.burger-open .b-dark-background', function(){
+    $(document).on('click', '.burger-open .b-dark-background, .b-burger-menu-block .b-close', function(){
         $('html').removeClass('burger-open');
+        return false;
+    });
+
+    $(document).on('click', '.politics-open .b-dark-background, .b-politics-block .b-close', function(){
+        $('html').removeClass('politics-open');
+        return false;
+    });
+
+    $(document).on('click', '.politics-with-btns-open .b-dark-background, .b-politics-block-with-btns .b-close', function(){
+        $('html').removeClass('politics-with-btns-open');
+        return false;
+    });
+
+    $('#agree-btn').on('click', function(){
+        $('#politics-agreement').val('Y');
+        $('#politics-agreement').parents('form').submit();
     });
 
     $('.b-filter-reset').on('click',function(){
         $(this).parents('form').find('input, select').each(function(){
 
+            if ($(this).hasClass('b-range-input')) {
+                var val = Number($(this).attr('default-value').replace(/\D/g, ''));
+                $(this).parents('.b-calc-slider').find('.b-slider-range').slider( "value", val );
+                $(this).val(new Intl.NumberFormat('ru-RU').format(Number(val))).trigger('change');
+            }
+
             if ($(this).hasClass('select')) {
-                $(this).val('').trigger("chosen:updated");
+                $(this).val($(this).find("option:first").val()).trigger("chosen:updated");
                 return;
             }
 
-            if ($(this).parent().hasClass('b-input not-empty')) {
-                $(this).parent().removeClass('not-empty');
+            if ($('.b-tumbler-text-right').hasClass('active')) {
+                $('.b-tumbler-text-left').click();
             }
-
-            $(this).val('');
+            if ($(this).attr('type') == 'radio' || $(this).attr('type') == 'checkbox') {
+                $(this).prop('checked', false)
+            }
         });
 
-        if ($(this).parents('form').attr('id') == 'vacancy-form') {
-            $(this).parents('form').submit();
-        }
-        
+        return false;
     });
 
     if(!isMobile){
