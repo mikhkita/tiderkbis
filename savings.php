@@ -23,7 +23,7 @@ include "header.php";
 							<div class="b-calc-slider">
 								<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 								<div class="b-calc-input-cont">
-									<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000">
+									<input class="b-range-input b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000" default-value="15 000">
 								</div>
 							</div>
 						</div>
@@ -32,7 +32,7 @@ include "header.php";
 							<div class="b-calc-slider">
 								<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
 								<div class="b-calc-input-cont b-calc-input-month-cont">
-									<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6">
+									<input class="b-range-input b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6" default-value="6">
 								</div>
 							</div>
 						</div>
@@ -109,7 +109,7 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="savings-application.php" class="b-btn"><span class="b-btn-text">Оставить заявку</span></a>
 					</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="savings-application.php" class="b-btn"><span class="b-btn-text">Оставить заявку</span></a>
 					</div>
 				</div>
 			</div>
@@ -159,7 +159,7 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="savings-application.php" class="b-btn"><span class="b-btn-text">Оставить заявку</span></a>
 					</div>
 				</div>
 			</div>
@@ -184,7 +184,7 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="savings-application.php" class="b-btn"><span class="b-btn-text">Оставить заявку</span></a>
 					</div>
 				</div>
 			</div>
@@ -209,7 +209,7 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="savings-application.php" class="b-btn"><span class="b-btn-text">Оставить заявку</span></a>
 					</div>
 				</div>
 			</div>
@@ -234,7 +234,7 @@ include "header.php";
 						</div>
 					</div>
 					<div class="b-res-btn-container">
-						<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+						<a href="savings-application.php" class="b-btn"><span class="b-btn-text">Оставить заявку</span></a>
 					</div>
 				</div>
 			</div>
@@ -308,7 +308,7 @@ include "header.php";
 				</div>
 			</div>
 			<div class="b-res-btn-container">
-				<a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a>
+				<a href="savings-application.php" class="b-btn"><span class="b-btn-text">Оставить заявку</span></a>
 				{{#if detailUrl}}
 				<a href="{{detailUrl}}" class="b-btn b-white-btn">Подробнее</a>
 				{{/if}}
