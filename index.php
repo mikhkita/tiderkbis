@@ -9,41 +9,40 @@ include "header.php";
 ?>
 	<div class="b-main-slider">
 		<div class="b-slider-item">
-			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
+			<picture>
+			  <source media="(max-width: 767px)" srcset="i/main-back-mobile.jpg">
+			  <img src="i/main-back-1.jpg">
+			</picture>
 			<div class="b-block">
 				<div class="b-slider-item-info">
-					<h2>Займы на любые цели</h2>
+					<h2>Займы на <br>любые цели</h2>
 					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
 					<div class="btn-shadow"><a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>
 		</div>
 		<div class="b-slider-item">
-			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
+			<picture>
+			  <source media="(max-width: 767px)" srcset="i/main-back-2.jpg">
+			  <img src="i/main-back-2.jpg">
+			</picture>
 			<div class="b-block">
 				<div class="b-slider-item-info">
-					<h2>Займы на любые цели</h2>
-					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
-					<div class="btn-shadow"><a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
+					<h2>Погашайте займы <br>не выходя из дома</h2>
+					<div class="b-slider-item-text">В любое время,<br>c любой банковской карты</div>
+					<div class="btn-shadow"><a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оплатить заём</span></a></div>
 				</div>
 			</div>
 		</div>
 		<div class="b-slider-item">
-			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
+			<picture>
+			  <source media="(max-width: 767px)" srcset="i/main-back-mobile.jpg">
+			  <img src="i/main-back-3.jpg">
+			</picture>
 			<div class="b-block">
 				<div class="b-slider-item-info">
-					<h2>Займы на любые цели</h2>
-					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
-					<div class="btn-shadow"><a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
-				</div>
-			</div>
-		</div>
-		<div class="b-slider-item">
-			<div class="b-slider-item-img" data-img-url="i/main-back.jpg" data-mobile-img-url="i/main-back-mobile.jpg"></div>
-			<div class="b-block">
-				<div class="b-slider-item-info">
-					<h2>Займы на любые цели</h2>
-					<div class="b-slider-item-text">Сменить обстановку, отправиться в путешествие или сделать что-то, о чем вы давно мечтали</div>
+					<h2>Займы под <br>материнский капитал</h2>
+					<div class="b-slider-item-text">На покупку<br>и строительство жилья</div>
 					<div class="btn-shadow"><a href="loan-application.php" class="b-btn"><span class="b-btn-text">Оформить заявку</span></a></div>
 				</div>
 			</div>

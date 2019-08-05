@@ -35,6 +35,10 @@ include "header.php";
 				<span class="b-cooperative-tile-title">Документы</span>
 				<span class="b-cooperative-tile-img b-doc-illustration"></span>
 			</a>
+			<a href="shareholder.php" class="b-white-tile b-cooperative-tile">
+				<span class="b-cooperative-tile-title">Cтать пайщиком</span>
+				<span class="b-cooperative-tile-img b-shareholder-illustration"></span>
+			</a>
 		</div>
 	</div>
 </div>

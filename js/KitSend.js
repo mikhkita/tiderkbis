@@ -285,6 +285,12 @@ $(document).ready(function(){
 		var $form = $(this);
 
   		if( $(this).find("input.error, select.error, textarea.error").length == 0 ){
+
+  			if ($form.hasClass('form-with-politics') && $('#politics-agreement').val() == 'N') {
+  				$('html').addClass('politics-with-btns-open');
+  				return false;
+  			}
+
   			var $this = $(this),
   				$thanks = $($this.attr("data-block"));
 

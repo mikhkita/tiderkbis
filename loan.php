@@ -31,7 +31,7 @@ include "header.php";
 								<div class="b-calc-slider">
 									<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 									<div class="b-calc-input-cont">
-										<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000">
+										<input class="b-calc-input-rub b-range-input" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000" default-value="15 000">
 									</div>
 								</div>
 							</div>
@@ -40,7 +40,7 @@ include "header.php";
 								<div class="b-calc-slider">
 									<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
 									<div class="b-calc-input-cont b-calc-input-month-cont">
-										<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6">
+										<input class="b-calc-input-month b-range-input" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6" default-value="6">
 									</div>
 								</div>
 							</div>
@@ -82,7 +82,7 @@ include "header.php";
 						<div class="b-block-calc b-calc-text-block">
 							<div class="b-calc-text">Все расчеты являются предварительными и могут отличаться от фактически полученных</div>
 							<a href="#" class="ajax b-btn"><span class="b-btn-text">Рассчитать</span></a>
-							<a href="#" class="b-btn b-white-btn">Сбросить фильтр</a>
+							<a href="#" class="b-btn b-white-btn b-filter-reset">Сбросить фильтр</a>
 						</div>
 					</div>
 				</div>
@@ -121,7 +121,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -153,7 +153,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -185,7 +185,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -217,7 +217,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -249,7 +249,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -281,7 +281,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -313,7 +313,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -345,7 +345,7 @@ include "header.php";
 						</div>
 						<div class="b-res-btn-container">
 							<a href="loan-application.php" class="b-btn" tabindex="0"><span class="b-btn-text">Оформить заявку</span></a>
-							<a href="loan-detail.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
+							<a href="loan-detail-no-calc.php" class="b-btn b-white-btn" tabindex="0">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -432,18 +432,18 @@ include "header.php";
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents clearfix">
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика(поручителя, залогодателя)</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт общих условий предоставления займов</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
-			<a href="#" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт общих условий предоставления займов</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>
 		</div>
 	</div>
 </div>
