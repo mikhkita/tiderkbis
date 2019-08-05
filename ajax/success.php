@@ -2,8 +2,8 @@
 
 	$arRes = array(
 		'RESULT' => 'success',
-		'ACTION' => 'success-page',
-	)
+		'MOVETO' => 'success-1',
+	);
 
 	echo json_encode($arRes);
 

@@ -19,7 +19,7 @@ include "header.php";
 		</div>
 		<h3>Откликнуться на вакансию</h3>
 		<h4>Расскажите о себе</h4>
-		<form id="vacancy-item-1" action="/ajax/success.php" method="POST" class="b-vacancy-detail-form form-with-politics" data-file-action="addFile.php">
+		<form id="vacancy-item-1" action="ajax/success.php" method="POST" class="b-vacancy-detail-form form-with-politics" data-file-action="addFile.php">
 			<input type="hidden" id="politics-agreement" value="N">
 			<div class="b-half-input-cont">
 				<div class="b-vacancy-detail-form-mobile"></div>

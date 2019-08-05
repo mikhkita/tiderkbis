@@ -3670,11 +3670,11 @@ input.error,textarea.error{
 		right: -10rem;
 	}
 	.b-cooperative-tile .b-shareholder-illustration{
-		background-image: url('../i/illustration.svg#tile-shareholder');
-		width: 26.9rem;
-		height: 21.5rem;
-		right: 0;
-		top: 0;
+		background-image: url('../i/illustration.svg#payshit');
+	    width: 26.9rem;
+	    height: 19rem;
+	    right: -2.3rem;
+	    top: 0px;
 	}
 /* Desktop */
 @media (min-width: 1024px) {
@@ -3692,7 +3692,7 @@ input.error,textarea.error{
 		right: -11rem;	
 	}
 	.b-cooperative-tile:hover .b-shareholder-illustration{
-		right: -11rem;	
+		right: -4rem;	
 	}
 }
 @media screen and (max-width: 767px){
@@ -5688,6 +5688,7 @@ input.datepicker-here{
 	.b-success-img{
 		width: 32.8rem;
 		height: 30.5rem;
+		background-image: url('../i/illustration.svg#success-1');
 	}
 	.b-success h3{
 		line-height: 3.6rem;
@@ -5695,9 +5696,20 @@ input.datepicker-here{
 		margin-top: 3.2rem;
 	}
 	.b-success p{
-		width: 39.5rem;
+		max-width: 39.5rem;
 		margin-bottom: 3.2rem;
+		line-height: 2rem;
 	}
+
+@media screen and (max-width: 767px) {
+	.b-success{
+		margin-top: 3rem;
+	}
+		.b-success-img {
+		    width: 25.8rem;
+		    height: 24.5rem;
+		}
+}
 
 
 /* Success page ---––––––––––––––––––––––––––––––––––––––––– Success page */

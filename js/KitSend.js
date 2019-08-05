@@ -438,8 +438,8 @@ $(document).ready(function(){
 	                            window.location.reload();
 	                        }
 
-	                        if (json.ACTION == "success-page") {
-	                        	window.location.replace("/success.php");
+	                        if (json.MOVETO) {
+	                        	window.location.replace(json.MOVETO);
 	                        }
 
 				        }else{

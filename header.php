@@ -140,7 +140,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 								<a href="tel:83822513614" class="b-phone"><span class="b-phone-icon"></span>(3822) 51-36-14</a>
 							</div>
 							<div class="b-header-right">
-								<a href="personal.php" class="b-personal-btn">
+								<a href="personal-forms.php" class="b-personal-btn">
 									<span class="b-personal-btn-icon"></span><span class="b-personal-btn-text">Личный кабинет</span>
 								</a>
 								<div class="b-search-btn">
