@@ -4290,10 +4290,10 @@ input.error,textarea.error{
 		padding: 0;
 	}
 	.b-reception-cont .b-tumbler-text-left{
-		max-width: 122px;
+		max-width: 12.2rem;
 	}
 	.b-reception-cont .b-tumbler-text-right{
-		max-width: 110px;
+		max-width: 11rem;
 	    margin-left: 1.2rem;
 	}
 	.b-reception-cont h3 {
@@ -4336,6 +4336,18 @@ input.error,textarea.error{
 	.b-pagination {
 		margin-top: 1.6rem;
 	    text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 375px){
+
+	.b-reception-cont .b-tumbler-text-left {
+	    max-width: 11.3rem;
+	}
+	.b-reception-cont .b-tumbler-text-right {
+	    max-width: 11rem;
+	    margin-left: 0.6rem;
 	}
 
 }
@@ -5161,7 +5173,7 @@ input.datepicker-here{
 		background-image: url('../i/contacts-img-mobile.jpg');
 	    background-position: 50% 50%;
 	    padding-top: 3.2rem;
-	    padding-bottom: 3.2em;
+	    padding-bottom: 3.2rem;
 	}
 		.b-contacts-inner-block{
 		    margin-bottom: 4rem;
@@ -5170,6 +5182,7 @@ input.datepicker-here{
 			margin-bottom: 0;
 		}
 			.b-contacts-inner-block-middle {
+				font-family: 'Rubik-Medium';
 			    margin-bottom: 0.8rem;
 			}
 
