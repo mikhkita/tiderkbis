@@ -85,6 +85,15 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
 
+    var prevArrow = '<div class="b-block">';
+        prevArrow+= '<div class="arrow-left-icon"></div>';
+        prevArrow+= '</div>';
+
+    var nextArrow = '<div class="b-block">';
+        nextArrow+= '<div class="arrow-right-icon">';
+        nextArrow+= '</div>';
+        nextArrow+= '</div>';
+
     $(".b-main-slider").slick({
         dots: false,
         autoplay: true,
@@ -96,8 +105,10 @@ $(document).ready(function(){
         speed: 500,
         arrows: true,
         fade: true,
-        prevArrow: '<div class="b-block"><div class="arrow-left-icon"></div></div>',
-        nextArrow: '<div class="b-block"><div class="arrow-right-icon"></div></div>',
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        prevArrow: prevArrow,
+        nextArrow: nextArrow,
         touchThreshold: 100,
         responsive: [
             {
@@ -109,6 +120,8 @@ $(document).ready(function(){
             },
           ]
     });
+
+    $('.b-slider-item img').css('animation-play-state', 'running');
 
     function illustrationSlider(){
         $('.b-main-illustrations .b-illustration-list').slick({

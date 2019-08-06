@@ -10,7 +10,7 @@ include "header.php";
 	<div class="b-main-slider">
 		<div class="b-slider-item">
 			<picture>
-			  <source media="(max-width: 767px)" srcset="i/main-back-mobile.jpg">
+			  <source media="(max-width: 767px)" srcset="i/main-back-1-mobile.jpg">
 			  <img src="i/main-back-1-full.jpg">
 			</picture>
 			<div class="b-block">
@@ -23,7 +23,7 @@ include "header.php";
 		</div>
 		<div class="b-slider-item">
 			<picture>
-			  <source media="(max-width: 767px)" srcset="i/main-back-2.jpg">
+			  <source media="(max-width: 767px)" srcset="i/main-back-2-mobile.jpg">
 			  <img src="i/main-back-2-full.jpg">
 			</picture>
 			<div class="b-block">
@@ -36,7 +36,7 @@ include "header.php";
 		</div>
 		<div class="b-slider-item">
 			<picture>
-			  <source media="(max-width: 767px)" srcset="i/main-back-3.jpg">
+			  <source media="(max-width: 767px)" srcset="i/main-back-3-mobile.jpg">
 			  <img src="i/main-back-3-full.jpg">
 			</picture>
 			<div class="b-block">
@@ -48,12 +48,20 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-
 	<div class="b-main-illustrations">
 		<div class="b-block">
 			<div class="b-illustration-list">
 				<div class="b-illustration-item">
-					<div class="b-1-illustration b-illustration"></div>
+					<div class="b-illustration" style="width: 234px; height: 170px;">
+						<svg viewbox="0 0 400 400">
+							<path fill="#000">
+							    <animate attributeName="d" dur="3000ms" repeatCount="indefinite" values="
+					              M15.1235,54.8552 C25.5948123,38.4961261 52.1061352,25.1213102 82.2636496,17.6066323 C121.679183,7.78503254 167.323212,7.97383569 191.525,24.5938 C213.258651,39.5242404 226.631764,61.4033503 231.690431,83.2697676 C238.853387,114.232111 229.345957,145.169006 203.299,156.317 C171.719,169.779 146.735,123.834 119.488,123.834 C88.4826,123.834 55.4232,137.244 28.3856,128.096 C13.6529,123.082 -19.2325,108.548 15.1235,54.8552 Z;
+
+					              M204.501 149.937C192.332 152.384 162.028 130.087 123.953 125.102C85.8175 120.071 39.9103 132.398 24.9092 124.286C9.90802 116.129 25.8129 87.5771 46.4169 68.7241C67.0209 49.9164 92.2638 40.8524 123.471 31.9698C154.678 23.0871 191.85 14.3857 206.369 24.628C220.948 34.8702 212.876 64.0108 211.851 92.1997C210.767 120.343 216.671 147.535 204.501 149.937Z;"/>
+						  </path>
+						</svg> 
+					</div>
 					<div class="b-illustration-text">Пайщиков</div>
 					<div class="b-illustration-info">
 						<span class="illustration-bold-num">11 959</span>
