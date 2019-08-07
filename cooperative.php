@@ -11,7 +11,7 @@ include "header.php";
 
 ?>
 	
-<div class="b-content">
+<div class="b-content fadeDown anim delay500" data-cont=".b-breadcrumbs">
 	<div class="b-block clearfix">
 		<div class="b-left-block">
 			<div class="b-text">

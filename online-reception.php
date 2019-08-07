@@ -11,10 +11,10 @@ include "header.php";
 
 ?>
 
-<div class="b-reception-cont">
+<div class="b-reception-cont fadeDown anim delay500" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<h3>Задать вопрос</h3>
-		<form action="#" class="form-with-politics" method="POST">
+		<form action="ajax/question-success.php" class="form-with-politics" method="POST">
 			<input type="hidden" id="politics-agreement" value="N">
 			<div class="b-tumbler-block">
 				<div class="b-tumbler-text b-tumbler-text-left active">Хочу, чтобы мне <br>позвонили</div>
@@ -60,7 +60,7 @@ include "header.php";
 		</form>
 	</div>
 </div>
-<div class="b-questions-answers-cont">
+<div class="b-questions-answers-cont fadeDown anim">
 	<div class="b-block">
 		<h3>Вопросы и ответы</h3>
 	</div>

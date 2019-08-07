@@ -10,7 +10,7 @@ $params = array(
 include "header.php";
 
 ?>
-<div class="b-news-page">
+<div class="b-news-page fadeDown anim delay500" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<div class="b b-news-block">
 			<div class="b-news-list">

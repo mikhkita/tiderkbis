@@ -44,6 +44,7 @@ $(document).ready(function(){
                 $(".b-calc-results.max-4-items").removeClass("max-4-items");
                 $(".b-calc-results .b-btn-container").remove();
                 $(".b-calc-result-list").addClass("slider-results");
+
                 slickResults();
                 var slick = $('.b-calc-result-list').slick('getSlick'),
                     id = slick.$slider.parents('.b-calc-results').attr('id');
@@ -145,7 +146,7 @@ $(document).ready(function(){
     }
 
     function adviceSlider(){
-        $('.b-advice-list').slick({
+        $('.b-advice-list:not(.no-slider)').slick({
             slidesToShow: 1,
             dots: false,
             arrows: false,
@@ -206,44 +207,98 @@ $(document).ready(function(){
 
         var $this = $(this),
             to = Number($(this).attr("data-range-to").replace(/\s/g, '')),
+            from = $(this).attr("data-range-from") ? Number($(this).attr("data-range-from").replace(/\s/g, '')) : 0 ,
             input = $this.parent().find('input'),
             val = Number(input.val().replace(/\s/g, '')),
             step = 1;
 
         if ($this.attr('data-input-id') == 'sum') {
-            step = 100;
-        }   
+            step = 1000;
+            input.val(new Intl.NumberFormat('ru-RU').format(val));
+        }
 
-        input.val(new Intl.NumberFormat('ru-RU').format(val));
+        if ($this.attr('data-input-id') == 'date') {
+
+            if ($this.attr('data-slider-type') == 'loan') {
+                var sliderValue = [6, 12, 13, 24, 36, 60];
+                input.val(new Intl.NumberFormat('ru-RU').format(sliderValue[val]));
+            }
+
+            if ($this.attr('data-slider-type') == 'savings') {
+                var sliderValue = ['Не установлен', 6, 12, 24];
+                input.val(sliderValue[val]);
+            }
+        }
 
         $this.slider({
             range: 'min',
-            min: 0,
+            min: from,
             max: to,
             value: val,
             step: step,
             slide: function( event, ui ) {
-                input.val(new Intl.NumberFormat('ru-RU').format(ui.value));
+                if ($this.attr('data-input-id') == 'date') {
+                    input.val(sliderValue[ui.value]);
+                } else {
+                    input.val(new Intl.NumberFormat('ru-RU').format(ui.value));
+                }
             }
         });
     });
 
     $('.b-calc-slider input').on('input',function(){
+        console.log('ok');
+    })
 
+    $(".b-calc-slider").on( "slide", function(event, ui){
+        if(ui.value == 0 && $(this).find('.b-slider-range').attr('data-slider-type') == 'savings'){
+            $(this).addClass('b-range-text');
+        } else {
+            $(this).removeClass('b-range-text');
+        }
+    });
+
+    $('.b-calc-slider input').on('input',function(){
+        if ($(this).parents('.b-calc-slider').hasClass('b-range-text') && $(this).val() != 'Не установлен') {
+            $(this).parents('.b-calc-slider').removeClass('b-range-text');
+        }
+    });
+
+    $('.b-calc-slider input').on('change',function(){
         var val = $(this).val(),
             max = Number($(this).parents('.b-calc-slider').find('.b-slider-range').attr('data-range-to').replace(/\s/g, ''));
+       
+            if (val == '') {
+                val = 0;
+            }
 
-        if (val == '') {
-            val = 0;
-        }
-
-        if (val > max) {
-            val = max;   
-        }
-
-        $(this).val(new Intl.NumberFormat('ru-RU').format(Number(val)));
+            if (val > max) {
+                val = max;   
+            }
 
         $(this).parents('.b-calc-slider').find('.b-slider-range').slider( "value", val );
+
+        if ($(this).parents('.b-calc-slider').find('.b-slider-range').attr('data-input-id') == 'date') {
+            if ($(this).parents('.b-calc-slider').find('.b-slider-range').attr('data-slider-type') == 'loan') {
+                var sliderValue = [6, 12, 13, 24, 36, 60];
+                val = sliderValue[val];
+            }
+            if ($(this).parents('.b-calc-slider').find('.b-slider-range').attr('data-slider-type') == 'savings') {
+                
+                if ($(this).val() == 0) {
+                    $(this).parents('.b-calc-slider').addClass('b-range-text');
+                } else {
+                    $(this).parents('.b-calc-slider').removeClass('b-range-text');
+                }
+
+                var sliderValue = ['Не установлен', 6, 12, 24];
+                val = sliderValue[val];
+            }
+
+            $(this).val(val);
+        } else {
+            $(this).val(new Intl.NumberFormat('ru-RU').format(Number(val)));
+        }
 
     })
 
@@ -507,10 +562,10 @@ $(document).ready(function(){
         $(this).removeClass('preloader');
     })
 
-    animateBtn();
+    animateBtn('.b-btn');
 
-    function animateBtn(){
-        var links = $(".b-btn:not(.b-white-btn)");
+    function animateBtn(className){
+        var links = $(className);
         for(var i = 0; i < links.length; i++){
             links[i].addEventListener('click', function (event) {
                 // event.preventDefault();
@@ -545,9 +600,25 @@ $(document).ready(function(){
                 s.top = y + 'px';
                 s.left = x + 'px';
                 this.appendChild(span);
+
+                setTimeout(function(){
+                    $('.ripple').remove();
+                },500)
+
             });
         }
     }
+
+    $('.b-advice').mousemove(function(e){
+        var y = e.offsetY;
+        var x = e.offsetX;
+        console.log(x);
+        console.log(y);
+        $(this).find('.moveable').css({
+            'top': y,
+            'left': x,
+        }); 
+    });
 
     if( $(".datepicker-here").length ){
         $(".datepicker-here").each(function(){
@@ -665,6 +736,11 @@ $(document).ready(function(){
         return false;
     });
 
+    $(document).on('click', '.error-open .b-dark-background, .b-drop-error-block .b-close', function(){
+        $('html').removeClass('error-open');
+        return false;
+    });
+
     $('#agree-btn').on('click', function(){
         $('#politics-agreement').val('Y');
         $('#politics-agreement').parents('form').submit();
@@ -673,10 +749,15 @@ $(document).ready(function(){
     $('.b-filter-reset').on('click',function(){
         $(this).parents('form').find('input, select').each(function(){
 
+            if ($(this).attr('type') == 'text' && !$(this).hasClass('b-range-input')) {
+                $(this).val('');
+                $(this).parent().removeClass('not-empty');
+            }
+
             if ($(this).hasClass('b-range-input')) {
                 var val = Number($(this).attr('default-value').replace(/\D/g, ''));
                 $(this).parents('.b-calc-slider').find('.b-slider-range').slider( "value", val );
-                $(this).val(new Intl.NumberFormat('ru-RU').format(Number(val))).trigger('change');
+                $(this).val(val).trigger('change');
             }
 
             if ($(this).hasClass('select')) {
@@ -691,6 +772,20 @@ $(document).ready(function(){
                 $(this).prop('checked', false)
             }
         });
+
+        if ($('.default-items').length) {
+
+            $('.b-calc-inner-results .b-calc-result-list').html($('.default-items').html());
+
+            if ($('.b-calc-inner-results .b-calc-result-list').hasClass('slick-initialized')) {
+                $('.b-calc-inner-results .b-calc-result-list').slick('unslick');
+                $('.b-calc-inner-results .b-calc-result-list').html($('.default-items').html());
+                slickResults();
+                var slick = $('.b-calc-inner-results .b-calc-result-list').slick('getSlick'),
+                    id = slick.$slider.parents('.b-calc-results').attr('id');
+                changeSlickCounter(id, slick.currentSlide, slick.slideCount);
+            }
+        }
 
         return false;
     });
@@ -909,7 +1004,6 @@ $(document).ready(function(){
                 Error: function(up, err) {
 
                     $('.b-dragndrop-block').addClass('error');
-                    console.log(err);
 
                     if (err.code == -600) {
                         document.getElementById("plupload-error").innerHTML = "Файл слишком большой";
@@ -1014,7 +1108,7 @@ $(document).ready(function(){
                 newsSlider();
             }
 
-            if(! $('.b-advice-list').hasClass('slick-initialized')){
+            if(! $('.b-advice-list:not(.no-slider)').hasClass('slick-initialized')){
                 adviceSlider();
             }
 
@@ -1028,7 +1122,7 @@ $(document).ready(function(){
                 $('.b-news-list').slick('unslick');
             }
 
-            if($('.b-advice-list').hasClass('slick-initialized')){
+            if($('.b-advice-list:not(.no-slider)').hasClass('slick-initialized')){
                 $('.b-advice-list').slick('unslick');
             }
 

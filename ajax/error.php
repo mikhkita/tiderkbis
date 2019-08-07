@@ -1,8 +1,8 @@
 <?php 
 
 	$arRes = array(
-		'RESULT' => 'success',
-		'MOVETO' => 'success-1.php',
+		'RESULT' => 'error',
+		'ACTION' => 'drop-error',
 	);
 
 	echo json_encode($arRes);

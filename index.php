@@ -7,7 +7,7 @@ $params = array(
 include "header.php";
 
 ?>
-	<div class="b-main-slider">
+	<div class="b-main-slider fadeDown anim">
 		<div class="b-slider-item">
 			<picture>
 			  <source media="(max-width: 767px)" srcset="i/main-back-1-mobile.jpg">
@@ -48,19 +48,30 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-	<div class="b-main-illustrations">
+	<div class="b-main-illustrations fadeDown anim">
 		<div class="b-block">
 			<div class="b-illustration-list">
-				<div class="b-illustration-item">
-					<div class="b-illustration" style="width: 234px; height: 170px;">
-						<svg viewbox="0 0 400 400">
-							<path fill="#000">
-							    <animate attributeName="d" dur="3000ms" repeatCount="indefinite" values="
-					              M15.1235,54.8552 C25.5948123,38.4961261 52.1061352,25.1213102 82.2636496,17.6066323 C121.679183,7.78503254 167.323212,7.97383569 191.525,24.5938 C213.258651,39.5242404 226.631764,61.4033503 231.690431,83.2697676 C238.853387,114.232111 229.345957,145.169006 203.299,156.317 C171.719,169.779 146.735,123.834 119.488,123.834 C88.4826,123.834 55.4232,137.244 28.3856,128.096 C13.6529,123.082 -19.2325,108.548 15.1235,54.8552 Z;
+				<div class="b-illustration-item fadeDown anim delay100">
+					<div class="b-1-illustration b-illustration">
+						<div class="b-blob-cont">
+							<svg viewbox="0 0 234 234">
+								<path fill="#D8FFC5">
+								    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+						              M15.1235 54.8552C39.2807 17.115 148.806 -4.74239 191.525 24.5938C244.033 60.6654 247.741 137.296 203.299 156.317C171.719 169.779 146.735 123.834 119.488 123.834C88.4826 123.834 55.4232 137.244 28.3856 128.096C13.6529 123.082 -19.2325 108.548 15.1235 54.8552Z;
 
-					              M204.501 149.937C192.332 152.384 162.028 130.087 123.953 125.102C85.8175 120.071 39.9103 132.398 24.9092 124.286C9.90802 116.129 25.8129 87.5771 46.4169 68.7241C67.0209 49.9164 92.2638 40.8524 123.471 31.9698C154.678 23.0871 191.85 14.3857 206.369 24.628C220.948 34.8702 212.876 64.0108 211.851 92.1997C210.767 120.343 216.671 147.535 204.501 149.937Z;"/>
-						  </path>
-						</svg> 
+						              M48.1605 29.4155C87.1605 2.32257 152.16 -5.67786 193.185 29.416C299.16 130.823 154.661 192.416 104.661 152.823C68.1605 111.416 89.1605 94.416 68.6605 83.416C39.6605 67.855 16.6605 102.416 4.6605 83.416C3.16052 78.916 -6.8395 67.6236 48.1605 29.4155Z;
+
+						              M60.3676 32.8393C99.3675 5.74641 138.343 -9.75477 179.368 25.3391C280.368 148.34 203.868 173.756 132.368 161.839C84.3675 153.839 67.3676 154.839 46.8676 143.839C17.8676 128.278 0.867554 87.8398 5.86755 64.8398C11.072 40.8994 45.3676 43.2597 60.3676 32.8393Z;
+
+						              M112.089 11.9664C151.089 -15.1265 212.089 23.9666 227.089 65.4669C238.668 97.5 202.089 73.4623 173.427 82C149.927 89 161.573 195.5 55.5 159C16.1387 145.456 -4.6196 79.7779 8.08942 59.9668C25.0894 33.4668 87.0894 29.3336 112.089 11.9664Z;
+
+						              M92.5 62.5C131.5 35.4071 185.5 -33.0004 222 21.9998C243.5 58.999 211.245 142.465 186 158.499C149 182 79.5 151.5 51 129.999C21.7637 107.943 -5.20902 84.8106 7.50001 64.9995C24.5 38.4995 67.5 79.8672 92.5 62.5Z;
+
+						              M15.1235 54.8552C39.2807 17.115 148.806 -4.74239 191.525 24.5938C244.033 60.6654 247.741 137.296 203.299 156.317C171.719 169.779 146.735 123.834 119.488 123.834C88.4826 123.834 55.4232 137.244 28.3856 128.096C13.6529 123.082 -19.2325 108.548 15.1235 54.8552Z;"/>
+							  </path>
+							</svg> 
+						</div>
+						<div class="b-1-inner-illustration"></div>
 					</div>
 					<div class="b-illustration-text">Пайщиков</div>
 					<div class="b-illustration-info">
@@ -68,7 +79,7 @@ include "header.php";
 						<span class="illustration-bold-text">Чел.</span>
 					</div>
 				</div>
-				<div class="b-illustration-item">
+				<div class="b-illustration-item fadeDown anim delay200">
 					<div class="b-2-illustration b-illustration"></div>
 					<div class="b-illustration-text">Принято сбережений</div>
 					<div class="b-illustration-info">
@@ -76,7 +87,7 @@ include "header.php";
 						<span class="rub-icon"></span>
 					</div>
 				</div>
-				<div class="b-illustration-item">
+				<div class="b-illustration-item fadeDown anim delay300">
 					<div class="b-3-illustration b-illustration"></div>
 					<div class="b-illustration-text">Выдано займов </div>
 					<div class="b-illustration-info">
@@ -87,12 +98,11 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-
-	<div class="b-popular-offers">
+	<div class="b-popular-offers fadeDown anim">
 		<div class="b-block">
 			<h3>Популярные предложения</h3>
 			<div class="b-popular-offers-list">
-				<a href="loan.php" class="b-popular-offer-item">
+				<a href="mother.php" class="b-popular-offer-item">
 					<div class="b-popular-offer-item-top">
 						<div class="b-popular-offer-item-img" style="background-image: url('i/offer-1.jpg');"></div>
 						<div class="b-popular-offer-item-type">займы</div>
@@ -115,9 +125,7 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-
-	<div class="b-calc-cont">
-
+	<div class="b-calc-cont fadeDown anim">
 		<div class="b-calc">
 			<div class="b-block">
 				<h3>Калькулятор услуг</h3>
@@ -133,7 +141,7 @@ include "header.php";
 									<div class="b-calc-slider-block clearfix">
 										<label for="sum">Сумма займа</label>
 										<div class="b-calc-slider">
-											<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
+											<div class="b-slider-range" data-input-id="sum" data-range-from="1000" data-range-to="1000000"></div>
 											<div class="b-calc-input-cont">
 												<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000" name="sum">
 											</div>
@@ -142,9 +150,9 @@ include "header.php";
 									<div class="b-calc-slider-block clearfix">
 										<label for="date">Срок займа</label>
 										<div class="b-calc-slider">
-											<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
+											<div class="b-slider-range" data-input-id="date" data-range-to="5" data-slider-type="loan"></div>
 											<div class="b-calc-input-cont b-calc-input-month-cont">
-												<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6" name="loan-term">
+												<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="1" name="loan-term">
 											</div>
 										</div>
 									</div>
@@ -193,7 +201,7 @@ include "header.php";
 									<div class="b-calc-slider-block clearfix">
 										<label for="sum">Сумма</label>
 										<div class="b-calc-slider">
-											<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
+											<div class="b-slider-range" data-input-id="sum" data-range-from="1000" data-range-to="10000000"></div>
 											<div class="b-calc-input-cont">
 												<input class="b-calc-input-rub" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000">
 											</div>
@@ -202,9 +210,9 @@ include "header.php";
 									<div class="b-calc-slider-block clearfix">
 										<label for="date">Срок хранения сбережений</label>
 										<div class="b-calc-slider">
-											<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
+											<div class="b-slider-range" data-input-id="date" data-range-to="3" data-slider-type="savings"></div>
 											<div class="b-calc-input-cont b-calc-input-month-cont">
-												<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6">
+												<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="1">
 											</div>
 										</div>
 									</div>
@@ -257,6 +265,7 @@ include "header.php";
 		<div class="b-calc-results invisible not-ajax-results" id="loan-results">
 			<div class="b-block">
 				<h3>Вам подходит:</h3>
+				<div class="b-calc-no-res">К сожалению, по заданным параметрам ничего не найдено</div>
 				<div class="b-calc-result-list slider-results">
 					<div class="b-calc-result-item">
 						<div class="b-calc-result-item-top">
@@ -274,7 +283,7 @@ include "header.php";
 									Мин. <span class="b-res-big">25 000 <span class="rub-icon"></span></span>
 								</div>
 								<div class="b-calc-result-sum">
-									<span class="b-calc-result-sum-info">&nbsp;</span>
+									<span class="b-calc-result-sum-info"></span>
 									Макс. <span class="b-res-big">32 900 <span class="rub-icon"></span></span>
 								</div>
 							</div>
@@ -446,8 +455,9 @@ include "header.php";
 		<div class="b-calc-results invisible not-ajax-results" id="savings-results">
 			<div class="b-block">
 				<h3>Вам подходит:</h3>
+				<div class="b-calc-no-res">К сожалению, по заданным параметрам ничего не найдено</div>
 				<div class="b-calc-result-list slider-results">
-					<div class="b-calc-result-item">
+					<div class="b-calc-result-item savings-default-res">
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Накопление»</div>
 							<ul>
@@ -463,7 +473,7 @@ include "header.php";
 									Мин. <span class="b-res-big">25 000 <span class="rub-icon"></span></span>
 								</div>
 								<div class="b-calc-result-sum">
-									<span class="b-calc-result-sum-info">&nbsp;</span>
+									<span class="b-calc-result-sum-info"></span>
 									Макс. <span class="b-res-big">32 900 <span class="rub-icon"></span></span>
 								</div>
 							</div>
@@ -483,7 +493,7 @@ include "header.php";
 							</div>
 						</div>
 					</div>
-					<div class="b-calc-result-item">
+					<div class="b-calc-result-item savings-default-res">
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Потребительский»</div>
 							<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
@@ -512,7 +522,7 @@ include "header.php";
 							</div>
 						</div>
 					</div>
-					<div class="b-calc-result-item">
+					<div class="b-calc-result-item savings-default-res">
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
@@ -541,7 +551,7 @@ include "header.php";
 							</div>
 						</div>
 					</div>
-					<div class="b-calc-result-item">
+					<div class="b-calc-result-item savings-default-res">
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
@@ -570,7 +580,7 @@ include "header.php";
 							</div>
 						</div>
 					</div>
-					<div class="b-calc-result-item">
+					<div class="b-calc-result-item savings-default-res">
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Потребительский»</div>
 							<div class="b-calc-res-subtitle">с начислением процентов на остаток долга</div>
@@ -599,7 +609,7 @@ include "header.php";
 							</div>
 						</div>
 					</div>
-					<div class="b-calc-result-item">
+					<div class="b-calc-result-item savings-default-res">
 						<div class="b-calc-result-item-top">
 							<div class="b-calc-res-title">«Доверительный»</div>
 							<div class="b-calc-res-subtitle"></div>
@@ -632,7 +642,6 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-
 	<script id="loan-template" type="text/x-handlebars-template">
 		<div class="b-calc-result-item" id={{id}}>
 			<div class="b-calc-result-item-top">
@@ -641,7 +650,7 @@ include "header.php";
 				<div class="b-calc-res-info">{{itemInfo}}</div>
 			</div>
 			<div class="b-calc-result-item-bottom">
-				<div class="b-calc-result-sum-string">
+				<div class="b-calc-result-sum-string {{minMaxClass}}">
 					<div class="b-calc-result-sum">
 						<span class="b-calc-result-sum-info">Ежемесячный платёж</span>
 						{{#if monthlyPayment.MIN}}
@@ -651,7 +660,7 @@ include "header.php";
 						{{/if}}
 					</div>
 					<div class="b-calc-result-sum">
-						<span class="b-calc-result-sum-info">&nbsp;</span>
+						<span class="b-calc-result-sum-info"></span>
 						{{#if monthlyPayment.MAX}}
 						Макс. <span class="b-res-big">{{monthlyPayment.MAX}} <span class="rub-icon"></span></span>
 						{{/if}}
@@ -700,9 +709,8 @@ include "header.php";
 			</div>
 		</div>
 	</script>
-
 	<script id="savings-template" type="text/x-handlebars-template">
-		<div class="b-calc-result-item" id={{id}}>
+		<div class="b-calc-result-item {{forPens}}" id={{id}}>
 			<div class="b-calc-result-item-top">
 				<div class="b-calc-res-title">«{{title}}»</div>
 				<ul>
@@ -726,7 +734,7 @@ include "header.php";
 						{{/if}}
 					</div>
 					<div class="b-calc-result-sum">
-						<span class="b-calc-result-sum-info">&nbsp;</span>
+						<span class="b-calc-result-sum-info"></span>
 						{{#if income.MAX}}
 						Макс. <span class="b-res-big">{{income.MAX}} <span class="rub-icon"></span></span>
 						{{/if}}
@@ -775,8 +783,7 @@ include "header.php";
 			</div>
 		</div>
 	</script>
-
-	<div class="b b-news-block">
+	<div class="b b-news-block fadeDown anim">
 		<div class="b-block">
 			<div class="b-title-with-button">
 				<h3>Новости</h3>
@@ -801,12 +808,11 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-
-	<div class="b b-index-bottom-block">
+	<div class="b b-index-bottom-block fadeDown anim">
 		<div class="b-block">
 			<h3>Нам доверяют более 10&nbsp;000 пайщиков</h3>
 			<div class="b-index-bottom-list">
-				<div class="b-index-bottom-item">
+				<div class="b-index-bottom-item fadeDown anim delay100">
 					<div class="b-index-bottom-top">
 						<div class="b-1-index-bottom-illustration b-index-bottom-illustration"></div>
 						<div class="b-index-bottom-title">Более чем 30 кооперативных участков</div>
@@ -816,7 +822,7 @@ include "header.php";
 						<a href="contacts.php" class="b-small-btn">Контакты</a>
 					</div>
 				</div>
-				<div class="b-index-bottom-item">
+				<div class="b-index-bottom-item fadeDown anim delay200">
 					<div class="b-index-bottom-top">
 						<div class="b-2-index-bottom-illustration b-index-bottom-illustration"></div>
 						<div class="b-index-bottom-title">Минимум документов</div>
@@ -826,7 +832,7 @@ include "header.php";
 						<a href="documents.php" class="b-small-btn">Документы</a>
 					</div>
 				</div>
-				<div class="b-index-bottom-item">
+				<div class="b-index-bottom-item fadeDown anim delay300">
 					<div class="b-index-bottom-top">
 						<div class="b-3-index-bottom-illustration b-index-bottom-illustration"></div>
 						<div class="b-index-bottom-title">Быстрое оформление</div>
@@ -842,7 +848,7 @@ include "header.php";
 
 <? include "advices.php"; ?>
 
-	<div class="b-commercial-block">
+	<div class="b-commercial-block fadeDown anim">
 		<div class="b-block">
 			<div class="b-commercial-inner">
 				<h3>Работа в кооперативе</h3>

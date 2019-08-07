@@ -11,7 +11,7 @@ $params = array(
 include "header.php";
 
 ?>
-<div class="b-detail-news">
+<div class="b-detail-news fadeDown anim delay300" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<div class="b-news-date">10.02.2019</div>
 		<div class="b-text">

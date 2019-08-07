@@ -5,6 +5,7 @@ $params = array(
 	"SUBTITLE" => "без страхования и до 100 000 рублей без обеспечения",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
+		"Займы" => "loan.php",
 	),
 );
 
@@ -12,7 +13,7 @@ include "header.php";
 
 ?>
 
-<div class="b-calc-cont">
+<div class="b-calc-cont fadeDown anim delay500" data-cont=".b-breadcrumbs">
 	<div class="b-left-calc">
 		<div class="b-calc-tab-list not-tabs">
 			<div class="b-block">
@@ -35,7 +36,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b b-loan-detail-docs gray">
+<div class="b b-loan-detail-docs gray fadeDown anim">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h4>Документы, необходимые для подачи заявки</h4>
@@ -52,7 +53,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-content b-mother-block b-mother-more-block">
+<div class="b-content b-mother-block b-mother-more-block fadeDown anim">
 	<div class="b-block">
 		<h3>Дополнительная информация</h3>
 		<div class="b-text">

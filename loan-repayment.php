@@ -11,7 +11,7 @@ include "header.php";
 
 ?>
 
-<div class="b-loan-repayment">
+<div class="b-loan-repayment fadeDown anim delay300" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<h3>Способы оплаты</h3>
 		<div class="b-loan-repayment-list">

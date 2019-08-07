@@ -11,7 +11,7 @@ $params = array(
 include "header.php";
 
 ?>
-<div class="b-shareholder">
+<div class="b-shareholder fadeDown anim delay300" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<div class="b-shareholder-illustration mobile"></div>
 		<div class="b-shareholder-text">
@@ -21,11 +21,11 @@ include "header.php";
 			Сумма денежного взноса при вступлении в КПКГ «Сибирский кредит» составляет 200 рублей, из них членский взнос — 10 рублей, паевой взнос — 10 рублей, вступительный взнос — 180 рублей.<br><br>
 			Для пенсионеров сумма денежного взноса при вступлении в КПКГ «Сибирский кредит» составляет 20 рублей, из них членский взнос — 10 рублей, паевой взнос — 10 рублей. От вступительного взноса решением общего собрания пайщиков пенсионеры освобождены.
 		</div>
-		<div class="b-shareholder-illustration desktop"></div>
+		<div class="b-shareholder-illustration desktop fadeDown anim delay400"></div>
 	</div>
 </div>
 
-<div class="b-shareholder-docs">
+<div class="b-shareholder-docs fadeDown anim">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h3>Документы</h3>

@@ -13,7 +13,7 @@ include "header.php";
 
 ?>
 
-<div class="b-calc-cont">
+<div class="b-calc-cont fadeDown anim delay500" data-cont=".b-breadcrumbs">
 	<div class="b-left-calc">
 		<div class="b-calc-tab-list not-tabs">
 			<div class="b-block">
@@ -38,9 +38,9 @@ include "header.php";
 							<div class="b-calc-slider-block">
 								<label for="date">Срок займа</label>
 								<div class="b-calc-slider">
-									<div class="b-slider-range" data-input-id="date" data-range-to="18"></div>
+									<div class="b-slider-range" data-input-id="date" data-range-to="5"></div>
 									<div class="b-calc-input-cont b-calc-input-month-cont">
-										<input class="b-calc-input-month b-range-input" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="6" default-value="6">
+										<input class="b-calc-input-month b-range-input" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="1" default-value="1">
 									</div>
 								</div>
 							</div>
@@ -93,6 +93,7 @@ include "header.php";
 	<div class="b-calc-results max-4-items b-calc-inner-results" id="loan-results">
 		<div class="b-block">
 			<h3 class="b-title-mobile">Вам подходит:</h3>
+			<div class="b-calc-no-res">К сожалению, по заданным параметрам ничего не найдено</div>
 			<div class="b-calc-result-list">
 				<div class="b-calc-result-item">
 					<div class="b-calc-result-item-top">
@@ -107,7 +108,7 @@ include "header.php";
 								<span class="b-res-big">6</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -142,7 +143,7 @@ include "header.php";
 								от <span class="b-res-big">13</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -177,7 +178,7 @@ include "header.php";
 								от <span class="b-res-big">13</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -212,7 +213,7 @@ include "header.php";
 								от <span class="b-res-big">13</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -247,7 +248,7 @@ include "header.php";
 								<span class="b-res-big">6</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -282,7 +283,7 @@ include "header.php";
 								от <span class="b-res-big">13</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -317,7 +318,7 @@ include "header.php";
 								от <span class="b-res-big">13</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -352,7 +353,7 @@ include "header.php";
 								от <span class="b-res-big">13</span> месяцев
 							</div>
 							<div class="b-calc-result-sum">
-								<span class="b-calc-result-sum-info">&nbsp;</span>
+								<span class="b-calc-result-sum-info"></span>
 							</div>
 						</div>
 						<div class="b-calc-result-sum-string">
@@ -392,7 +393,7 @@ include "header.php";
 		<div class="b-calc-result-item-bottom">
 			<div class="b-calc-result-sum-string">
 				<div class="b-calc-result-sum">
-					<span class="b-calc-result-sum-info">Ежемесячный платёж</span>
+					<span class="b-calc-result-sum-info {{minMaxClass}}">Ежемесячный платёж</span>
 					{{#if monthlyPayment.MIN}}
 					Мин. <span class="b-res-big">{{monthlyPayment.MIN}} <span class="rub-icon"></span></span>
 					{{else}}
@@ -400,7 +401,7 @@ include "header.php";
 					{{/if}}
 				</div>
 				<div class="b-calc-result-sum">
-					<span class="b-calc-result-sum-info">&nbsp;</span>
+					<span class="b-calc-result-sum-info"></span>
 					{{#if monthlyPayment.MAX}}
 					Макс. <span class="b-res-big">{{monthlyPayment.MAX}} <span class="rub-icon"></span></span>
 					{{/if}}
@@ -453,7 +454,7 @@ include "header.php";
 	</div>
 </script>
 
-<div class="b-savings-docs">
+<div class="b-savings-docs fadeDown anim">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h3>Документы</h3>
@@ -462,7 +463,7 @@ include "header.php";
 		<div class="b-documents clearfix">
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит»</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обработке и защите персональных данных</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
@@ -475,8 +476,6 @@ include "header.php";
 		</div>
 	</div>
 </div>
-
-
 
 <? include "advices.php"; ?>
 

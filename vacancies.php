@@ -18,7 +18,7 @@ include "header.php";
 	</div>
 </div> -->
 
-<div class="b-vacancy-content">
+<div class="b-vacancy-content fadeDown anim delay300">
 	<div class="b-block clearfix">
 		<div class="b-right-block b-right-vacancies sticky">
 			<h4>Поиск по вакансиям</h4>

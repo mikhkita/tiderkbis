@@ -19,7 +19,7 @@ include "header.php";
 		</div>
 		<h3>Откликнуться на вакансию</h3>
 		<h4>Расскажите о себе</h4>
-		<form id="vacancy-item-1" action="ajax/success.php" method="POST" class="b-vacancy-detail-form form-with-politics" data-file-action="addFile.php">
+		<form id="vacancy-item-1" action="ajax/error.php" method="POST" class="b-vacancy-detail-form form-with-politics" data-file-action="addFile.php">
 			<input type="hidden" id="politics-agreement" value="N">
 			<div class="b-half-input-cont">
 				<div class="b-vacancy-detail-form-mobile"></div>
@@ -73,7 +73,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-vacancy-detail">
+<div class="b-vacancy-detail fadeDown anim delay300" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<div class="b-vacancy-top-chain">
 			<ul>
@@ -127,7 +127,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-vanacy-about-block">
+<div class="b-vanacy-about-block fadeDown anim">
 	<!-- <div class="b-vanacy-mobile-back" style="background-image: url('i/vacancy-about.jpg');"></div> -->
 	<div class="b-block">
 		<h3>О нас</h3>
@@ -140,7 +140,7 @@ include "header.php";
 <div class="b b-vacancy-bottom-block">
 	<div class="b-block">
 		<div class="b-index-bottom-list">
-			<div class="b-index-bottom-item">
+			<div class="b-index-bottom-item fadeDown anim delay300">
 				<div class="b-index-bottom-top">
 					<div class="b-1-index-bottom-illustration b-index-bottom-illustration"></div>
 					<div class="b-index-bottom-title">Более чем 30 кооперативных участков</div>
@@ -149,7 +149,7 @@ include "header.php";
 					<div class="b-index-bottom-text">На территории Сибирсокого <br>Федерального округа</div>
 				</div>
 			</div>
-			<div class="b-index-bottom-item">
+			<div class="b-index-bottom-item fadeDown anim delay350">
 				<div class="b-index-bottom-top">
 					<div class="b-2-index-bottom-illustration b-index-bottom-illustration"></div>
 					<div class="b-index-bottom-title">Минимум документов</div>
@@ -158,7 +158,7 @@ include "header.php";
 					<div class="b-index-bottom-text">Основной документ — <br>паспорт гражданина РФ</div>
 				</div>
 			</div>
-			<div class="b-index-bottom-item">
+			<div class="b-index-bottom-item fadeDown anim delay400">
 				<div class="b-index-bottom-top">
 					<div class="b-3-index-bottom-illustration b-index-bottom-illustration"></div>
 					<div class="b-index-bottom-title">Быстрое оформление</div>

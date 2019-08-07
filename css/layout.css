@@ -125,12 +125,23 @@ input.error,textarea.error{
 .ripple {
 	width: 0;
 	height: 0;
-	border-radius: 6.8rem;
+	border-radius: 20rem;
 	background: #FEDB31;
 	transform: scale(0);
 	position: absolute;
 	opacity: 1;
 	animation: ripple 0.5s linear;
+}
+.moveable{
+	position: absolute;
+	width: 26rem;
+	height: 26rem;
+	background: #DBFFD2;
+	border-radius: 26rem;
+	z-index: 10;
+}
+.b-advice .ripple{
+	background: #DBFFD2;
 }
 @keyframes ripple {
 	100% {
@@ -257,7 +268,8 @@ input.error,textarea.error{
 .vacancy-open, 
 .burger-open,
 .politics-open,
-.politics-with-btns-open{
+.politics-with-btns-open,
+.error-open{
 	overflow: hidden;
 }
 
@@ -280,7 +292,8 @@ input.error,textarea.error{
 .vacancy-open .b-dark-background,
 .burger-open .b-dark-background,
 .politics-open .b-dark-background,
-.politics-with-btns-open .b-dark-background{
+.politics-with-btns-open .b-dark-background,
+.error-open .b-dark-background{
 	opacity: 1;
 	visibility: visible;
 }
@@ -332,7 +345,7 @@ input.error,textarea.error{
 /* City select ––––––––––––––––––––––––––––––––––––––––––––– City select */
 
 .b-city-select-block{
-	position: absolute;
+	position: fixed;
 	top: -100vh;
 	visibility: hidden;
 	left: 0;
@@ -423,6 +436,51 @@ input.error,textarea.error{
 }
 
 /* City select ––––––––––––––––––––––––––––––––––––––––––––– City select */
+
+
+/* Drop error ––––––––––––––––––––––––––––––––––––––––––––– Drop error */
+.b-drop-error-block{
+	position: fixed;
+	top: -100vh;
+	visibility: hidden;
+	left: 0;
+	width: 100vw;
+	padding: 2.4rem 12.4rem 9.3rem 12.4rem;
+	background: #FFF;
+	z-index: 15;
+	-webkit-transition: top 400ms ease-out, visibility 400ms;
+	-o-transition: top 400ms ease-out, visibility 400ms;
+	transition: top 400ms ease-out, visibility 400ms;
+}
+.error-open .b-drop-error-block{
+	top: 0;
+	visibility: visible;
+}
+	.b-drop-error-block .b-block{
+		width: 100%;
+	}
+		.b-drop-error-block h3{
+			line-height: 2.4rem;
+			margin-bottom: 3.2rem;
+		}
+		.b-drop-error-block p{
+			margin-bottom: 6.1rem;
+			max-width: 32.8rem;
+		}
+@media screen and (max-width: 767px){
+	.b-drop-error-block{
+		padding: 1.6rem;
+		padding-bottom: 4.6rem;
+	}
+		.b-drop-error-block p{
+			margin-bottom: 3.2rem;
+		}
+		.b-drop-error-block h3{
+			margin-bottom: 2.4rem;
+		}
+}
+/* Drop error ––––––––––––––––––––––––––––––––––––––––––––– Drop error */
+
 
 /* Vacancy form ––––––––––––––––––––––––––––––––––––––––––––– Vacancy form */
 
@@ -634,7 +692,8 @@ input.error,textarea.error{
 					.b-city-btn-arrow{
 						background-image: url('../i/sprite.svg#arrow-down');
 						width: 1.2rem;
-						height: 1.2rem;
+						height: 1.4rem;
+						margin-top: 1px;
 						margin-left: 0.6rem;
 					}
 				.b-phone{
@@ -715,9 +774,10 @@ input.error,textarea.error{
 							-webkit-transition: background-color 100ms ease-out, border-color 100ms ease-out;
 							-o-transition: background-color 100ms ease-out, border-color 100ms ease-out;
 							transition: background-color 100ms ease-out, border-color 100ms ease-out;
+							vertical-align: middle;
 						}
 						.b-personal-btn-text{
-
+							vertical-align: middle;
 						}
 					.b-search-btn{
 
@@ -1142,6 +1202,9 @@ input.error,textarea.error{
 	.b-top-burger-block{
 		display: block;
 	}
+	.b-burger-lk{
+		display: none;
+	}
 		.b-top-burger-block .b-close{
 			display: inline-block;
 			vertical-align: top;
@@ -1190,6 +1253,13 @@ input.error,textarea.error{
 	.b-burger-menu-block{
 	    padding-bottom: 3.2rem;
 	}
+		.b-burger-lk{
+			display: block;
+			padding: 0.8rem 0;
+			border-top: 1px solid #DADADA;
+			border-bottom: 1px solid #DADADA;
+			margin-bottom: 2.4rem;
+		}
 		.b-burger-menu-list{
 			column-count: 2;
 		    font-size: 1.6rem;
@@ -1197,7 +1267,8 @@ input.error,textarea.error{
 	    	margin-bottom: 4rem;
 		}
 			.b-burger-logo{
-				margin-bottom: 4rem;
+				margin-bottom: 3.2rem;
+				margin-top: 0;
 			}
 			.b-burger-menu-list li{
 				margin-bottom: 1.6rem;
@@ -1225,7 +1296,8 @@ input.error,textarea.error{
 	-o-transition: top 400ms ease-out, visibility 400ms;
 	transition: top 400ms ease-out, visibility 400ms;
 }
-.vacancy-open .b-politics-block-with-btns{
+.vacancy-open .b-politics-block-with-btns,
+.vacancy-open .b-politics-block{
 	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
 }
 .b-politics-block-with-btns{
@@ -1265,6 +1337,7 @@ input.error,textarea.error{
 .b-main-slider{
 	overflow: hidden;
 	max-height: 48rem;
+	background-color: #F2F2F2;
 }
 .b-main-slider:not(.slick-initialized) .b-slider-item{
 	opacity: 0;
@@ -1476,7 +1549,26 @@ input.error,textarea.error{
 			}
 			.b-1-illustration{
 				width: 23.4rem;
-				background-image: url('../i/illustration.svg#1');
+				position: relative;
+			}
+			.b-1-inner-illustration{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-image: url('../i/woman-illustration.svg');
+			}
+			.b-blob-cont{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
 			}
 			.b-2-illustration{
 				width: 22rem;
@@ -1736,6 +1828,14 @@ input.error,textarea.error{
 									border: 1px solid #DADADA;
 									box-sizing: border-box;
 									border-radius: 38px;
+								}
+								.b-range-text .b-calc-input-cont input{
+								    font-size: 1.6rem;
+								    text-transform: uppercase;
+							        font-family: 'Rubik-Medium';
+								}
+								.b-range-text .b-calc-input-month-cont:before{
+									visibility: hidden;
 								}
 								.b-calc-input-rub{
 									background-image: url('../i/sprite.svg#ruble');
@@ -2037,6 +2137,9 @@ input.error,textarea.error{
 	padding-top: 2.4rem;
 	padding-bottom: 1.6rem;
 }
+	.default-items{
+		display: none;
+	}
 .b-calc-results:before{
 	content: '';
 	background-color: #F2F2F2;
@@ -2065,11 +2168,31 @@ input.error,textarea.error{
 	.b-calc-results h3{
 		margin-bottom: 3.2rem;
 	}
+	.b-calc-results.no-res h3{
+		display: none;
+	}
+	.b-calc-no-res{
+		display: none;
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+		color: rgba(32, 32, 32, 0.5);
+		max-width: 41rem;
+	}
+	.no-res .b-calc-no-res{
+		display: block;
+		padding: 6rem 0;
+	}
+	.no-res .b-calc-result-list{
+		display: none;
+	}
 	.b-calc-result-list{
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
+		.b-calc-result-list .slick-list{
+			margin: 0 -1.2rem;
+		}
 	.b-calc-results .b-btn-container{
 		margin-top: 1.6rem;
 		margin-bottom: 2.4rem;
@@ -2081,11 +2204,6 @@ input.error,textarea.error{
 		overflow: hidden;
 		max-height: 38.7rem;
 	}*/
-	.b-calc-result-list.slick-slider .slick-track,
-	.b-calc-result-list.slick-slider .slick-list{
-		margin: 0 -12px;
-		left: 6px;
-	}
 		.b-calc-result-list .arrow-left-icon{
 			right: unset;
 			left: 0;
@@ -2122,6 +2240,23 @@ input.error,textarea.error{
 			    display: flex;
 			    align-content: space-between;
 			    flex-wrap: wrap;
+			    position: relative;
+			}	
+				.b-calc-result-item.savings-default-res{
+
+				}
+			.b-calc-result-item.for-pens:after{
+				content: 'Для пенсионеров';
+				position: absolute;
+				right: 2.4rem;
+				top: 2.4rem;
+				color: #00963F;
+				border: 1px solid #00963F;
+				font-family: 'Rubik-Medium';
+				padding: 0.8rem;
+				font-size: 1.4rem;
+				line-height: 1.7rem;
+				text-transform: uppercase;
 			}
 			.slick-initialized .b-calc-result-item{
 				margin: 0 1.2rem;
@@ -2196,6 +2331,7 @@ input.error,textarea.error{
 							margin-bottom: 0.8rem;
 							display: block;
 							max-width: 20rem;
+							min-height: 1.9rem;
 						}
 						.b-calc-result-sum-info .mobile{
 							display: none;
@@ -2237,6 +2373,13 @@ input.error,textarea.error{
 		.b-calc-results{
 			padding-top: 4rem;
 			padding-bottom: 4rem;
+			overflow: hidden;
+		}
+		.no-res .b-calc-no-res{
+		    padding: 6rem 1.6rem;
+		}
+		.b-calc-results .b-block{
+			width: 100%;
 		}
 			.slider-results{
 				padding-bottom: 4.3rem;
@@ -2252,6 +2395,7 @@ input.error,textarea.error{
 		.slider-results .b-calc-result-item{
 			width: 28.5rem;
 			margin: 0 0.8rem;
+			display: inline-flex;
 		}
 		/*.b-calc-result-list{
 			margin: 0 -1.6rem;
@@ -2260,12 +2404,25 @@ input.error,textarea.error{
 		.b-calc-result-list.slick-slider .slick-list{
 			margin: 0 -1.6rem;
 			left: 1.6rem;
+			padding: 0 1.6rem;
+			display: flex;
+		    align-content: space-between;
+		    align-items: stretch;
 		}
+			.for-pens .b-calc-res-title{
+				margin-bottom: 6rem;
+			}
+			.b-calc-result-item.for-pens:after{
+				right: unset;
+			    left: 1.6rem;
+    			top: 6rem;
+			}
 			.b-calc-res-title{
 				margin-bottom: 2.4rem;
 			}
 			.b-calc-res-subtitle{
 				margin-bottom: 0.8rem;
+				min-height: 3.6rem;
 			}
 			.b-calc-res-info{
 				font-size: 1.4rem;
@@ -2279,6 +2436,12 @@ input.error,textarea.error{
 		.b-calc-result-sum{
 			font-size: 1.4rem;
     		line-height: 1.7rem;
+		}
+		.b-calc-result-item:not(.savings-default-res) .b-calc-result-sum-string:first-child{
+			display: block;
+		}
+		.savings-default-res .b-calc-result-sum-string:first-child .b-calc-result-sum .b-calc-result-sum-info{
+		    color: #8F8F8F;
 		}
 		.b-calc-result-sum-string:first-child .b-calc-result-sum{
 			width: auto;
@@ -2294,11 +2457,21 @@ input.error,textarea.error{
 		.b-calc-result-sum-string:not(:first-child) .b-calc-result-sum:last-child{
 			width: auto;
 		}
+			.min-max-string .b-res-big,
+			.savings-default-res .b-res-big{
+				font-size: 2.4rem;
+				line-height: .28rem;
+			}
+			.min-max-string .b-res-big .rub-icon{
+			    width: 1.7rem;
+    			height: 1.7rem;
+			}
 		.b-calc-result-sum-info{
 			color: rgba(33, 33, 33, 0.5);
 			max-width: 100%;
 			font-size: 1.6rem;
     		line-height: 1.9rem;
+    		min-height: auto;
 		}
 		.b-calc-result-sum-info .mobile{
 			display: inline;
@@ -2316,7 +2489,7 @@ input.error,textarea.error{
 			display: none!important;
 		}
 		.b-slick-count{
-			left: 0;
+			left: 1.6rem;
 			bottom: 0;
 		}
 		.b-res-btn-container .b-white-btn{
@@ -2325,8 +2498,11 @@ input.error,textarea.error{
 	.b-calc-inner-results{
 
 	}
+		.b-calc-results h3{
+			margin: 0 1.6rem 2.4rem;
+		}
 		.b-calc-inner-results .b-title-mobile{
-			margin-bottom: 2.4rem;
+			margin: 0 1.6rem 2.4rem;
 		}
 	.b-res-btn-container{
 
@@ -2382,6 +2558,22 @@ input.error,textarea.error{
 	border: 1px solid #00963F;
 	box-sizing: border-box;
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+	-webkit-transition: box-shadow .1s, transform .1s;
+	-o-transition: box-shadow .1s, transform .1s;
+	transition: box-shadow .1s, transform .1s;
+	width: 2.8rem;
+	height: 2.8rem;
+}
+.ui-widget-content .ui-state-default.ui-state-hover{
+	box-shadow: 0px 2px 15px #94E786;
+}
+.ui-widget-content .ui-state-default.ui-state-active{
+	/*width: 2.2rem;*/
+	/*height: 2.2rem;*/
+	-webkit-transform: scale(0.8) translateY(-60%);
+	-ms-transform: scale(0.8) translateY(-60%);
+	-o-transform: scale(0.8) translateY(-60%);
+	transform: scale(0.8) translateY(-60%);
 }
 .ui-slider-horizontal .ui-slider-range{
 	background: #00963F;
@@ -2787,7 +2979,7 @@ input.error,textarea.error{
 }
 @media screen and (max-width: 375px){
 	.b-left-calc .b-calc-tab-item{
-		font-size: calc(13px + 1 * (100vw - 320px) / 55);
+		font-size: calc(12px + 2 * (100vw - 320px) / 55);
 	}
 	.b-left-calc .b-btn,
 	.b-left-calc .b-white-btn{
@@ -3230,6 +3422,8 @@ input.error,textarea.error{
 				background-color: #FFF;
 				margin-right: 2.4rem;
 				position: relative;
+				overflow: hidden;
+				z-index: 1;
 			}
 			.b-advice:last-child{
 				margin-right: 0rem;
@@ -3277,6 +3471,9 @@ input.error,textarea.error{
 		display: block;
 		margin: 0 -1.6rem;
 	}
+	.b-advice-list.no-slider{
+		margin: 0;
+	}
 		.b-advice-list .slick-list{
 			padding: 0 1.6rem;
 		}
@@ -3287,6 +3484,10 @@ input.error,textarea.error{
 			margin-right: 1.6rem;
 			width: 28.5rem;
 			height: auto;
+		}
+		.no-slider .b-advice{
+			width: 100%;
+			margin-bottom: 1.6rem;
 		}
 		.b-advice .b-green-link {
 		    left: 1.6rem;
@@ -4216,11 +4417,18 @@ input.error,textarea.error{
 .b-loan-app-docs{
 	margin-top: 4rem;
 }
+.b-savings-app-docs{
+	margin-top: 4rem;
+	margin-bottom: 8rem;
+}
 	.b-loan-app-docs .b-documents{
 		margin-bottom: 0;
 	}
 
 @media screen and (max-width: 767px) {
+	.b-loan-app-form h3 br{
+		display: none;
+	}
 	.b-1-app-input,
 	.b-2-app-input{
 		width: 100%;
@@ -4450,6 +4658,9 @@ input.error,textarea.error{
 
 	.b-pagination{
 
+	}
+	.b-search .b-pagination{
+		margin-top: 4rem;
 	}
 		.b-pagination ul{
 
@@ -5271,8 +5482,18 @@ input.datepicker-here{
 	    padding-top: 3.2rem;
 	    padding-bottom: 3.2rem;
 	}
+		.b-contacts-inner-block:nth-child(1){
+			width: 100%;
+			margin-right: 0;
+		}
+		.b-contacts-inner-block:nth-child(2){
+			width: 100%;
+			margin-right: 0;
+		}
 		.b-contacts-inner-block{
 		    margin-bottom: 4rem;
+		    max-width: 100%;
+		    margin-right: 0;
 		}
 		.b-contacts-inner-block:last-child{
 			margin-bottom: 0;
@@ -5312,6 +5533,12 @@ input.datepicker-here{
 		.select-mobile-arrow:after{
 			background-color: #00963F;
 		}
+}
+@media screen and (max-width: 375px){
+	.b-contacts-inner-block-middle{
+		font-size: calc(3.8rem + 1 * (100vw - 320px) / 55);
+		line-height: calc(4.6rem + 1.1 * (100vw - 320px) / 55);
+	}
 }
 
 /* Contacts ---––––––––––––––––––––––––––––––––––––––––– Contacts */
@@ -5881,6 +6108,15 @@ input.datepicker-here{
 				background-size: cover;
 				background-position: 50% 50%;
 			}
+@media screen and (max-width: 767px){
+	.b-mother-block .b-left-block{
+		width: 100%;
+	}
+	.b-mother-illustration {
+	    width: 100%;
+	    height: 25.5rem;
+	}
+}
 
 /* Settings form ---––––––––––––––––––––––––––––––––––––––––– Settings form */
 
@@ -5908,18 +6144,6 @@ input.datepicker-here{
 	}
 
 /* Settings form ---––––––––––––––––––––––––––––––––––––––––– Settings form */
-
-=======
-@media screen and (max-width: 767px){
-	.b-mother-block .b-left-block{
-		width: 100%;
-	}
-	.b-mother-illustration {
-	    width: 100%;
-	    height: 25.5rem;
-	}
-}
->>>>>>> dc551699bd2e612eb195e1d36c50d5d9f1af5efd
 
 /* Success page ---––––––––––––––––––––––––––––––––––––––––– Success page */
 
@@ -5951,6 +6175,9 @@ input.datepicker-here{
 		.b-success-img {
 		    width: 25.8rem;
 		    height: 24.5rem;
+		}
+		.b-success br{
+			display: none;
 		}
 }
 
@@ -6150,7 +6377,10 @@ input.datepicker-here{
 				transition: color 100ms ease-out;
 	}
 		ul.b-footer-menu li a:hover{
-			color: rgba(33, 33, 33, 0.4);;
+			color: rgba(33, 33, 33, 0.4);
+		}
+		ul.b-footer-menu li a:active{
+			color: rgba(33, 33, 33, 0.2);
 		}
 	.b-soc{
 		-webkit-transition: opacity 100ms ease-out;

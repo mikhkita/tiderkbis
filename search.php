@@ -2,7 +2,7 @@
 
 <? $withoutRating = true;?>
 
-<div class="b-search">
+<div class="b-search fadeDown anim delay300" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<div class="b-search-block">
 			<form action="" method="GET" class="search-string">
@@ -63,6 +63,15 @@
 					К сожалению, по вашему запросу ничего не найдено
 				</div>
 			<? endif; ?>
+		</div>
+		<div class="b-pagination">
+			<ul>
+				<li><span>1</span></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li class="pagination-dots"><span>...</span></li>
+				<li><a href="#">12</a></li>
+			</ul>
 		</div>
 	</div>
 </div>

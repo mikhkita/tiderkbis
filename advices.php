@@ -1,4 +1,4 @@
-<div class="b b-advices grey">
+<div class="b b-advices grey fadeDown anim">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h3>Полезные советы</h3>

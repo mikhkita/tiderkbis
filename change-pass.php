@@ -12,7 +12,7 @@ include "header.php";
 
 ?>
 
-<div class="b-settings-form">
+<div class="b-settings-form fadeDown anim delay300" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<form action="ajax/pass-json.php" method="POST" class="settings-form change-pass-form">
 			<p>Вы можете задать или изменить логин, который будет использоваться для входа в учетную запись</p>

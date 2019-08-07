@@ -4,7 +4,7 @@ $params = array(
 	"TITLE" => "Заявка на сбережение",
 	"BREADCRUMBS" => array(
 		"Главная" => "index.php",
-		"Займы" => "loan.php",
+		"Сбережения" => "savings.php",
 	),
 );
 
@@ -12,12 +12,12 @@ include "header.php";
 
 ?>
 
-<div class="b-loan-app-form">
-	<form action="#" id="loan-application-form" class="form-with-politics" method="POST">
+<div class="b-loan-app-form fadeDown anim delay300" data-cont=".b-breadcrumbs">
+	<form action="ajax/success.php" id="loan-application-form" class="form-with-politics" method="POST">
 		<input type="hidden" id="politics-agreement" value="N">
 		<div class="b-loan-app-cont">
 			<div class="b-block">
-				<h3>Информация о займе</h3>
+				<h3>Информация <br>о сбережении</h3>
 				<div class="b-loan-app-block">
 					<div class="b-input b-1-app-input loan-select">
 						<select class="select" name="loan-type" data-placeholder="Вид сбережения" placeholder="Вид сбережения" required>
@@ -78,25 +78,19 @@ include "header.php";
 	</form>
 </div>
 
-<div class="b-loan-app-docs">
+<div class="b-savings-app-docs">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h3>Документы</h3>
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
 		<div class="b-documents clearfix">
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика(поручителя, залогодателя)</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработкуперсональных данных</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ«Сибирский кредит»</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на получение займа</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Справка о доходах пайщика</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Стандарт для общих условий предоставления займа</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступлениев кооператив</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты</span></a>
-			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Реквизиты для оплаты займа</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит».pdf</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт.pdf</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных.pdf</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Информация для получателей финансовых услуг.pdf</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета сберегателя.doc</span></a>
+			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Заявление на вступление в кооператив.doc</span></a>
 		</div>
 	</div>
 </div>

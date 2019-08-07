@@ -10,9 +10,9 @@ $params = array(
 include "header.php";
 
 ?>
-<div class="b-all-advises-list">
+<div class="b-all-advises-list fadeDown anim delay500" data-cont=".b-breadcrumbs">
 	<div class="b-block">
-		<div class="b-advice-list">
+		<div class="b-advice-list no-slider">
 			<a href="advice-detail.php" class="b-advice">
 				<div class="b-img" style="background-image: url('i/advice-1.jpg');"></div>
 				<div class="b-advice-text">
@@ -34,6 +34,15 @@ include "header.php";
 					<div class="b-green-link">Подробнее<span class="right-arrow-icon"></span></div>
 				</div>
 			</a>
+		</div>
+		<div class="b-pagination">
+			<ul>
+				<li><span>1</span></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li class="pagination-dots"><span>...</span></li>
+				<li><a href="#">12</a></li>
+			</ul>
 		</div>
 	</div>
 </div>

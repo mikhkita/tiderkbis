@@ -92,12 +92,33 @@
 		'RESULT' => 'success',
 		'ITEMS' => array(
 			0 => array(
+				'ID' => 2,
+				'TITLE' => 'Доход',
+				// 'DETAIL_URL' => 'savings.php',
+				'INCOME' => 25000,
+				'END_SUM' => 40000,
+				'PERCENT_RATE' => 7,
+				'ADVATAGES_LIST' => array(
+					0 => array(
+						'TEXT' => 'Возможность пополнения',
+						'ACTIVE' => 'Y'
+					),
+					1 => array(
+						'TEXT' => 'Капитализация или выплата процентов',
+						'ACTIVE' => 'Y'
+					),
+					2 => array(
+						'TEXT' => 'Досрочный возврат денег',
+					),
+				)
+			),
+			1 => array(
 				'ID' => 1,
 				'TITLE' => 'Накопление',
 				// 'DETAIL_URL' => 'savings.php',
 				'INCOME' => 25000,
 				'END_SUM' => 40000,
-				'PERCENT_RATE' => 41.5,
+				'PERCENT_RATE' => 7,
 				'ADVATAGES_LIST' => array(
 					0 => array(
 						'TEXT' => 'Возможность пополнения',
@@ -111,12 +132,32 @@
 					),
 				)
 			),
-			1 => array(
-				'ID' => 2,
-				'TITLE' => 'Доход',
+			2 => array(
+				'ID' => 1,
+				'TITLE' => 'Процент',
 				// 'DETAIL_URL' => 'savings.php',
-				'INCOME' => 15000,
-				'END_SUM' => 20000,
+				'INCOME' => 25000,
+				'END_SUM' => 40000,
+				'PERCENT_RATE' => 7,
+				'ADVATAGES_LIST' => array(
+					0 => array(
+						'TEXT' => 'Возможность пополнения',
+					),
+					1 => array(
+						'TEXT' => 'Капитализация или выплата процентов',
+					),
+					2 => array(
+						'TEXT' => 'Досрочный возврат денег',
+					),
+				)
+			),
+			3 => array(
+				'ID' => 1,
+				'TITLE' => 'Накопление',
+				'FOR_PENS' => true,
+				// 'DETAIL_URL' => 'savings.php',
+				'INCOME' => 25000,
+				'END_SUM' => 40000,
 				'PERCENT_RATE' => 7,
 				'ADVATAGES_LIST' => array(
 					0 => array(
@@ -125,7 +166,6 @@
 					),
 					1 => array(
 						'TEXT' => 'Капитализация или выплата процентов',
-						'ACTIVE' => 'Y'
 					),
 					2 => array(
 						'TEXT' => 'Досрочный возврат денег',

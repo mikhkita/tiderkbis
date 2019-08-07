@@ -10,7 +10,7 @@ $params = array(
 
 include "header.php";
 ?>
-<div class="b-loan-detail-cont b-loan-detail-no-calc" style="background-image: url('i/loan-detail.jpg');">
+<div class="b-loan-detail-cont b-loan-detail-no-calc fadeDown anim delay300" data-cont=".b-breadcrumbs" style="background-image: url('i/loan-detail.jpg');">
 	<div class="b-block">
 		<h1><?=$params['TITLE']?></h1>
 		<div class="b-calc-result-item big-results">
@@ -41,7 +41,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b b-loan-detail-docs gray">
+<div class="b b-loan-detail-docs gray fadeDown anim">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h4>Документы, необходимые для подачи заявки</h4>
@@ -73,7 +73,8 @@ include "header.php";
 		</div>
 	</div>
 </div>
-<div class="b-detail-other">
+
+<div class="b-detail-other fadeDown anim">
 	<div class="b-block">
 		<h4>Прочие требования</h4>
 		<ul>

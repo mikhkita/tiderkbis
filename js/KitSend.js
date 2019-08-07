@@ -100,6 +100,8 @@ $(document).ready(function(){
 		return rePhone.test(value);
 	});
 
+	$('.b-calc-inner-results .b-calc-result-list').after('<div class="default-items">' + $('.b-calc-inner-results .b-calc-result-list').html() + '</div>');
+
 	// slickResults();
 
 	$('.b-calc-result-list').on('afterChange', function(event, slick, currentSlide, nextSlide){
@@ -383,68 +385,85 @@ $(document).ready(function(){
 						if( json.RESULT == "success" ){
 
 							if ($form.attr('data-template')) {
+								var resID = $form.attr('data-results-id'),
+									html = '';
 
-								var id = $form.attr('data-template'),
-									resID = $form.attr('data-results-id');
+								$('#'+resID+' .b-calc-result-list').html(html);
 
-								var source = $('#'+id).html();
-							    var loanTemplate = Handlebars.compile(source);
-							    var html = '';
+								if(json.ITEMS.length > 0){
+									var id = $form.attr('data-template');
+									var source = $('#'+id).html();
+								    var loanTemplate = Handlebars.compile(source);
+								    var list = $('#'+resID).find('.b-calc-result-list');
 
-							    $('#'+resID+' .b-calc-result-list').html(html);
-							    var list = $('#'+resID).find('.b-calc-result-list');
+								    if ($('#'+resID).hasClass('no-res')) {
+								    	$('#'+resID).removeClass('no-res');
+								    }
 
-							    if (list.hasClass('slider-results')) {
-							    	if (list.hasClass('slick-initialized')) {
-							    		list.slick('unslick');
-							    	}
-							    	list.addClass('isSlider');
-							    	list.removeClass('slider-results');
-							    }
+								    if (list.hasClass('slider-results')) {
+								    	if (list.hasClass('slick-initialized')) {
+								    		list.slick('unslick');
+								    	}
+								    	list.addClass('isSlider');
+								    	list.removeClass('slider-results');
+								    }
 
-							    for (var i = 0; i < json.ITEMS.length; i++) {
-							    	var $this = json.ITEMS[i];
+								    for (var i = 0; i < json.ITEMS.length; i++) {
+								    	var $this = json.ITEMS[i],
+								    		minMaxClass = '',
+								    		pensClass = '';
 
-							    	if(isObject($this.MONTHLY_PAYMENT)){
-							    		if ($this.MONTHLY_PAYMENT.MIN)
-							    			$this.MONTHLY_PAYMENT.MIN = ($this.MONTHLY_PAYMENT.MIN*1).toLocaleString();
-							    		if($this.MONTHLY_PAYMENT.MAX)
-							    			$this.MONTHLY_PAYMENT.MAX = ($this.MONTHLY_PAYMENT.MAX*1).toLocaleString();
-							    	} else {
-							    		$this.MONTHLY_PAYMENT = ($this.MONTHLY_PAYMENT*1).toLocaleString();
-							    	}
+								    	if(isObject($this.MONTHLY_PAYMENT)){
+								    		if ($this.MONTHLY_PAYMENT.MIN)
+								    			$this.MONTHLY_PAYMENT.MIN = ($this.MONTHLY_PAYMENT.MIN*1).toLocaleString();
+								    		if($this.MONTHLY_PAYMENT.MAX)
+								    			$this.MONTHLY_PAYMENT.MAX = ($this.MONTHLY_PAYMENT.MAX*1).toLocaleString();
+							    			if ($this.MONTHLY_PAYMENT.MIN && $this.MONTHLY_PAYMENT.MAX)
+							    				minMaxClass = 'min-max-string';
+								    	} else {
+								    		$this.MONTHLY_PAYMENT = ($this.MONTHLY_PAYMENT*1).toLocaleString();
+								    	}
 
-						    	  	var context = { 
-								    	id: $this.ID,
-										title: $this.TITLE,
-										subtitle: $this.SUBTITLE,
-										itemInfo: $this.ITEM_INFO,
-										monthlyPayment: $this.MONTHLY_PAYMENT,
-										overpayment: $this.OVERPAYMENT,
-										percentRate: $this.PERCENT_RATE,
-										detailUrl: $this.DETAIL_URL,
-										advatagesList: $this.ADVATAGES_LIST,
-										income: ($this.INCOME*1).toLocaleString(),
-										endSum: ($this.END_SUM*1).toLocaleString()
-								    };
+								    	if ($this.FOR_PENS) {
+								    		pensClass = 'for-pens';
+								    	}
 
-								    html += loanTemplate(context);
-							    }
+							    	  	var context = { 
+									    	id: $this.ID,
+											title: $this.TITLE,
+											forPens: pensClass,
+											subtitle: $this.SUBTITLE,
+											itemInfo: $this.ITEM_INFO,
+											monthlyPayment: $this.MONTHLY_PAYMENT,
+											overpayment: $this.OVERPAYMENT,
+											percentRate: $this.PERCENT_RATE,
+											detailUrl: $this.DETAIL_URL,
+											advatagesList: $this.ADVATAGES_LIST,
+											income: ($this.INCOME*1).toLocaleString(),
+											endSum: ($this.END_SUM*1).toLocaleString(),
+											minMaxClass: minMaxClass
+									    };
 
-							    $('#'+resID+' .b-calc-result-list').html(html);
-							    console.log($('#'+resID));
-							    if ($('#'+resID).hasClass('not-ajax-results')) {
-							    	$('#'+resID).removeClass('not-ajax-results');
-							    }
+									    html += loanTemplate(context);
+								    }
 
-							  	if (($('#'+resID+' .b-calc-result-list').hasClass('isSlider') && json.ITEMS.length > 2) || window.innerWidth < 768) {
-							  		$('#'+resID+' .b-calc-result-list').addClass('slider-results');
-							    	slickResults();
- 	
-							    	var slick = $('#'+resID+' .b-calc-result-list').slick('getSlick'),
-							    		id = slick.$slider.parents('.b-calc-results').attr('id');
-	    							changeSlickCounter(id, slick.currentSlide, slick.slideCount);
-							    }
+								    $('#'+resID+' .b-calc-result-list').html(html);
+								    console.log($('#'+resID));
+								    if ($('#'+resID).hasClass('not-ajax-results')) {
+								    	$('#'+resID).removeClass('not-ajax-results');
+								    }
+
+								  	if (($('#'+resID+' .b-calc-result-list').hasClass('isSlider') && json.ITEMS.length > 2) || window.innerWidth < 768) {
+								  		$('#'+resID+' .b-calc-result-list').addClass('slider-results');
+								    	slickResults();
+	 	
+								    	var slick = $('#'+resID+' .b-calc-result-list').slick('getSlick'),
+								    		id = slick.$slider.parents('.b-calc-results').attr('id');
+		    							changeSlickCounter(id, slick.currentSlide, slick.slideCount);
+								    }
+								} else {
+									$('#'+resID).addClass('no-res');
+								}
 							}
 
 							if( json.ACTION == "reload" ){
@@ -462,6 +481,12 @@ $(document).ready(function(){
 					        }
 
 				        }else{
+
+				        	if (json.ACTION == 'drop-error') {
+				        		$('html').removeClass();
+				        		$('html').addClass('error-open');
+				        	}
+
 				        	$form.find(".b-popup-error").html(json.ERROR);
 				        	if ($form.find(".b-settings-text")) {
 								$form.find(".b-settings-text").html(json.ERROR);

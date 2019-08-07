@@ -1,6 +1,6 @@
 <?
 
-$version = "6";
+$version = "7";
 $arPage = explode('/', $_SERVER['REQUEST_URI']);
 if (end($arPage) == 'loan-detail.php' || end($arPage) == 'loan-detail-no-calc.php') {
 	$isDetail = true;
@@ -59,6 +59,16 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 			</ul>
 		</div>
 	</div>
+	<div class="b-drop-error-block">
+		<div class="b-block">
+			<div class="b-close clearfix">
+				<a href="#" class="b-icon-cross"></a>
+			</div>
+			<h3>Ошибка отправки</h3>
+			<p>Приносим свои извинения, в ходе отправки запроса произошла ошибка. Повторите попытку позже.</p>
+			<a href="#" class="b-btn b-close">Принимаю</a>
+		</div>
+	</div>
 	<div class="b-burger-menu-block">
 		<div class="b-block">
 			<div class="b-top-burger-block">
@@ -67,6 +77,9 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 					<a href="#" class="b-icon-cross"></a>
 				</div>
 			</div>
+			<a href="personal-forms.php" class="b-burger-lk">
+				<span class="b-personal-btn-icon"></span><span class="b-personal-btn-text">Личный кабинет</span>
+			</a>
 			<ul class="b-burger-menu-list">
 				<li><a href="loan.php">Займы</a></li>
 				<li><a href="savings.php">Сбережения</a></li>
@@ -161,14 +174,14 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 				<div class="b-block clearfix">
 					<a href="index.php" class="b-logo-mobile"></a>
 					<ul class="b-main-menu justify">
-						<li><a href="loan.php">Займы</a></li>
-						<li><a href="savings.php">Сбережения</a></li>
-						<li><a href="payment.php">Погашение займа</a></li>
-						<li><a href="cooperative.php">О кооперативе</a></li>
-						<li><a href="online-reception.php">Онлайн-приёмная</a></li>
-						<li><a href="contacts.php">Контакты</a></li>
+						<li class="fadeDown anim delay100"><a href="loan.php">Займы</a></li>
+						<li class="fadeDown anim delay150"><a href="savings.php">Сбережения</a></li>
+						<li class="fadeDown anim delay200"><a href="payment.php">Погашение займа</a></li>
+						<li class="fadeDown anim delay250"><a href="cooperative.php">О кооперативе</a></li>
+						<li class="fadeDown anim delay300"><a href="online-reception.php">Онлайн-приёмная</a></li>
+						<li class="fadeDown anim delay350"><a href="contacts.php">Контакты</a></li>
 					</ul>
-					<div class="b-menu-right-cont">
+					<div class="b-menu-right-cont fadeDown anim delay400">
 						<div class="b-search-btn b-search-btn-mobile">
 							<span class="b-search-btn-icon"></span>
 							<form action="search.php" method="GET" class="b-search-input">
@@ -187,7 +200,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 		<? if( isset($params["BREADCRUMBS"]) ): ?>
 		<div class="b b-navigation <?=$detailPageClass?>">
 			<div class="b-block">
-				<ul class="b-breadcrumbs">
+				<ul class="b-breadcrumbs fadeDown anim delay100">
 					<? foreach ($params["BREADCRUMBS"] as $title => $url): ?>
 						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=$url?>" title="<?=$title?>" itemprop="url"><span itemprop="title"><?=$title?></span></a></li>
 					<? endforeach; ?>
@@ -195,10 +208,10 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 				</ul>
 				<? if (!$isDetail): ?>
 					<? if (!$params["SUBTITLE"]): ?>
-						<h1><?=$params["TITLE"]?></h1>
+						<h1 class="fadeDown anim delay200"><?=$params["TITLE"]?></h1>
 					<? else: ?>
-						<h1 class="before-subtitle"><?=$params["TITLE"]?></h1>
-						<h4 class="subtitle"><?=$params["SUBTITLE"]?></h4>
+						<h1 class="before-subtitle fadeDown anim delay200"><?=$params["TITLE"]?></h1>
+						<h4 class="subtitle fadeDown anim delay300"><?=$params["SUBTITLE"]?></h4>
 					<? endif; ?>
 				<? endif; ?>
 			</div>

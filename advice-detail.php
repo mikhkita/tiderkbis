@@ -11,7 +11,7 @@ $params = array(
 include "header.php";
 
 ?>
-<div class="b-detail-advice">
+<div class="b-detail-advice fadeDown anim delay500" data-cont=".b-breadcrumbs">
 	<div class="b-block">
 		<picture>
 			<img src="i/detail-advice.jpg">
