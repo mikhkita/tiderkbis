@@ -1129,6 +1129,12 @@ $(document).ready(function(){
         }
     });
 
+    $("[data-begin]").hover(function(){
+        document.getElementById($(this).attr("data-begin")).unpauseAnimations();
+    },function(){
+        document.getElementById($(this).attr("data-begin")).pauseAnimations();
+    });
+
 
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");

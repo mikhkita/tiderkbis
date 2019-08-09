@@ -27,25 +27,13 @@ include "header.php";
 			</div>
 		</div>
 		<div class="b-right-block sticky">
-			<svg xmlns="http://www.w3.org/2000/svg" class="webvrLogo" id="webvrLogo" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
-			  <path d="M127 259h746v482H127z" class="st0" fill="#3a46ff"/>
-			  <circle r="86" class="st1" fill="#fff">
-			    <animateTransform attributeName="transform" attributeType="XML" type="translate" values="292.7 500" dur="0s" repeatCount="indefinite"/>
-			    <animateTransform attributeName="transform" attributeType="XML" type="scale" values="1,0.05;1,1;1,1;1,0.05;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;" dur="7s" begin="webvrLogo.mouseover" end="webvrLogo.mouseout" repeatCount="indefinite" additive="sum"/>
-			  </circle>
-			  <circle r="86" class="st1" fill="#fff">
-			    <animateTransform attributeName="transform" attributeType="XML" type="translate" values="707.3 500" dur="0s" repeatCount="indefinite"/>
-			    <animateTransform attributeName="transform" attributeType="XML" type="scale" values="1,0.05;1,1;1,1;1,0.05;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;1,1;" dur="7s" begin="webvrLogo.mouseover" end="webvrLogo.mouseout" repeatCount="indefinite" additive="sum"/>
-			  </circle>
-			  <path d="M485 447h30v106h-30z" class="st1"/>
-			</svg>
-			<a href="online-reception.php" class="b-white-tile b-cooperative-tile">
+			<a href="online-reception.php" class="b-white-tile b-cooperative-tile" data-begin="first1">
 				<span class="b-cooperative-tile-title">Онлайн-<br>приёмная</span>
 				<div class="b-cooperative-tile-img b-man-illustration">
 					<div class="b-blob-cont">
-						<svg viewbox="-70 -70 234 234" id='id1'>
-							<path fill="#fff4b8" >
-							    <animate attributeName="d" dur="12s" repeatCount="indefinite" begin="id1.mouseover" values="
+						<svg viewbox="-50 -70 234 234" id="first1">
+							<path fill="#fff4b8" id="blob-1" d="M112.089 11.9664C151.089 -15.1265 212.089 23.9666 227.089 65.4669C238.668 97.5 202.089 73.4623 173.427 82C149.927 89 161.573 195.5 55.5 159C16.1387 145.456 -4.6196 79.7779 8.08942 59.9668C25.0894 33.4668 87.0894 29.3336 112.089 11.9664Z" >
+							    <animate xlink:href="#blob-1" attributeName="d" begin="0s" dur="12s" repeatCount="indefinite" values="
 					              M112.089 11.9664C151.089 -15.1265 212.089 23.9666 227.089 65.4669C238.668 97.5 202.089 73.4623 173.427 82C149.927 89 161.573 195.5 55.5 159C16.1387 145.456 -4.6196 79.7779 8.08942 59.9668C25.0894 33.4668 87.0894 29.3336 112.089 11.9664Z;
 
 					              M92.5 62.5C131.5 35.4071 185.5 -33.0004 222 21.9998C243.5 58.999 211.245 142.465 186 158.499C149 182 79.5 151.5 51 129.999C21.7637 107.943 -5.20902 84.8106 7.50001 64.9995C24.5 38.4995 67.5 79.8672 92.5 62.5Z;
@@ -60,9 +48,29 @@ include "header.php";
 						  </path>
 						</svg> 
 					</div>
+					<script>
+						document.getElementById("first1").pauseAnimations();
+					</script>
 					<div class="illustration-image"></div>
 				</div>
 			</a>
+			<!-- <a href="online-reception.php" class="b-white-tile b-cooperative-tile">
+				<span class="b-cooperative-tile-title">Онлайн-<br>приёмная</span>
+				<div class="b-cooperative-tile-img b-man-illustration">
+					<div class="b-blob-cont">
+						<svg viewbox="-70 -70 234 234">
+							<path fill="#fff4b8" d="M112.089 11.9664C151.089 -15.1265 212.089 23.9666 227.089 65.4669C238.668 97.5 202.089 73.4623 173.427 82C149.927 89 161.573 195.5 55.5 159C16.1387 145.456 -4.6196 79.7779 8.08942 59.9668C25.0894 33.4668 87.0894 29.3336 112.089 11.9664Z" >
+							    <animate id="first" fill="freeze" attributeName="d" dur="0.3s" repeatCount="1" values="
+					              M112.089 11.9664C151.089 -15.1265 212.089 23.9666 227.089 65.4669C238.668 97.5 202.089 73.4623 173.427 82C149.927 89 161.573 195.5 55.5 159C16.1387 145.456 -4.6196 79.7779 8.08942 59.9668C25.0894 33.4668 87.0894 29.3336 112.089 11.9664Z;
+
+					              M92.5 62.5C131.5 35.4071 185.5 -33.0004 222 21.9998C243.5 58.999 211.245 142.465 186 158.499C149 182 79.5 151.5 51 129.999C21.7637 107.943 -5.20902 84.8106 7.50001 64.9995C24.5 38.4995 67.5 79.8672 92.5 62.5Z;"/>
+					            <animate id="second" fill="freeze" attributeName="d" dur="0.3s" repeatCount="1" values="M92.5 62.5C131.5 35.4071 185.5 -33.0004 222 21.9998C243.5 58.999 211.245 142.465 186 158.499C149 182 79.5 151.5 51 129.999C21.7637 107.943 -5.20902 84.8106 7.50001 64.9995C24.5 38.4995 67.5 79.8672 92.5 62.5Z; M112.089 11.9664C151.089 -15.1265 212.089 23.9666 227.089 65.4669C238.668 97.5 202.089 73.4623 173.427 82C149.927 89 161.573 195.5 55.5 159C16.1387 145.456 -4.6196 79.7779 8.08942 59.9668C25.0894 33.4668 87.0894 29.3336 112.089 11.9664Z;"/>
+						  </path>
+						</svg> 
+					</div>
+					<div class="illustration-image"></div>
+				</div>
+			</a> -->
 			<a href="documents.php" class="b-white-tile b-cooperative-tile">
 				<span class="b-cooperative-tile-title">Документы</span>
 				<div class="b-cooperative-tile-img b-doc-illustration">
