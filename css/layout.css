@@ -1579,6 +1579,17 @@ input.error,textarea.error{
 				width: 100%;
 				height: 100%;
 			}
+				.b-blob-cont svg{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 50%;
+					top: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					-o-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+				}
 			.b-2-illustration{
 				width: 22rem;
 			}
@@ -3929,6 +3940,7 @@ input.error,textarea.error{
 		margin-bottom: 6.4rem;
 	}
 		.b-payment .b-payment-img{
+			position: relative;
 			display: inline-block;
 			vertical-align: middle;
 			text-align: left;
@@ -3937,8 +3949,31 @@ input.error,textarea.error{
 			height: 18.5rem;
 			background-position: 0% 50%;
 		}
+		.b-payment-img .illustration-image{
+
+		}
+		.b-payment-img-7 .illustration-image{
+			max-width: 15rem;
+			max-height: 15.5rem;
+			background-image: url('../i/illustration.svg#7');
+		}
+		.b-payment-img-8 .illustration-image{
+			max-width: 12.2rem;
+			max-height: 14.5rem;
+			background-image: url('../i/illustration.svg#8');
+		}
+		.b-payment-img-9 .illustration-image{
+			max-width: 13.8rem;
+			max-height: 11.3rem;
+			background-image: url('../i/illustration.svg#9');
+		}
+		.b-payment-img-10 .illustration-image{
+			max-width: 10.4rem;
+			max-height: 14.3rem;
+			background-image: url('../i/illustration.svg#10');
+		}
 		.b-payment-img-10{
-			height: 16.5rem;
+
 		}
 		.b-payment-text{
 			display: inline-block;
@@ -3979,10 +4014,11 @@ input.error,textarea.error{
 	height: 19.3rem;
 	overflow: hidden;
 	margin-bottom: 2.4rem;
-}
+}	
 .b-cooperative-tile:last-child{
 	margin-bottom: 0rem;
 }
+	.b-cooperative-tile
 	.b-cooperative-tile-title{
 		position: absolute;
 		left: 1.6rem;
@@ -3994,26 +4030,48 @@ input.error,textarea.error{
 		position: absolute;
 	}
 	.b-man-illustration{
-		background-image: url('../i/illustration.svg#11');
 		width: 20.5rem;
-		height: 30.6rem;
+		height: 100%;
 		top: 0rem;
-		right: -2rem;
+		right: 0;
 	}
+		.b-man-illustration .illustration-image{
+			background-image: url('../i/illustration.svg#11');
+		}
 	.b-doc-illustration{
-		background-image: url('../i/illustration.svg#12');
 		width: 26.8rem;
-		height: 23.9rem;
+		height: 100%;
 		top: 0rem;
-		right: -10rem;
+		right: -4rem;
 	}
-	.b-cooperative-tile .b-shareholder-illustration{
-		background-image: url('../i/illustration.svg#payshit');
-	    width: 26.9rem;
-	    height: 19rem;
+		.b-doc-illustration .illustration-image{
+			width: 13.6rem;
+			height: 9.3rem;
+			background-image: url('../i/illustration.svg#12');
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+	.b-woman-illustration{
+	    width: 20rem;
+	    height: 100%;
 	    right: -2.3rem;
 	    top: 0px;
 	}
+		.b-woman-illustration .illustration-image{
+			max-height: 16.5rem;
+			max-width: 13.2rem;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			background-image: url('../i/illustration.svg#1');
+		}
 /* Desktop */
 @media (min-width: 1024px) {
 	.b-cooperative-tile-img{
@@ -4027,10 +4085,10 @@ input.error,textarea.error{
 		right: -3rem;
 	}
 	.b-cooperative-tile:hover .b-doc-illustration{
-		right: -11rem;	
+		right: -8rem;	
 	}
-	.b-cooperative-tile:hover .b-shareholder-illustration{
-		right: -4rem;	
+	.b-cooperative-tile:hover .b-woman-illustration{
+		right: -6rem;	
 	}
 }
 @media screen and (max-width: 767px){
@@ -6207,6 +6265,9 @@ input.datepicker-here{
 	.b-success-img{
 		width: 32.8rem;
 		height: 30.5rem;
+		position: relative;
+	}
+	.b-success-img .illustration-image{
 		background-image: url('../i/illustration.svg#success-1');
 	}
 	.b-success h3{
