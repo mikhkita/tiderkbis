@@ -11,14 +11,14 @@ include "header.php";
 
 ?>
 	
-<!-- <div class="b-no-vacancies">
+<div class="b-no-vacancies fadeDown anim delay300">
 	<div class="b-block">
 		<div class="b-no-vacancies-img" style="background-image: url('i/illustration.svg#no-vacancies');"></div>
 		<div class="b-no-vacancies-text">К сожалению, на данный момент у нас нет доступных вакансий</div>
 	</div>
-</div> -->
+</div>
 
-<div class="b-vacancy-content fadeDown anim delay300">
+<!-- <div class="b-vacancy-content fadeDown anim delay300">
 	<div class="b-block clearfix">
 		<div class="b-right-block b-right-vacancies sticky">
 			<h4>Поиск по вакансиям</h4>
@@ -75,7 +75,7 @@ include "header.php";
 			</a>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <script id="vacancy-template" type="text/x-handlebars-template">
 	<a href="{{detailUrl}}" class="b-white-tile b-vacancy-tile">

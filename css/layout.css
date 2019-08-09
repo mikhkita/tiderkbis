@@ -1566,7 +1566,7 @@ input.error,textarea.error{
 				position: absolute;
 				left: 0;
 				top: 0;
-				/*background-image: url('../i/illustration.svg#1');*/
+				background-image: url('../i/illustration.svg#1');
 			}
 			.b-blob-cont{
 				position: absolute;
@@ -1588,7 +1588,7 @@ input.error,textarea.error{
 				position: absolute;
 				left: 0;
 				top: 0;
-				/*background-image: url('../i/illustration.svg#2');*/
+				background-image: url('../i/illustration.svg#2');
 			}
 			.b-3-illustration{
 				width: 23rem;
@@ -1599,7 +1599,7 @@ input.error,textarea.error{
 				position: absolute;
 				left: 0;
 				top: 0;
-				/*background-image: url('../i/illustration.svg#3');*/
+				background-image: url('../i/illustration.svg#3');
 			}
 			.b-illustration-text{
 				font-family: 'Rubik-Regular';
@@ -2769,20 +2769,33 @@ input.error,textarea.error{
 			.b-1-index-bottom-illustration{
 				width: 17.4rem;
 			}
-			.b-1-index-bottom-illustration .image{
-				/*background-image: url('../i/illustration.svg#4');*/
+			.illustration-image{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.b-1-index-bottom-illustration .illustration-image{
+				background-image: url('../i/illustration.svg#4');
+				width: 12.4rem;
+				height: 16rem;
 			}
 			.b-2-index-bottom-illustration{
 				width: 16.3rem;
 			}
-			.b-2-index-bottom-illustration .image{
-				/*background-image: url('../i/illustration.svg#5');*/
+			.b-2-index-bottom-illustration .illustration-image{
+				background-image: url('../i/illustration.svg#5');
+				width: 11.6rem;
+				height: 14.9rem;
 			}
 			.b-3-index-bottom-illustration{
 				width: 16rem;
 			}
-			.b-3-index-bottom-illustration .image{
-				/*background-image: url('../i/illustration.svg#6');*/
+			.b-3-index-bottom-illustration .illustration-image{
+				background-image: url('../i/illustration.svg#6');
+				width: 13.7rem;
+				height: 14.6rem;
 			}
 			.b-index-bottom-title{
 				max-width: 20rem;
@@ -6133,10 +6146,19 @@ input.datepicker-here{
 			.b-mother-illustration{
 				width: 41.2rem;
 				height: 30.5rem;
-				max-width: 100%;
-				background-image: url('../i/house-illustration.svg');
-				background-size: cover;
-				background-position: 50% 50%;
+				position: relative;
+			}
+			.b-mother-illustration .illustration-image{
+				max-width: 31.5rem;
+			    max-height: 16.5rem;
+			    top: unset;
+			    left: unset;
+			    right: 0;
+			    bottom: 3rem;
+			    background-image: url(../i/house-illustration.svg);
+			    background-size: contain;
+			    background-repeat: no-repeat;
+			    background-position: 50% 50%;
 			}
 @media screen and (max-width: 767px){
 	.b-mother-block .b-left-block{

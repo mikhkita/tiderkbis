@@ -562,7 +562,7 @@ $(document).ready(function(){
         $(this).removeClass('preloader');
     })
 
-    animateBtn('.b-btn');
+    animateBtn('.b-btn:not(.b-white-btn)');
 
     function animateBtn(className){
         var links = $(className);
