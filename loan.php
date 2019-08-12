@@ -31,7 +31,7 @@ include "header.php";
 								<div class="b-calc-slider">
 									<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
 									<div class="b-calc-input-cont">
-										<input class="b-calc-input-rub b-range-input" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="15 000" default-value="15 000">
+										<input class="b-calc-input-rub b-range-input" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="250 000" default-value="250 000">
 									</div>
 								</div>
 							</div>
@@ -40,7 +40,7 @@ include "header.php";
 								<div class="b-calc-slider">
 									<div class="b-slider-range" data-input-id="date" data-range-to="5" data-slider-type="loan"></div>
 									<div class="b-calc-input-cont b-calc-input-month-cont">
-										<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="1" name="loan-term">
+										<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="1" name="loan-term" default-value="1">
 									</div>
 								</div>
 							</div>

@@ -152,7 +152,7 @@ input.error,textarea.error{
 	transform: translate(-50%,-50%);
 	border-radius: 100rem;
 	background: #DBFFD2;
-	z-index: -1;
+	/*z-index: 1;*/
 	-webkit-transition: width .5s ease-out, height .5s ease-out;
 	-o-transition: width .5s ease-out, height .5s ease-out;
 	transition: width .5s ease-out, height .5s ease-out;
@@ -1706,8 +1706,8 @@ input.error,textarea.error{
 				-ms-transform: translate(-50%, -50%);
 				-o-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
-				width: 100%;
-				height: 100%;
+				width: 110%;
+				height: 110%;
 			}
 				.b-blob-cont svg{
 					position: absolute;
@@ -3709,9 +3709,9 @@ input.error,textarea.error{
 	.b-advice:hover .b-green-link .right-arrow-icon{
 		right: -3.9rem;
 	}	
-	.b-advice-text:hover .b-green-back{
-		width: 40rem;
-		height: 40rem;
+	.b-advice:hover .b-green-back{
+		width: 80rem;
+		height: 80rem;
 	}
 }
 @media (min-width: 1440px) {
