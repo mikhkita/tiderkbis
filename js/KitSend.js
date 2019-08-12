@@ -49,7 +49,7 @@ function slickResults(){
     		$(this).slick({
 		        dots: false,
 		        slidesToShow: 2,
-		        slidesToScroll: 2,
+		        slidesToScroll: 1,
 		        infinite: true,
 		        cssEase: 'ease', 
 		        speed: 400,
@@ -75,16 +75,16 @@ function slickResults(){
 
 function changeSlickCounter(id, currentSlide, slideCount){
 
-	if(window.innerWidth > 768) {
-		if (slideCount != 1 && slideCount%2 != 0) {
-			slideCount ++;
-		};
-		$('#'+id+' .current-slick').text((currentSlide + 2)/2);
-	    $('#'+id+' .count-slick').text((slideCount)/2);
-	} else {
+	// if(window.innerWidth > 768) {
+	// 	if (slideCount != 1 && slideCount%2 != 0) {
+	// 		slideCount ++;
+	// 	};
+	// 	$('#'+id+' .current-slick').text((currentSlide + 2)/2);
+	//     $('#'+id+' .count-slick').text((slideCount)/2);
+	// } else {
 		$('#'+id+' .current-slick').text(currentSlide+1);
-	    $('#'+id+' .count-slick').text(slideCount);
-	}
+    	$('#'+id+' .count-slick').text(slideCount);
+	// }
 
 }
 

@@ -178,13 +178,13 @@ include "header.php";
 	</form>
 </div>
 
-<div class="b-loan-app-docs fadeDown anim">
+<div class="b-loan-app-docs fadeDown anim" data-offset="100">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h3>Документы</h3>
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
-		<div class="b-documents clearfix">
+		<div class="b-documents cut-on-mobile clearfix">
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработкуперсональных данных</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит»</span></a>

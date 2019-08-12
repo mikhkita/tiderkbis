@@ -1,6 +1,6 @@
 	<? if( $withoutRating !== true ): ?>
 
-	<div class="b b-rating fadeDown anim">
+	<div class="b b-rating fadeDown anim" data-offset="100">
 		<div class="b-block">
 			<div class="b-rating-block">
 				<div class="b-rating-before">
@@ -37,7 +37,7 @@
 		</div>
 	</div>
 	<? endif; ?>
-	<div class="b b-footer grey fadeDown anim">
+	<div class="b b-footer grey fadeDown anim" data-offset="100">
 		<div class="b-block justify">
 			<ul class="b-footer-menu">
 				<li><a href="cooperative.php">О кооперативе</a></li>

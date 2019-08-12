@@ -14,7 +14,7 @@ include "header.php";
 	<div class="b-block">
 		<h3>Способы оплаты</h3>	
 		<div class="b-payments">
-			<div class="b-payment fadeDown anim">
+			<div class="b-payment fadeDown anim" data-offset="100">
 				<div class="b-payment-img b-payment-img-7">
 					<div class="b-blob-cont">
 						<svg viewbox="0 0 234 234">
@@ -41,7 +41,7 @@ include "header.php";
 					<p>Пайщики КПКГ «Сибирский кредит» могут оплатить действующие займы обратившись в любой из 30 филиалов - кооперативных участков «Сибирского кредита» на территории Томской и Новосибирской областей.</p>
 				</div>
 			</div>
-			<div class="b-payment fadeDown anim">
+			<div class="b-payment fadeDown anim" data-offset="100">
 				<div class="b-payment-img b-payment-img-8">
 					<div class="b-blob-cont">
 						<svg viewbox="0 0 234 234">
@@ -68,7 +68,7 @@ include "header.php";
 					<p>Внести денежные средства в счёт погашения займа можно в любом из пунктов обслуживания сети сервиса <a href="#">«Золотая Корона – Погашение кредитов»</a> на всей территории РФ («Евросеть», «Мегафон», «Билайн», обувные салоны «Кари»)*. За услугу перевода взимается комиссия 1%, но не менее 50 рублей. При оплате займа, платёж зачисляется в срок до 2-х рабочих дней.<br><br>Оплатить заём банковской картой Вы можете <a href="#">прямо сейчас</a>.</p>
 				</div>
 			</div>
-			<div class="b-payment fadeDown anim">
+			<div class="b-payment fadeDown anim" data-offset="100">
 				<div class="b-payment-img b-payment-img-9">
 					<div class="b-blob-cont">
 						<svg viewbox="0 0 234 234">
@@ -95,7 +95,7 @@ include "header.php";
 					<p>Погасить задолженность по займу можно в любом российском банке, направив платёж по реквизитам получателя КПКГ «Сибирский кредит». Срок зачисления денежных средств на счёт получателя зависит от выбранного банка и производится, как правило, в течение 3-5 рабочих дней. Комиссия за перевод взимается в соответствии с тарифами банка отправителя. В назначении платежа обязательно указывайте номер Договора.<br><br>Реквизиты Вы можете скачать в разделе <a href="documents.php">«Документы»</a>. </p>
 				</div>
 			</div>
-			<div class="b-payment fadeDown anim">
+			<div class="b-payment fadeDown anim" data-offset="100">
 				<div class="b-payment-img b-payment-img-10">
 					<div class="b-blob-cont">
 						<svg viewbox="0 0 234 234">

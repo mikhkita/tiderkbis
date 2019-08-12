@@ -41,7 +41,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b b-loan-detail-docs gray fadeDown anim">
+<div class="b b-loan-detail-docs gray fadeDown anim" data-offset="100">
 	<div class="b-block">
 		<div class="b-title-with-button">
 			<h4>Документы, необходимые для подачи заявки</h4>
@@ -74,7 +74,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-detail-other fadeDown anim">
+<div class="b-detail-other fadeDown anim" data-offset="100">
 	<div class="b-block">
 		<h4>Прочие требования</h4>
 		<ul>

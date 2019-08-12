@@ -11,7 +11,7 @@ include "header.php";
 
 ?>
 
-<div class="b-contacts-select fadeDown anim">
+<div class="b-contacts-select fadeDown anim" data-offset="100">
 	<div class="b-block">
 		<div class="b-contacts-select-cont">
 			<select name="city" id="contacts-select" class="select">
@@ -24,7 +24,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-content b-contacts-accordeon b-only-one-accordeon fadeDown anim">
+<div class="b-content b-contacts-accordeon b-only-one-accordeon fadeDown anim" data-offset="100">
 	<div class="b-accordeon-list" id="tsk">
 		<div class="b-accordeon opened">
 			<div class="b-block">
@@ -261,7 +261,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-contacts-block fadeDown anim">
+<div class="b-contacts-block fadeDown anim" data-offset="100">
 	<div class="b-block">
 		<div class="b-contacts-inner-block">
 			<div class="b-contacts-inner-block-top">Пайщиков</div>	

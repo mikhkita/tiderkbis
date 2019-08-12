@@ -84,7 +84,7 @@ include "header.php";
 			<h3>Документы</h3>
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
-		<div class="b-documents clearfix">
+		<div class="b-documents cut-on-mobile clearfix">
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит».pdf</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Базовый стандарт.pdf</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Положение об обрабоке и защите персональных данных.pdf</span></a>

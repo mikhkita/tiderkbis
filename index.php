@@ -7,8 +7,8 @@ $params = array(
 include "header.php";
 
 ?>
-	<div class="b-main-slider fadeDown anim">
-		<div class="b-slider-item">
+	<div class="b-main-slider">
+		<div class="b-slider-item slick-anim">
 			<picture>
 			  <source media="(max-width: 767px)" srcset="i/main-back-1-mobile.jpg">
 			  <img src="i/main-back-1-full.jpg">
@@ -48,10 +48,10 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-	<div class="b-main-illustrations fadeDown anim">
+	<div class="b-main-illustrations fadeDown anim" data-offset="100">
 		<div class="b-block">
 			<div class="b-illustration-list">
-				<div class="b-illustration-item fadeDown anim delay100">
+				<div class="b-illustration-item fadeDown anim delay100 anim-counter-cont" data-offset="100">
 					<div class="b-1-illustration b-illustration">
 						<div class="b-blob-cont">
 							<svg viewbox="0 0 234 234">
@@ -75,11 +75,11 @@ include "header.php";
 					</div>
 					<div class="b-illustration-text">Пайщиков</div>
 					<div class="b-illustration-info">
-						<span class="illustration-bold-num">11 959</span>
+						<span class="illustration-bold-num anim-counter" data-count="11 959">11 959</span>
 						<span class="illustration-bold-text">Чел.</span>
 					</div>
 				</div>
-				<div class="b-illustration-item fadeDown anim delay200">
+				<div class="b-illustration-item fadeDown anim delay200 anim-counter-cont" data-offset="100">
 					<div class="b-2-illustration b-illustration">
 						<div class="b-blob-cont">
 							<svg viewbox="0 0 234 234">
@@ -103,11 +103,11 @@ include "header.php";
 					</div>
 					<div class="b-illustration-text">Принято сбережений</div>
 					<div class="b-illustration-info">
-						<span class="illustration-bold-num">424 481 608</span>
+						<span class="illustration-bold-num anim-counter" data-count="424 481 608">424 481 608</span>
 						<span class="rub-icon"></span>
 					</div>
 				</div>
-				<div class="b-illustration-item fadeDown anim delay300">
+				<div class="b-illustration-item fadeDown anim delay300 anim-counter-cont" data-offset="100">
 					<div class="b-3-illustration b-illustration">
 						<div class="b-blob-cont">
 							<svg viewbox="0 0 234 234">
@@ -131,14 +131,14 @@ include "header.php";
 					</div>
 					<div class="b-illustration-text">Выдано займов </div>
 					<div class="b-illustration-info">
-						<span class="illustration-bold-num">5 746 662 874</span>
+						<span class="illustration-bold-num anim-counter" data-count="5 746 662 874">5 746 662 874</span>
 						<span class="rub-icon"></span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="b-popular-offers fadeDown anim">
+	<div class="b-popular-offers fadeDown anim" data-offset="100">
 		<div class="b-block">
 			<h3>Популярные предложения</h3>
 			<div class="b-popular-offers-list">
@@ -165,7 +165,7 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-	<div class="b-calc-cont fadeDown anim">
+	<div class="b-calc-cont fadeDown anim" data-offset="100">
 		<div class="b-calc">
 			<div class="b-block">
 				<h3>Калькулятор услуг</h3>
@@ -823,7 +823,7 @@ include "header.php";
 			</div>
 		</div>
 	</script>
-	<div class="b b-news-block fadeDown anim">
+	<div class="b b-news-block fadeDown anim" data-offset="100">
 		<div class="b-block">
 			<div class="b-title-with-button">
 				<h3>Новости</h3>
@@ -848,11 +848,11 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-	<div class="b b-index-bottom-block fadeDown anim">
+	<div class="b b-index-bottom-block fadeDown anim" data-offset="100">
 		<div class="b-block">
 			<h3>Нам доверяют более 10&nbsp;000 пайщиков</h3>
 			<div class="b-index-bottom-list">
-				<div class="b-index-bottom-item fadeDown anim delay100">
+				<div class="b-index-bottom-item fadeDown anim delay100" data-offset="100">
 					<div class="b-index-bottom-top">
 						<div class="b-1-index-bottom-illustration b-index-bottom-illustration">
 							<div class="b-blob-cont">
@@ -882,7 +882,7 @@ include "header.php";
 						<a href="contacts.php" class="b-small-btn">Контакты</a>
 					</div>
 				</div>
-				<div class="b-index-bottom-item fadeDown anim delay200">
+				<div class="b-index-bottom-item fadeDown anim delay200" data-offset="100">
 					<div class="b-index-bottom-top">
 						<div class="b-2-index-bottom-illustration b-index-bottom-illustration">
 							<div class="b-blob-cont">
@@ -908,7 +908,7 @@ include "header.php";
 						<a href="documents.php" class="b-small-btn">Документы</a>
 					</div>
 				</div>
-				<div class="b-index-bottom-item fadeDown anim delay300">
+				<div class="b-index-bottom-item fadeDown anim delay300" data-offset="100">
 					<div class="b-index-bottom-top">
 						<div class="b-3-index-bottom-illustration b-index-bottom-illustration">
 							<div class="b-blob-cont">
@@ -944,7 +944,7 @@ include "header.php";
 
 <? include "advices.php"; ?>
 
-	<div class="b-commercial-block fadeDown anim">
+	<div class="b-commercial-block fadeDown anim" data-offset="100">
 		<div class="b-block">
 			<div class="b-commercial-inner">
 				<h3>Работа в кооперативе</h3>

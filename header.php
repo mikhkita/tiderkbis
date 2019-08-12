@@ -66,7 +66,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 			</div>
 			<h3>Ошибка отправки</h3>
 			<p>Приносим свои извинения, в ходе отправки запроса произошла ошибка. Повторите попытку позже.</p>
-			<a href="#" class="b-btn b-close">Принимаю</a>
+			<a href="#" class="b-btn b-close">Назад</a>
 		</div>
 	</div>
 	<div class="b-burger-menu-block">
@@ -181,7 +181,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 						<li class="fadeDown anim delay300"><a href="online-reception.php">Онлайн-приёмная</a></li>
 						<li class="fadeDown anim delay350"><a href="contacts.php">Контакты</a></li>
 					</ul>
-					<div class="b-menu-right-cont fadeDown anim delay400">
+					<div class="b-menu-right-cont">
 						<div class="b-search-btn b-search-btn-mobile">
 							<span class="b-search-btn-icon"></span>
 							<form action="search.php" method="GET" class="b-search-input">
@@ -190,7 +190,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 								<a href="#" class="search-close b-icon-cross"></a>
 							</form>
 						</div>	
-						<a href="#" class="b-menu-btn">
+						<a href="#" class="b-menu-btn fadeDown anim delay400">
 							<span class="b-menu-btn-icon"></span>
 						</a>
 					</div>
@@ -200,7 +200,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 		<? if( isset($params["BREADCRUMBS"]) ): ?>
 		<div class="b b-navigation <?=$detailPageClass?>">
 			<div class="b-block">
-				<ul class="b-breadcrumbs fadeDown anim delay100">
+				<ul class="b-breadcrumbs fadeDown anim delay100" data-offset="100">
 					<? foreach ($params["BREADCRUMBS"] as $title => $url): ?>
 						<li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<?=$url?>" title="<?=$title?>" itemprop="url"><span itemprop="title"><?=$title?></span></a></li>
 					<? endforeach; ?>
@@ -208,10 +208,10 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 				</ul>
 				<? if (!$isDetail): ?>
 					<? if (!$params["SUBTITLE"]): ?>
-						<h1 class="fadeDown anim delay200"><?=$params["TITLE"]?></h1>
+						<h1 class="fadeDown anim delay200" data-offset="100"><?=$params["TITLE"]?></h1>
 					<? else: ?>
-						<h1 class="before-subtitle fadeDown anim delay200"><?=$params["TITLE"]?></h1>
-						<h4 class="subtitle fadeDown anim delay300"><?=$params["SUBTITLE"]?></h4>
+						<h1 class="before-subtitle fadeDown anim delay200" data-offset="100"><?=$params["TITLE"]?></h1>
+						<h4 class="subtitle fadeDown anim delay300" data-offset="100"><?=$params["SUBTITLE"]?></h4>
 					<? endif; ?>
 				<? endif; ?>
 			</div>

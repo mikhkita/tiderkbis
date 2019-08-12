@@ -87,13 +87,26 @@ $(document).ready(function(){
     $.fn.placeholder();
 
     var prevArrow = '<div class="b-block">';
-        prevArrow+= '<div class="arrow-left-icon"></div>';
+            prevArrow+= '<div class="arrow-left-icon"></div>'
         prevArrow+= '</div>';
 
     var nextArrow = '<div class="b-block">';
-        nextArrow+= '<div class="arrow-right-icon">';
+            nextArrow+= '<div class="arrow-right-icon">';
+                nextArrow+= '<div class="clip1">'
+                    nextArrow+= '<div class="slice1"></div>'
+                nextArrow+= '</div>';
+                nextArrow+= '<div class="clip2">'
+                    nextArrow+= '<div class="slice2"></div>'
+                nextArrow+= '</div>';
+            nextArrow+= '</div>';
         nextArrow+= '</div>';
-        nextArrow+= '</div>';
+
+    $('.b-main-slider').on('init', function(slick){
+        $('.b-main-slider .arrow-right-icon').addClass('first-rotate');
+        setTimeout(function(){
+            $('.b-main-slider .arrow-right-icon').addClass('second-rotate');
+        },2500);
+    });
 
     $(".b-main-slider").slick({
         dots: false,
@@ -119,8 +132,59 @@ $(document).ready(function(){
                 dots: true,
               }
             },
-          ]
+        ],
     });
+
+    $('.b-main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.b-main-slider').find('[data-slick-index="'+nextSlide+'"]').addClass('slick-anim');
+        setTimeout(function(){
+            $('.b-main-slider').find('[data-slick-index="'+currentSlide+'"]').removeClass('slick-anim');
+        },500);
+
+        $('.b-main-slider .arrow-right-icon').addClass('reset');
+        $('.b-main-slider .arrow-right-icon').removeClass('first-rotate second-rotate');
+
+    });
+
+    $('.b-main-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        $('.b-main-slider .arrow-right-icon').removeClass('reset');
+        $('.b-main-slider .arrow-right-icon').addClass('first-rotate');
+        setTimeout(function(){
+            $('.b-main-slider .arrow-right-icon').addClass('second-rotate');
+        },2500);
+
+    });
+
+    docButton();
+
+    $(document).on('click', '.show-more-docs', function(){
+        if($(this).parents('.b-documents').hasClass('max-4-docs')){
+            $(this).parents('.b-documents').removeClass('max-4-docs');
+            $(this).addClass('b-white-btn').text('Свернуть');
+        } else {
+            $(this).parents('.b-documents').addClass('max-4-docs');
+            $(this).removeClass('b-white-btn').text('Показать все');
+        }
+        return false;
+    });
+
+    function docButton(){
+        $('.b-documents.cut-on-mobile').each(function(){
+            if ($(this).find('.b-document').length > 4 && isMobile){
+                if (!$(this).hasClass('mobile-docs')) {
+                    $(this).addClass('mobile-docs max-4-docs');
+                    var btn = '<div class="b-btn-container b-document"><a href="#" class="b-btn show-more-docs">Показать все</a></div>';
+                    var html = $(this).html() + btn;
+                    $(this).html(html);
+                }
+            } else {
+                if ($(this).hasClass('mobile-docs')) {
+                    $(this).removeClass('mobile-docs max-4-docs');
+                    $(this).find('.b-btn-container').remove();
+                }
+            }
+        });
+    }
 
     $('.b-slider-item img').css('animation-play-state', 'running');
 
@@ -247,7 +311,7 @@ $(document).ready(function(){
     });
 
     $('.b-calc-slider input').on('input',function(){
-        console.log('ok');
+        // console.log('ok');
     })
 
     $(".b-calc-slider").on( "slide", function(event, ui){
@@ -612,8 +676,8 @@ $(document).ready(function(){
     $('.b-advice').mousemove(function(e){
         var y = e.offsetY;
         var x = e.offsetX;
-        console.log(x);
-        console.log(y);
+        // console.log(x);
+        // console.log(y);
         $(this).find('.moveable').css({
             'top': y,
             'left': x,
@@ -1097,6 +1161,8 @@ $(document).ready(function(){
                 changeSliderImg(img);
             })
         }
+
+        docButton();
 
         if(window.innerWidth < 768) {
 

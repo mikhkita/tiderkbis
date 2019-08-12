@@ -71,11 +71,11 @@ include "header.php";
 					<div class="illustration-image"></div>
 				</div>
 			</a> -->
-			<a href="documents.php" class="b-white-tile b-cooperative-tile">
+			<a href="documents.php" class="b-white-tile b-cooperative-tile" data-begin="first2">
 				<span class="b-cooperative-tile-title">Документы</span>
 				<div class="b-cooperative-tile-img b-doc-illustration">
 					<div class="b-blob-cont">
-						<svg viewbox="-70 -70 234 234">
+						<svg viewbox="-70 -70 234 234" id="first2">
 							<path fill="#D8FFC5">
 							    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
 							    M48.1605 29.4155C87.1605 2.32257 152.16 -5.67786 193.185 29.416C299.16 130.823 154.661 192.416 104.661 152.823C68.1605 111.416 89.1605 94.416 68.6605 83.416C39.6605 67.855 16.6605 102.416 4.6605 83.416C3.16052 78.916 -6.8395 67.6236 48.1605 29.4155Z;
@@ -92,14 +92,17 @@ include "header.php";
 						  </path>
 						</svg> 
 					</div>
+					<script>
+						document.getElementById("first2").pauseAnimations();
+					</script>
 					<div class="illustration-image"></div>
 				</div>
 			</a>
-			<a href="shareholder.php" class="b-white-tile b-cooperative-tile">
+			<a href="shareholder.php" class="b-white-tile b-cooperative-tile" data-begin="first3">
 				<span class="b-cooperative-tile-title">Cтать пайщиком</span>
 				<div class="b-cooperative-tile-img b-woman-illustration">
 					<div class="b-blob-cont">
-						<svg viewbox="-70 -70 234 234">
+						<svg viewbox="-70 -70 234 234" id="first3">
 							<path fill="#fff4b8">
 							    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
 					              M60.3676 32.8393C99.3675 5.74641 138.343 -9.75477 179.368 25.3391C280.368 148.34 203.868 173.756 132.368 161.839C84.3675 153.839 67.3676 154.839 46.8676 143.839C17.8676 128.278 0.867554 87.8398 5.86755 64.8398C11.072 40.8994 45.3676 43.2597 60.3676 32.8393Z;
@@ -116,6 +119,9 @@ include "header.php";
 						  </path>
 						</svg> 
 					</div>
+					<script>
+						document.getElementById("first3").pauseAnimations();
+					</script>
 					<div class="illustration-image"></div>
 				</div>
 			</a>

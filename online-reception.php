@@ -60,7 +60,7 @@ include "header.php";
 		</form>
 	</div>
 </div>
-<div class="b-questions-answers-cont fadeDown anim">
+<div class="b-questions-answers-cont fadeDown anim" data-offset="100">
 	<div class="b-block">
 		<h3>Вопросы и ответы</h3>
 	</div>

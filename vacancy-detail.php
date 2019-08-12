@@ -127,7 +127,7 @@ include "header.php";
 	</div>
 </div>
 
-<div class="b-vanacy-about-block fadeDown anim">
+<div class="b-vanacy-about-block fadeDown anim" data-offset="100">
 	<!-- <div class="b-vanacy-mobile-back" style="background-image: url('i/vacancy-about.jpg');"></div> -->
 	<div class="b-block">
 		<h3>О нас</h3>
@@ -140,7 +140,7 @@ include "header.php";
 <div class="b b-vacancy-bottom-block">
 	<div class="b-block">
 		<div class="b-index-bottom-list">
-			<div class="b-index-bottom-item fadeDown anim delay100">
+			<div class="b-index-bottom-item fadeDown anim delay100" data-offset="100">
 				<div class="b-index-bottom-top">
 					<div class="b-1-index-bottom-illustration b-index-bottom-illustration">
 						<div class="b-blob-cont">
@@ -169,7 +169,7 @@ include "header.php";
 					<div class="b-index-bottom-text">На территории Сибирского <br>Федерального округа</div>
 				</div>
 			</div>
-			<div class="b-index-bottom-item fadeDown anim delay200">
+			<div class="b-index-bottom-item fadeDown anim delay200" data-offset="100">
 				<div class="b-index-bottom-top">
 					<div class="b-2-index-bottom-illustration b-index-bottom-illustration">
 						<div class="b-blob-cont">
@@ -194,7 +194,7 @@ include "header.php";
 					<div class="b-index-bottom-text">Основной документ — <br>паспорт гражданина РФ</div>
 				</div>
 			</div>
-			<div class="b-index-bottom-item fadeDown anim delay300">
+			<div class="b-index-bottom-item fadeDown anim delay300" data-offset="100">
 				<div class="b-index-bottom-top">
 					<div class="b-3-index-bottom-illustration b-index-bottom-illustration">
 						<div class="b-blob-cont">

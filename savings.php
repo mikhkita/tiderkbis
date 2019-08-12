@@ -28,12 +28,12 @@ include "header.php";
 									</div>
 								</div>
 							</div>
-							<div class="b-calc-slider-block">
+							<div class="b-calc-slider-block clearfix">
 								<label for="date">Срок хранения сбережений</label>
 								<div class="b-calc-slider">
 									<div class="b-slider-range" data-input-id="date" data-range-to="3" data-slider-type="savings"></div>
 									<div class="b-calc-input-cont b-calc-input-month-cont">
-										<input class="b-range-input b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="1" default-value="1">
+										<input class="b-calc-input-month" type="text" id="date" oninput="this.value = this.value.replace(/\D/g, '')" value="1">
 									</div>
 								</div>
 							</div>
@@ -329,7 +329,7 @@ include "header.php";
 			<h3>Документы</h3>
 			<a href="documents.php" class="b-small-btn">Все документы</a>
 		</div>
-		<div class="b-documents clearfix">
+		<div class="b-documents cut-on-mobile clearfix">
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Анкета заёмщика (поручителя, залогодателя)</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Согласие на обработку персональных данных</span></a>
 			<a href="javascript:void(0);" class="b-document"><span class="b-document-icon"></span><span class="b-document-text">Устав КПКГ «Сибирский кредит»</span></a>

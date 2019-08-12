@@ -24,9 +24,29 @@ $(document).ready(function(){
 					}
 					$this.addClass("show");
 					$(this).removeClass("anim");
+
+					if ($(this).hasClass('anim-counter-cont')) {
+						var counterItem = $(this).find('.anim-counter');
+						startCounter(counterItem);
+					}
+
 				}
 			});
 		}
+
+		function startCounter($this){
+			console.log($this);
+	        jQuery({ Counter: 0 }).animate({ Counter: Number($this.text().replace(/\s/g, '')) }, {
+	            duration: 3000,
+	            easing: 'swing',
+	            step: function () {
+	                $this.text(new Intl.NumberFormat('ru-RU').format(this.Counter.toFixed(0)));
+	            },
+	            complete: function(){
+	                $this.text($(this).attr('data-count'));
+	            }
+	        });
+	    };
 
 	  	function resize(){
 	  		if( typeof( window.innerWidth ) == 'number' ) {

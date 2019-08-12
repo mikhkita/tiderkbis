@@ -1,7 +1,7 @@
 <? include "header.php";?>
 
 <? $withoutRating = true; ?>
-<div class="b-personal-form fadeDown anim delay300">
+<div class="b-personal-form fadeDown anim delay300" data-offset="100">
 	<div class="b-block">
 		<div class="b-personal-form-block" id="auth">
 			<h1>Авторизация</h1>
