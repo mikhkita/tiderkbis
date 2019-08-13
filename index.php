@@ -823,7 +823,7 @@ include "header.php";
 			</div>
 		</div>
 	</script>
-	<div class="b b-news-block fadeDown anim" data-offset="100">
+	<div class="b b-news-block fadeDown anim" data-offset="50">
 		<div class="b-block">
 			<div class="b-title-with-button">
 				<h3>Новости</h3>

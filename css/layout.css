@@ -140,7 +140,10 @@ input.error,textarea.error{
 	opacity: 1;
 	animation: ripple 0.5s linear;
 }
-.b-green-back{
+.b-white-tile:not(.b-question-tile):before,
+.b-advice .b-advice-text:before,
+.b-popular-offer-item-bottom:before{
+	content: '';
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -150,13 +153,19 @@ input.error,textarea.error{
 	-ms-transform: translate(-50%,-50%);
 	-o-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
-	border-radius: 100rem;
-	background: #DBFFD2;
-	/*z-index: 1;*/
-	opacity: 0.5;
-	-webkit-transition: width .5s ease-out, height .5s ease-out;
-	-o-transition: width .5s ease-out, height .5s ease-out;
-	transition: width .5s ease-out, height .5s ease-out;
+	border-radius: 50%;
+	background: #ececec;
+	/*opacity: 0.5;*/
+	-webkit-transition: width .5s, height .5s;
+	-o-transition: width .5s, height .5s;
+	transition: width .5s, height .5s;
+}
+.b-white-tile:before{
+	z-index: 0;
+}
+.b-advice-text:before,
+.b-search-res.b-white-tile:before{
+	z-index: -1;
 }
 .b-advice .ripple{
 	background: #DBFFD2;
@@ -1819,6 +1828,8 @@ input.error,textarea.error{
 			background-color: #fff;
 			width: calc(100%/2 - 1.2rem);
 			display: block;
+			position: relative;
+			overflow: hidden;
 		}
 			.b-popular-offer-item-top{
 				position: relative;
@@ -1843,6 +1854,8 @@ input.error,textarea.error{
 				}
 			.b-popular-offer-item-bottom{
 				padding: 1.6rem 1.6rem 3.2rem;
+				position: relative;
+				overflow: hidden;
 			}
 				.b-popular-offer-item-name{
 					font-family: 'Rubik-Regular';
@@ -1850,21 +1863,27 @@ input.error,textarea.error{
 					line-height: 3.2rem;
 					margin-bottom: 3.2rem;
 					max-width: 33rem;
+					position: relative;
 				}
 				.b-popular-offer-item .b-small-btn{
 					-webkit-transition: background-color .1s, border-color .1s;
 					-o-transition: background-color .1s, border-color .1s;
 					transition: background-color .1s, border-color .1s;
+					position: relative;
 				}
 				
 @media screen and (min-width: 1024px) {
-	.b-popular-offer-item:hover .b-small-btn{
+	.b-popular-offer-item:hover .b-popular-offer-item-bottom:before{
+		width: 80rem;
+		height: 80rem;
+	}
+	/*.b-popular-offer-item:hover .b-small-btn{
 		background-color: #FEDB31;
 		border-color: transparent;
 	}
 	.b-popular-offer-item .b-small-btn:active{
 	    color: #212121;
-	}
+	}*/
 }
 @media screen and (max-width: 767px) {
 	.b-popular-offers-list{
@@ -2814,10 +2833,12 @@ input.error,textarea.error{
 					margin-bottom: 1.6rem;
 					font-size: 1.6rem;
 					line-height: 2.2rem;
+					position: relative;
 				}
 				.b-news-text{
 					font-size: 1.6rem;
 					line-height: 2.2rem;
+					position: relative;
 				}
 				.b-news .b-green-link{
 					position: absolute;
@@ -3729,7 +3750,7 @@ input.error,textarea.error{
 	.b-advice:hover .b-green-link .right-arrow-icon{
 		right: -3.9rem;
 	}	
-	.b-advice:hover .b-green-back{
+	.b-advice:hover .b-advice-text:before{
 		width: 80rem;
 		height: 80rem;
 	}
@@ -5313,6 +5334,7 @@ input.datepicker-here{
 		}
 		.b-vacancy-tile .b-city-btn{
 			margin-bottom: 2.5rem;
+			position: relative;
 			display: inline-block;
 		}
 			.b-vacancy-tile .b-city-btn-icon{display: inline-block;vertical-align: middle;margin-top: -0.2rem;}
@@ -5326,9 +5348,10 @@ input.datepicker-here{
 		}
 		.b-vacancy-tile .b-vacancy-section{
 			margin-bottom: 0.8rem;
+			position: relative;
 		}
 		.b-vacancy-tile .b-vacancy-skill{
-
+			position: relative;
 		}
 .b-right-vacancies{
 
@@ -6336,6 +6359,10 @@ input.datepicker-here{
 	}
 	.b-white-tile:hover .b-lk1-illustration{
 		right: -6rem;
+	}
+	.b-white-tile:hover:before{
+		width: 50rem;
+		height: 50rem;
 	}
 }
 
