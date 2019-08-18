@@ -2,7 +2,7 @@
 
 <? $withoutRating = true;?>
 
-<div class="b-search fadeDown anim delay300" data-cont=".b-breadcrumbs">
+<div class="b-search fadeDown anim delay300">
 	<div class="b-block">
 		<div class="b-search-block">
 			<form action="" method="GET" class="search-string">

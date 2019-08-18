@@ -11,6 +11,7 @@ $params = array(
 include "header.php";
 ?>
 <div class="b-loan-detail-cont b-loan-detail-no-calc fadeDown anim delay300" data-cont=".b-breadcrumbs" style="background-image: url('i/loan-detail.jpg');">
+	<div class="b-loan-detail-cont-back"></div>
 	<div class="b-block">
 		<h1><?=$params['TITLE']?></h1>
 		<div class="b-calc-result-item big-results">

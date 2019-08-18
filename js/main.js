@@ -92,20 +92,32 @@ $(document).ready(function(){
 
     var nextArrow = '<div class="b-block">';
             nextArrow+= '<div class="arrow-right-icon">';
-                nextArrow+= '<div class="clip1">'
-                    nextArrow+= '<div class="slice1"></div>'
-                nextArrow+= '</div>';
-                nextArrow+= '<div class="clip2">'
-                    nextArrow+= '<div class="slice2"></div>'
-                nextArrow+= '</div>';
+                nextArrow+= "<div id='round'></div>"
             nextArrow+= '</div>';
         nextArrow+= '</div>';
 
+    function startBar(id){
+        $(id).html("");
+
+        var bar = new ProgressBar.Circle(id, {
+          strokeWidth: 6,
+          easing: 'linear',
+          duration: 5000,
+          color: '#00963f',
+          trailColor: '#fff',
+          trailWidth: 1,
+          svgStyle: null
+        });
+
+        bar.animate(1.0);
+    }
+
     $('.b-main-slider').on('init', function(slick){
-        $('.b-main-slider .arrow-right-icon').addClass('first-rotate');
-        setTimeout(function(){
-            $('.b-main-slider .arrow-right-icon').addClass('second-rotate');
-        },2500);
+        startBar('#round');
+    });
+
+    $(document).on('click', '.b-main-slider .arrow-right-icon, .b-main-slider .arrow-left-icon', function(){
+        $('#round').html("");
     });
 
     $(".b-main-slider").slick({
@@ -140,19 +152,10 @@ $(document).ready(function(){
         setTimeout(function(){
             $('.b-main-slider').find('[data-slick-index="'+currentSlide+'"]').removeClass('slick-anim');
         },500);
-
-        $('.b-main-slider .arrow-right-icon').addClass('reset');
-        $('.b-main-slider .arrow-right-icon').removeClass('first-rotate second-rotate');
-
     });
 
     $('.b-main-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        $('.b-main-slider .arrow-right-icon').removeClass('reset');
-        $('.b-main-slider .arrow-right-icon').addClass('first-rotate');
-        setTimeout(function(){
-            $('.b-main-slider .arrow-right-icon').addClass('second-rotate');
-        },2500);
-
+        startBar('#round');
     });
 
     docButton();

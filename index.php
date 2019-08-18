@@ -54,6 +54,9 @@ include "header.php";
 				<div class="b-illustration-item fadeDown anim delay100 anim-counter-cont" data-offset="100">
 					<div class="b-1-illustration b-illustration">
 						<div class="b-blob-cont">
+							
+						</div>
+						<div class="b-blob-cont">
 							<svg viewbox="0 0 234 234">
 								<path fill="#D8FFC5">
 								    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
@@ -944,8 +947,9 @@ include "header.php";
 
 <? include "advices.php"; ?>
 
-	<div class="b-commercial-block fadeDown anim" data-offset="100">
-		<div class="b-block">
+	<div class="b-commercial-block">
+		<div class="b-back-img fadeDown anim" data-offset="100" style="background-image: url('i/cooperative-full.jpg');"></div>
+		<div class="b-block fadeDown anim" data-offset="100">
 			<div class="b-commercial-inner">
 				<h3>Работа в кооперативе</h3>
 				<div class="b-commercial-text">Начинать строить карьеру лучше вместе с лидером рынка. Мы поможем раскрыть и реализовать ваш потенциал.</div>

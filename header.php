@@ -161,7 +161,7 @@ setcookie('isFirstTime', 'Y', time() + (86400 * 30), "/");
 									<span class="b-search-btn-text">Поиск</span>
 									<form action="search.php" method="GET" class="b-search-input">
 										<input type="text" name="q">
-										<input type="submit">
+										<input type="submit" value="">
 										<a href="#" class="search-close b-icon-cross"></a>
 									</form>
 								</div>

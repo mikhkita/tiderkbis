@@ -36,8 +36,8 @@ $(document).ready(function(){
 
 		function startCounter($this){
 			console.log($this);
-	        jQuery({ Counter: 0 }).animate({ Counter: Number($this.text().replace(/\s/g, '')) }, {
-	            duration: 3000,
+	        $({ Counter: 0 }).animate({ Counter: Number($this.text().replace(/\s/g, '')) }, {
+	            duration: 1500,
 	            easing: 'swing',
 	            step: function () {
 	                $this.text(new Intl.NumberFormat('ru-RU').format(this.Counter.toFixed(0)));

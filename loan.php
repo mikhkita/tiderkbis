@@ -29,7 +29,7 @@ include "header.php";
 							<div class="b-calc-slider-block">
 								<label for="sum">Сумма займа</label>
 								<div class="b-calc-slider">
-									<div class="b-slider-range" data-input-id="sum" data-range-to="25000"></div>
+									<div class="b-slider-range" data-input-id="sum" data-range-from="1000" data-range-to="1000000"></div>
 									<div class="b-calc-input-cont">
 										<input class="b-calc-input-rub b-range-input" type="text" id="sum" oninput="this.value = this.value.replace(/\D/g, '')" value="250 000" default-value="250 000">
 									</div>
