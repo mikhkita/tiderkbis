@@ -278,6 +278,8 @@ input.error,textarea.error{
 	width: 1.4rem;
 	height: 1.4rem;
 	background-image: url('../i/sprite.svg#ruble');
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .b-orange-btn{
 
@@ -316,6 +318,8 @@ input.error,textarea.error{
 		width: 0.8rem;
 		height: 1.4rem;
 		background-image: url('../i/sprite.svg#arrow-right-green');
+		background-repeat: no-repeat;
+		background-position: center;
 		z-index: 1;
 		-webkit-transition: right 150ms ease-out;
 		   -moz-transition: right 150ms ease-out;
@@ -647,6 +651,8 @@ input.error,textarea.error{
 						width: 2.4rem;
 						height: 2.4rem;
 						background-image: url('../i/sprite.svg#cross');
+						background-repeat: no-repeat;
+						background-position: center;
 					}
 				.plupload-error{
 					display: none;
@@ -778,6 +784,8 @@ input.error,textarea.error{
 				}
 					.b-city-btn-icon{
 						background-image: url('../i/sprite.svg#location');
+						background-repeat: no-repeat;
+						background-position: center;
 						width: 1.3rem;
 						height: 1.6rem;
 						margin-right: 0.8rem;
@@ -788,6 +796,8 @@ input.error,textarea.error{
 					}
 					.b-city-btn-arrow{
 						background-image: url('../i/sprite.svg#arrow-down');
+						background-repeat: no-repeat;
+						background-position: center;
 						width: 1.2rem;
 						height: 1.4rem;
 						margin-top: 1px;
@@ -798,6 +808,8 @@ input.error,textarea.error{
 				}
 					.b-phone-icon{
 						background-image: url('../i/sprite.svg#phone');
+						background-repeat: no-repeat;
+						background-position: center;
 						width: 1.5rem;
 						height: 1.5rem;
 						margin-right: 0.6rem;
@@ -861,6 +873,7 @@ input.error,textarea.error{
 						}
 						.b-personal-btn-icon{
 							background-image: url('../i/sprite.svg#user');
+							background-repeat: no-repeat;
 							background-size: 2.4rem;
 							background-position: 50% 50%;
 							width: 4.6rem;
@@ -890,6 +903,8 @@ input.error,textarea.error{
 							position: relative;
 							background: transparent;
 							background-image: url('../i/sprite.svg#search');
+							background-repeat: no-repeat;
+							background-position: center;
 							width: 2.4rem;
 							height: 2.4rem;	
 							/*margin-right: 0.4rem;*/
@@ -1031,6 +1046,7 @@ input.error,textarea.error{
 			}
 				.b-menu-btn-icon{
 					background-image: url('../i/sprite.svg#menu');
+					background-repeat: no-repeat;
 					background-size: 2.4rem 1.8rem;
 					width: 4.6rem;
 					height: 4.6rem;
@@ -1529,11 +1545,13 @@ input.error,textarea.error{
 				right: 6.1rem;
 			    background-position: 1.8rem 50%;
 				background-image: url('../i/sprite.svg#arrow-left');
+				background-repeat: no-repeat;
 			}
 			.arrow-right-icon{
 				right: 0;
 			    background-position: 2rem 50%;
 				background-image: url('../i/sprite.svg#arrow-right');
+				background-repeat: no-repeat;
 			}
 			.b-main-slider .arrow-right-icon:before{
 				position: absolute;
@@ -2546,6 +2564,7 @@ input.error,textarea.error{
 						}
 							.b-res-big .rub-icon{
 							    background-image: url(../i/sprite.svg#rub);
+							    background-repeat: no-repeat;
 								width: 2.3rem;
 								height: 2.3rem;
 							}
@@ -2556,6 +2575,7 @@ input.error,textarea.error{
 						}
 							.b-res-middle .rub-icon{
 							    background-image: url(../i/sprite.svg#rub);
+							    background-repeat: no-repeat;
 								width: 1.8rem;
 								height: 1.8rem;
 							}
@@ -4056,6 +4076,8 @@ input.error,textarea.error{
 			}
 			.b-star-icon{
 				background: rgba(255,255,255,0.34) url('../i/sprite.svg#star');	
+				background-repeat: no-repeat;
+				background-position: center;
 				width: 5.4rem;
 				height: 4rem;
 			}
@@ -4520,6 +4542,8 @@ input.error,textarea.error{
 	}
 		.b-document-icon{
 			background-image: url('../i/sprite.svg#document');
+			background-repeat: no-repeat;
+			background-position: center;
 			width: 3.2rem;
 			height: 3.3rem;
 			display: inline-block;
@@ -4648,6 +4672,8 @@ input.error,textarea.error{
 		width: 2.4rem;
 		height: 2.4rem;
 		background-image: url('../i/sprite.svg#cross');
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 @media (max-width: 767px) {
 	.b-cookies-block{
@@ -5704,18 +5730,22 @@ input.datepicker-here{
 				margin-right: 1.6rem;
 			}
 			.location-icon{
+				background-repeat: no-repeat;
 				background-image: url('../i/sprite.svg#location');
 				background-size: 2rem 2.4rem;
 			}
 			.phone-icon{
+				background-repeat: no-repeat;
 				background-image: url('../i/sprite.svg#phone');
 				background-size: 2rem 2rem;
 			}
 			.clock-icon{
+				background-repeat: no-repeat;
 				background-image: url('../i/sprite.svg#clock');
 				background-size: 2.4rem 2.4rem;
 			}
 			.mail-icon{
+				background-repeat: no-repeat;
 				background-image: url('../i/sprite.svg#mail');
 				background-size: 2.4rem 1.7rem;
 			}
@@ -6113,6 +6143,8 @@ input.datepicker-here{
 			    width: 2rem;
 			    height: 2rem;
 			    background-image: url(../i/sprite.svg#logout);
+			    background-repeat: no-repeat;
+				background-position: center;
 			}
 			.b-personal .logout-link .b-logout-icon{
 				display: none;
@@ -6162,6 +6194,8 @@ input.datepicker-here{
 					width: 2.4rem;
 					height: 2.4rem;
 					background-image: url('../i/sprite.svg#settings');
+					background-repeat: no-repeat;
+					background-position: center;
 					display: inline-block;
 					-webkit-transition: transform 200ms ease-out;
 					-moz-transition: transform 200ms ease-out;
@@ -6657,6 +6691,8 @@ input.datepicker-here{
 				}
 					.b-paraweb-icon{
 						background-image: url('../i/sprite.svg#paraweb');
+						background-repeat: no-repeat;
+						background-position: center;
 						width: 12.7rem;
 						height: 3rem;
 						position: absolute;
@@ -6675,12 +6711,18 @@ input.datepicker-here{
 							height: 3rem;
 						}
 						.b-soc.ok-icon{
+							background-repeat: no-repeat;
+							background-position: center;
 							background-image: url('../i/sprite.svg#ok');
 						}
 						.b-soc.vk-icon{
+							background-repeat: no-repeat;
+							background-position: center;
 							background-image: url('../i/sprite.svg#vk');
 						}
 						.b-soc.yt-icon{
+							background-repeat: no-repeat;
+							background-position: center;
 							background-image: url('../i/sprite.svg#yt');
 						}
 @media (-webkit-min-device-pixel-ratio: 1.5) {
